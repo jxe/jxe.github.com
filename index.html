@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <title>Joe Edelman</title>
 <link rel="stylesheet" type="text/css" href="css/joe-home.css" />
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
 
 <div class="left">
 	<h1 style="text-align:center;">Joe Edelman</h1>
@@ -12,13 +13,22 @@
     <a href="http://github.com/jxe/">github</a>
   </p>
 
-	<p style="float:right"><img src="/img/notepad.jpg" alt="" /></p>
+	<p style="float:right"><img src="img/notepad.jpg" alt="" /></p>
 
 	<p style="text-align:right; max-width:250px" class="caption">
 		I work on technologies of conviviality and trust.
 	</p>
 </div>
-<div class="right">
+
+<textarea id="text" style="display:none">
+
+## Ongoing Projects
+
+* [Bright Ideas](http://bright-ideas.co) -- Great activities yo.
+	
+</textarea>
+
+<div class="right" id="render">
 
 	<h2>Ongoing Projects</h2>
 
@@ -122,3 +132,10 @@
 
 </div>
 </body></html>
+
+
+<script type="text/javascript">
+	var converter = new Showdown.converter();
+	var text = document.getElementById('text');
+	document.getElementById('render').innerHTML = converter.makeHtml(text.innerHTML);
+</script>

@@ -4,7 +4,7 @@ body {
   font-size: 13px;
   background: white;
   color: black;
-  background: #fff url('/img/brgrad.png') repeat-x scroll;
+  background: #fff url('../img/brgrad.png') repeat-x scroll;
 }
 
 p { 
