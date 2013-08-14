@@ -17,7 +17,7 @@ ul {
   padding-left: 2.5em; 
 }
 
-a { 
+a[href] { 
   text-decoration:none;
 	color: #222; 
 	border-bottom: solid thin #88c; 
@@ -36,9 +36,6 @@ li {
   margin-top: 6px;
   margin-bottom: 6px;
 }
-/* ============= */
-/* = two sides = */
-/* ============= */
 
 .left {
   margin-left: 90px;
@@ -47,14 +44,13 @@ li {
   float: left;
   border-right: 1px solid #CCC;
   padding-right: 20px;
-}
-
-.left h1, .left p {
-  text-align:right
+  text-align:center
 }
 
 .left img {
   width: 250px;
+  display:block;
+  margin-top: 20px
 }
 
 .right {
@@ -62,7 +58,8 @@ li {
   float: left;
 }
 
-.left h1 {
+h1 {
+  text-align:center
   font-family: "Optima", Verdana;
   font-size: 2em;
   color: #06c; 
@@ -72,16 +69,8 @@ li {
   margin: 0px;
 }
 
-
-/* ============ */
-/* = headings = */
-/* ============ */
-
-ul + h2 {
-  margin-top: 30px;
-}
-
 h2 {
+  margin-top: 30px;
   font-size: 18px;
   color: #666;
 }
@@ -91,4 +80,15 @@ h3 {
   margin: 0px;
   color: #c60;
   margin-left: 5px;
+}
+
+
+h4 {
+  padding: 0px;
+  margin: 0px;
+  color: #c60;
+}
+
+h4 + ul {
+  margin-top:0;
 }
