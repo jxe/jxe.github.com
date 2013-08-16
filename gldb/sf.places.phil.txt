@@ -1,0 +1,37 @@
+region:sf
+Urban Exploration
+
+f585511812
+Lazar Kunstmann
+renegade conservationist
+
+- place: Marin Ghost Hill
+  there_for: Beautiful decay.  Plants and ruins.  Crazy echoes and booms.
+  guide: >
+    There's a strange hill near Battery Mendell, at the roundabout where Field and Mendell roads meet. From a distance it looks like any other hill. As you approach, a few concrete cylinders hint at something more. A nondescript set of wooden stairs lead down. Bring a flashlight. Dress warm and for exploring. Watch out for holes in the ground.
+
+- activity: Cyprus Lawn Cemetery at night
+  there_for: Adventure and group fear.
+  guide: >
+    If this cemetery doesn't scare you, there's something wrong with you.
+    It closes at 7:30, by 8pm no one is there. The huge tombs, trees and bushes create hiding places everywhere. You're lurking around, alone, vulnerable on all sides. And there are so many noises! But try to calm down and appreciate how grand the place is -- considered the finest Victorian era cemetery west of the Mississippi. Many famous people rest here, including Hearst, DeYoung, and Spreckles, whose tomb is like a Roman palace. There's a pyramid with a poem. An abandoned, sunken crypt. A long row of children from the 1908 flu epidemic, their graves marked with little lambs.
+
+- place: Albany Bulb
+  there_for: A world without rules
+  guide: >
+    Just a few miles from Downtown Berkeley, there's a place with no rules.  A no-man's land full of friendly hobos and junkyard creations: a tree house, kinetic sculptures, a scrap-wood library with hundreds of books, mad mike's castle and other homemade shelters. Almost completely surrounded by water, the Albany Bulb would be an island if not for the narrow, half-mile stretch of walking trails connecting it to the mainland. You'll see people tagging shit in broad daylight, building things, doing whatever they please. You should too.
+
+- place: Ocean Beach Secret Cave
+  there_for: covert action
+  guide: >
+    Near the northern tip of Ocean Beach lies a secret entrance to the underground. A cave waits below, as big as a living room. On one side there is a tunnel, but only at low tide can you follow where it leads.
+
+- place: Abandoned Mansion in North Bay
+  there_for: architecture and amazement
+  guide: >
+    At the tip of the Tiburon, an abandoned, half-finished mansion awaits you for a secluded sunset dinner. Many spots offer wonderful views of the city over the bay. The craftmanship of Lava House, untouched since the 70s, is incredible. Empty pools, meandering paths, a lava rock garden, pebble mosaic tiles, arches, grotto, the groundwork for a waterfall. The owner, a fabulously wealthy seatbelt manufacturer, has openly declared a policy of tolerance for trespassers.
+
+- activity: Botanical Garden Sneak-in
+  there_for: wonder, silence, visual delight
+  guide: >
+    The SF Botanical Garden is serene at night. You'll have it all to yourself: a Japanese zen garden, a redwood grove, a wonderful view of the sky and city from Heidelburg Hill. One hundred acres is big enough to let you wander, to get lost for a while. Squeeze through the main gate after closing, or hop the short wall north of the gate, on MLK Drive. A full moon is best for appreciating the beauty of the place.

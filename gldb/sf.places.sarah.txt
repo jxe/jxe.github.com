@@ -1,0 +1,32 @@
+region:sf
+Fun bike rides
+
+f1236432
+Sarah Reed
+gopher hunter
+
+
+- place: Bayview Shipping Yard
+  with: buddies
+  there_for: Surreal, foreign
+  guide: >
+    This is like a foreign land. The shipping containers. The paved emptiness. The ocean. And then to come upon a tiny park, hidden past an unused parking lot. It's surreal. An enclave of nature admist this abandoned, alien landscape. It's a great place to stop and spend some time together. We had mimosas and made pancakes.
+
+- place: McLaren Park
+  with: date
+  there_for: quiet, isolation, solitude
+  guide: >
+    The redwood grove in McLaren Park engulfs you. Just a quarter mile away, the city is humming along, but you don't see any sign of it. You don't see anyone. Pure solitude, tucked away in the middle of everything. Enter the park from the west. You'll find the grove. And a big pond, dense with birds. Perhaps a labyrinth. But maybe not the hidden treehouse.
+
+- activity: Excitement, Exploration, and Drinks in Alameda
+  with:
+  there_for: Horrifying, heart-racing, historic
+  guide: >
+    Riding the Webster Street Tube is not for sissies. You're racing down a pedestrian corridor, cars whizzing by, with only inches to spare on either side of your handlebars. The slightest swerve will wipe you out. But then you emerge to the relief of Alameda's wide open streets. They only get more open and deserted as you roam west. Towards the water's edge, inside an old airplane hangar, there's a distillery that gives free tastings. St. George's Spirits. Have a drink, enjoy the view, and take the ferry home.
+
+- place: Fort Funston
+  with: date
+  there_for: Excitement, fear, delight
+  guide: >
+    People fly at Fort Funston. Bike past the abandoned military fort, right up to the edge of a cliff overlooking the beach. Watch them leap off, soar, and swing back around overhead, so close you can touch them. They're very friendly, these flying people. Feel free to talk to them about their craft. Go during the weekend, and bring binoculars.
+

@@ -1,0 +1,9 @@
+{
+	"kind": "activity",
+	"title": "run, jump, and play",
+	"city": "sfo",
+	"desires": ["active"],
+	"topics": ["running"],
+	"guideURLs": ["https://dl.dropboxusercontent.com/s/5zzp3qfxuvyycgf/running-guide.json"],
+	"authorURLs": ["http://nxhx.org"]
+}

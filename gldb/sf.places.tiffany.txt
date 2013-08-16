@@ -1,0 +1,39 @@
+region:sf
+Odd places to explore
+
+f300965
+Tiffany Ng
+flaneur
+
+
+- place: Chapel of the Chimes
+  with: date
+  there_for: exquisite, minute details
+  img: http://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Oakland-columbarium-s.jpg/300px-Oakland-columbarium-s.jpg
+  loc: 37.831681,-122.245781
+  guide: >
+    From the outside, it looks like a gothic chapel. Inside, *an endless labyrinth of crypts* to wander in awe. Unlike any cemetery. An emotional odyssey through room after room, each exquisite, unique, crafted to be heard and felt. Careful attention reveals clues about those who rest here. Have a flower to leave with one of the dead at the Chapel of the Chimes.
+
+- place: Labyrinths in the Oakland Hills
+  with: date
+  there_for: solitude, ritual, mystery
+  guide: >
+    Side trails through ancient volcanic grounds lead to stone labyrinths. Difficult to find, somber, and mysteriously maintained. It's worth bringing a relic to leave behind. Head to the Sibley Volcanic Regional Preserve.
+
+- place: Something is in the warehouse at Pier 24
+  with: date
+  there_for: It's a secret
+  guide: >
+    Call 888-777-6666. Tell them Tiffany sent you.
+
+- place: Let's Play. Pinball. 
+  with: date
+  there_for: nostalgic, competitive
+  guide: >
+    Step into a 1950s time portal of blinking lights and clacking pinballs. It's time to pick your machine for a duel. A woodrail relic from the 40s or 50s? Get nostalgic with AC/DC? Motorcycle games with the Harley regulars? There are dozens to choose from at the Pacific Pinball Museum.
+
+- place: The One-Block Town
+  with: buddies
+  there_for: curious, lost, bizarre
+  guide: >
+    There's a defunct theater ticket booth where you can have a meal while a polar bear watches over you. Should you be thirsty, the door to a beer cellar beckons you deeper into the rabbit hole. You may enter. Welcome to the one-block town of Port Costa, haven for bikers and interior decorators. Go on a Sunday.
