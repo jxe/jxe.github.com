@@ -73,24 +73,9 @@ tell both: thanks so much for participating!
 
 ```
 
-Add to libdeck jsdoc
-
-Given a JSON object like this
-
-{
-  ID: "http://bright-ideas.co/sf.places.phil#ocean-beach"
-  type: 'place',
-  title: 'Ocean Beach Secret Cave',
-  loc: [37.760568,-122.510004],
-  guide: "Near the northern tip of Ocean Beach lies a secret entrance to the underground. A cave waits below. On one side there is a tunnel, but only at low tide can you follow where it leads."
-}
-
-and backend interfaces "shouts" and "chatrooms" to handle invitations and conversations, libdeck.js exposes higher level notions of who's interested, when they can plan, what plans are possible, etc.
-
-
 -->
 
-I'm an inventor. My work touches on economics, human-computer interaction, and social psychology.  I tend to make websites, in-person games, and participatory events instead of psych experiments.
+I'm an inventor. My work touches on economics, human-computer interaction, and social psychology.  I tend to make websites, in-person games, participatory events, and rough algorithms with evaluation functions, instead of psych experiments and formal models.
 
 * I've worked on [technologies of rapid in-person affiliation](#affiliation) since 1993
 
@@ -104,7 +89,7 @@ Help me turn these topics into accessible public talks -- invite me to speak.  :
 
 ## <a id="affiliation"></a> Rapid In-Person Affiliation
 
-The way we we allocate our time and money is largely determined by our desires for *affiliation* and *rapport*.  Affiliation and rapport are commonly regarded as key factors both to [healthy communities](#healthy-communities) and to [lives well lived](#lives-well-lived).  But under what cirumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://en.wikipedia.org/wiki/Emergency_Communities) [2](#groundcrew), and with games and social art projects at various scales.
+So much of our lives are a quest for *affiliation* and *rapport*.  They're regarded as key factors both to [healthy communities](#healthy-communities) and to [lives well lived](#lives-well-lived).  But under what cirumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://en.wikipedia.org/wiki/Emergency_Communities) [2](#groundcrew), and with games and social art projects at various scales.
 
 See below:
 
@@ -124,9 +109,9 @@ The first event, in 2001, was a "trustfall dinner party", in which the steps to 
 
 I've created software for forming just-in-time opt-in teams with high opt-in rates and high performance.  These have been tested in environments ranging from art museum openings to disaster sites.
 
-* <a id="ceml"></a> **CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
+* <a id="ceml"></a>**CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
 
-* <a id="groundcrew"></a> **Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
+* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
 
 * **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
 
@@ -153,7 +138,7 @@ I run a monthly playtest for realworld games and a yearly festival in SF.  Many 
 
 #### Writing
 
-* <a id="healthy-communities"></a> **Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
+* <a id="healthy-communities"></a>**Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
 
 
 #### Experiments
@@ -330,8 +315,6 @@ In order to do better, we would need web-scale systems for collecting data about
 
 
 #### Tech and Demos
-
-Work on this is just beginning.
 
 * **GLDB** is a nascent public database of which activities people feel best about at least a week after the fact, and which lifestyles feel best to the people who live them, relative to lifestyles they've had in the past.  It includes [an API](https://github.com/timewellspent/gldb/tree/master/gldb-server) for asking about whether URLs are likely to be long-term fulfilling, for making your own reports, and for querying fulfilling activities, and [a web scraper](https://github.com/timewellspent/gldb/blob/master/scraper/scraper.go) for parsing the web as activities rather than as content objects.
 
