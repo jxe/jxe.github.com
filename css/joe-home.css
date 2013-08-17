@@ -39,10 +39,9 @@ li {
 
 .left {
   margin-left: 90px;
-  margin-right: 80px;
+  margin-right: 60px;
   margin-top: 17px;
   float: left;
-  border-right: 1px solid #CCC;
   padding-right: 20px;
   text-align:center
 }
@@ -50,12 +49,21 @@ li {
 .left img {
   width: 250px;
   display:block;
-  margin-top: 20px
+  margin: 20px 0px;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 5px;
+}
+
+
+.right p {
+  line-height: 1.35;
 }
 
 .right {
   width: 350px; margin-top: 0px; margin-bottom: 0px; margin-right: 40px;
   float: left;
+  font-size: 14px;
+  color: hsl(60, 1%, 15%)
 }
 
 h1 {
@@ -64,24 +72,26 @@ h1 {
   font-size: 2em;
   color: #06c; 
   color: #050; 
-  color: white;
+  color: black;
   font-weight: normal;
   margin: 0px;
-  text-shadow: black 0px 1px 1px;
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 50px;
   font-size: 22px;
   color: #c60;
 }
 
 h3 {
-  margin-top: 30px;
+  margin-top: 50px;
   font-size: 18px;
   color: #c60;
 }
 
+h4 {
+  margin-top: 50px;
+}
 
 h4 + ul {
   margin-top:0;
@@ -101,15 +111,56 @@ h4 + ul {
 /*.only-tech #clickers.tech  { background: white };*/
 
 #clickers {
-  background: #ccc;
-  color: #444;
-  padding: 5px;
+  background: #ddd;
+  color: #777;
+  padding: 5px 0px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
+  border-radius: 5px;
 }
 
 #clickers a {
-  color: #005;
+  color: #77d;
   border: none;
-  padding: 3px 7px;
+  padding: 4px 7px;
+}
+
+span.discuss {
+  margin-left: 10px;
+  color: #ccc;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+
+#chat {
+  position: fixed;
+  top: 0px; left: 0px;
+  width: 400px; height: 400px;
+  margin: 50px;
+  background: white; 
+  /*border: solid thin black;*/
+  box-shadow: rgba(0,0,0,0.4) 0px 0px 15px;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+}
+
+#chatform {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0; right: 0;
+  background: #eee;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  box-shadow: rgba(0,0,0,0.4) 0px 0px 1px;
+}
+
+#chattopic {
+  width: 200px;
 }

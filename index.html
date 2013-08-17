@@ -5,13 +5,13 @@
 <body class="all">
 <a style="position:absolute; top:0" id="top"></a>
 <div class="left">
+  <img src="img/notepad.jpg"/>
   <h1>Joe Edelman</h1>
-  <a href="http://twitter.com/edelwax">@edelwax</a><br><br>	
-  (also: 
+  <a href="http://twitter.com/edelwax">@edelwax</a><br><br><br>
+  also,
   <a href="http://github.com/jxe">github</a>
   <a href="http://couchsurfing.com/profile.html?id=2I8BSF">couchsurfing</a>
-  <a href="http://facebook.com/joe.edelman">facebook</a>)
-  <img src="img/notepad.jpg"/>
+  <a href="http://facebook.com/joe.edelman">facebook</a>
 </div>
 <div class="right" id="render"></div><textarea id="text" style="display:none">
 
@@ -83,14 +83,12 @@ I'm an inventor. My work touches on economics, human-computer interaction, and s
 
 * and [significant lifestyle changes and activity search on the internet](#internet-and-lifestyle) since 2005 
 
-There are ideas below about what an empowering technology infrastructure would look like, and how effective it would be at changing lifestyles.
+There are ideas below about what an empowering technology infrastructure would look like, and how effective it would be at changing lifestyles and affiliations.
 
 Help me turn these topics into accessible public talks -- invite me to speak.  :)
 
 <div id="clickers">
-  Showing
-  <a class='all'  href="#">all work</a>
-  <a class='tech' href="#">just tech, games, events</a>
+  Showing &mdash; <a class='all'  href="#">all work</a> <a class='tech' href="#">just tech, games, events</a>
 </div>
 
 
@@ -105,7 +103,7 @@ See below:
 * [Physical Marketplaces for Fulfilling Experience](#rapport) (2005-ongoing)
 
 
-### <a id="teamwork"></a> Just-In-Time Teamwork
+### <a id="teamwork"></a> Just-In-Time Teamwork <span class="discuss"></span>
 
 My earliest experiments with just-in-time teamwork involved writing software and throwing game-like events, and this has remained the pattern.
 
@@ -171,7 +169,7 @@ I run a monthly playtest for realworld games and a yearly festival in SF.  Many 
 
 
 
-### <a id="rapport"></a> Physical Marketplaces for Fulfilling Experience
+### <a id="rapport"></a> Physical Marketplaces for Fulfilling Experience <span class="discuss"></span>
 
 What are the most fulfilling things that can happen to a person in an evening or a day?  An emotional breakthrough, a breathtaking vista, a playful conversation with a loved one, the resolution of a longstanding logistical or material problem, a return to an aspect of oneself...
 
@@ -212,7 +210,7 @@ Since 2011, I've co-lead a crew that makes immersive experiences in public space
 
 
 
-### <a id="connection"></a> Engineering Felt Connection between Strangers
+### <a id="connection"></a> Engineering Felt Connection between Strangers <span class="discuss"></span>
 
 Although I had been experimenting in this space for 12 years already, my work at [CouchSurfing](http://couchsurfing.org) offered a unique laboratory to test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages that both sides of a homestay received before they met in person.  We also had wonderful and rapid feedback in the form of stories the users tell as reviews of the experience immediately after meeting.
 
@@ -288,7 +286,7 @@ See below:
 * [Web-Scale Lifestyle Search](#web-scale-activity-search)
 
 
-### <a id="lives-well-lived"></a> Consumer Choice and The Good Life
+### <a id="lives-well-lived"></a> Consumer Choice and The Good Life <span class="discuss"></span>
 
 Is there a sense in which we can say that a person is or isn't choosing a good life for themselves?  And are there interfaces that reveal and affect these choices?  What is a good life?
 
@@ -312,7 +310,7 @@ Is there a sense in which we can say that a person is or isn't choosing a good l
 * [Northstar](http://www.northstarteens.org) is an [unschool](http://en.wikipedia.org/wiki/Unschooling) in Western Mass where teenagers are asked every week what they would like to do with their week.  This simple act seems to precipitate significant lifestyle and activity changes.  As a board member for two years I had a chance to observe and take part in this process.
 
 
-### <a id="web-scale-activity-search"></a> Web-Scale Lifestyle Search
+### <a id="web-scale-activity-search"></a> Web-Scale Lifestyle Search <span class="discuss"></span>
 
 If social activity search and activity recommenders have the potential to change lifestyles dramatically, we can ask ourselves how we're doing on that front on the internet, and how we could do better.
 
@@ -343,12 +341,49 @@ I will be revising these things.
 
 
 </textarea>
+
+
+
+<!--
+
+* Rapid Affiliation [1993]
+	* Just-In-Time Teamwork
+	* Provisioning Intimacy and Empathy
+	* Markets in Interaction and Rapport
+		* varieties...
+
+* Rapid Lifestyle Change, Activity Searches, and the Internet [2012]
+	* Consumer Demand for a Life Well Lived
+	* Web-Scale Activity and Lifestyle Search
+
+-->
+
+<!-- 
+ -->
+
+
+<div id="chat">
+<div id="chat_entries"></div>
+
+<form id="chatform">
+In person, let's <span id="chatverb"></span> <b id="chattopic"></b><br>
+
+&mdash; <input placeholder="Your twitter handle">, <input placeholder="city">
+<button>Post</button>
+</form>
+
+</div>
+
+
+
+
+
 <script type="text/javascript">
   var r = document.getElementById('render');
-	r.innerHTML =
-	  marked(document.getElementById('text').value, {
-	    sanitize: false, gfm: true
-	  });
+  r.innerHTML =
+    marked(document.getElementById('text').value, {
+      sanitize: false, gfm: true
+    });
 
   function hide(q){
     var nodes = document.querySelectorAll(q);
@@ -388,23 +423,25 @@ I will be revising these things.
     else if (e.target.text.match(/tech/)) body.className = 'only-tech';
     return false;
   }
+
+  var discuss = document.getElementsByClassName('discuss');
+  var chat = document.getElementById('chat');
+  body.onclick = function(){
+    chat.style.display = 'none';
+  }
+  document.getElementById('chatform').onsubmit = function() {
+    alert('woot');
+  };
+  discuss = [];
+  for (var i = 0; i < discuss.length; ++i) {
+    discuss[i].topic = discuss[i].parentNode.innerText;
+    discuss[i].innerHTML = "discuss";
+    discuss[i].verb = discuss[i].innerText;
+    discuss[i].onclick = function(ev) {
+      chat.style.display = 'block';
+      ev.stopPropagation();
+      document.getElementById('chatverb').innerText = ev.target.verb;
+      document.getElementById('chattopic').innerText = ev.target.topic;
+    };
+  }
 </script>
-
-
-
-<!--
-
-* Rapid Affiliation [1993]
-	* Just-In-Time Teamwork
-	* Provisioning Intimacy and Empathy
-	* Markets in Interaction and Rapport
-		* varieties...
-
-* Rapid Lifestyle Change, Activity Searches, and the Internet [2012]
-	* Consumer Demand for a Life Well Lived
-	* Web-Scale Activity and Lifestyle Search
-
--->
-
-<!-- 
- -->
