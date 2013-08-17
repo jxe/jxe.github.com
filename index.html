@@ -2,6 +2,7 @@
 <title>Joe Edelman</title>
 <link rel="stylesheet" href="css/joe-home.css" />
 <script src="http://cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js"></script>
+<a style="position:absolute; top:0" id="top"></a>
 <div class="left">
   <h1>Joe Edelman</h1>
   <a href="http://twitter.com/edelwax">@edelwax</a><br><br>	
@@ -16,65 +17,46 @@
 
 <!--
 
-Todo, LibDeck sample code / data obj
+TWEET:  My life's work is now browsable.  Big ups to @worrydream for the encouragement.  http://nxhx.org
 
 
-Add Cadre Events demo docs to teamwork section
 
-Scripts from rube goldbergs?
+Soon:
 
-photos from phil stuff
-
-take to the streets radio mp3
-
+* ESSAY: Two kinds of menus in User Interfaces: Meaningful choice vs consumer choice (on Medium, from Economy of lives well lived fn 1)
+* Find other tidbits in Economy of lives well lived and eight Easy peices
+* Revel
+* screenshots from cadre events
+* Scripts from rube goldbergs?
+* take to the streets radio mp3
 * ESSAY: Media and the Desire for Rapport
+* ESSAY: "A Social-graph- and time-desire- aware model of lifestyle change"
+* nax screenshot?
 
-nax screenshot?
+* add to experiments in engineering connection
+  * GAME: okcupid profile 
+  * EV: Tristan
+  * Operation NightHawk w. Nate
 
+* Govt of Tibet
+* Interval stuff w. rhythm and kinect
+* AI Lab collab filt and web spidering
+* WGBH reputation community and forum
+* Emergency Communities
+* NOTE: TWS Brand & Mark
+* SW: Doables Microdata Standard
+* PROJ: Google Now & Android Opportunities 
 
-=========
-  
-	<li>Joe has worked for The Gov&#8217;t of Tibet in Exile, Interval Research Corporation, the <span class="caps">MIT</span> Artificial Intelligence Lab, <span class="caps">WGBH</span> Television, Dartmouth College, <a href="http://emergencycommunities.org">a post-Katrina soup kitchen</a>, <a href="http://couchsurfing.org">couchsurfing</a>, an <a href="http://en.wikipedia.org/wiki/Unschooling">unschool</a> called <a href="http://www.northstarteens.org">North Star</a>, renesys.com, and other companies.</li>
-	</ul>
+## Better approaches to metadata
+* ESSAY: Heirarchical Views of Databases
+* ESSAY: Fully Connected Scientific Metadata
 
--->
+## Better approaches to communication
+* DEMO: Peeps email
 
+## RANDO HCI
+* PROJ: E-Planet at Interval
 
-I'm an inventor. My work touches on economics, human-computer interaction, and social psychology. 
-
-I believe [econ 101 is outdated](#econ101) and I've developed new models of [consumer search](#meaingful-choice), [consumer planning](#web-scale-activity-search), and [affiliation](#affiliation).
-
-Since 1993 I have studied [rapid affiliation](#affiliation), including [just-in-time teamwork](#teamwork), the provisioning of [intimacy and empathy among strangers](#intimacy), and [markets in interaction and rapport](#rapport).
-
-Since 2012 I have also begin to study [Rapid Lifestyle Change, Activity Searches, and the Internet](#internet-and-lifestyle)
-
-I've been lousy at getting my work out. I plan to publish and demo more in 2013 and 2014. 
-
-****
-
-## <a id="affiliation"></a> Rapid Affiliation
-
-Strong preferences for affiliation and rapport determine much of how we spend our time and money.  These factors are reported as key both for healthy communities and for [lives well lived](#lives-well-lived).  Which cirumstances are conducive to strangers coming together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://google.com?q=emergency+communities) [2](http://groundcrew.us), and with games and social art projects at various scales.
-
-See below:
-
-* [Just-In-Time Teamwork](#teamwork)
-* [Markets in Interaction and Rapport](#rapport)
-* [Provisioning Intimacy and Empathy among Strangers](#intimacy)
-
-
-## <a id="teamwork"></a> Just-In-Time Teamwork
-
-My earliest experiments with just-in-time teamwork involved writing software and throwing game-like events, and this has remained the pattern.
-
-The first event, in 2001, was a "trustfall dinner party", in which the steps to make a complex gourmet meal were distributed across several rooms in a house, shuffled among participants, and arranged so as to require precision timing and coordination in seven phases triggered by a house-wide bell system.  The software is lost to an ancient harddrive, but see below for more recent work.
-
-
-#### Technology
-
-I've created software for forming just-in-time opt-in teams with high opt-in rates and high performance.  These have been tested in environments ranging from art museum openings to disaster sites.
-
-There's [CEML, a programming language](http://github.com/citizenlogistics.com/ceml).  Here's sample code. [[1]](#fn1)
 
 ```
 "Harass and report"
@@ -91,16 +73,64 @@ tell both: thanks so much for participating!
 
 ```
 
-And there's [Groundcrew, a realtime teambuilding command console](http://groundcrew.us).
+Add to libdeck jsdoc
 
-* [Some screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf)
-* [A blogpost](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/)
-* [A video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
+Given a JSON object like this
+
+{
+  ID: "http://bright-ideas.co/sf.places.phil#ocean-beach"
+  type: 'place',
+  title: 'Ocean Beach Secret Cave',
+  loc: [37.760568,-122.510004],
+  guide: "Near the northern tip of Ocean Beach lies a secret entrance to the underground. A cave waits below. On one side there is a tunnel, but only at low tide can you follow where it leads."
+}
+
+and backend interfaces "shouts" and "chatrooms" to handle invitations and conversations, libdeck.js exposes higher level notions of who's interested, when they can plan, what plans are possible, etc.
 
 
-And [LibDeck.js, a javascript library that abstracts multi-person, multi-role scheduling and buy-in](http://citizenlogistics.github.io/libdeck/)
+-->
 
-* [LibDeck jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)
+I'm an inventor. My work touches on economics, human-computer interaction, and social psychology. 
+
+* Since 1993 I've studied [technologies of rapid affiliation](#affiliation)
+
+* Since 2005 I've begun to study [lifestyle change and activity search on the internet](#internet-and-lifestyle)
+
+This work has lead to ideas about what an empowering technology infrastructure would look like.
+
+I plan to publish and demo more in 2013 and 2014. 
+
+****
+
+## <a id="affiliation"></a> Rapid Affiliation
+
+The way we we allocate our time and money is largely determined by our desires for *affiliation* and *rapport*.  Affiliation and rapport are commonly regarded as key factors both to healthy communities and to [lives well lived](#lives-well-lived).  But under what cirumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://google.com?q=emergency+communities) [2](http://groundcrew.us), and with games and social art projects at various scales.
+
+See below:
+
+* [Engineering Felt Connection between Strangers](#connection) (1993-2011)
+* [Just-In-Time Teamwork](#teamwork) (2001-2012)
+* [Markets in Interaction and Rapport](#rapport) (2005-ongoing)
+
+
+## <a id="teamwork"></a> Just-In-Time Teamwork
+
+My earliest experiments with just-in-time teamwork involved writing software and throwing game-like events, and this has remained the pattern.
+
+The first event, in 2001, was a "trustfall dinner party", in which the steps to make a complex gourmet meal were distributed across several rooms in a house, shuffled among participants, and arranged so as to require precision timing and coordination in seven phases triggered by a house-wide bell system.  The software is lost to an ancient harddrive, but see below for more recent work.
+
+
+#### Technology
+
+I've created software for forming just-in-time opt-in teams with high opt-in rates and high performance.  These have been tested in environments ranging from art museum openings to disaster sites.
+
+* <a id="ceml"></a> **CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
+
+* **Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
+
+* **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
+
+* **Cadre Events** is a mobile web- and sms-based interface for talking groups of people texting in at the same event and funneling them in chatrooms that coordinate group actitivies between strangers.   [screenshots](https://www.dropbox.com/sh/90olm7apkfbg374/d4SNqanDFn)
 
 <!-- cadre events / revel -->
 
@@ -121,6 +151,11 @@ I run a monthly playtest for realworld games and a yearly festival in SF.  Many 
 * **Card Parties** are events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS.  Tasks interweave. Strangers find themselves in intimate encounters, quiet moments, facing challenges together, being theatrical, etc.  I have [an old FAQ](/misc/notecard-party-faq.html) for running one of your own and [some software and a mission database](http://github.com/jxe/Participatorium) that will help.
 
 
+#### Writing
+
+* <a id="healthy-communities"></a> **Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
+
+
 #### Experiments
 
 * *Trustfall Dinner* (2001)&mdash;
@@ -137,7 +172,7 @@ I run a monthly playtest for realworld games and a yearly festival in SF.  Many 
 
 * *Card Parties* (2002-2011) -- detailed above.
 
-* *Cadre Events, Missions* -- the software detailed above was deployed and refined at events at YBCA, CoAPSF 2011, and at several Occupy Wall Street sites!
+* *Cadre Events, Missions* -- the *Cadre Events* software mentioned above was deployed and refined at events at YBCA, CoAPSF 2011, and at several Occupy Wall Street sites!  Here are [some missions from CoAP](https://hackpad.com/Cadre-Events-missions-from-COAP2011-ZXCE1SjUZ4y)
 
 
 
@@ -184,37 +219,42 @@ Since 2011, I've co-lead a crew that makes immersive experiences in public space
 
 
 
-## <a id="intimacy"></a> Provisioning Intimacy and Empathy among Strangers
+
+## <a id="connection"></a> Engineering Felt Connection between Strangers
+
+Although I had been experimenting in this space for 12 years already, my work at [CouchSurfing](http://couchsurfing.org) offered a unique laboratory to test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages that both sides of a homestay received before they met in person.  We also had wonderful and rapid feedback in the form of stories the users tell as reviews of the experience immediately after meeting.
+
+**Learned**: there are many ways to prepare strangers so as to increase trust, openness, etc.  Tricks like double opt-ins, prompted welcome messages, structuring an opportunity for a shared experience or task, and a careful ramping of intimacy can make 10-100x differences in conversions to positive and connected experiences.
 
 
-#### Design
+#### Connection games you can play yourself
 
-* PROJ: Couchsurfing reputation, stranger priming & front page
+* **A Getting-to-know-you card game** (2012) - A simple game where cards dealt prompt successively riskier personal stories.  ([Rules](http://edelwax.tumblr.com/post/31384959456/a-getting-to-know-you-game-using-a-deck-of-cards-and-a))
 
-* **Tryst** (2011)&mdash;A text-messaging rig that organized rendezvous and subtle mobs at the <a href="http://openengagement.info/">Open Engagement</a> conference. With <a href="http://thachr.com">Sara Thacher.</a>  (<a href="https://gist.github.com/1945964">script file</a>)  (<a href="https://www.facebook.com/photo.php?fbid=1893654825104&set=a.1891648734953.2104507.1353540046&type=3&theater">photos</a>)
+* **Tryst** (2011)&mdash;This is a [CEML script](#ceml) that you can modify and run at conferences, etc.  It arranges rendezvous between strangers at the conference who text in, where they share things they noticed at the conference. Run first at the <a href="http://openengagement.info/">Open Engagement</a> conference in Portlant in 2011. Script written with <a href="http://thachr.com">Sara Thacher.</a>  (<a href="https://gist.github.com/1945964">script file</a>)  (<a href="https://www.facebook.com/photo.php?fbid=1893654825104&set=a.1891648734953.2104507.1353540046&type=3&theater">photos</a>)
 
+* **Infatuated** (2012) -- Another [CEML script](#ceml).  This one is design for pairing up visitors to an art gallery.  It pairs up strangers who begin by watching each other at a distance as they interact with the art and eventually meet.  Written with/by Sam Lavigne and Ian Kizu-Blair of Situate Design.  [Script file](https://docs.google.com/a/citizenlogistics.com/document/d/1_U_axTZJ9EMuIvq60I6cQd00L91uUuz7PNPwkTAH_8k)
 
-#### Intimacy and empathy games you can play yourself
-
-* GAME: Getting to know you card game
-
-* GAME: Infatuated
-
-* GAMES: Scorebook for Contact Improv
+* **Various Theater Games and Warmups for Contact Improvisers** (2006) -- [A small booklet](/pdf/scorebook.pdf) for dancers.
 
 
-#### Art, Experiments, Events
+#### Experiments
 
-* GAME: Invoke
-* GAME: okcupid profile 
-* EV: Continuous Play
-* GAME: Breakfast Voting
-* EV: Tristan
+* **Breakfast Voting** (1993) - When I was 16, on a whim I asked a few thousand
+  strangers on the internet to vote on what I should have for breakfast.
+  They formed teams, put forward proposals, and made connections 
 
+* **EarthSync** (2006)&mdash;A social calendar-sharing website.  Allowed 
+  you to see what all of your geographically-dispersed friends are doing
+  today and "sync-up" by doing the same thing at the same time.
 
-* **EarthSync** (2006)&mdash;A social calendar-sharing website.  Allowed you to see what all of your geographically-dispersed friends are doing today and "sync-up" by doing the same thing at the same time.
+* **Share a Quiet Moment with a Distant Stranger** (2006)&mdash;A web installation.  
+  Spend a minute or two in synchronous silent contemplation with a
+  stranger somewhere else on Earth. Users are given the relative compass 
+  bearing and degreesbelow-the-horizon of their companions, so as to more
+  fully feel "with" them in contemplation.
 
-* **Share a Quiet Moment with a Distant Stranger** (2006)&mdash;A web installation.  Spend a minute or two in synchronous silent contemplation with a stranger somewhere else on Earth. Users are given the relative compass bearing and degreesbelow-the-horizon of their companions, so as to more fully feel "with" them in contemplation.
+* **CouchSurfing**
 
 * **Inaction at a Distance** (2003)&mdash;
   Site-specific performance.  Two people stand quietly, shoulder
@@ -236,90 +276,79 @@ Since 2011, I've co-lead a crew that makes immersive experiences in public space
   of a book within which he or she would like to receive a
   postcard, and within a week another user would place one there.
 
-* **Continuous Play** (2008)&mdash;A performance collaboration with choreographer <a href="http://www.inmixedcompany.com/">Maura Donohue</a> in which the audience switches from passive to very active performers, directed via SMS, over the course of the evening. (<a href="http://www.flickr.com/photos/inmixedcompany/2291504845/">photos</a>)
+* **Continuous Play** (2008)&mdash;A performance collaboration with
+  choreographer <a href="http://www.inmixedcompany.com/">Maura Donohue</a> in
+  which the audience switches from passive to very active performers,
+  directed via SMS, over the course of the evening.
+  (<a href="http://www.flickr.com/photos/inmixedcompany/2291504845/">photos</a>)
 
 
 
 
-## <a id="internet-and-lifestyle"></a> Rapid Lifestyle Change, Activity Searches, and the Internet
 
-Since 2012.
+## <a id="internet-and-lifestyle"></a> Lifestyle change and activity search on the internet
 
-[Consumer Demand for a Life Well Lived](#lives-well-lived) 
-[Web-Scale Activity and Lifestyle Search](#web-scale-activity-search)
+Who we affiliate with [is the major factor in determining lifestyle](http://www.ted.com/talks/nicholas_christakis_the_hidden_influence_of_social_networks.html).  My work on [rapid affiliation](#affiliation)--and our observation at couchsurfing that users tended to change lifestyle as their affiliations changed--led me to question whether it might be possible to migrate people to new, more fulfilling lifestyles using the social graph and activity search.
 
+See below:
 
-## <a id="lives-well-lived"></a> Consumer Demand for a Life Well Lived
-
-Colloquially it makes sense when we say that someone is *more of* a consumer or *less of* a consumer.  But do we mean anything at all relative to the technical meaning of the word? 
+* [Consumer Choice and The Good Life](#lives-well-lived) 
+* [Web-Scale Lifestyle Search](#web-scale-activity-search)
 
 
-#### Tech and Demos
+## <a id="lives-well-lived"></a> Consumer Choice and The Good Life
 
-* DEMO: Bright Ideas
-* PROJ: Northstar
-* DEMO: Recommender Demo -Thing that sorts your Facebook friends by what you want this week
-
-* **<a href="http://bright-ideas.co">Bright Ideas</a>** &#8212;An app startup.  Great activities, shared by people in your city.
+Is there a sense in which we can say that a person is or isn't choosing a good life for themselves?  And are there interfaces that reveal and affect these choices?  What is a good life?
 
 
 #### Writing
 
-* ESSAY: Meaningful choice vs consumer choice
-* ESSAY: greatmending.quora.com
-* ESSAY: Econ 101 for Post-Capitalists
-* STUDY: Bright Ideas at Philz
-* NOTE: TWS Brand & Mark
-* ESSAY: "A Social-graph- and time-desire- aware model of lifestyle change"
-* PAPER: KF Comm Metrics
-* ESSAY: Economy of lives well lived
+* [**Two Kinds of Demand**: Is our economy powered by activities (and pageviews) that we later regret?](https://medium.com/armchair-economics/a36c54b97ee1)
+* [**Some Interfaces Empower Us, Others Weaken Us**](https://medium.com/product-design/2ef22a472b30)
+
+#### Tech and Demos
+
+* **Sand** is a calendar app that helps you visualize your life and makes it easy to add exercise, friend dates, and the things that make you happy to your week.  [Screenshots](https://www.dropbox.com/sh/oi23wtqpolnlnqx/_1zjdsT4Vx).
+
+* **Bright Ideas** is a directory of easy and more satisfying things you could do with your friends.  [Screenshots](https://www.dropbox.com/sh/hzzsdtcjzh4pv55/jvoZ8M0YYm)
 
 
-## <a id="web-scale-activity-search"></a> Web-Scale Activity and Lifestyle Search
+#### Experiments
+
+* Using the *Bright Ideas* interface above, we asked a few thousand people in the bay area to check if they saw better ideas for things to do with their friends (and better friends to do them with) and if they did, they made plans using the app and facebook or text messaging.  Some of these participants were tracked longitudinally and we saw surprising levels of lifestyle change.  This was not a scientific study, but we hope to make data available, and we would love to work with scientists on a proper redo with a control group, etc.
+
+* [Northstar](http://www.northstarteens.org) is an [unschool](http://en.wikipedia.org/wiki/Unschooling) in Western Mass where teenagers are asked every week what they would like to do with their week.  This simple act seems to precipitate significant lifestyle and activity changes.  As a board member for two years I had a chance to observe and take part in this process.
+
+
+## <a id="web-scale-activity-search"></a> Web-Scale Lifestyle Search
+
+If social activity search and activity recommenders have the potential to change lifestyles dramatically, we can ask ourselves how we're doing on that front on the internet, and how we could do better.
+
+Users of facebook newsfeed say yes to more than 200 million person-hours of activities recommended by newsfeed each day.  Anecdotally, in a casual survey, we observe that users tend to regret accepting those recommendations when the last week of activity is summarized in front of them.  This is a far cry from a migration to a life well lived.
+
+In order to do better, we would need web-scale systems for collecting data about the good life and for characterizing URLs, not as content objects, but as activities that take time out of your week and are either rewarding or not.
 
 
 #### Tech and Demos
 
-* <a href="http://timewellspent.github.io">GLDB: The Good Life Database</a> &#8212;a data clearinghouse about the good life.
+Work on this is just beginning.
 
-* SW: GLDB
-* SW: Doables Microdata Standard
-* SW: rapports and games database (self-deploying!) (*)
-* DEMO: Sands of Time
-* DEMO: Thing that asks you to review fb events and makes a venue scoreboard per city per desire
-* PROJ: Google Now & Android Opportunities 
+* **GLDB** is a nascent public database of which activities people feel best about at least a week after the fact, and which lifestyles feel best to the people who live them, relative to lifestyles they've had in the past.  It includes [an API](https://github.com/timewellspent/gldb/tree/master/gldb-server) for asking about whether URLs are likely to be long-term fulfilling, for making your own reports, and for querying fulfilling activities, and [a web scraper](https://github.com/timewellspent/gldb/blob/master/scraper/scraper.go) for parsing the web as activities rather than as content objects.
+
+* **FulfillmentKit** is a javascript library of sample heuristics for guessing which activities (for example, from those presented by newsfeed) are most likely to be fulfilling for the user.  It could be useful in, say, a chrome extension for pruning newsfeed.  Or as an example to the authors of newsfeed algorithm and other recommender serveices.   [first demo](http://timewellspent.github.io/demos/recommender1/)
 
 
-# Loose Ends
-
-## Better approaches to econ and markets
-
-* <a id="econ101"></a> Microeconomics 101 for New Millenium
-* ESSAY: Eight easy pieces
-
-## Better approaches to metadata
-
-* ESSAY: Heirarchical Views of Databases
-* ESSAY: Fully Connected Scientific Metadata
-
-## Better approaches to communication
-
-* DEMO: Peeps email
-
-## Early work on events
-
-* Operation NightHawk w. Nate
-
-## RANDO HCI
-
-* PROJ: E-Planet at Interval
 
 
-# Footnotes
+## <a id="tentative"></a> Odds and Ends
 
-<a id="fn1"></a>
+I will be revising these things.
 
-1. There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  That&quot;s down right now but I hope to get it back up soon.
+* There might be a better way to do [economics 101](https://hackpad.com/Lets-Modernize-Econ-101-YHCWZmsRMpc)
+* I made an email client once.  I'll find screenshots on an old harddrive and post them.
+* I have a kind of [design manifesto](http://greatmending.quora.com/Towards-an-Honest-Internet-Refocusing-the-Tech-Industry-on-Fulfillment-before-it-jumps-the-shark) up on quora, but it's out of date.
+
+
 
 
 
