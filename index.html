@@ -2,6 +2,7 @@
 <title>Joe Edelman</title>
 <link rel="stylesheet" href="css/joe-home.css" />
 <script src="http://cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js"></script>
+<body class="all">
 <a style="position:absolute; top:0" id="top"></a>
 <div class="left">
   <h1>Joe Edelman</h1>
@@ -75,6 +76,7 @@ tell both: thanks so much for participating!
 
 -->
 
+
 I'm an inventor. My work touches on economics, human-computer interaction, and social psychology.  I tend to make websites, in-person games, participatory events, and rough algorithms with evaluation functions, instead of psych experiments and formal models.
 
 * I've worked on [technologies of rapid in-person affiliation](#affiliation) since 1993
@@ -85,7 +87,12 @@ There are ideas below about what an empowering technology infrastructure would l
 
 Help me turn these topics into accessible public talks -- invite me to speak.  :)
 
-****
+<div id="clickers">
+  Showing
+  <a class='all'  href="#">all work</a>
+  <a class='tech' href="#">just tech, games, events</a>
+</div>
+
 
 ## <a id="affiliation"></a> Rapid In-Person Affiliation
 
@@ -354,9 +361,9 @@ I will be revising these things.
   var children = r.childNodes;
   for (var i in children){
     var n = children[i];
-    if (n.nodeName != "#text"){
+    if (n.nodeName != "#text" && n.nodeName != "#comment"){
       if (n.tagName == 'H4') {
-        if (n.innerText.match(/tech|game/i)){
+        if (n.innerText.match(/tech|game|event/i)){
           k = 'tech';
         } else if (n.innerText.match(/experiment/i)){
           k = 'game'
@@ -368,17 +375,18 @@ I will be revising these things.
       else if (n.tagName == 'P' || n.tagName == 'UL'){
         n.className = k;
       } else {
-        k = 'open';
+        k = 'other';
       }  
     }
   }
 
-  // var body = document.getElementsByTagName('body')[0];
-  // document.getElementById('clickers').onclick = function(e){
-  //   if (e.target.text.match(/everything/)) body.className = 'all';
-  //   else if (e.target.text.match(/tech/)) body.className = 'only-tech';
-  //   else if (e.target.text.match(/art/)) body.className = 'only-game';
-  // }
+  var body = document.getElementsByTagName('body')[0];
+  var clickers = document.getElementById('clickers');
+
+  if (clickers) clickers.onclick = function(e){
+    if (e.target.text.match(/all/)) body.className = 'all';
+    else if (e.target.text.match(/tech/)) body.className = 'only-tech';
+  }
 </script>
 
 
@@ -398,10 +406,4 @@ I will be revising these things.
 -->
 
 <!-- 
-<div id="clickers">
-  Show:
-  <a href="#">everything</a>
-  <a href="#">just tech and games</a>
-  <a href="#">just art</a>
-</div>
  -->

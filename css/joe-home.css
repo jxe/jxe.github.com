@@ -91,7 +91,25 @@ h4 + ul {
 .only-game .right > p, .only-game .right > ul { display:none; }
 .only-game .right > p.game, .only-game .right > h4.game, .only-game .right > ul.game { display:block; }
 
-.only-tech .right > p, .only-tech .right > ul { display:none; }
+.only-tech .right > p, .only-tech .right > ul, .only-tech .right > h4 { display:none; }
 .only-tech .right > p.tech, .only-tech .right > h4.tech, .only-tech .right > ul.tech { display:block; }
 
 .right > p.open, .right > ul.open { display:block; }
+
+.only-tech #clickers .tech { background: white }
+.all #clickers .all { background: white }
+/*.only-tech #clickers.tech  { background: white };*/
+
+#clickers {
+  background: #ccc;
+  color: #444;
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#clickers a {
+  color: #005;
+  border: none;
+  padding: 3px 7px;
+}
