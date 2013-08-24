@@ -19,13 +19,13 @@
 
 I'm an inventor. My work touches on economics, human-computer interaction, and social psychology.
 
-I research tech for changing lifestyles to make us less lonely, more powerful, and better to the planet we live on.
+I make tech and art for changing lifestyles, making us less lonely, more powerful, and better to the planet we live on.
 
-* I've worked on [technologies of rapid in-person affiliation](#affiliation) since 1993, including work on [teamwork](#teamwork), [fulfillment](#rapport), and [felt connection](#connection)
+* **Bringing people together**.  I've worked on [technologies of rapid in-person affiliation](#affiliation) since 1993, including work on [teamwork](#teamwork), [fulfillment](#rapport), and [felt connection](#connection)
 
-* and since 2005 I've focused more on [how lifestyles change on the internet, via activity search and reaffiliation](#internet-and-lifestyle)
+* **Large-scale mechanisms for lifestyle change**. Since 2005 I've been looking into [how lifestyles can change on the internet, via activity search and reaffiliation](#internet-and-lifestyle)
 
-This has led me to make websites, [calendar apps](#sand), in-person games, [participatory events](#codered), and rough algorithms with evaluation functions.  These are sometimes better ways to do science than experiments and formal models.
+This has led me to make websites, [calendar apps](#sand), in-person games, [participatory events](#codered), and rough algorithms with evaluation functions.  Sometimes these are good alternatives to more traditional experiments and to formal models.
 
 I'd like to turn these topics into accessible public talks -- invite me to speak.  :)
 
@@ -154,12 +154,14 @@ Since 2011, I've co-lead a crew that makes immersive experiences in public space
 
 ### <a id="connection"></a> Engineering Felt Connection between Strangers <span vous="discuss"</span>
 
-Although I had been experimenting in this space for 12 years already, my work at [CouchSurfing](http://couchsurfing.org) offered a unique laboratory to test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages that both sides of a homestay received before they met in person.  We also had wonderful and rapid feedback in the form of stories the users tell as reviews of the experience immediately after meeting.
+Although I'd been playing with this stuff for 12 years already, my work at [CouchSurfing](http://couchsurfing.org) was a super-valuable chance to test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review copy via review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages we send to both sides of a homestay before they meet up in person.  The reviews that users post are stories they tell about their experiences, and this gave us wonderful and rapid feedback about our changes.
 
-**Learned**: there are many ways to prepare strangers so as to increase trust, openness, etc.  Tricks like double opt-ins, prompted welcome messages, structuring an opportunity for a shared experience or task, and a careful ramping of intimacy can make 10-100x differences in conversions to positive and connected experiences.
+**Learned**: there are many ways to prepare strangers so as to increase trust, openness, etc.  Tricks like double opt-ins, prompting welcome messages from peers, structuring interactions through a shared experience or task, and a careful ramp-up of intimacy can make 10-100x differences in conversions to positive and connected experiences.
 
 
 #### Connection games you can play yourself
+
+* **10 Challenges for New Friends** (2013) - Who else is tired of adding new friends on the internet without a good way to get to know them?  I made a challenged-based game for processing new interesting people and getting to know them.  Please feel free to make your own.  [Link](http://edelwax.tumblr.com/post/58978561014/10-challenges-for-new-friends)
 
 * **A Getting-to-know-you card game** (2012) - A simple game where cards dealt prompt successively riskier personal stories.  ([Rules](http://edelwax.tumblr.com/post/31384959456/a-getting-to-know-you-game-using-a-deck-of-cards-and-a))   <span vous="play" topic="GTKY Cards"></span>
 
@@ -341,22 +343,17 @@ tell both: thanks so much for participating!
 
 -->
 
-
+<!-- deal w. markdown -->
 <script type="text/javascript">
-
-
-  // markdown
-
-  var r = document.getElementById('render');
-  r.innerHTML =
-    marked(document.getElementById('text').value, {
-      sanitize: false, gfm: true
-    });
+  render.innerHTML = marked(text.value, { sanitize: false, gfm: true });
+</script>
 
 
 
-  // folding
 
+
+<!-- section folding! -->
+<script type="text/javascript">
   function hide(q){
     var nodes = document.querySelectorAll(q);
     for (var i in nodes){
