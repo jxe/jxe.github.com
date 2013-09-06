@@ -21,16 +21,17 @@ ul {
 a[href] { 
   text-decoration:none;
 	color: #222; 
-	border-bottom: solid thin #88c; 
-	border-right: solid thin #88c; 
+	border-bottom: solid thin #aad; 
+	/*border-right: solid thin #88c; */
   color: #06c; 
-  padding: 0px 4px;
+  /*padding: 0px 4px;*/
 }
 
 a:hover {
-  background: white;
-	border-bottom: solid thin black; 
-	border-right: solid thin black; 
+  /*background: white;*/
+  border-bottom: solid thin #22c;
+	/*border-bottom: solid thin black; */
+	/*border-right: solid thin black; */
 }
 
 li {
