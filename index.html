@@ -17,15 +17,13 @@
 </div>
 <div class="right" id="render"></div><textarea id="text" style="display:none">
 
-I'm an inventor. My work touches on economics, human-computer interaction, and social psychology.
+I'm an inventor. My work touches on economics, human-computer interaction, and social psychology:
 
-I make tech and art for changing lifestyles, making us less lonely, more powerful, and better to the planet we live on.
+* **Bringing people and experiences together**.  Since 1993, I've worked on [Engineering Felt Connection between Strangers](#connection), [Just-In-Time Teamwork](#teamwork), and [The Economics of Fulfilling Experience](#eof).
 
-* **Bringing people together**.  I've worked on [technologies of rapid in-person affiliation](#affiliation) since 1993, including work on [teamwork](#teamwork), [fulfillment](#rapport), and [felt connection](#connection)
+* **Empowered Computing**. Since 2005 I've been gathering ways to re-empower users and consumers on the internet: [Information Architecture and Agency](#agency), [Activity-Centric Networking](#acn), and [Dynamics of Lifestyle Migration](#lifestyle).
 
-* **Large-scale mechanisms for lifestyle change**. Since 2005 I've been looking into [how lifestyles can change on the internet, via activity search and reaffiliation](#internet-and-lifestyle)
-
-This has led me to make websites, [calendar apps](#sand), in-person games, [participatory events](#codered), and rough algorithms with evaluation functions.  Sometimes these are good alternatives to more traditional experiments and to formal models.
+I'm a researcher, but instead of traditional experiments or formal models, I make websites, [calendar apps](#sand), in-person games, [participatory events](#codered), and rough algorithms with evaluation functions.
 
 I'd like to turn these topics into accessible public talks -- invite me to speak.  :)
 
@@ -34,127 +32,30 @@ I'd like to turn these topics into accessible public talks -- invite me to speak
 </div>
 
 
-## <a id="affiliation"></a> Rapid In-Person Affiliation
+<!-- 
+BRINGING PEOPLE TOGETHER
+  design for rapport
+    Felt Connection between Strangers
+    Just-In-Time Teamwork
+  language environments for expressive coordination
+  economics of fulfilling experience
+  (design patterns for reaffiliation)
 
-So much of our lives are a quest for *affiliation* and *rapport*.  They're regarded as key factors both to [healthy communities](#healthy-communities) and to [lives well lived](#lives-well-lived).  But under what circumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://en.wikipedia.org/wiki/Emergency_Communities) [2](#groundcrew), and with games and social art projects at various scales.
-
-See below:
-
-* [Engineering Felt Connection between Strangers](#connection) (1993-2011)
-* [Just-In-Time Teamwork](#teamwork) (2001-2012)
-* [Physical Marketplaces for Fulfilling Experience](#rapport) (2005-ongoing)
-
-
-### <a id="teamwork"></a> Just-In-Time Teamwork <span vous="discuss"></span>
-
-My earliest experiments with just-in-time teamwork involved writing software and throwing game-like events, and this has remained the pattern.
-
-The first event, in 2001, was a "trustfall dinner party", in which the steps to make a complex gourmet meal were distributed across several rooms in a house, shuffled among participants, and arranged so as to require precision timing and coordination in seven phases triggered by a house-wide bell system.  The software is lost to an ancient harddrive, but see below for more recent work.
-
-
-#### Technology
-
-I've created software for forming just-in-time opt-in teams with high opt-in rates and high performance.  These have been tested in environments ranging from art museum openings to disaster sites.
-
-* <a id="ceml"></a>**CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
-
-* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
-
-* **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
-
-* **Cadre Events** is a mobile web- and sms-based interface for talking groups of people texting in at the same event and funneling them in chatrooms that coordinate group actitivies between strangers.   [screenshots](https://www.dropbox.com/sh/90olm7apkfbg374/d4SNqanDFn)
-
-<!-- cadre events / revel -->
-
-
-
-#### Ongoing events
-
-I run a monthly playtest for realworld games and a yearly festival in SF.  Many of the games presented by others involve just-in-time teamwork, and often they are also about turning nonaffiliated strangers into affiliated groups in some public or semi-public-space venue.
-
-* The Playtest:  [SandboxSF](https://www.facebook.com/groups/496677353748745/)
-* The Festival:  [Come Out and Play SF](http://comeoutandplaysf.org)
-
-
-#### Teamwork games I've made that you can play
-
-* **Clandestine Film School** involves two decks of cards and a pack of hair clips, and is meant to be played in cafes where people work with their laptops and might like to work together instead.  One deck is a deck of "role cards" -- "director", "actor", "star", "interviewer", "cameraman".  The other has missions -- "a 6sec love story about mugs", "a 2min doco about lives of baristas", "a very subtle action adventure", etc.  Someone gives out cards and those who have roles and need to join mission team wear the hairclips.  Hashtags collect the media.  *Presented at SandboxSF in July '13 and played at Arbor in Oakland*.  <span vous="play" topic="Clandestine Film School"></span>
-
-* **Card Parties** are events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS.  Tasks interweave. Strangers find themselves in intimate encounters, quiet moments, facing challenges together, being theatrical, etc.  I have [an old FAQ](/misc/notecard-party-faq.html) for running one of your own and [some software and a mission database](http://github.com/jxe/Participatorium) that will help.
-
-
-#### Writing
-
-* <a id="healthy-communities"></a>**Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
-
-
-#### Experiments
-
-* *Trustfall Dinner* (2001)&mdash;
-   A computer program was used to scramble the
-  instructions of several gourmet recipes and to assign guests at
-  the dinner party cooking tasks in such a manner that it was
-  difficult for anyone to guess what was being prepared until the
-  very end. A primary focus was on the mechanics of danger and
-  trust -- for instance, in having one participant leave something
-  prone to burning on the stove and having another participant
-  remove it.
-
-* *Ruby Goldberg Instruction Series* (2005-) -- Everyone at an open mic or other gathering sends a text message and receives one back from a server.  Each text has an instruction with a trigger event and an action to be taken by the recipient, for instance: "Take off your shoe. When you hear the bell, step into the aisle and hold up your shoe and shake it."  Someone else would receive: "When you see someone shaking one of their shoes in the air, begin to tell a short (20 second) story about your childhood."
-
-* *Card Parties* (2002-2011) -- detailed above.
-
-* *Cadre Events, Missions* -- the *Cadre Events* software mentioned above was deployed and refined at events at YBCA, CoAPSF 2011, and at several Occupy Wall Street sites!  Here are [some missions from CoAP](https://hackpad.com/Cadre-Events-missions-from-COAP2011-ZXCE1SjUZ4y)
-
-
-
-
-
-
-### <a id="rapport"></a> Physical Marketplaces for Fulfilling Experience <span vous="discuss"></span>
-
-What are the most fulfilling things that can happen to a person in an evening or a day?  An emotional breakthrough, a breathtaking vista, a playful conversation with a loved one, the resolution of a longstanding logistical or material problem, a return to an aspect of oneself...
-
-The market for these fulfilling experiences is unusual in that provisioning experiences requires unusual insight into and influence over personality and state, and the criteria for consumer search are poorly understood by both consumers and providers.  These goods are all either experience goods or credence goods which means they cannot be selected from a catalogue.
-
-It is instructive to create situations where there are many providers of potentially fullfilling experiences and many consumers, and various attempts to coordinate can be studied and engineered.
-
-**Learned:** There is a certain regularity to the things that emerge as frequently fulfilling in these environments.  [Diagram of Desires and Rapports](https://www.dropbox.com/s/qlreore5l5rixmx/desires-and-rapports.pdf).  There is also regularity to the information we need about a person in order to address interactions and rapports they will engage in to them, and regularity to the ways that "vendors" of interaction and rapport need to present themselves in order to be browsable and engagable.  (I hope to give a talk about these things.)
-
-
-#### <a id="codered"></a>Ongoing events
-
-Since 2011, I've co-lead a crew that makes immersive experiences in public space.  Often simple.  Often beautiful.  Sometimes vaguely illegal.  These events are all multi-party markets in interaction and rapport.  They are physical markets, just like a farmer's market, and we have been making adjustments to optimize the emergence of the right audience-member / fulfilling experience transactions.
-
-* [Photos from our events](https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU)
-
-
-#### Interaction games you can play yourself 
-
-* **Numbers**.  This is a super-simple game you can play at any kind of event.  If you have twenty guests, pass out twenty slips of paper, numbered 1-20.  The goal is to end the evening with the number 1.  Announce that anyone can, if they find someone with a number lower than theirs, ask for a challenge.  The challenge should be possible and ideally, fun.  If they succeed, they get to trade for the lower number.  What happens is that people make more and more creative challenges for one another, and the challenges become lightweight designed experiences that are reproduced on their own merits.  *Played at COaPSF 2012 and many dinenr parties.*   <span vous="play" topic="Numbers"></span>
-
-* **Pantheon** - a theater piece for 12 actors that need to be unlocked by the audience.  In *Pantheon*, every actor gets a binder of games to play and stories to exchange with audience members, and makes a secret decision before the show about what kind of presentation from an audience member will wake them from silence.  The binders are being collaboratively written.  [Join us!](https://hackpad.com/PANTHEON-iLG8ZLrtOIu)  <span vous="play" topic="Pantheon"></span>
-
-* **Yenta** - *down for the moment, help me get it back up* - an webapp that watches the twitter public feed for people that feel "bored" or are asking for something from "anyone".  When it finds two people who are both bored at the same time and live near one another, it asks the user if they'd like to suggest something for both people to do together.  This becomes a double @reply introducing the pair.  The user scores a point if their suggestion drives engagement between the two.
-
-* **Microperformance potluck** - This is a kind of event where people get together to eat and participate in eachother's projects.  Each attendee brings a thing for the whole group to do together or to witness in less than 2 minutes.  A timer is set and if any partipant uses more than two minutes of the group's time, they are tackled and carried out of the room by the audience.  [Flyer](/pdf/micropotluck2.pdf)
-
-
-
-#### Experiments
-
-* **Northampton Adventure Exchange** (2007) -- Residents of the small town of Northampton, MA filled out an online form where they specified a kind of quality they wanted to have added to their lives.  The choices included "surprise", "peace and quiet", "danger", "challenge", "warmth", etc.  They also reported their schedules.  A massive potluck was held once a week in which 30+ people attempted to pair up people from the database and make adventures for them to go on together which related to their desires.
-
-* **Take to the Streets Radio** (2005)&mdash;was a radio show and weekly street event for more than a year. We give listeners instructions every week for public space adventures near the centers of Northampton and Florence, MA.  Each week there was a guest adventure designer.
-
-* **Wish-fulfillment Card Parties** (2006,2007) -- At daylong events with 300 people, everyone was asked to make a wish for something that could realistically happen to them at the event that they would love.  A team of 30 people used a group editing and revision process to derive assignments for all 300 that, taken together, would make each person's wish come true.
-
-
+AGENCY, CHOICE, FULFILLMENT, and LIFESTYLE CHANGE
+  identity, agency, and information architecture
+  activity-centric networking
+  lifestyle migration analysis
+ -->
 
 
 ### <a id="connection"></a> Engineering Felt Connection between Strangers <span vous="discuss"</span>
 
-Although I'd been playing with this stuff for 12 years already, my work at [CouchSurfing](http://couchsurfing.org) was a super-valuable chance to test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review copy via review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages we send to both sides of a homestay before they meet up in person.  The reviews that users post are stories they tell about their experiences, and this gave us wonderful and rapid feedback about our changes.
+So much of our lives are a quest for *affiliation* and *rapport*.  They're regarded as key factors both to [healthy communities](#healthy-communities) and to [lives well lived](#eof).  But under what circumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://en.wikipedia.org/wiki/Emergency_Communities) [2](#groundcrew), and with games and social art projects at various scales.
+
+<!-- What are the social affordances and information requirements of emotional sharing, intellectual connection, and the other common types of rapport?
+ -->
+
+My work at CouchSurfing was especially valuable: we could live-test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review copy via review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages we send to both sides of a homestay before they meet up in person.  The reviews that users post are stories they tell about their experiences, and this gave us wonderful and rapid feedback about our changes.
 
 **Learned**: there are many ways to prepare strangers so as to increase trust, openness, etc.  Tricks like double opt-ins, prompting welcome messages from peers, structuring interactions through a shared experience or task, and a careful ramp-up of intimacy can make 10-100x differences in conversions to positive and connected experiences.
 
@@ -218,26 +119,126 @@ Although I'd been playing with this stuff for 12 years already, my work at [Couc
 
 
 
+### <a id="teamwork"></a> Just-In-Time Teamwork <span vous="discuss"></span>
+
+What are the social affordances and information requirements of good teamwork?  What are the most reliable and positive ways to bring strangers together into real-world teams?
+
+My experiments have involved writing software and throwing game-like events.
 
 
-## <a id="internet-and-lifestyle"></a> Changing lifestyles via activity search and reaffiliation
+#### Technology
 
-Who we affiliate with [is the major factor in determining lifestyle](http://www.ted.com/talks/nicholas_christakis_the_hidden_influence_of_social_networks.html).  My work on [rapid in-person affiliation](#affiliation)--and our observation at couchsurfing that users tended to change lifestyle as their affiliations changed--led me to question whether it might be possible to migrate people to new, more fulfilling lifestyles using the social graph and activity search.
+I've created software for forming just-in-time opt-in teams with high opt-in rates and high performance.  These have been tested in environments ranging from art museum openings to disaster sites.
 
-See below:
+* <a id="ceml"></a>**CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
 
-* [Consumer Choice and The Good Life](#lives-well-lived) 
-* [Web-Scale Lifestyle Search](#web-scale-activity-search)
+* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
+
+* **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
+
+* **Cadre Events** is a mobile web- and sms-based interface for talking groups of people texting in at the same event and funneling them in chatrooms that coordinate group actitivies between strangers.   [screenshots](https://www.dropbox.com/sh/90olm7apkfbg374/d4SNqanDFn)
+
+<!-- cadre events / revel -->
 
 
-### <a id="lives-well-lived"></a> Consumer Choice and The Good Life <span vous="discuss"></span>
 
-Is there a sense in which we can say that a person is or isn't choosing a good life for themselves?  And are there interfaces that reveal and affect these choices?  What is a good life?
+#### Ongoing events
+
+I run a monthly playtest for realworld games and a yearly festival in SF.  Many of the games presented by others involve just-in-time teamwork, and often they are also about turning nonaffiliated strangers into affiliated groups in some public or semi-public-space venue.
+
+* The Playtest:  [SandboxSF](https://www.facebook.com/groups/496677353748745/)
+* The Festival:  [Come Out and Play SF](http://comeoutandplaysf.org)
+
+
+#### Teamwork games I've made that you can play
+
+* **Clandestine Film School** involves two decks of cards and a pack of hair clips, and is meant to be played in cafes where people work with their laptops and might like to work together instead.  One deck is a deck of "role cards" -- "director", "actor", "star", "interviewer", "cameraman".  The other has missions -- "a 6sec love story about mugs", "a 2min doco about lives of baristas", "a very subtle action adventure", etc.  Someone gives out cards and those who have roles and need to join mission team wear the hairclips.  Hashtags collect the media.  *Presented at SandboxSF in July '13 and played at Arbor in Oakland*.  <span vous="play" topic="Clandestine Film School"></span>
+
+* **Card Parties** are events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS.  Tasks interweave. Strangers find themselves in intimate encounters, quiet moments, facing challenges together, being theatrical, etc.  I have [an old FAQ](/misc/notecard-party-faq.html) for running one of your own and [some software and a mission database](http://github.com/jxe/Participatorium) that will help.
+
+
+#### Writing
+
+* <a id="healthy-communities"></a>**Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
+
+
+#### Experiments
+
+* *Trustfall Dinner* (2001)&mdash;
+   A computer program was used to scramble the
+  instructions of several gourmet recipes and to assign guests at
+  the dinner party cooking tasks in such a manner that it was
+  difficult for anyone to guess what was being prepared until the
+  very end. A primary focus was on the mechanics of danger and
+  trust -- for instance, in having one participant leave something
+  prone to burning on the stove and having another participant
+  remove it.
+
+* *Ruby Goldberg Instruction Series* (2005-) -- Everyone at an open mic or other gathering sends a text message and receives one back from a server.  Each text has an instruction with a trigger event and an action to be taken by the recipient, for instance: "Take off your shoe. When you hear the bell, step into the aisle and hold up your shoe and shake it."  Someone else would receive: "When you see someone shaking one of their shoes in the air, begin to tell a short (20 second) story about your childhood."
+
+* *Card Parties* (2002-2011) -- detailed above.
+
+* *Cadre Events, Missions* -- the *Cadre Events* software mentioned above was deployed and refined at events at YBCA, CoAPSF 2011, and at several Occupy Wall Street sites!  Here are [some missions from CoAP](https://hackpad.com/Cadre-Events-missions-from-COAP2011-ZXCE1SjUZ4y)
+
+
+
+
+
+
+
+### <a id="eof"></a> Economics of Fulfilling Experience <span vous="discuss"></span>
+
+What are the most fulfilling things that can happen to a person in an evening or a day?  An emotional breakthrough, a breathtaking vista, a playful conversation with a loved one, the resolution of a longstanding logistical or material problem, a return to an aspect of oneself...
+
+The market for these fulfilling experiences is unusual in that provisioning experiences requires unusual insight into and influence over personality and state, and the criteria for consumer search are poorly understood by both consumers and providers.  These goods are all either experience goods or credence goods which means they cannot be selected from a catalogue.
+
+It is instructive to create situations where there are many providers of potentially fullfilling experiences and many consumers, and various attempts to coordinate can be studied and engineered.
+
+**Learned:** There is a certain regularity to the things that emerge as frequently fulfilling in these environments.  [Diagram of Desires and Rapports](https://www.dropbox.com/s/qlreore5l5rixmx/desires-and-rapports.pdf).  There is also regularity to the information we need about a person in order to address interactions and rapports they will engage in to them, and regularity to the ways that "vendors" of interaction and rapport need to present themselves in order to be browsable and engagable.  (I hope to give a talk about these things.)
+
+
+#### <a id="codered"></a>Ongoing events
+
+Since 2011, I've co-lead a crew that makes immersive experiences in public space.  Often simple.  Often beautiful.  Sometimes vaguely illegal.  These events are all multi-party markets in interaction and rapport.  They are physical markets, just like a farmer's market, and we have been making adjustments to optimize the emergence of the right audience-member / fulfilling experience transactions.
+
+* [Photos from our events](https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU)
 
 
 #### Writing
 
 * [**Two Kinds of Demand**: Is our economy powered by activities (and pageviews) that we later regret?](https://medium.com/armchair-economics/a36c54b97ee1)
+
+
+#### Interaction games you can play yourself 
+
+* **Numbers**.  This is a super-simple game you can play at any kind of event.  If you have twenty guests, pass out twenty slips of paper, numbered 1-20.  The goal is to end the evening with the number 1.  Announce that anyone can, if they find someone with a number lower than theirs, ask for a challenge.  The challenge should be possible and ideally, fun.  If they succeed, they get to trade for the lower number.  What happens is that people make more and more creative challenges for one another, and the challenges become lightweight designed experiences that are reproduced on their own merits.  *Played at COaPSF 2012 and many dinenr parties.*   <span vous="play" topic="Numbers"></span>
+
+* **Pantheon** - a theater piece for 12 actors that need to be unlocked by the audience.  In *Pantheon*, every actor gets a binder of games to play and stories to exchange with audience members, and makes a secret decision before the show about what kind of presentation from an audience member will wake them from silence.  The binders are being collaboratively written.  [Join us!](https://hackpad.com/PANTHEON-iLG8ZLrtOIu)  <span vous="play" topic="Pantheon"></span>
+
+* **Yenta** - *down for the moment, help me get it back up* - an webapp that watches the twitter public feed for people that feel "bored" or are asking for something from "anyone".  When it finds two people who are both bored at the same time and live near one another, it asks the user if they'd like to suggest something for both people to do together.  This becomes a double @reply introducing the pair.  The user scores a point if their suggestion drives engagement between the two.
+
+* **Microperformance potluck** - This is a kind of event where people get together to eat and participate in eachother's projects.  Each attendee brings a thing for the whole group to do together or to witness in less than 2 minutes.  A timer is set and if any partipant uses more than two minutes of the group's time, they are tackled and carried out of the room by the audience.  [Flyer](/pdf/micropotluck2.pdf)
+
+
+
+#### Experiments
+
+* **Northampton Adventure Exchange** (2007) -- Residents of the small town of Northampton, MA filled out an online form where they specified a kind of quality they wanted to have added to their lives.  The choices included "surprise", "peace and quiet", "danger", "challenge", "warmth", etc.  They also reported their schedules.  A massive potluck was held once a week in which 30+ people attempted to pair up people from the database and make adventures for them to go on together which related to their desires.
+
+* **Take to the Streets Radio** (2005)&mdash;was a radio show and weekly street event for more than a year. We give listeners instructions every week for public space adventures near the centers of Northampton and Florence, MA.  Each week there was a guest adventure designer.
+
+* **Wish-fulfillment Card Parties** (2006,2007) -- At daylong events with 300 people, everyone was asked to make a wish for something that could realistically happen to them at the event that they would love.  A team of 30 people used a group editing and revision process to derive assignments for all 300 that, taken together, would make each person's wish come true.
+
+
+
+
+### <a id="agency"></a> Information Architecture and Agency <span vous="discuss"></span>
+
+Many website and apps consist of an organization of various opportunities for use of the user's time.  As such, these organizational schemes package notions of what the user cares about and how they make decisions, and these notions affect the users' psychology, outlook, and planning procedures.  We look at different IA approaches and their effect on the user, their self-conception, and their planning procedures.
+
+
+#### Writing
+
 * [**Some Interfaces Empower Us, Others Weaken Us**](https://medium.com/product-design/2ef22a472b30)
 
 #### Tech and Demos
@@ -254,13 +255,9 @@ Is there a sense in which we can say that a person is or isn't choosing a good l
 * [Northstar](http://www.northstarteens.org) is an [unschool](http://en.wikipedia.org/wiki/Unschooling) in Western Mass where teenagers are asked every week what they would like to do with their week.  This simple act seems to precipitate significant lifestyle and activity changes.  As a board member for two years I had a chance to observe and take part in this process.
 
 
-### <a id="web-scale-activity-search"></a> Web-Scale Lifestyle Search <span vous="discuss"></span>
+### <a id="acn"></a> Activity-Centric Networking <span vous="discuss"></span>
 
-If social activity search and activity recommenders have the potential to change lifestyles dramatically, we can ask ourselves how we're doing on that front on the internet, and how we could do better.
-
-Users of facebook newsfeed say yes to more than 200 million person-hours of activities recommended by newsfeed each day.  Anecdotally, in a casual survey, we observe that users tend to regret accepting those recommendations when the last week of activity is summarized in front of them.  This is a far cry from a migration to a life well lived.
-
-In order to do better, we would need web-scale systems for collecting data about the good life and for characterizing URLs, not as content objects, but as activities that take time out of your week and are either rewarding or not.
+The early internet was conceptualized as a network of **addressable hosts**, and newer approaches present a network of **hashed content**. We explore a third tack, organizing and navigating the internet as a network of **potential activities** for users. Hosts, content, and services may contribute to activities and may present the same or similar/substitutable activities. Metadata like duration and desires-fulfilled becomes important to the organization of the internet, and new modes of browsing are possible.
 
 
 #### Tech and Demos
@@ -268,6 +265,17 @@ In order to do better, we would need web-scale systems for collecting data about
 * **GLDB** is a nascent public database of which activities people feel best about at least a week after the fact, and which lifestyles feel best to the people who live them, relative to lifestyles they've had in the past.  It includes [an API](https://github.com/timewellspent/gldb/tree/master/gldb-server) for asking about whether URLs are likely to be long-term fulfilling, for making your own reports, and for querying fulfilling activities, and [a web scraper](https://github.com/timewellspent/gldb/blob/master/scraper/scraper.go) for parsing the web as activities rather than as content objects.
 
 * **FulfillmentKit** is a javascript library of sample heuristics for guessing which activities (for example, from those presented by newsfeed) are most likely to be fulfilling for the user.  It could be useful in, say, a chrome extension for pruning newsfeed.  Or as an example to the authors of newsfeed algorithm and other recommender serveices.   [first demo](http://timewellspent.github.io/demos/recommender1/)
+
+
+### <a id="lifestyle"></a> Dynamics of Lifestyle Migration <span vous="discuss"</span>
+
+An individual's pattern of consumption, production, and time allocation can change dramatically as a result of life events (graduation from HS or college, moving to a city), shifts in affiliation (marriage, divorce, club memberships, new friends), and personal realizations. Although motivating lifestyle change is key to addressing major problems like carbon emissions, obesity, and poverty, little is understood about the conditions that produce positive lifestyle change and how to engineer more of them. We can use activity and event attendance, social graph, and location data to track lifestyle change in a global population and offer suggestions for encouraging certain changes globally.
+
+At couchsurfing we observed that users tended to change lifestyle as their affiliations changed.  And others have noted that who we affiliate with [is the major factor in determining lifestyle](http://www.ted.com/talks/nicholas_christakis_the_hidden_influence_of_social_networks.html).  This led me to question whether it might be possible to migrate people to new, more fulfilling lifestyles using the social graph and activity search.
+
+If social activity search and activity recommenders have the potential to change lifestyles dramatically, we can ask ourselves how we're doing on that front on the internet, and how we could do better.
+
+Users of facebook newsfeed say yes to more than 200 million person-hours of activities recommended by newsfeed each day.  Anecdotally, in a casual survey, we observe that users tend to regret accepting those recommendations when the last week of activity is summarized in front of them.  This is a far cry from a migration to a life well lived.
 
 
 
