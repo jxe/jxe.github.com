@@ -17,44 +17,41 @@
 </div>
 <div class="right" id="render"></div><textarea id="text" style="display:none">
 
-I'm an inventor. My work touches on economics, human-computer interaction, and social psychology:
 
-* **People, Experiences, and Coordination**.  Since 1993, I've worked on [Media of Rapport and Affiliation](#connection), [Expressive Environments for Coordination](#coord), and [The Economics of Fulfilling Experience](#eof).
 
-* **Empowered Computing**. Since 2005 I've been gathering ways to re-empower users and consumers on the internet: [Information Architecture and Agency](#agency), [Activity-Centric Networking](#acn), and [Dynamics of Lifestyle Change](#lifestyle).
+Hello!  I study the simple things that make life worth living:  what are they, how do we include them in software design, economics, and architecture, and how do we arrange for them to happen more for people?   
 
-I'm a researcher, but instead of traditional experiments or formal models, I make websites, [calendar apps](#sand), in-person games, [participatory events](#codered), and rough algorithms with evaluation functions.
+**Design and Lives Well Lived**
 
-I'd like to turn these topics into accessible public talks -- invite me to speak.  :)
+* [Teamwork and Connection with Strangers via Software](#connection)
+* [Conning People Out of Their Habits in Public Space](#conning)
+* [Designing Feeds for Personal Agency](#agency)
+
+**Coordination and Provision of Fulfilling Experiences**
+
+* [Expressive Environments for Coordination](#coord)
+* [Activity Centric Networking](#acn)
+* [Market Capitalism and Lives Well Lived](#lwl)
+
+<!--
+* Quickly Inventing Fulfilling Games
+* How Simple Are Simple Pleasures? - Coordination and Fulfillment
+* The Regret Economy
+-->
+
+I'd like to turn these topics into accessible public talks -- [invite me to speak](mailto:joe@nxhx.org).
 
 <div id="clickers">
   Showing &mdash; <a class='all'  href="#">all research</a> <a class='tech' href="#">just tech, games, events</a>
 </div>
 
 
-<!-- 
-BRINGING PEOPLE TOGETHER
-  design for rapport
-    Felt Connection between Strangers
-    Just-In-Time Teamwork
-  language environments for expressive coordination
-  economics of fulfilling experience
-  (design patterns for reaffiliation)
 
-AGENCY, CHOICE, FULFILLMENT, and LIFESTYLE CHANGE
-  identity, agency, and information architecture
-  activity-centric networking
-  lifestyle migration analysis
- -->
+### <a id="connection"></a> Teamwork and Connection with Strangers via Software <span vous="discuss"</span>
 
+Under what circumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://en.wikipedia.org/wiki/Emergency_Communities) [2](#groundcrew), and with games and social art projects at various scales.
 
-### <a id="connection"></a> Media of Rapport and Affiliation <span vous="discuss"</span>
-
-So much of our lives are a quest for *affiliation* and *rapport*.  They're regarded as key factors both to [healthy communities](#healthy-communities) and to [lives well lived](#eof).  But under what circumstances do strangers come together quickly, either to work together or to share in various kinds of rapport and social interaction?  Answering this question has involved work with [couchsurfing](http://couchsurfing.org) on trust, search, and priming, with disaster relief organizations [1](http://en.wikipedia.org/wiki/Emergency_Communities) [2](#groundcrew), and with games and social art projects at various scales.
-
-<!-- What are the social affordances and information requirements of emotional sharing, intellectual connection, and the other common types of rapport? -->
-
-My work at CouchSurfing was especially valuable: we could live-test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review copy via review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages we send to both sides of a homestay before they meet up in person.  The reviews that users post are stories they tell about their experiences, and this gave us wonderful and rapid feedback about our changes.
+Work at CouchSurfing was especially valuable: we could live-test different preparations and funnels for strangers meeting one another.  We had opportunities to tune profiles (including review copy via review prompts), to tune search and matchmaking algorithms, and to tune the preparatory messages we send to both sides of a homestay before they meet up in person.  The reviews that users post are stories they tell about their experiences, and this gave us wonderful and rapid feedback about our changes.
 
 **Learned**: there are many ways to prepare strangers so as to increase trust, openness, etc.  Tricks like double opt-ins, prompting welcome messages from peers, structuring interactions through a shared experience or task, and a careful ramp-up of intimacy can make 10-100x differences in conversions to positive and connected experiences.
 
@@ -161,51 +158,17 @@ I run a monthly playtest for realworld games and a yearly festival in SF.  Many 
 
 
 
+### <a id="conning"></a> Conning People Out of Their Habits in Public Space <span vous="discuss"></span>
 
+When people discuss the evenings, days, and weeks that make life worth living, they talk about experiences of connection, wonder, teamwork, adventure, etc.  We miss out on opportunities for experiences like these for all kinds of social, economic, and personal reasons.  A simple way to intervene is to understand the personal habits of navigation and the social codes around navigation (both navigation of architectural/public space and navigation of time options, more generally) that keep people from otherwise-available experiences they would review highly.
 
-### <a id="coord"></a> Expressive Environments for Coordination <span vous="discuss"></span>
-
-Increasingly the expressive intent of artists and programmers involves connecting people in new ways and coordinating new forms of action. While languages that treat connections and coordination in the core semantics have started to appear (my own CEML, and Sep's Dog), the field is young and we are not yet in a place where an amateur can concoct new media with new interactional modes and/or new social forms of action without a great deal of forethought.
-
-#### Technology
-
-* <a id="ceml"></a>**CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
-
-* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
-
-* **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
-
-<!-- cadre events / revel -->
-
-
-#### Coordination games I've made that you can play
-
-* **Card Parties** are events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS.  Tasks interweave. Strangers find themselves in intimate encounters, quiet moments, facing challenges together, being theatrical, etc.  I have [an old FAQ](/misc/notecard-party-faq.html) for running one of your own and [some software and a mission database](http://github.com/jxe/Participatorium) that will help.
-
-
-
-
-### <a id="eof"></a> Economics of Fulfilling Experience <span vous="discuss"></span>
-
-What are the most fulfilling things that can happen to a person in an evening or a day?  An emotional breakthrough, a breathtaking vista, a playful conversation with a loved one, the resolution of a longstanding logistical or material problem, a return to an aspect of oneself...
-
-The market for these fulfilling experiences is unusual in that provisioning experiences requires unusual insight into and influence over personality and state, and the criteria for consumer search are poorly understood by both consumers and providers.  These goods are all either experience goods or credence goods which means they cannot be selected from a catalogue.
-
-It is instructive to create situations where there are many providers of potentially fullfilling experiences and many consumers, and various attempts to coordinate can be studied and engineered.
-
-**Learned:** There is a certain regularity to the things that emerge as frequently fulfilling in these environments.  [Diagram of Desires and Rapports](https://www.dropbox.com/s/qlreore5l5rixmx/desires-and-rapports.pdf).  There is also regularity to the information we need about a person in order to address interactions and rapports they will engage in to them, and regularity to the ways that "vendors" of interaction and rapport need to present themselves in order to be browsable and engagable.  (I hope to give a talk about these things.)
-
+We can then use techniques from conn artistry, theme park design, game design, mythmaking, and immersive theatre to interfere with these habits and social codes.
 
 #### <a id="codered"></a>Ongoing events
 
 Since 2011, I've co-lead a crew that makes immersive experiences in public space.  Often simple.  Often beautiful.  Sometimes vaguely illegal.  These events are all multi-party markets in interaction and rapport.  They are physical markets, just like a farmer's market, and we have been making adjustments to optimize the emergence of the right audience-member / fulfilling experience transactions.
 
 * [Photos from our events](https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU)
-
-
-#### Writing
-
-* [**Two Kinds of Demand**: Is our economy powered by activities (and pageviews) that we later regret?](https://medium.com/armchair-economics/a36c54b97ee1)
 
 
 #### Interaction games you can play yourself 
@@ -231,7 +194,7 @@ Since 2011, I've co-lead a crew that makes immersive experiences in public space
 
 
 
-### <a id="agency"></a> Information Architecture and Agency <span vous="discuss"></span>
+### <a id="agency"></a> Designing Feeds for Personal Agency <span vous="discuss"></span>
 
 Many website and apps consist of an organization of various opportunities for use of the user's time.  As such, these organizational schemes package notions of what the user cares about and how they make decisions, and these notions affect the users' psychology, outlook, and planning procedures.  We look at different IA approaches and their effect on the user, their self-conception, and their planning procedures.
 
@@ -254,6 +217,37 @@ Many website and apps consist of an organization of various opportunities for us
 * [Northstar](http://www.northstarteens.org) is an [unschool](http://en.wikipedia.org/wiki/Unschooling) in Western Mass where teenagers are asked every week what they would like to do with their week.  This simple act seems to precipitate significant lifestyle and activity changes.  As a board member for two years I had a chance to observe and take part in this process.
 
 
+
+
+
+
+
+### <a id="coord"></a> Expressive Environments for Coordination <span vous="discuss"></span>
+
+Increasingly the expressive intent of artists and programmers involves connecting people in new ways and coordinating new forms of action. While languages that treat connections and coordination in the core semantics have started to appear (my own CEML, and Sep's Dog), the field is young and we are not yet in a place where an amateur can concoct new media with new interactional modes and/or new social forms of action without a great deal of forethought.
+
+#### Technology
+
+* <a id="ceml"></a>**CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
+
+* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
+
+* **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
+
+<!-- cadre events / revel -->
+
+
+#### Coordination games I've made that you can play
+
+* **Card Parties** are events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS.  Tasks interweave. Strangers find themselves in intimate encounters, quiet moments, facing challenges together, being theatrical, etc.  I have [an old FAQ](/misc/notecard-party-faq.html) for running one of your own and [some software and a mission database](http://github.com/jxe/Participatorium) that will help.
+
+
+
+
+
+
+
+
 ### <a id="acn"></a> Activity-Centric Networking <span vous="discuss"></span>
 
 The early internet was conceptualized as a network of **addressable hosts**, and newer approaches present a network of **hashed content**. We explore a third tack, organizing and navigating the internet as a network of **potential activities** for users. Hosts, content, and services may contribute to activities and may present the same or similar/substitutable activities. Metadata like duration and desires-fulfilled becomes important to the organization of the internet, and new modes of browsing are possible.
@@ -264,6 +258,25 @@ The early internet was conceptualized as a network of **addressable hosts**, and
 * **GLDB** is a nascent public database of which activities people feel best about at least a week after the fact, and which lifestyles feel best to the people who live them, relative to lifestyles they've had in the past.  It includes [an API](https://github.com/timewellspent/gldb/tree/master/gldb-server) for asking about whether URLs are likely to be long-term fulfilling, for making your own reports, and for querying fulfilling activities, and [a web scraper](https://github.com/timewellspent/gldb/blob/master/scraper/scraper.go) for parsing the web as activities rather than as content objects.
 
 * **FulfillmentKit** is a javascript library of sample heuristics for guessing which activities (for example, from those presented by newsfeed) are most likely to be fulfilling for the user.  It could be useful in, say, a chrome extension for pruning newsfeed.  Or as an example to the authors of newsfeed algorithm and other recommender serveices.   [first demo](http://timewellspent.github.io/demos/recommender1/)
+
+
+
+### <a id="lwl"></a> Market Capitalism and Lives Well Lived <span vous="discuss"></span>
+
+What are the most fulfilling things that can happen to a person in an evening or a day?  An emotional breakthrough, a breathtaking vista, a playful conversation with a loved one, the resolution of a longstanding logistical or material problem, a return to an aspect of oneself...
+
+The market for these fulfilling experiences is unusual in that provisioning experiences requires unusual insight into and influence over personality and state, and the criteria for consumer search are poorly understood by both consumers and providers.  These goods are all either experience goods or credence goods which means they cannot be selected from a catalogue.
+
+It is instructive to create situations where there are many providers of potentially fullfilling experiences and many consumers, and various attempts to coordinate can be studied and engineered.
+
+**Learned:** There is a certain regularity to the things that emerge as frequently fulfilling in these environments.  [Diagram of Desires and Rapports](https://www.dropbox.com/s/qlreore5l5rixmx/desires-and-rapports.pdf).  There is also regularity to the information we need about a person in order to address interactions and rapports they will engage in to them, and regularity to the ways that "vendors" of interaction and rapport need to present themselves in order to be browsable and engagable.
+
+
+
+#### Writing
+
+* [**Two Kinds of Demand**: Is our economy powered by activities (and pageviews) that we later regret?](https://medium.com/armchair-economics/a36c54b97ee1)
+
 
 
 ### <a id="lifestyle"></a> Dynamics of Lifestyle Change <span vous="discuss"</span>
@@ -286,8 +299,6 @@ I will be revising these things.
 * There might be a better way to do [economics 101](https://hackpad.com/Lets-Modernize-Econ-101-YHCWZmsRMpc)
 * I made an email client once.  I'll find screenshots on an old harddrive and post them.
 * I have a kind of [design manifesto](http://greatmending.quora.com/Towards-an-Honest-Internet-Refocusing-the-Tech-Industry-on-Fulfillment-before-it-jumps-the-shark) up on quora, but it's out of date.
-
-
 
 
 
