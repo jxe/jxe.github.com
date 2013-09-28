@@ -1,0 +1,73 @@
+<audio controls="yeah"></audio>
+
+<script type="text/javascript">
+var engine = {
+	current_script: null,
+	current_role: null,
+	scripts: {},
+
+	script: function (song, obj, cb) {
+		obj.song = song;
+		obj.roles = {};
+		engine.current_script = obj;
+		engine.scripts[song] = obj;
+		cb(engine);
+	},
+
+	role: function(name, count, cb){
+		engine.current_role = {
+			name: name,
+			count: count,
+			moves: []
+		};
+		engine.current_script.roles[name] = engine.current_role;
+		cb(engine);
+	},
+
+	move: function(time, alert){
+		engine.current_role.moves.push({
+			t: time,
+			alert: alert
+		});
+	},
+
+	play: function(song, role){
+		var audio = document.querySelector('audio');
+		audio.src = song + ".mp3";
+		var dance = engine.scripts[song];
+		var track = audio.addTextTrack('descriptions');
+		var moves = dance.roles[role].moves;
+		for (var i = moves.length - 1; i >= 0; i--) {
+			var move = moves[i];
+			track.addCue(new TextTrackCue(move.t, move.t+3, move.alert));
+		};
+
+		track.oncuechange = function (){
+		  var cue = this.activeCues[0]; // assuming there is only one active cue
+		  console.log(cue && cue.text);
+		  if (cue) alert(cue.text);
+		};
+
+		// audio.play();
+	}
+};
+
+engine.script('rooster', {
+	latlng: [37.811729, -122.269964],
+	city: "Oakland, CA",
+	neighborhood: "Downtown",
+	title: "Oakland Rooster",
+	count: 1,
+}, function(_){
+	_.role("Orsino", 1, function(){
+
+		_.move(3, "Wonder about life.");
+		_.move(30, "Duck down like a duck ducking down.");
+		_.move(45, "Touch your heart.");
+		_.move(60, "Lie on your back for the rest of the song.");
+
+	});
+});
+
+engine.play('rooster', "Orsino");
+</script>
