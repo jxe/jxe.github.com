@@ -92,6 +92,7 @@ F.child('roles').on('value', function(v){
 			var title = "play " + role.title;
 			var link = $('<li><a href="#">' + title + '</a></li>');
 			link.appendTo('#playables').on('click', function(){
+				beep();
 				r.ref().child('taken_at').set(now());
 				current_role_name = r.name();
 				attach_device_to_walk(F.child('walks').child(role.walk));
