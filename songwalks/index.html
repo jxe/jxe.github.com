@@ -225,6 +225,8 @@ function new_songwalk(){
 var beep = (function () {
     var ctx = new(window.audioContext || window.webkitAudioContext);
     return function (duration, type, finishedCallback) {
+    	if (!duration) duration = 200;
+    	if (!type) type = 0;
         duration = +duration;
         type = (type % 5) || 0;  // Only 0-4 are valid types.
         if (typeof finishedCallback != "function") {
