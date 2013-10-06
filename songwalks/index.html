@@ -1,11 +1,26 @@
-<meta name="viewport" content="width=device-width, user-scalable=false;">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 <script src="zepto.min.js"></script>
 <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-
+<style type="text/css">
+	#menu a, .menu a {
+		display: block;
+		padding: 10px;
+		border: solid thin #eee;
+		background: #ccc;
+		text-decoration: none;
+	}
+</style>
 <!--
 
 ## TODO
-- remove old instructions in configure functions..
+
+- roles have names
+	- Culver City Parking Lot
+		- Jim and John appreciated Dina Maccabee's "The Rooster"
+			- Play Jim
+			- Play John
+- locations menu before roles menu
+- scratch game vs. recorded game
 
 LATER
 - paused mode should seek
@@ -37,20 +52,20 @@ walks: {
 -->
 
 <div id="home">
-	<h2>Home</h2>
-	<ul id="menu">
+	<h2>Song Appreciation Game</h2>
+	<div id="menu">
+		<div id="playables"></div>
 		<div id="recordables"></div>
-		<div id="playables"></div>	
-		<li><a href="javascript:new_songwalk()">new songwalk</a>
-	</ul>
+		<div><a href="javascript:new_songwalk()">new songwalk</a></div>
+	</div>
 </div>
 
 <div id="device" style="display:none">
 	<audio controls="yeah"></audio>
 	<p id="instructions"></p>
 	<div id="annotation_controls">
-		<a href="javascript:add_instructions()">add instructions</a>
-		<!-- <a href="#">add image</a> -->
+		<h2>Help your friend enjoy the song by sending messages.</h2>
+		<div id="message_buttons" class="menu"></div>
 	</div>
 	<a href="javascript:back()">back</a>
 </div>
@@ -80,7 +95,7 @@ F.child('roles').on('value', function(v){
 		var role = r.val();
 		if (!role.recorded_at){
 			var title = "record " + role.title;
-			var link = $('<li><a href="#">' + title + '</a></li>');
+			var link = $('<a href="#">' + title + '</a>');
 			link.appendTo('#recordables').on('click', function(){
 				r.ref().child('recorded_at').set(now());
 				current_role_name = r.name();
@@ -90,7 +105,7 @@ F.child('roles').on('value', function(v){
 			});
 		} else if (!role.taken_at || five_minutes_ago(role.taken_at)) {
 			var title = "play " + role.title;
-			var link = $('<li><a href="#">' + title + '</a></li>');
+			var link = $('<a href="#">' + title + '</a>');
 			link.appendTo('#playables').on('click', function(){
 				beep();
 				r.ref().child('taken_at').set(now());
@@ -105,7 +120,36 @@ F.child('roles').on('value', function(v){
 
 
 function configure_as_recorder(){
-	$('#annotation_controls').show();
+	current_walk.child('roles').once('value', function(v){
+		$('#message_buttons').empty();
+		v.forEach(function(r){
+			var role_name = r.val();
+			var title = "msg " + role_name;
+			if (role_name == current_role_name) title = "msg yourself";
+			var link = $('<a href="#">' + title + '</a>');
+			link.appendTo('#message_buttons').on('click', function(){
+				add_instructions(role_name);
+				return false;
+			});
+		});
+		$('#annotation_controls').show();
+	});
+
+	current_walk.child('events').on('child_added', function(child){
+		var instruction = child.val();
+		if (instruction.role == current_role_name){
+			// for me!
+			// who sent it?
+			var what;
+			if (instruction.from == current_role_name){
+				what = "<b>You</b> sent yourself an instruction: <br>";
+			} else {
+				what = "<b>" + instruction.from + "</b> sent an instruction: <br>";
+			}
+		  	$('#instructions').html(what + instruction.text);				
+		  	beep();
+		}
+	});
 }
 
 function configure_as_player(){
@@ -129,12 +173,13 @@ function configure_as_player(){
 	};
 }
 
-function add_instructions(){
+function add_instructions(to_role){
 	var audio = document.querySelector('audio');
 	var text = prompt('What instructions?');
 	if (!text) return;
 	current_walk.child('events').push({
-		role: current_role_name,
+		from: current_role_name,
+		role: to_role || current_role_name,
 		t: audio.currentTime,
 		text: text
 	});
