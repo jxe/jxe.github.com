@@ -11,7 +11,6 @@
 	}
 </style>
 <!--
-
 ## TODO
 
 - roles have names
@@ -21,42 +20,32 @@
 			- Play John
 - locations menu before roles menu
 - scratch game vs. recorded game
-
-LATER
-- paused mode should seek
-- drag should go to paused 0
-- add photo taking
-
-
-## SCHEMA
-
-// changes slowly, as roles are declared and recorded
-roles: [{
-	title: "",
-	recorded_at: 0,
-	taken_at: 0,
-	walk: "",
-	city: ""
-}]
-
-// changes quick as events added and playstate changes
-walks: {
-	id: {
-		song: "rooster",
-		is: "playing/paused",
-		events: [[t, ev], [t, ev]],
-		roles: []
-	}
-}
-
 -->
 
 <div id="home">
-	<h2>Song Appreciation Game</h2>
-	<div id="menu">
-		<div id="playables"></div>
-		<div id="recordables"></div>
-		<div><a href="javascript:new_songwalk()">new songwalk</a></div>
+	<h2>Song Appreciation Quests</h2>
+
+	<div id="location_picker">
+		<p>Pick your location</p>
+		<div class="menu">
+			<div id="locations"></div>
+			<a href="javascript:add_location()">Add a location...</a>
+		</div>
+	</div>
+
+	<div id="role_picker">
+		<p>
+			You're at <span id="location_name"></span>
+			<a href="javascript:back()">(change)</a>
+		</p>
+		<div id="menu">
+			<h2>Open Parts</h2>
+			<div id="recordables"></div>
+			<a href="javascript:new_songwalk()">new quest</a>
+
+			<h2>Recorded Parts</h2>
+			<div id="playables"></div>
+		</div>
 	</div>
 </div>
 
@@ -86,13 +75,79 @@ function now(){ return (new Date()).getTime(); };
 
 var current_role_name;
 var current_walk;
+var current_location;
+var all_parts_snapshot;
 
-F.child('roles').on('value', function(v){
-	// list all available roles in #recordables
+function refresh(){
+	if (current_location){
+		$('#location_picker').hide();
+		$('#role_picker').show();
+	} else {
+		$('#location_picker').show();
+		$('#role_picker').hide();
+	}
+}
+
+function add_location(){
+	var name = prompt('Name');
+	if (name){
+		F.child('locations').push(name);
+		current_location = name;
+		$('#location_name').html(current_location);
+		draw_parts();
+		refresh();
+	}
+}
+
+function new_songwalk(){
+	// in walks: set song and roles[]
+	// in roles: set title, walk, city
+	var song = prompt('Song:');
+	if (!song) return;
+	var role_count = Number(prompt('How many players?'));
+	if (!role_count) return;
+	var role_ids = [];
+	var title = FULL_TITLES[song] + " for " + role_count + " players, at " + current_location;
+	var walk = F.child('walks').push({
+		title: title,
+		song: song,
+		city: "lax"
+	});
+	for (var i = 0; i < role_count; i++) {
+		var role = F.child('roles').push({
+			walk: walk.name(),
+			city: 'lax',
+			location: current_location,
+			title: "Player " + (i+1) + " for " + FULL_TITLES[song]
+		})
+		walk.child('roles').push(role.name());
+	};
+}
+
+
+
+F.child('locations').on('value', function(v){
+	$('#locations').empty();
+	v.forEach(function(l){
+		var link = $('<a href="#">' + l.val() + '</a>');
+		link.appendTo('#locations').on('click', function(){
+			current_location = l.val();
+			$('#location_name').html(current_location);
+			draw_parts();
+			refresh();
+			return false;
+		});
+	});
+});
+
+function draw_parts(v){
+	if (!v) v = all_parts_snapshot;
+	all_parts_snapshot = v;
 	$('#recordables').empty();
 	$('#playables').empty();
 	v.forEach(function(r){
 		var role = r.val();
+		if (role.location && current_location && current_location != role.location) return;
 		if (!role.recorded_at){
 			var title = "record " + role.title;
 			var link = $('<a href="#">' + title + '</a>');
@@ -116,8 +171,9 @@ F.child('roles').on('value', function(v){
 			});			
 		}
 	});
-});
+}
 
+F.child('roles').on('value', draw_parts);
 
 function configure_as_recorder(){
 	current_walk.child('roles').once('value', function(v){
@@ -200,7 +256,12 @@ function five_minutes_ago(t){
 	return now() - t > 20*1000;
 }
 
-function back(){ detach_device(); }
+function back(){
+	current_location = null;
+	detach_device();
+	draw_parts();
+	refresh();
+}
 
 
 function detach_device(){
@@ -238,33 +299,7 @@ function attach_device_to_walk(walk){
 	$('#device').show();
 }
 
-function new_songwalk(){
-	// in walks: set song and roles[]
-	// in roles: set title, walk, city
-	var song = prompt('Song:');
-	if (!song) return;
-	var location = prompt('Location:');
-	if (!location) return;
-	var role_count = Number(prompt('How many players?'));
-	if (!role_count) return;
-	var role_ids = [];
-	var title = FULL_TITLES[song] + " for " + role_count + " players, at " + location;
-	var walk = F.child('walks').push({
-		title: title,
-		song: song,
-		city: "lax"
-	});
-	for (var i = 0; i < role_count; i++) {
-		var role = F.child('roles').push({
-			walk: walk.name(),
-			city: 'lax',
-			title: "Player " + (i+1) + " for " + FULL_TITLES[song] + " at " + location
-		})
-		walk.child('roles').push(role.name());
-	};
-}
-
-
+refresh();
 
 
 var beep = (function () {
@@ -290,6 +325,34 @@ var beep = (function () {
 
 
 
+
+
+// LATER
+// - paused mode should seek
+// - drag should go to paused 0
+// - add photo taking
+
+
+// ## SCHEMA
+
+// // changes slowly, as roles are declared and recorded
+// roles: [{
+// 	title: "",
+// 	recorded_at: 0,
+// 	taken_at: 0,
+// 	walk: "",
+// 	city: ""
+// }]
+
+// // changes quick as events added and playstate changes
+// walks: {
+// 	id: {
+// 		song: "rooster",
+// 		is: "playing/paused",
+// 		events: [[t, ev], [t, ev]],
+// 		roles: []
+// 	}
+// }
 
 
 
