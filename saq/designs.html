@@ -1,0 +1,145 @@
+<style type="text/css">
+	body { font-family: optima; font-size: 14px;}
+	h2,p.x { padding: 0 5; margin: 0 0;}
+	p.x { 
+		margin-bottom: 10px; margin-top: -5px;
+	}
+	.x { padding: 5px; margin: 5px 0px; }
+	.xx { padding: 5px; margin: 5px 0px; background: white; }
+	.xy { padding: 5px; margin: 5px 0px; border: solid thin white; }
+	.bh { display: -webkit-box; -webkit-box-orient: horizontal; box-sizing: border-box; position: relative; }
+	.bv { height: 100%; display: -webkit-box; -webkit-box-orient: vertical;   box-sizing: border-box; position: relative; }	
+	.flex { display: block; -webkit-box-flex: 1.0 }
+	.m { min-height: 40px;}
+	.screen {
+		height: 560px;
+		width: 320px;
+		border: 1px solid #bbb;
+		margin: 30px 10px;
+		background: #ccc;
+		position: relative;
+		display: -webkit-box; -webkit-box-orient: vertical;   box-sizing: border-box; position: relative;
+	}
+
+	.note {
+		position: absolute; top: -20px; color: red; width: 100%; text-align: center;
+	}
+
+	.buttons > button {
+		width: 150px;
+	}
+
+	.place { position: absolute; top: 0px; left: 340px; }
+	.play { position: absolute; top: 0px; left: 670px; }
+	.record { position: absolute; top: 0px; left: 1000px; }
+</style>
+
+<div class="home screen">
+	<div class="note">Home screen</div>
+	<h2 class="x">You're in Middletown CT</h2>
+	<p class="x">Choose your start location</p>
+	<div class="xx m">
+		<b>Center of Wesleyan Quad</b><br>
+		Three experiences here
+	</div>
+
+	<div class="xx m">
+		<b>Arts Bldg Lobby</b><br>
+		One experience here.
+	</div>
+
+	<div class="xx m">
+		+ Add a location
+	</div>
+
+	<div class="flex"></div>
+
+	<div class="x m">
+		Song of the week is TEH ROOSTER.  366 experiences have been made in 20 cities.  Make one by picking a place above.
+	</div>
+</div>
+
+<div class="place screen">
+	<div class="note">You picked a location</div>
+	<h2 class="x">You're at Center of Wesleyan Quad, in Middletown CT</h2>
+	<p  class="x">Three experiences start here.</p>
+	<div class="xx m bh">
+		<div class="flex">Joe and Dina made an experience for <b>The Rooster</b></div>
+		<div>&#9654;</div>
+	</div>
+
+	<div class="xx m bh">
+		<div class="flex">Max and Jason made an experience for <b>Iron Man</b></div>
+		<div>&#9654;</div>
+	</div>
+
+	<div class="xx m bh">
+		<div class="flex">Albert made an experience for <b>Sitting On the Dock of the Bay</b></div>
+		<div>&#9654;</div>
+	</div>
+
+	<div class="flex"></div>
+
+	<div class="xx m">
+		Record your own!
+	</div>
+</div>
+
+
+<div class="play screen">
+	<div class="note">playing</div>
+	<div class="bv">
+		<div class="bh m">
+			<div class="xx">&#9654;</div>
+			<div class="flex x">This is the INTRO to The Rooster (20s left)</div>
+		</div>
+		<p class="x" style="text-align:center">(You're playing MAX)</p>
+
+		<div class="bh">
+			<div class="flex xx">Current suggestion is to PLAY AIR GUITAR</div>
+			<button class="xx">Accept</button>
+		</div>
+		<div class="flex xy">
+			Jason is PRETEND FLY FISHING.
+		</div>
+	</div>
+</div>
+
+
+<div class="record screen">
+	<div class="note">making</div>
+	<div class="bv">
+		<div class="bh">
+			<div class="xx">&#9654;</div>
+			<div class="flex x">This is the INTRO to The Rooster (20s left)</div>
+		</div>
+
+		<div class="bh m">
+			<div class="flex xx">Jason suggested PLAYING AIR GUITAR</div>
+			<button class="xx">Accept</button>
+		</div>
+		<div class="flex xy">
+			You suggested PRETEND FLY FISHING.<br><br>
+			Jason accepted your suggestion (+10)
+		</div>
+		<div class="xx">
+			<b>Suggest something during THE INTRO</b>
+			<div class="bh">
+				<input class="flex" placeholder="Suggest a dance move...">
+				<button>Send</button>
+			</div>
+			<hr>
+			<div class="buttons">
+				<button style="background:gray">Dance Move</button>
+				<button>Fitness activity</button>
+				<button>Pose</button>
+				<button>Thought Feeling</button>
+				<button>Sounding</button>
+				<button>Interaction</button>
+				<button>Walking direction</button>
+				<button>Object to examine</button>
+			</div>
+		</div>
+	</div>
+</div>
+
