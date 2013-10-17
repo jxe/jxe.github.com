@@ -98,13 +98,17 @@ h1 {
 }
 
 h2 {
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 22px;
-  color: #c60;
+  color: #000;
+}
+
+h2 + h3 {
+  margin-top: 0px;
 }
 
 h3 {
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 18px;
   color: #c60;
 }
