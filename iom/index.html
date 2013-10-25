@@ -29,7 +29,11 @@ Example format:
 
 	     X-Situation: "sfo art time_with_friends:3h,0.4,0.2"
 
-Interested parties
+Reference Client:
+
+* The Sand Calendar App and Browser and the No Regrets Chrome extension both use the situation cookie format.  The browser within Sand adds the HTTP header to requests.  The GLDB reference recommender system uses the header to create customized most-popular lists.
+
+Stakeholders:
 
 - YELP, Google Now, FB Newsfeed
 
@@ -76,6 +80,9 @@ Stakeholders:
 
 - Pocket, iCal, etc
 
+Reference clients:
+
+* The Sand Calendar app opens futuremark: URLs by adding them to the dock for easy scheduling, and by providing a button to get suggestions a thte suggestions_url once schedulde.
 
 ## Proofs of Relevance
 
@@ -120,6 +127,11 @@ Example Exchange Protocol:
 		GET /most_regretted?in=situation
 		GET /least_regretted?in=situation
 		GET /adjacent_situations?in=situation
+
+Reference clients:
+
+* The Sand calendar app and the No Regrets chrome extension will both make users' ratings available as Proofs of Relevance.  The GLDB reference recommender will consume them to create better, customized most-popular lists.
+
 
 ## Summary
 
