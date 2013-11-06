@@ -3,30 +3,37 @@
 </style>
 
 <textarea id="text" style="display:none">
-*v0.2 -- parts still naive -- Joe Edelman*
+*v0.3 -- parts still naive -- Joe Edelman*
 
 
+IoM-motivation
 
+# Intro: Re: Keeping the Internet from Being Like TV
+
+YouTube and Kickstarter are both growing fast, but which will colonize more hours of our day?  On a Monday evening in 2025, will more of us be working on creative projects, or watching youtube suggested videos?
+
+In the age of Television, the mass media was about getting people to sit their ass on a couch and stay there.  The nature of the medium was passive, but it also had a lot to do with who had power:  with relationships between content providers, major networks, advertisers, and watchers. Those who controlled the medium needed a lot of eyeballs/assess, and more every year, and the users could only express their desires and assent by switching on/off or changing channels.
+
+Avoiding such a fate for the Internet means being wary when points of algorithmic "programming" or "curation" appear which have millions or billions of people attached.  Facebook newsfeed and YouTube suggested videos are the clearest current examples, but there are many.
+
+*We need to make sure that the ecosystem around these recommender services is aligned with the true interests of the end-user.*  In particular, the following parties need to form a more flexible and accountable relationship:  (1) recommender systems and feeds like facebook newsfeed and google now, (2) "content/activity provider" websites that propose activities to users like youtube, meetup, and instructables, (3) review, rating, and engagement metrics providers like yelp, bitly, quantcast, the sharing sites, etc, and (4) the users themselves and their agents, like Chrome and Pocket.
+
+We think it's possible to align the internet recommender ecosystem to the users' true interests, and we here present web client technology, standards, and open data solutions to this problem, with notes about the political means to create adoption.  The key idea is that of holding recommendations/URLs/activities to a standard of *high contextual relevance* or *meaning* w/r/t an individual users' situation and desires for their lives.
 
 
 # Towards a WWW of High Contextual Relevance 
 
-We are stuck recommending popular links and "top picks" so long as we have little understanding of the users' actual situation and desires, and how to contribute to them.  In order to overcome this, we need: (a) a model of the context that users are in when they are using the web or apps, including location, social context, and their desires for their time; and (b) open information about what material is *truly* relevant to various contexts and people, rather than merely clickbait.
+It takes data to recommend meaningful activity.  When we have little understanding of the users' actual situation and desires, or about how to contribute to them, we can only recommend popular links and "top picks."  The internet becomes a popularity contest.  In order to overcome this, we need: (a) a model of the context that users are in when they are using the web or apps, including location, social context, and their desires for their time; and (b) open information about what material is *truly relevant* to various contexts and people, rather than merely clickbait.
 
-It is therefore of interest to devise both: (a) precise serialization formats for users' contexts and time-desires, and (b) cryptographically secure systems for proving that the data at a URL was *actually helpful* to one or more individuals in various contexts, insofar as this is possible.
+It is therefore of interest to devise both: (a) **precise serialization formats for users' contexts and time-desires**, and (b) **cryptographically secure systems for *proving* that the data at a URL was *actually helpful* to one or more individuals in various contexts**, insofar as this is possible.
 
-These systems must be secure, given the incentive for URL owners and App providers to want their URLs, Apps, and App notifications to seem relevant in more situations than they really are.  The user's time and attention is all that they have, and these proofs are its defense.
-
-
-## Internet of Meaning
-
-The grand aim is to rewrite the relationships between these four parties: (1) recommender systems and feeds like facebook newsfeed and google now, (2) "content/activity provider" websites that propose activities to users like youtube, meetup, and instructables, (3) review, rating, and engagement metrics providers like yelp, bitly, quantcast, the sharing sites, etc, and (4) the users themselves and their agents, like Chrome and Pocket.
+These systems must be secure, given the incentive for URL owners and App providers to want their URLs, Apps, and App notifications to seem relevant in more situations than they really are.  The user's time and attention is all that they have, and these *proofs* are its defense.
 
 
 
 ## Advertising Analytics vs Contextual Relevance Information
 
-Currently, companies like Quantcast use demographic and psychographic information to predict what different people will reliablly click on or purchase.  We propose to use information about a users' situation and context to enable prediction (by third party recommendation engines, browser plugins, etc) of what different people will find time well spent.  These systems are similar in structure and purpose, even to the point of involving some of the same inputs, like other users' clicks, views, and scrolls.  We differ in desiring an ecosystem of open, secure data, competing recommender systems, user control, and a broad focus on self-reported lives well lived.
+Currently, companies like Quantcast use demographic and psychographic information to predict what different people will reliablly click on or purchase.  We propose to use information about a users' situation and context to enable prediction (by third party recommendation engines, browser plugins, etc) of what different people will find *time well spent*.  These systems are similar in structure and purpose, even to the point of involving some of the same inputs, like other users' clicks, views, and scrolls.  **We differ in desiring an ecosystem of open, secure data, competing recommender systems, user control, and a broad focus on self-reported lives well lived.**
 
 
 ## Information about Contextual Relevance
@@ -39,7 +46,7 @@ Most estimates of contextual relevance on the web are rudimentary, and don't nec
 - user liked/shared/recommended broadly
 - user bookmarked for later review
 
-We would also like to encourage more sophisticated measures:
+**We would also like to encourage more sophisticated measures**:
 
 - user returned to resource intentionally
 - user scheduled/invited/forwarded to friend
@@ -49,18 +56,20 @@ We would also like to encourage more sophisticated measures:
 - user explicitly reported as comparative Time Well Spent
 
 
-## Proofs of Relevance
-
-Proving that a particular click or a view duration occurred and involved a human in a self-reported situation is not difficult with client-side support, a trusted DHT (distributed, redundant) database, and an agreed-upon identity system, and--like the Neilsen ratings--the data can be of use to many even if it is only recorded by some, as client adoptions will not be immediate or complete.
-
-Of interest is how to aggregate this information for exchange in an anonymous but cryptographically verifiable form.  We are optimistic that a crypto approach using homomorphic encryption is straightforward. 
-
-
 ## Circumstances for Exchange
 
 Currently click and view data for websites can be a hoarded and valuable resource.  Facebook, for instance, does not publish click data about headlines on newsfeed.  Google doesn't publish which of its recommended links have long read times.  Services like Alexa and Compete.com make only the broadest aggregate data available, and quantcast charges for it.
 
-We believe there is an opportunity to disrupt this situation with open data, standard formats, and client-side support for the production and verification of proofs.  Recommender algorithms should have the widest possible pool of data on which to act, and activity-source sites like DIY.org and Meetup.com should be able to leverage their proofs of relevance in an open market of recommenders.
+**Websites that are in the public benefit, that are activity providers, or that already have high indirect traffic, may have an interest in publishing aggregations of their click, view, and review data in an open, secure format, if it means an increase in traffic** from recommender systems.
+
+We believe there is an opportunity to disrupt this closed-engagement-data situation with open data, standard formats, and client-side support for the production and verification of proofs of relevance.  Recommender algorithms should have the widest possible pool of data on which to act, and activity-source sites like DIY.org and Meetup.com should be able to leverage their proofs of relevance in an open market of recommenders.
+
+
+## Security: Proofs of Relevance
+
+Proving that a particular click or a view duration occurred and involved a human in a self-reported situation is straightforward with the simplifying assumptions of client-side support, a trusted DHT database, and an agreed-upon identity system, and—like the Neilsen ratings—the data can be of use to millions even if it is initially only recorded by thousands.  It makes sense to start with cryptographically secure claims of relevance made by a small number of early adaptors that auth into a trusted system, and gradually relax these constraints.
+
+**We are exploring how to aggregate this information for exchange in an anonymous but cryptographically verifiable form**.  We are optimistic about an approach using homomorphic encryption. 
 
 
 ## Comparative Time Well Spent
@@ -69,9 +78,9 @@ The issue of how to get the highest possible relevance signal from a single user
 
 Indeed, at least in retrospect, we evaluate time choices on the margin and in relation to opportunity costs.  If we discover that another event was going on or discover a new hobby, we might suddenly come to regret time choices we made in the past, before that discovery.
 
-The only time choices that are safe from this kind of downward reevaluation are those where the comparison is done at the time of review, and for which the reported value of the time-choice is high enough as to dwarf the search costs and expected outcome of further comparison.  These are the activities that are Time Well Spent, in an absolute sense.
+**The only time choices that are safe from this kind of downward reevaluation are those where the comparison is done at the time of review, and for which the reported value of the time-choice is high enough as to dwarf the search costs and expected outcome of further comparison**.  These are the activities that are Time Well Spent, in an absolute sense.
 
-While this may seem like a high bar for web activities, the truth is that people will report many of their most treasured time-choices as comparative Time Well Spent:  time with their children, camping with best friends, a good cry, a quiet moment sipping tea and writing in one's journal... these kinds of activities are often reported as unassailable even given extensive comparative engagements.
+While this may seem like a high bar for web activities, the truth is that activities which meet this criteria abound: many of our most treasured time-choices are reported as comparative Time Well Spent:  time with our children, camping with best friends, a good cry, a quiet moment sipping tea and writing in one's journal... these kinds of activities are reported as clear wins even in a broadly comparative context.
 
 Only by supporting these strong proofs of relevance can we hope to bring web use up to this standard.
 
@@ -80,9 +89,9 @@ Only by supporting these strong proofs of relevance can we hope to bring web use
 
 There are many kinds of link relevance.  Advertisers on facebook use demographic and psychographic information together with the users' likes and their friends' likes to pick links to display.  Newsfeed itself uses recent behavior of friends together with general engagement metrics like the ones we propose above.  Google uses keyword searches both for advertising for its main results page, together with a raft of engagement and other trust metrics.
 
-All of these user-specific measures have biases:  keyword search is biased towards directed, intentional actions, especially research and purchases.  Activities and URLs that are not about directed research or purchasing will see lower incidence of recommendation because search engines will not recognize those aspects of situational context.  Recommendation based on friends' activities is biased towards "the news of the day" and away from anything individual or directed.  Recommendation based on demographic and psychographic information is biased towards least-common-denominator exploitation of human interests or susceptability.
+**All of these user-specific measures have biases**:  keyword search is biased towards directed, intentional actions, especially research and purchases.  Activities and URLs that are not about directed research or purchasing will see lower incidence of recommendation because search engines will not recognize those aspects of situational context.  Recommendation based on friends' activities is biased towards "the news of the day" and away from anything individual or directed.  Recommendation based on demographic and psychographic information is biased towards least-common-denominator exploitation of human interests or susceptability.
 
-After a year of experimentation with over 3000 subjects and a variety of different situational framings, we have settled on a framing based on neighborhood-level location, sociographic information (e.g., information about friends' availability, proximity, and willingness), and a small set of keywords we call *time-desires*, which capture what most people want to fill their lives with (e.g., "quality time with friends and loved ones", "learning", "time outdoors", "exercise", "quiet time", "creative projects", and "the unknown").
+After a year of experimentation with over 3000 subjects and a variety of different situational framings, **we have settled on a framing based on neighborhood-level location, sociographic information (e.g., information about friends' availability, proximity, and willingness), and a small set of keywords we call *time-desires***, which capture what most people want to fill their lives with (e.g., "quality time with friends and loved ones", "learning", "time outdoors", "exercise", "quiet time", "creative projects", and "the unknown").
 
 The situation descriptor we're proposing is small enough to be used as an HTTP header and can answer questions like:
 
@@ -96,11 +105,30 @@ For example:
 
 		X-Situation: sfo art time_with_friends:3h,0.4,0.2
 
-		(in SF, wants to spend time with friends, has an interest in art, 
-		has a close friend they often do things with)
+		(in SF, wants to spend time with friends, has an interest in 
+		art, has a close friend they often do things with)
 
 
-## Hints by Page Authors
+## Rollout and Political Considerations
+
+Many websites and startups are underrepresented in newsfeed and elsewhere because of the current lack of accountability and good data in recommender systems.  Meetup, EventBrite, DIY, Instructables, Skillshare, CouchSurfing, and many more companies would see greater traffic if recommender systems like newsfeed were able to provide highly contextually relevant results.
+
+There are also underdog recommenders, like Google Now and Twitter Discover, that have an interest in differentiating their suggestions from those of newsfeed and youtube suggested videos.
+
+Finally, there is a growing consumer awareness movement about internet addiction, too much time staring at our devices, and the need to switch off to turn on.
+
+We believe the time is right for an alliance that creates the kind of open data and interoperability that will help users in the long run.
+
+
+## Conclusion and Further Work
+
+*TBD*
+
+
+
+## Appendix A: Further Details & Specifications
+
+### Hints by Page Authors
 
 When a URL-addressed resource is first published there will be little or no review information about it, and recommender systems will not be able to make a decision based on proofs of relevance.  It is therefore advisable for page authors to be able to provide hints to recommenders about which situational contexts their resource is relevant to.
 
@@ -119,6 +147,20 @@ Example Format:
 		<meta property="doable:listen:recommend_for" content="downtime" />
 
 
+### The 'futuremark:' url scheme
+ 
+The ideal UX and rollout for situational context-aware browsing is unclear.  One possible direction is that time-management interfaces like Pocket / Google Keep / Reading List take some of the burden off the web browsers.
+
+The futuremark standard combines "read it later" / Google Keep / Pocket / Reading List type uses with aspirational calendaring ("I want to run 3x/wk") and traditional calendaring, and provides these services with a common URL scheme.
+
+A futuremark is like a bookmark, but is reserved for things the users has said they really want to fill a part of their life with.  Futuremarks can be generated by applications and websites for anything the user may wish to resume (e.g. planning a trip, writing a document), periodically reschedule (e.g., yoga classes from a provider), or periordically re-engage with (e.g. exercise suggestions).  
+
+Example Format:
+
+    	futuremark://exercise?
+    		suggestions_url=http://www.yelp.com/search?find_desc=exercise+park%26find_loc=%%
+    		&suggestions_desc="Suggestions from Yelp for Parks to exercise in"
+    		&image=http://example.com/images/runner.png
 
 
 <!--
