@@ -1,14 +1,26 @@
-<style type="text/css">
-	#body { width: 400px;}
-</style>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="i.css">
+
+
+<section class="article">
+	<article class="post">
+		<header>
+			<hgroup>
+				<h1>Internet of Meaning</h1>
+				<p class="date">Editor, Joe Edelman</p>
+			</hgroup>
+		</header>
+		<div id="body"></div>
+	</article>
+</section>
+<footer><small>&copy; 2013 Joe Edelman</small></footer>
+
 
 <textarea id="text" style="display:none">
-*v0.3 -- parts still naive -- Joe Edelman*
+*v0.3 -- parts still naive*
 
-
-IoM-motivation
-
-# Intro: Re: Keeping the Internet from Being Like TV
+## Intro, Re: Keeping the Internet from Being Like TV
 
 YouTube and Kickstarter are both growing fast, but which will colonize more hours of our day?  On a Monday evening in 2025, will more of us be working on creative projects, or watching youtube suggested videos?
 
@@ -16,16 +28,16 @@ In the age of Television, the mass media was about getting people to sit their a
 
 Avoiding such a fate for the Internet means being wary when points of algorithmic "programming" or "curation" appear which have millions or billions of people attached.  Facebook newsfeed and YouTube suggested videos are the clearest current examples, but there are many.
 
-*We need to make sure that the ecosystem around these recommender services is aligned with the true interests of the end-user.*  In particular, the following parties need to form a more flexible and accountable relationship:  (1) recommender systems and feeds like facebook newsfeed and google now, (2) "content/activity provider" websites that propose activities to users like youtube, meetup, and instructables, (3) review, rating, and engagement metrics providers like yelp, bitly, quantcast, the sharing sites, etc, and (4) the users themselves and their agents, like Chrome and Pocket.
+**We need to make sure that the ecosystem around these recommender services is aligned with the true interests of the end-user.**  In particular, the following parties need to form a more flexible and accountable relationship:  (1) recommender systems and feeds like facebook newsfeed and google now, (2) "content/activity provider" websites that propose activities to users like youtube, meetup, and instructables, (3) review, rating, and engagement metrics providers like yelp, bitly, quantcast, the sharing sites, etc, and (4) the users themselves and their agents, like Chrome and Pocket.
 
 We think it's possible to align the internet recommender ecosystem to the users' true interests, and we here present web client technology, standards, and open data solutions to this problem, with notes about the political means to create adoption.  The key idea is that of holding recommendations/URLs/activities to a standard of *high contextual relevance* or *meaning* w/r/t an individual users' situation and desires for their lives.
 
 
-# Towards a WWW of High Contextual Relevance 
+## Towards a WWW of High Contextual Relevance 
 
 It takes data to recommend meaningful activity.  When we have little understanding of the users' actual situation and desires, or about how to contribute to them, we can only recommend popular links and "top picks."  The internet becomes a popularity contest.  In order to overcome this, we need: (a) a model of the context that users are in when they are using the web or apps, including location, social context, and their desires for their time; and (b) open information about what material is *truly relevant* to various contexts and people, rather than merely clickbait.
 
-It is therefore of interest to devise both: (a) **precise serialization formats for users' contexts and time-desires**, and (b) **cryptographically secure systems for *proving* that the data at a URL was *actually helpful* to one or more individuals in various contexts**, insofar as this is possible.
+**It is therefore of interest to devise both: (a) precise serialization formats for users' contexts and time-desires, and (b) cryptographically secure systems for *proving* that the data at a URL was *actually helpful* to one or more individuals in various contexts, insofar as this is possible.**
 
 These systems must be secure, given the incentive for URL owners and App providers to want their URLs, Apps, and App notifications to seem relevant in more situations than they really are.  The user's time and attention is all that they have, and these *proofs* are its defense.
 
@@ -162,6 +174,9 @@ Example Format:
     		&suggestions_desc="Suggestions from Yelp for Parks to exercise in"
     		&image=http://example.com/images/runner.png
 
+## Acknowledgements
+
+Thanks to Colleen McKenzie for notes.  Look [here](https://github.com/jxe/jxe.github.com/tree/master/iom) on github and send a pull request with your changes!
 
 <!--
 
@@ -192,7 +207,6 @@ HTML5 Doables
 -->
 
 </textarea>
-<div id="body"></div>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js"></script>
 <script type="text/javascript">
   body.innerHTML = marked(text.value, { sanitize: false, gfm: true });
