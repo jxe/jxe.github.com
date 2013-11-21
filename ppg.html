@@ -38,17 +38,17 @@ var F = new Firebase("https://songwalks.firebaseio.com/");
          </optgroup>
          <option>Add...</option>
       </select>
+      <a href="#" id="save">SAVE</a> <a href="#" id="edit">EDIT</a>
    </div>
-   <div style="position:relative; top:400px; left:0; width:200px">
-      <img data-set="src:waveform_url" style="-webkit-transform: rotate(90deg); position: absolute; top:300px; left:0px; display:block">
-   </div>
+
+   <img data-set="src:waveform_url" style="-webkit-transform: rotate(90deg); position: absolute; display:block">
 </div>
 
 
 <div id="timeline">
    <div id="playhead">
       <a style="float:right" id="rewind" href="#">REW</a>
-      <a id="play" href="#">PLAY</a>
+      <a id="play" href="#">PLAY/PAUSE</a>
    </div>
    <div id="actions">
       <a data-set="style:style text:text" style="top: 159px" class="action">
@@ -64,8 +64,6 @@ var F = new Firebase("https://songwalks.firebaseio.com/");
 //* loads soundcloud waveform rot90 from waveform_img
 
 -->
-
-<a href="#" id="save">SAVE</a> <a href="#" id="edit">EDIT</a>
 
 <div id="add_action">
       <button>+ Dance move</button>
@@ -153,7 +151,7 @@ Fireball(F, {
          if (!exp.start_loc) return "<a href='#' id='geolocate'>Geolocate!</a>";
          var mapUrl = "http://maps.google.com/maps/api/staticmap?markers=";
          mapUrl = mapUrl + exp.start_loc[0] + ',' + exp.start_loc[1];
-         mapUrl = mapUrl + '&zoom=16&size=320x100&maptype=roadmap&sensor=true';
+         mapUrl = mapUrl + '&zoom=16&size=320x100&maptype=roadmap&sensor=true&key=AIzaSyA51bUQ2qrcA4OqxkBVktwFkxH9XEqcG3A';
          return "<img src='"+mapUrl+"'>";
       },
       
@@ -170,7 +168,7 @@ Fireball(F, {
    show_when:{
       '#experience': function(){ return Fireball.get('$experience'); },
       '#timeline':   function(){ return Fireball.get('$experience'); },
-      '#add_action, #save': function(){
+      '#add_action, #save, #choose_song': function(){
          var latest = Fireball.latest('#experience');
          return latest && !latest.saved; 
       },
