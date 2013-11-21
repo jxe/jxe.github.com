@@ -1,0 +1,595 @@
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+  
+  
+
+<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+
+
+<script type="text/javascript">
+
+(function(){
+
+
+	// some rad extensions to firebase itself
+
+	var dyns = [], vars = {};
+
+
+	// like 'child' except it supports "dynamic paths"
+	// with on() subscriptions that get remade when the 
+	// paths change
+	Firebase.prototype.dynamic = function(path){
+		var dyn = {
+			root:this,
+			path:path,
+			expanded_path: null,
+			live_ref: null,
+			subs: [],
+
+			uses_var: function(v){
+				return this.path.indexOf(v) != -1;
+			},
+			expand_path: function(){
+				var incomplete = false;
+				var expanded = this.path.replace(/\$(\w+)/g, function(match){
+					if (!vars[match]) incomplete = true;
+					else return vars[match];
+				});
+				if (!incomplete) return expanded;
+			},
+			is_path_up_to_date: function(){
+				return (this.expanded_path && this.expanded_path == this.expand_path());
+			},
+			update_ref: function(){
+				var new_path = this.expand_path();
+				if (new_path != this.expanded_path){
+					this.teardown_subs();
+					this.live_ref = null;
+					this.expanded_path = null;
+					if (new_path){
+						this.expanded_path = new_path;
+						this.live_ref = this.ref_for_expanded_path(new_path);
+						this.setup_subs();
+					}
+				}
+			},
+			ref_for_expanded_path: function(path){
+				var m, rx = /\[(\d*)\]$/;
+				if (m = path.match(rx)){
+					path = path.replace(rx, '');
+					if (Number(m[1])) return this.root.child(path).limit(Number(m[1]));
+				}
+				return this.root.child(path);
+			},
+			teardown_subs: function(){
+				var ref = this.live_ref;
+				if (!ref) return;
+				this.subs.forEach(function(s){
+					ref.off(s[0], s[1]);
+				});
+				this.on_cleared && this.on_cleared();
+			},
+			setup_subs: function(){
+				var ref = this.live_ref;
+				if (!ref) return;
+				this.subs.forEach(function(s){ ref.on(s[0], s[1]); });
+			},
+			on: function(ev, cb){
+				if (ev == 'cleared'){
+					this.on_cleared = cb;
+				} else {
+					this.subs.push([ev, cb]);
+					if (this.live_ref) this.live_ref.on(ev,cb);
+				}
+			}
+		};
+		dyn.update_ref();
+		dyns.push(dyn);
+		return dyn;
+	};
+
+	Firebase.prototype.param = function(v, value){
+		if (!value) return vars[v];
+		vars[v] = value;
+		dyns.forEach(function(dyn){ if (dyn.uses_var(v)) dyn.update_ref(); });
+		return value;
+	};
+
+
+
+
+
+	// Fireball
+
+	var templates = {}, mapping = {}, calculated_fields = {}, latest = {};
+	var show_when = {}, on_click = {}, on_submit = {}, on_change = {};
+
+	function matches(element, selector){
+		if (!element || element.nodeType !== 1) return false;
+	    var m = element.webkitMatchesSelector || element.mozMatchesSelector ||
+	            element.oMatchesSelector || element.matchesSelector || element.matches;
+	    return m.call(element, selector);
+	}
+
+	function closest(node, sel){
+	    while (node && !(matches(node, sel))) node = node.parentNode;
+	    if (matches(node, sel)) return node;
+	}
+
+	function alleach(dom, selector, f){
+	  var matches = dom.getElementsByClassName(selector);
+	  for (var i = 0; i < matches.length; ++i) f(matches[i]);
+	}
+
+	function get_field_value(domid, json, path){
+		if (json[path]) return json[path];
+		var key = domid + " " + path;
+		if (calculated_fields[key]) return calculated_fields[key](json);
+		return null;
+	}
+
+	function decorate_element(el, json, domid){
+		var directive = el.getAttribute('data-set');
+		if (!directive) return;
+		var maps = directive.split(' ');
+		maps.forEach(function(word){
+   		var parts = word.split(':');
+   		var attr, path;
+   		if (parts.length == 1){
+   		   attr = path = parts[0];
+   		} else if (parts.length == 2){
+   		   attr = parts[0];
+   		   path = parts[1];
+   		} else if (parts.length == 3){
+   		   attr = parts[0];
+   		   if (parts[1] != domid) return;
+   		   path = parts[2];
+   		}
+		   var val = get_field_value(domid, json, path);
+		   if (attr == 'text'){
+			   el.innerHTML = val;
+		   } else {
+			   el.setAttribute(attr, val);
+   		}				
+		});
+	}
+
+	function project(json, dom, domid){
+		if (!json) json = {};
+		if (typeof json === 'string' || typeof json === 'number'){
+		// if (!hasChildElements(dom)){
+			dom.innerHTML = json;
+			return dom;
+		}
+		if (json.id) dom.id = json.id;
+
+		decorate_element(dom, json, domid);
+		var matches = dom.querySelectorAll('[data-set]');
+		for (var i = 0; i < matches.length; i++) {
+			var el = matches[i];
+	      decorate_element(el, json, domid);
+		}
+
+		for (var k in json){
+			alleach(dom, k, function(m){ m.innerHTML = json[k]; });
+		}
+		return dom;
+	}
+
+	function projectAll(array, dom, domid, path){
+		var doms = [];
+		for (var k in array){
+			var o = array[k];
+			o.id = k;
+			var clone = dom.cloneNode(true);
+			clone.data = o;
+			clone.path = path + '/' + o.id;
+			doms.push(project(o, clone, domid));
+		}
+		return doms;
+	}
+
+	function map_to_dom(fbref, domid, path){
+		if (!path) {
+			for (var k in domid) map_to_dom(fbref, k, domid[k]);
+			return;
+		}
+
+		var dyn = fbref.dynamic(path);
+		mapping[domid] = dyn;
+
+		if (path.match(/\[(\d*)\]$/)){
+			// it's a collection
+			var outer = document.querySelector(domid);
+			if (!outer) return alert("Not found in DOM: " + domid);
+			templates[domid] = outer.firstElementChild.cloneNode(true);
+			outer.innerHTML = "";
+			dyn.on('value', function(snap){
+				var val = snap.val();
+				latest[domid] = val;
+				outer.innerHTML = "";
+				if (!val) return;
+				var dom_objs = projectAll(val, templates[domid], domid, snap.ref().toString());
+				dom_objs.forEach(function(dom){
+					outer.appendChild(dom);
+				});
+				refresh();
+			});
+		} else {
+			// simple object
+			dyn.on('value', function(snap){
+				var o = snap.val();
+				latest[domid] = o;
+				project(o, document.querySelector(domid), domid);
+				refresh();
+			});
+		}
+	}
+
+	function refresh(){
+		for (var k in show_when){
+			var nodes = document.querySelectorAll(k);
+			for (var i = 0; i < nodes.length; i++) {
+				var el = nodes[i];
+				if (show_when[k](el)) el.style.display = '';
+				else el.style.display = 'none';
+			};
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', function(){
+		refresh();
+		document.addEventListener('click', function(ev){
+			for (var k in on_click){
+				var el = closest(ev.target, k);
+				if (el){
+					on_click[k](el);
+					refresh();
+					return false;
+				}
+			}
+		});
+
+		document.addEventListener('submit', function(ev){
+			for (var k in on_submit){
+				var el = closest(ev.target, k);
+				if (el){
+					on_submit[k](el);
+					refresh();
+					ev.stopPropagation();
+					ev.preventDefault();
+					return false;
+				}
+			}
+		});
+		
+		document.addEventListener('change', function(ev){
+			for (var k in on_change){
+				var el = closest(ev.target, k);
+				if (el){
+					on_change[k](el);
+					ev.preventDefault();
+					return false;
+				}
+			}
+		});
+	});
+
+	function extend(obj, props){
+		for (var k in props){ obj[k] = props[k]; }
+	}
+
+	var firebases = {};
+
+	window.Fireball = function(F, obj){
+		if (!obj) return mapping[F] && mapping[F].live_ref;
+		if (typeof F == "string") {
+			if (!firebases[F]) firebases[F] = new Firebase(F);
+			F = firebases[F];
+		}
+		window.Fireball.set = function(x,y){ return F.param(x,y); };
+		window.Fireball.get = function(x){ return F.param(x); };
+		if (obj.map) map_to_dom(F, obj.map);
+		if (obj.on_click) extend(on_click, obj.on_click);
+		if (obj.on_submit) extend(on_submit, obj.on_submit);
+		if (obj.on_change) extend(on_change, obj.on_change);
+		if (obj.show_when) extend(show_when, obj.show_when);
+		if (obj.calculated_fields) extend(calculated_fields, obj.calculated_fields);
+		if (obj.init) obj.init();
+		refresh();
+	};
+
+	window.Fireball.refresh = refresh;
+	window.Fireball.latest = function(domid){ return latest[domid]; };
+})();
+
+
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="app.css">
+<script>
+var page = "home";
+var F = new Firebase("https://songwalks.firebaseio.com/");
+// always-hot/better-d
+</script>
+
+
+<style>
+html{ width: 320px; font-size: 18px; margin:0; padding:0; font-family: sans-serif; overflow: hidden; }
+body{ margin:0; padding:0; width: 320px; position: relative; }
+#cities a { margin: 0px 5px; }
+#browse { background: #ccc; border: solid thin black; padding 10px; position: relative; }
+#timeline{ position: relative; }
+#actions{ position: relative; left: 20px; }
+.action{ 
+   position: absolute; border-left: solid 2px #333; 
+   padding: 2px 7px; display:block; min-width: 260px;
+   z-index: 1;
+   background: #eee;
+}
+#playhead {
+   position : absolute;
+   z-index: 2;
+   background: #999;
+   width: 100%;
+   padding: 2px 10px;
+   box-sizing: border-box;
+}
+
+#playhead a {
+   background: blue; color: white; padding: 2px 5px; text-decoration: none;
+}
+
+.cornerbutton { 
+   position: absolute; top:0; right: 0; background: #933; color: white; text-decoration: none;
+   padding: 10px;
+}
+#about { background: #f9f; padding: 10px; }
+#geolocate { min-height: 100px; display: block; }
+form { display: inline; } 
+form input { width: 250px; border:none; }
+#add_action {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background: #ccc;
+}
+
+</style>
+
+<body>
+
+<select id="browser">
+   <option id="count_string"></option>
+   <optgroup id="experiences">
+      <option data-set="text:calctitle"></option>
+   <optgroup>
+   <option>New experience!</option>
+</select>
+
+<div id="experience" style="position:relative">
+   <a id="geolocate" data-set="text:googlemap">(map here)</a>
+   <div id="about">
+      This experience starts at <form id="placename"><input name="name" data-set="value:placename"></form>
+      and is for the song
+      <b data-set="text:song_title"></b>
+      <select id="choose_song">
+         <option>Choose...</option>
+         <optgroup id="songs">
+            <option data-set="text:#songs:song_title value:#songs:id"></option>
+         </optgroup>
+         <option>Add...</option>
+      </select>
+   </div>
+   <div style="position:relative; top:400px; left:0; width:200px">
+      <img data-set="src:waveform_url" style="-webkit-transform: rotate(90deg); position: absolute; top:300px; left:0px; display:block">
+   </div>
+</div>
+
+
+<div id="timeline">
+   <div id="playhead">
+      <a style="float:right" id="rewind" href="#">REW</a>
+      <a id="play" href="#">PLAY</a>
+   </div>
+   <div id="actions">
+      <a data-set="style:style text:text" style="top: 159px" class="action">
+         Blow bubbles
+      </a>
+   </div>
+</div>
+
+<!--
+
+//HTML
+//* 3 experiences in NYC... Selector (+add closer neighborhood)
+//* loads soundcloud waveform rot90 from waveform_img
+
+-->
+
+<a href="#" id="save">SAVE</a> <a href="#" id="edit">EDIT</a>
+
+<div id="add_action">
+      <button>+ Dance move</button>
+      <button>+ Fitness activity</button>
+      <button>+ Thought/feeling</button>
+      <button>+ Interaction with person</button>
+      <button>+ Interaction with object</button>
+</div>
+      
+<script>
+var current_sound, show_browse;
+
+Fireball(F, {
+   map:{
+      '#experiences' : '/experiences_in_city/$city[]',
+      '#experience'  : '/experiences_in_city/$city/$experience',
+      '#actions'     : '/p2/actions/$experience[]',
+      '#songs'       : '/songs[]'
+   },
+   
+   init:function(){
+      console.log('initted');
+      SC.initialize({client_id: "43963acff2ef28ec55f039eddcea8478"});
+      console.log('soundcloud initialized');
+      
+      F.dynamic('/experiences_in_city/$city').on('value', function(snap){
+         var v = snap.val();
+         document.getElementById("count_string").innerHTML = Object.keys(v).length + " experiences nearby in NYC";
+      });
+      
+      // put this inside geocoder
+      (function(){
+         Fireball.set('$city', '-J8g_WwoZ8WuOxKYfLaY');
+      })();
+   },
+   
+   on_change:{
+
+	   '#browser': function(sel){
+	      var opt = sel.options[sel.selectedIndex];
+	      if (sel.value.match(/^New/)){
+	         setTimeout(function(){
+      	      var title = prompt('Title:');
+   	         if (!title) return;
+               var id = Fireball('#experiences').push({title:title}).name();
+               Fireball.set('$experience', id);
+               current_sound = null;
+	         }, 0);
+	      } else if (opt.id) {
+            Fireball.set('$experience', opt.id);
+            current_sound = null;
+	      }
+	   },
+
+      '#choose_song': function(el){
+         var opt = el.options[el.selectedIndex];
+         if (el.value.match(/^Add/)){
+            setTimeout(function(){
+               var url = prompt("Soundcloud URL:");
+
+            if (!url) return el.selectedIndex = 0;
+            SC.get('/resolve', {url:url}, function(track){
+               // alert('got:' + JSON.stringify(track));
+               if (!track) return alert('Sorry, couldn\'t load');
+               var properties = {
+                  soundcloud_url: "/tracks/" + track.id,
+                  soundcloud_id: track.id,
+                  waveform_url: track.waveform_url,
+                  song_title: track.title
+               };
+               properties.song_id = Fireball('#songs').push(properties).name();
+               Fireball('#experience').update(properties);
+            });
+
+
+            }, 0);
+         } else {
+            Fireball('#experience').update(opt.data);
+         }
+      }
+   },
+   
+   calculated_fields:{
+      "#experience googlemap": function(exp){
+         if (!exp.start_loc) return "<a href='#' id='geolocate'>Geolocate!</a>";
+         var mapUrl = "http://maps.google.com/maps/api/staticmap?markers=";
+         mapUrl = mapUrl + exp.start_loc[0] + ',' + exp.start_loc[1];
+         mapUrl = mapUrl + '&zoom=16&size=320x100&maptype=roadmap&sensor=true';
+         return "<img src='"+mapUrl+"'>";
+      },
+      
+      "#experiences calctitle": function(exp){
+         // TODO: make from start loc name and song name and authors
+         return exp.song_title + " @ " + exp.placename;
+      },
+      
+      '#actions style': function(action){
+         return "top: " + (action.t * 4 + 20) + "px";
+      }
+   },
+   
+   show_when:{
+      '#experience': function(){ return Fireball.get('$experience'); },
+      '#timeline':   function(){ return Fireball.get('$experience'); },
+      '#add_action, #save': function(){
+         var latest = Fireball.latest('#experience');
+         return latest && !latest.saved; 
+      },
+      '#edit': function(){
+         return Fireball.get('$experience') && Fireball.latest('#experience').saved; 
+      }
+   },
+
+	on_click: {
+	   '.action': function(el){
+	      alert('you clicked ' + el.id);
+	   },
+	
+	   '#add_action button': function(el){
+         var new_action = prompt('What:');
+         if (new_action) Fireball('#actions').push({
+            t: current_sound.position / 1000,
+            type: el.innerText,
+            text: new_action
+         });
+      },
+    
+      '#cities a': function(el){
+         Fireball.set('$city', el.id);
+      },
+      
+	   '#new_city': function(){
+	      var name = prompt('City:');
+	      if (name) Fireball('#cities').push({name:name});
+	   },
+		   
+	   '#geolocate':function(){
+   	      navigator.geolocation.getCurrentPosition(function(pos){
+   	         Fireball('#experience').update({ 'start_loc': [
+   	            pos.coords.latitude, pos.coords.longitude
+   	         ] });
+   	      });
+	   },
+	   
+      "#rewind": function(){
+         current_sound.setPosition(0);
+      },
+      "#save":function(){
+         Fireball('#experience').update({ saved: true });
+      },
+      "#edit":function(){
+         Fireball('#experience').update({ saved: false });
+      },
+      "#play": function(){
+         if (current_sound) return current_sound.togglePause();
+
+         // configure soundcloud using Latest
+         var exp = Fireball.latest('#experience');
+         SC.stream(exp.soundcloud_url, function(sound){
+            current_sound = sound;
+            sound.play({
+               'whileplaying': function(){
+                  var px = sound.position / 250;
+                  document.getElementById('playhead').style.top = px + "px";
+               }
+            });
+         });
+      }
+	},
+	
+	on_submit:{
+      '#placename': function(form){
+         Fireball('#experience').update({ 'placename': form.name.value });
+      }
+	}
+});
+
+</script>
