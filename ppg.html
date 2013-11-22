@@ -281,7 +281,7 @@ Fireball(F, {
          properties.song_id = opt.id;
          properties.author_name = form.author_name.value;
          properties.placename = form.placename.value;
-         var id = Fireball('#experience').push(properties).name();
+         var id = Fireball('#experiences').push(properties).name();
          Fireball.set('$experience', id);
          show_compose = false;
          current_sound = null;
