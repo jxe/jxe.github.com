@@ -152,17 +152,17 @@
 			dom.innerHTML = json;
 			return dom;
 		}
-		if (json.id) dom.id = json.id;
+		// if (json.id) dom.id = json.id;
 
 		decorate_element(dom, json, domid);
 		var matches = dom.querySelectorAll('[data-set]');
 		for (var i = 0; i < matches.length; i++) {
-			var el = matches[i];
-	      decorate_element(el, json, domid);
+		  var el = matches[i];
+	          decorate_element(el, json, domid);
 		}
 
 		for (var k in json){
-			alleach(dom, k, function(m){ m.innerHTML = json[k]; });
+		  alleach(dom, k, function(m){ m.innerHTML = json[k]; });
 		}
 		return dom;
 	}
@@ -175,6 +175,7 @@
 			var clone = dom.cloneNode(true);
 			clone.data = o;
 			clone.path = path + '/' + o.id;
+			clone.id = o.id;
 			doms.push(project(o, clone, domid));
 		}
 		return doms;
