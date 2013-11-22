@@ -131,8 +131,8 @@ Fireball(F, {
 
       F.dynamic('/experiences_in_city/$city/$experience').on('value', function(snap){
          var v = snap.val();
-         if (v && !v.saved) document.getElementById('#timeline').className = 'editing';
-	 else document.getElementById('#timeline').className = 'playing';
+         if (v && !v.saved) document.getElementById('timeline').className = 'editing';
+	 else document.getElementById('timeline').className = 'playing';
       });
       
       F.dynamic('/experiences_in_city/$city').on('value', function(snap){
@@ -214,6 +214,7 @@ Fireball(F, {
       "#experiences li": function(el){
             Fireball.set('$experience', el.id);
             current_sound = null;
+            show_browse = false;
       },
 
       "#new_experience": function(){
