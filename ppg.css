@@ -43,7 +43,6 @@ body{ margin:0; padding:0; position: relative; }
 
 #about { background: #f9f; padding: 10px; }
 #geolocate { min-height: 100px; display: block; }
-form { display: inline; } 
 form input { 
    width: 250px; 
    border:none;
