@@ -5,7 +5,7 @@ body{ margin:0; padding:0; position: relative; }
 #actions{ margin-left: 35px; margin-right: 35px; }
 
 #waveform {
-   -webkit-transform: rotate(90deg); position: absolute; display:block; -webkit-transform-origin: 0% 100%; bottom:-35px;
+   -webkit-transform: rotate(90deg) scale(1.0,1.15); position: absolute; display:block; -webkit-transform-origin: 0% 100%; bottom:-35px;
 }
 
 .action{ 
