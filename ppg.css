@@ -10,7 +10,7 @@ body{ margin:0; padding:0; position: relative; }
 
 .action{ 
    position: absolute; border-left: solid 2px #558; 
-   padding: 2px 7px; display:block; min-width: 260px;
+   padding: 2px 7px; display:block; min-width: 230px;
    z-index: 2;
    background: #eee;
 }
