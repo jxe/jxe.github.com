@@ -225,7 +225,7 @@ Fireball(F, {
             current_sound = sound;
             sound.play({
                'whileplaying': function(){
-                  var px = sound.position / 250;
+                  var px = sound.position / 1000 * 8;
                   document.getElementById('playhead').style.top = px + "px";
                }
             });
