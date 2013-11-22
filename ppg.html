@@ -30,7 +30,7 @@
 </div>
 
 <div id="city">
-   <a href="#"><b id="count_string"></b> in <b data-set="text:name">NYC</b></a>
+   <a id="toggle_browse" href="#"><b id="count_string"></b> in <b data-set="text:name">NYC</b></a>
    <div id="choose_experience">
       <ul id="experiences">
          <li><a href="#" data-set="text:calctitle"></a></li>
@@ -225,7 +225,7 @@ Fireball(F, {
          show_browse = true;
          show_compose = false;
       },
-      "#count_string": function(){ show_browse = !show_browse; },
+      "#toggle_browse": function(){ show_browse = !show_browse; },
       "#change_city": function(){ Fireball.set('$city', null); },
       "#cities a": function(el){ Fireball.set('$city', el.id); },
       
