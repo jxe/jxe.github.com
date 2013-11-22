@@ -4,6 +4,10 @@ body{ margin:0; padding:0; position: relative; }
 #timeline{ position: relative; }
 #actions{ margin-left: 35px; margin-right: 35px; }
 
+#waveform {
+   -webkit-transform: rotate(90deg); position: absolute; display:block; -webkit-transform-origin: 0% 100%; bottom:-35px;
+}
+
 .action{ 
    position: absolute; border-left: solid 2px #558; 
    padding: 2px 7px; display:block; min-width: 260px;
@@ -18,6 +22,7 @@ body{ margin:0; padding:0; position: relative; }
    margin:0;
 }
 #playhead {
+   height: 35px;
    position : absolute;
    z-index: 1;
    background: rgba(0,0,0,0.1);
