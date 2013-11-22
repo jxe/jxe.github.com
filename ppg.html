@@ -41,14 +41,14 @@ var F = new Firebase("https://songwalks.firebaseio.com/");
       <a href="#" id="save">SAVE</a> <a href="#" id="edit">EDIT</a>
    </div>
 
-   <img data-set="src:waveform_url" style="-webkit-transform: rotate(90deg); position: absolute; display:block">
+   <img data-set="src:waveform_url" style="-webkit-transform: rotate(90deg); position: absolute; display:block; -webkit-transform-origin: 0% 100%; bottom:-20">
 </div>
 
 
 <div id="timeline">
    <div id="playhead">
-      <a style="float:right" id="rewind" href="#">REW</a>
-      <a id="play" href="#">PLAY/PAUSE</a>
+      <a style="float:right" id="rewind" href="#">&#9650;</a>
+      <a id="play" href="#">&#9654;</a>
    </div>
    <div id="actions">
       <a data-set="style:style text:text" style="top: 159px" class="action">
