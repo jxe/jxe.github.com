@@ -130,7 +130,11 @@ Fireball(F, {
       
       F.dynamic('/experiences_in_city/$city').on('value', function(snap){
          var v = snap.val();
-         document.getElementById("count_string").innerHTML = Object.keys(v).length + " experiences nearby in NYC";
+         if (!v) {
+         	document.getElementById("count_string").innerHTML = "No experiences yet"
+         } else {
+	         document.getElementById("count_string").innerHTML = Object.keys(v).length + " experiences";
+         }
       });
    },
    
