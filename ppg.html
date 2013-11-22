@@ -168,7 +168,7 @@ Fireball(F, {
       
       "#experiences calctitle": function(exp){
          // TODO: make from start loc name and song name and authors
-         return "Someone left instructions for enjoying " + exp.song_title + " that start at " + exp.placename;
+         return (exp.author_name || "Someone") + " made instructions for enjoying &ldquo;" + exp.song_title + "&rdquo; that start at &ldquo;" + exp.placename + "&rdquo;";
       },
       
 
@@ -179,15 +179,15 @@ Fireball(F, {
    
    show_when:{   
 
-      '#experience': function(){ return Fireball.get('$experience'); },
-      '#timeline':   function(){ return Fireball.get('$experience'); },
+      '#experience': function(){ return Fireball.latest('#experience') },
+      '#timeline':   function(){ return Fireball.latest('#experience') },
 
       '#add_action, #save, #delete': function(){
          var latest = Fireball.latest('#experience');
          return latest && !latest.saved; 
       },
       '#edit': function(){
-         return Fireball.get('$experience') && Fireball.latest('#experience').saved; 
+         return Fireball.latest('#experience') && Fireball.latest('#experience').saved; 
       },
       "#choose_city": function(){ return !Fireball.get("$city"); },
       "#city": function(){ return Fireball.get("$city"); },
