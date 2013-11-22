@@ -26,10 +26,11 @@
    <div id="cities">
       <a href="#" data-set="text:name"></a>
    </div>
+   <a href="#" id="new_city">Add</a>
 </div>
 
 <div id="city">
-   <a href="#" id="count_string">3 experiences in NYC</a>
+   <a href="#" id="count_string">3 experiences in <b data-set="text:name">NYC</b></a>
    <div id="choose_experience">
       <ul id="experiences">
          <li><a href="#" data-set="text:calctitle"></a></li>
@@ -114,7 +115,8 @@ var current_sound, show_browse, show_compose;
 
 Fireball(F, {
    map:{
-      '#cities'     :  '/cities[]',
+      '#cities'      : '/cities[]',
+      '#city'        : '/cities/$city',
       '#experiences' : '/experiences_in_city/$city[]',
       '#experience'  : '/experiences_in_city/$city/$experience',
       '#actions'     : '/p2/actions/$experience[]',
