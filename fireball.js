@@ -80,7 +80,7 @@
 	};
 
 	Firebase.prototype.param = function(v, value){
-		if (!value) return vars[v];
+		if (value === undefined) return vars[v];
 		vars[v] = value;
 		dyns.forEach(function(dyn){ if (dyn.uses_var(v)) dyn.update_ref(); });
 		return value;
