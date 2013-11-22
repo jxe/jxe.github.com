@@ -62,6 +62,7 @@
       starting at <b data-set="text:placename"></b>      
       <button id="save">save</button>
       <button id="edit">edit</button>
+      <a href="#" id="delete">delete</a>
    </div>
    <a id="geolocate" data-set="text:googlemap">(map here)</a>
    <img id="waveform" data-set="src:waveform_url">
@@ -167,7 +168,7 @@ Fireball(F, {
       
       "#experiences calctitle": function(exp){
          // TODO: make from start loc name and song name and authors
-         return exp.song_title + " @ " + exp.placename;
+         return "Someone left instructions for enjoying " + exp.song_title + " that start at " + exp.placename;
       },
       
 
@@ -181,7 +182,7 @@ Fireball(F, {
       '#experience': function(){ return Fireball.get('$experience'); },
       '#timeline':   function(){ return Fireball.get('$experience'); },
 
-      '#add_action, #save': function(){
+      '#add_action, #save, #delete': function(){
          var latest = Fireball.latest('#experience');
          return latest && !latest.saved; 
       },
@@ -194,14 +195,14 @@ Fireball(F, {
       "#compose_experience": function(){ return show_compose; }
    },
 
-	on_click: {
+   on_click: {
 	
-      "#experiences a": function(el){
+      "#experiences li": function(el){
             Fireball.set('$experience', el.id);
             current_sound = null;
       },
-	
-	   "#new_experience": function(){
+
+      "#new_experience": function(){
          show_browse = false;
          show_compose = true;
       },
@@ -212,12 +213,13 @@ Fireball(F, {
       "#count_string": function(){ show_browse = !show_browse; },
       "#change_city": function(){ Fireball.set('$city', null); },
       "#cities a": function(el){ Fireball.set('$city', el.id); },
-	
-	   '.action': function(el){
+      
+      
+      '.action': function(el){
 	      alert('you clicked ' + el.id);
-	   },
+      },
 	
-	   '#add_action button': function(el){
+      '#add_action button': function(el){
          var new_action = prompt('What:');
          if (new_action) Fireball('#actions').push({
             t: current_sound.position / 1000,
@@ -226,12 +228,12 @@ Fireball(F, {
          });
       },
           
-	   '#new_city': function(){
+      '#new_city': function(){
 	      var name = prompt('City:');
 	      if (name) Fireball('#cities').push({name:name});
-	   },
+      },
 		   
-	   '#geolocate':function(){
+      '#geolocate':function(){
    	      navigator.geolocation.getCurrentPosition(function(pos){
    	         Fireball('#experience').update({ 'start_loc': [
    	            pos.coords.latitude, pos.coords.longitude
@@ -241,6 +243,10 @@ Fireball(F, {
 	   
       "#rewind": function(){
          current_sound.setPosition(0);
+      },
+      "#delete":function(){
+         Fireball('#experience').delete();
+         Fireball.set("$experience", null);
       },
       "#save":function(){
          Fireball('#experience').update({ saved: true });
