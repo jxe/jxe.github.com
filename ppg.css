@@ -13,7 +13,12 @@ body{ margin:0; padding:0; position: relative; }
    padding: 2px 7px; display:block; min-width: 260px;
    z-index: 2;
    background: #eee;
-   
+}
+
+.action i {
+   font-size:9px;
+   color: #aaa;
+   display:block;
 }
 #browser {
    font-size:20px;
