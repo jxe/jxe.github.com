@@ -128,6 +128,12 @@ Fireball(F, {
       //console.log('initted');
       SC.initialize({client_id: "43963acff2ef28ec55f039eddcea8478"});
       //console.log('soundcloud initialized');
+
+      F.dynamic('/experiences_in_city/$city/$experience').on('value', function(snap){
+         var v = snap.val();
+         if (v && !v.saved) document.getElementById('#timeline').className = 'editing';
+	 else document.getElementById('#timeline').className = 'playing';
+      });
       
       F.dynamic('/experiences_in_city/$city').on('value', function(snap){
          var v = snap.val();
@@ -276,7 +282,7 @@ Fireball(F, {
                   
 		  var actions = Fireball.latest('#actions');
 		  for (var k in actions){
-			if (Math.abs(actions[k].t - s) > 10) document.getElementById(k).style.backgroundColor = "black";
+			if (Math.abs(actions[k].t - s) > 5) document.getElementById(k).style.backgroundColor = "black";
 			else document.getElementById(k).style.backgroundColor = "white";
 		  }
                }
