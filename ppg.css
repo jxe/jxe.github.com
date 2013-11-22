@@ -2,18 +2,20 @@ html{ font-size: 18px; margin:0; padding:0; font-family: sans-serif;  }
 body{ margin:0; padding:0; position: relative; }
 
 #timeline{ position: relative; }
-#actions{ position: relative; left: 20px; }
+#actions{ margin-left: 35px; margin-right: 35px; }
 
 .action{ 
-   position: absolute; border-left: solid 2px #333; 
+   position: absolute; border-left: solid 2px #558; 
    padding: 2px 7px; display:block; min-width: 260px;
    z-index: 2;
    background: #eee;
+   
 }
 #browser {
    font-size:20px;
    /* border:solid thin black; */
    max-width:100%;
+   margin:0;
 }
 #playhead {
    position : absolute;
