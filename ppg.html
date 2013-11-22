@@ -40,8 +40,7 @@ var F = new Firebase("https://songwalks.firebaseio.com/");
       </select>
       <a href="#" id="save">SAVE</a> <a href="#" id="edit">EDIT</a>
    </div>
-
-   <img data-set="src:waveform_url" style="-webkit-transform: rotate(90deg); position: absolute; display:block; -webkit-transform-origin: 0% 100%; bottom:-20">
+   <img id="waveform" data-set="src:waveform_url">
 </div>
 
 
@@ -161,7 +160,7 @@ Fireball(F, {
       },
       
       '#actions style': function(action){
-         return "top: " + (action.t * 4 + 20) + "px";
+         return "top: " + (action.t * 8 + 35) + "px";
       }
    },
    
