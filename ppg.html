@@ -26,7 +26,7 @@
    <div id="cities">
       <a href="#" data-set="text:name"></a>
    </div>
-   <a href="#" id="new_city">Add</a>
+   <button id="new_city">Add</button>
 </div>
 
 <div id="city">
@@ -35,11 +35,12 @@
       <ul id="experiences">
          <li><a href="#" data-set="text:calctitle"></a></li>
       </ul>
-      <a href="#" id="new_experience">New experience</a>
-      <a href="#" id="change_city">Change city</a>
+      <button id="new_experience">New experience</button>
+      <button id="change_city">Change city</button>
    </div>
    <form id="compose_experience">
       <input name="author_name" placeholder="Your name"><br>
+      <input name="to_name" placeholder="Dedicated to"><br>
       <input name="placename" placeholder="Start location"><br>
    
       <select id="choose_song">
@@ -174,7 +175,11 @@ Fireball(F, {
       
       "#experiences calctitle": function(exp){
          // TODO: make from start loc name and song name and authors
-         return (exp.author_name || "Someone") + " made instructions for enjoying &ldquo;" + exp.song_title + "&rdquo; that start at &ldquo;" + exp.placename + "&rdquo;";
+         if (exp.to_name){
+	         return "<b>" + (exp.author_name || "Someone") + "</b> had <b>" + exp.to_name + "</b> in mind, when they came up with a way of enjoying &ldquo;" + exp.song_title + "&rdquo; starting at &ldquo;" + exp.placename + "&rdquo;";
+         } else {
+	         return "<b>" + (exp.author_name || "Someone") + "</b> has a way of enjoying &ldquo;" + exp.song_title + "&rdquo; starting at &ldquo;" + exp.placename + "&rdquo;";
+         }
       },
       
 
@@ -284,6 +289,7 @@ Fireball(F, {
          properties = opt.data;
          properties.song_id = opt.id;
          properties.author_name = form.author_name.value;
+         properties.to_name = form.to_name.value;
          properties.placename = form.placename.value;
          var id = Fireball('#experiences').push(properties).name();
          Fireball.set('$experience', id);
