@@ -2,44 +2,68 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
-  
-  
-
 <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
 <script src="fireball.js"></script>
 <script src="http://connect.soundcloud.com/sdk.js"></script>
 <link rel="stylesheet" type="text/css" href="ppg.css">
-<script>
-var page = "home";
-var F = new Firebase("https://songwalks.firebaseio.com/");
-// always-hot/better-d
-</script>
-
 <body>
 
-<select id="browser">
-   <option id="count_string"></option>
-   <optgroup id="experiences">
-      <option data-set="text:calctitle"></option>
-   <optgroup>
-   <option>New experience!</option>
-</select>
 
-<div id="experience" style="position:relative">
-   <a id="geolocate" data-set="text:googlemap">(map here)</a>
-   <div id="about">
-      This experience starts at <form id="placename"><input name="name" data-set="value:placename"></form>
-      and is for the song
-      <b data-set="text:song_title"></b>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="choose_city">
+   Choose your city:
+   <div id="cities">
+      <a href="#" data-set="text:name"></a>
+   </div>
+</div>
+
+<div id="city">
+   <a href="#" id="count_string">3 experiences in NYC</a>
+   <div id="choose_experience">
+      <div id="experiences">
+         <a href="#" data-set="text:calctitle"></a>
+      </div>
+      <a href="#" id="new_experience">New experience</a>
+      <a href="#" id="change_city">Change city</a>
+   </div>
+   <form id="compose_experience">
+      <input name="author_name" placeholder="Your name"><br>
+      <input name="placename" placeholder="Start location"><br>
+   
       <select id="choose_song">
-         <option>Choose...</option>
+         <option>Choose song...</option>
          <optgroup id="songs">
             <option data-set="text:#songs:song_title value:#songs:id"></option>
          </optgroup>
          <option>Add...</option>
-      </select>
-      <a href="#" id="save">SAVE</a> <a href="#" id="edit">EDIT</a>
+      </select><br>
+
+      <button type="submit">submit</button>      
+      <a href="#" id="cancel_compose">cancel</a>
+   </form>
+</div>
+   
+
+
+<div id="experience" style="position:relative">
+   <div id="about">
+      Instructions for enjoying <b data-set="text:song_title"></b>,
+      starting at <b data-set="value:placename"></b>      
+      <button id="save">save</button>
+      <button id="edit">edit</button>
    </div>
+   <a id="geolocate" data-set="text:googlemap">(map here)</a>
    <img id="waveform" data-set="src:waveform_url">
 </div>
 
@@ -57,27 +81,39 @@ var F = new Firebase("https://songwalks.firebaseio.com/");
    </div>
 </div>
 
-<!--
-
-//HTML
-//* 3 experiences in NYC... Selector (+add closer neighborhood)
-//* loads soundcloud waveform rot90 from waveform_img
-
--->
-
 <div id="add_action">
-      <button>+ Dance move</button>
-      <button>+ Fitness activity</button>
-      <button>+ Thought/feeling</button>
-      <button>+ Interaction with person</button>
-      <button>+ Interaction with object</button>
+   Add:
+      <button>Dance move</button>
+      <button>Fitness activity</button>
+      <button>Thought/feeling</button>
+      <button>Interaction with person</button>
+      <button>Interaction with object</button>
+      <button>Make a sound</button>
 </div>
       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
-var current_sound, show_browse;
+var page = "home";
+var F = new Firebase("https://songwalks.firebaseio.com/");
+var current_sound, show_browse, show_compose;
 
 Fireball(F, {
    map:{
+      '#cities'     :  '/cities[]',
       '#experiences' : '/experiences_in_city/$city[]',
       '#experience'  : '/experiences_in_city/$city/$experience',
       '#actions'     : '/p2/actions/$experience[]',
@@ -85,67 +121,40 @@ Fireball(F, {
    },
    
    init:function(){
-      console.log('initted');
+      //console.log('initted');
       SC.initialize({client_id: "43963acff2ef28ec55f039eddcea8478"});
-      console.log('soundcloud initialized');
+      //console.log('soundcloud initialized');
       
       F.dynamic('/experiences_in_city/$city').on('value', function(snap){
          var v = snap.val();
          document.getElementById("count_string").innerHTML = Object.keys(v).length + " experiences nearby in NYC";
       });
-      
-      // put this inside geocoder
-      (function(){
-         Fireball.set('$city', '-J8g_WwoZ8WuOxKYfLaY');
-      })();
    },
    
    on_change:{
-
-	   '#browser': function(sel){
-	      var opt = sel.options[sel.selectedIndex];
-	      if (sel.value.match(/^New/)){
-	         setTimeout(function(){
-      	      var title = prompt('Title:');
-   	         if (!title) return;
-               var id = Fireball('#experiences').push({title:title}).name();
-               Fireball.set('$experience', id);
-               current_sound = null;
-	         }, 0);
-	      } else if (opt.id) {
-            Fireball.set('$experience', opt.id);
-            current_sound = null;
-	      }
-	   },
-
       '#choose_song': function(el){
          var opt = el.options[el.selectedIndex];
          if (el.value.match(/^Add/)){
             setTimeout(function(){
                var url = prompt("Soundcloud URL:");
-
-            if (!url) return el.selectedIndex = 0;
-            SC.get('/resolve', {url:url}, function(track){
+               if (!url) return el.selectedIndex = 0;
+               SC.get('/resolve', {url:url}, function(track){
                // alert('got:' + JSON.stringify(track));
-               if (!track) return alert('Sorry, couldn\'t load');
-               var properties = {
-                  soundcloud_url: "/tracks/" + track.id,
-                  soundcloud_id: track.id,
-                  waveform_url: track.waveform_url,
-                  song_title: track.title
-               };
-               properties.song_id = Fireball('#songs').push(properties).name();
-               Fireball('#experience').update(properties);
-            });
-
-
+                  if (!track) return alert('Sorry, couldn\'t load');
+                  var properties = {
+                     soundcloud_url: "/tracks/" + track.id,
+                     soundcloud_id: track.id,
+                     waveform_url: track.waveform_url,
+                     song_title: track.title
+                  };
+                  Fireball('#songs').push(properties);
+               });
             }, 0);
-         } else {
-            Fireball('#experience').update(opt.data);
-         }
+         } 
       }
    },
    
+
    calculated_fields:{
       "#experience googlemap": function(exp){
          if (!exp.start_loc) return "<a href='#' id='geolocate'>Geolocate!</a>";
@@ -155,29 +164,55 @@ Fireball(F, {
          return "<img src='"+mapUrl+"'>";
       },
       
+      
       "#experiences calctitle": function(exp){
          // TODO: make from start loc name and song name and authors
          return exp.song_title + " @ " + exp.placename;
       },
       
+
       '#actions style': function(action){
          return "top: " + (action.t * 8 + 35) + "px";
       }
    },
    
-   show_when:{
+   show_when:{   
+
       '#experience': function(){ return Fireball.get('$experience'); },
       '#timeline':   function(){ return Fireball.get('$experience'); },
-      '#add_action, #save, #choose_song': function(){
+
+      '#add_action, #save': function(){
          var latest = Fireball.latest('#experience');
          return latest && !latest.saved; 
       },
       '#edit': function(){
          return Fireball.get('$experience') && Fireball.latest('#experience').saved; 
-      }
+      },
+      "#choose_city": function(){ return !Fireball.get("$city"); },
+      "#city": function(){ return Fireball.get("$city"); },
+      "#choose_experience": function(){ return show_browse; },
+      "#compose_experience": function(){ return show_compose; }
    },
 
 	on_click: {
+	
+      "#experiences a": function(el){
+            Fireball.set('$experience', el.id);
+            current_sound = null;
+      },
+	
+	   "#new_experience": function(){
+         show_browse = false;
+         show_compose = true;
+      },
+      "#cancel_compose": function(){
+         show_browse = true;
+         show_compose = false;
+      },
+      "#count_string": function(){ show_browse = !show_browse; },
+      "#change_city": function(){ Fireball.set('$city', null); },
+      "#cities a": function(el){ Fireball.set('$city', el.id); },
+	
 	   '.action': function(el){
 	      alert('you clicked ' + el.id);
 	   },
@@ -190,11 +225,7 @@ Fireball(F, {
             text: new_action
          });
       },
-    
-      '#cities a': function(el){
-         Fireball.set('$city', el.id);
-      },
-      
+          
 	   '#new_city': function(){
 	      var name = prompt('City:');
 	      if (name) Fireball('#cities').push({name:name});
@@ -235,8 +266,17 @@ Fireball(F, {
 	},
 	
 	on_submit:{
-      '#placename': function(form){
-         Fireball('#experience').update({ 'placename': form.name.value });
+      '#compose_experience': function(form){
+         var songsel = form.choose_song;
+         var opt = songsel.options[songsel.selectedIndex];
+         properties = opt.data;
+         properties.song_id = opt.id;
+         properties.author_name = form.author_name.value;
+         properties.placename = form.placename.value;
+         var id = Fireball('#experience').push(properties).name();
+         Fireball.set('$experience', id);
+         show_compose = false;
+         current_sound = null;
       }
 	}
 });
