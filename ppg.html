@@ -276,8 +276,8 @@ Fireball(F, {
                   
 		  var actions = Fireball.latest('#actions');
 		  for (var k in actions){
-			if (Math.abs(actions[k].t - s) > 10) document.getElementById(k).class = "hidden";
-			else document.getElementById(k).class = "shown";
+			if (Math.abs(actions[k].t - s) > 10) document.getElementById(k).style.backgroundColor = "black";
+			else document.getElementById(k).style.backgroundColor = "white";
 		  }
                }
             });
