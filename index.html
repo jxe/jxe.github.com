@@ -7,39 +7,136 @@
 <body class="all">
 <a style="position:absolute; top:0" id="top"></a>
 <div class="left">
-  <img src="img/notepad.jpg"/>
   <h1>Joe Edelman</h1>
-  <a href="http://twitter.com/edelwax">@edelwax</a><br><br><br>
-  also,
+<center>
+  <a href="http://twitter.com/edelwax">@edelwax</a> (&amp; on
   <a href="http://github.com/jxe">github</a>
   <a href="http://couchsurfing.com/profile.html?id=2I8BSF">couchsurfing</a>
-  <a href="http://facebook.com/joe.edelman">facebook</a>
+  <a href="http://facebook.com/joe.edelman">facebook</a>)
+</center>
+  <img src="img/notepad.jpg"/>
 </div>
-<div class="right" id="render"></div><textarea id="text" style="display:none">
+
+
+<div class="right">
+
+
+<style>
+.right section > a { text-decoration:none; border-bottom: none; }
+section { border-radius: 20px; border: solid thin #bbb; padding: 5px 7px; margin:15px 3px; background: rgba(255,255,255,0.4)}
+section h2 { margin:10px; font-size: 22px; color: #777; }
+article { min-height: 100px; min-width: 100px; text-align:center; display: inline-block;  margin:10px; vertical-align: top; width: 200px; }
+article img { max-height: 100px; max-width: 180px; }
+article h2 { margin:0; font-size: 16px; color: #222; }
+article p { margin:0; font-size: 14px; color: gray }
+
+</style>
+
+<section>
+<h2>Emerging Problems with the Internet</h2>
+
+<a href="http://greatmending.quora.com/Towards-an-Honest-Internet-Refocusing-the-Tech-Industry-on-Fulfillment-before-it-jumps-the-shark">
+<article>
+<img src="img/wtu.jpg">
+<h2>We, the Users</h2>
+<p>Don't refer to us as eyeballs. Don't measure our lives in clicks and views.</p>
+</article>
+</a>
+
+<a href="https://medium.com/armchair-economics/a36c54b97ee1">
+<article>
+<img src="img/hnaw.jpg">
+<h2>Human Nature and the Web</h2>
+<p>Is it human nature to use the web in ways we later regret?</p>
+</article>
+</a>
+
+<a href="https://medium.com/product-design/2ef22a472b30">
+<article>
+<img src="img/dux.jpg">
+<h2>Personal Agency and User Experience</h2>
+<p>Every screenful of every app has a psychological effect</p>
+</article>
+</a>
+</section>
+
+<section>
+<h2>Steps Forward</h2>
+
+<a href="https://itunes.apple.com/cy/app/sand-calendar-day-planner/id687579461?mt=8">
+<article>
+<img src="img/sand.jpg">
+<h2>Sand, a Calendar and Browser</h2>
+<p>See your life clearly. Add exercise, friend dates... the things that make you happy.</p>
+</article>
+</a>
+
+<a href="/iom/">
+<article>
+<img src="img/iom.jpg">
+<h2>The Internet of Meaning</h2>
+<p>HTTP-level changes to help users find internet activities that are in their highest interest.</p>
+</article>
+</a>
+
+<a href="https://github.com/timewellspent/NoRegrets/">
+<article>
+<img src="img/nr.png">
+<h2>No Regrets</h2>
+<p>a chrome extension that helps you live well</p>
+</article>
+</a>
+
+<!--
+<a href="#">
+<article>
+<img src="img/recommender.jpg">
+<h2>Recommender Demos</h2>
+<p>...</p>
+</article>
+</a>
+-->
+
+</section>
+
+
+<section>
+<h2>Exploratory Work</h2>
+
+<a href="https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU">
+<article>
+<img src="img/codered.jpg">
+<h2>Code Red</h2>
+<p> Immersive experiences in public space.  Often simple.  Often beautiful.  </p>
+</article>
+</a>
+
+<a href="https://github.com/jxe/experiencefarm">
+<article>
+<img src="img/efarm.jpg">
+<h2>Experience Farm</h2>
+<p>a community of interensting ways to appreciate songs outside</p>
+</article>
+</a>
 
 
 
+</section>
 
+
+
+   <div id="render" class="narrow"></div>
+</div>
+<textarea id="text" style="display:none">
+
+## Me.
 
 I am an independent researcher.  My past includes corporate and academic research labs, startups, public speaking, choreography &amp; theater, and game design.
 
-I'd like to turn some of these topics into accessible public talks -- [invite me to speak](mailto:joe@nxhx.org).
+Below find a [vision statement](#stmt), a [design manifesto](#theory), [some games](#games), [software](#software), and shit-ton of [prior areas of inquiry](#prior).
 
 
-
-
-
-
-## Current Projects
-
-
-
-### Time- &amp; Meaning-Aware Internet
-
-What if the Internet were aware of the  value of each users time at the router level, the browser level, and at the recommended system/feed-level?  What if it were aware of which URLs were meaningful additions to our life and which weren't?
-
-We are prototyping these notions via [an iOS calendar app](#sand) that is also a web browser, a chrome extension which notices which websites you regret, [a DNS-like system that associates URL/verb pairs with different types of personal meaningfulness](#acn), [an HTML5 metadata specification](/iom/), [design recommendations](https://medium.com/product-design/2ef22a472b30) for helping users browse with agency, [and more](/iom/). 
-
+## Past work
 
 ### Environments for Describing &amp; Coordinating Group Work
 
@@ -50,11 +147,6 @@ We have made [a programming language for describing and deploying group interact
 
 
 
-
-
-## More
-
-I also have a [vision statement](#stmt), a [design manifesto](#theory), [a take on the consumer tech industry](#response), [some games](#games), [software](#software), and shit-ton of [prior areas of inquiry](#prior).
 
 ### <a id="stmt"></a> Vision Statement
 
@@ -77,13 +169,7 @@ We need to relearn how to design playgrounds:  environments for navigating with 
 
 
 
-### <a id="response"></a> The State of Consumer Tech
 
-In [Towards an Honest Internet Refocusing the Tech Industry](http://greatmending.quora.com/Towards-an-Honest-Internet-Refocusing-the-Tech-Industry-on-Fulfillment-before-it-jumps-the-shark), I complain about the dominant success metrics in the industry--clicks, views, and repeat visits--and propose new ones.
-
-In [Some Interfaces Empower Us, Others Weaken Us](https://medium.com/product-design/2ef22a472b30) I point out some information architecture and UX design differences between products that make a big difference.
-
-There is more info below about [agency, UX, and IA](#agency).
 
 
 
@@ -298,8 +384,6 @@ We use techniques from conn artistry, theme park design, game design, mythmaking
 #### <a id="codered"></a>Ongoing events
 
 Since 2011, I've co-lead a crew that makes immersive experiences in public space.  Often simple.  Often beautiful.  Sometimes vaguely illegal.  These events are all multi-party markets in interaction and rapport.  They are physical markets, just like a farmer's market, and we have been making adjustments to optimize the emergence of the right audience-member / fulfilling experience transactions.
-
-* [Photos from our events](https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU)
 
 * Games: [Interaction Games](#interactiongames)
 

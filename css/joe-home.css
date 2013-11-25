@@ -41,7 +41,8 @@ li {
 
 @media (max-width: 600px) {
   .right {
-    margin: 10px;
+    float: left;
+    margin-left: 20px;
   }
 }
 
@@ -58,8 +59,12 @@ li {
   }
 
   .right {
-    width: 350px; 
     float: left;
+    max-width: 500px;
+  }
+  
+  .narrow {
+    width: 350px; 
   }
 }
 
@@ -70,13 +75,13 @@ li {
 }
 
 .left {
-    margin-top: 86px;
+    margin-top: 36px;
     text-align:center  
 }
 
 .left img {
   width: 250px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   border-radius: 10px;
   box-shadow: rgba(30,20,0,0.7) 0px 0px 5px;
 }
@@ -148,3 +153,4 @@ h4 + ul {
   border: none;
   padding: 4px 7px;
 }
+
