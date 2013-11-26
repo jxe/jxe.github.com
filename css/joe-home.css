@@ -42,16 +42,16 @@ li {
 @media (max-width: 600px) {
   .right {
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
 @media (min-width: 600px) {
   .left {
-    margin-left: 90px;
-    margin-right: 60px;
+    margin-left: 30px;
+    margin-right: 20px;
     float: left;
-    padding-right: 20px;
   }
 
   .left img {
@@ -61,6 +61,7 @@ li {
   .right {
     float: left;
     max-width: 500px;
+    margin-left: 20px;
   }
   
   .narrow {
