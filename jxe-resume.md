@@ -1,17 +1,27 @@
 Joe Edelman
-http://github.com/jxe http://couchsurfing.com/joe_edelman http://www.linkedin.com/in/joeedelman
-Dartmouth College (BA); MIT (HSSP)
-joe@nxhx.org 413.250.8007
+
+* http://github.com/jxe http://couchsurfing.com/joe_edelman http://www.linkedin.com/in/joeedelman
+* Dartmouth College (BA); MIT (HSSP)
+* joe@nxhx.org 413.250.8007
+
+
+## Experience
+
+* Open source commiter since 1993.  Patches to emacs, trn, zsh...
+* Scientific research since 1995.  Contributions to HCI, CSSW, neuroinformatics, bioinformatics.
+* Management since 2000. Generally small teams (7 engineers or fewer).
+* Real world games & experimental theater since 1999.
+* javascript, C, golang, ruby, zsh, iOS / Objective-C, mongo, redis, python, SuperCollider
 
 
 ## Skills
 
 * robust, distributed systems
 * terabytes/day of data or traffic, in real time and globally
-* real world games
-* transaction cost and search cost economics
 * social design for stranger/stranger interactions
 * social design for activities/invites/events
+* transaction cost and search cost economics
+* real world games
 
 
 ## Positions
@@ -29,15 +39,6 @@ joe@nxhx.org 413.250.8007
 * Systems, Harvard Medical, realtime central data collection - 1995
 * HCI/CSCW Research, MIT Artificial Intelligence Lab, structured forums - 1993
 * born: September 1976
-
-
-## Experience
-
-* Open source commiter since 1993.  Patches to emacs, trn, zsh...
-* Scientific research since 1995.  Contributions to HCI, CSSW, neuroinformatics, bioinformatics.
-* Management since 2000. Generally small teams (7 engineers or fewer).
-* Real world games & experimental theater since 1999.
-* javascript, C, golang, ruby, zsh, iOS / Objective-C, mongo, redis, python, SuperCollider
 
 
 ## As a consultant.
