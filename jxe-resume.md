@@ -1,8 +1,7 @@
-Joe Edelman
+Joe Edelman <joe@nxhx.org> 413.250.8007
 
-* http://github.com/jxe http://couchsurfing.com/joe_edelman http://www.linkedin.com/in/joeedelman
+* http://github.com/jxe • http://couchsurfing.com/joe_edelman • http://www.linkedin.com/in/joeedelman
 * Dartmouth College (BA); MIT (HSSP)
-* joe@nxhx.org 413.250.8007
 
 
 ## Experience
