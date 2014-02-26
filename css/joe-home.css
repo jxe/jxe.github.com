@@ -76,13 +76,14 @@ li {
 }
 
 .left {
-    margin-top: 36px;
+    margin-top: 0px;
     text-align:center  
 }
 
 .left img {
   width: 250px;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: rgba(30,20,0,0.7) 0px 0px 5px;
 }
