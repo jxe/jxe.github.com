@@ -8,22 +8,22 @@ body {
   background: #fff url('../img/brgrad.png') repeat-x scroll;
 }
 
-p { 
-  padding-top: 0px; 
+p {
+  padding-top: 0px;
   margin-top: 0px;
 }
 
 ul {
   margin-left: 0;
-  padding-left: 2.5em; 
+  padding-left: 2.5em;
 }
 
-a[href] { 
+a[href] {
   text-decoration:none;
-	color: #222; 
-	border-bottom: solid thin #aad; 
+	color: #222;
+	border-bottom: solid thin #aad;
 	/*border-right: solid thin #88c; */
-  color: #06c; 
+  color: #06c;
   /*padding: 0px 4px;*/
 }
 
@@ -63,29 +63,32 @@ li {
     max-width: 500px;
     margin-left: 20px;
   }
-  
+
   .narrow {
-    width: 350px; 
+    width: 350px;
   }
 }
 
 .right {
-    margin-top: 27px; 
+    margin-top: 27px;
     font-size: 14px;
-    color: hsl(60, 1%, 15%)  
+    color: hsl(60, 1%, 15%)
 }
 
 .left {
     margin-top: 0px;
-    text-align:center  
+    text-align:center
 }
 
-.left img {
+.left div.photo {
   width: 250px;
+  height: 300px;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: rgba(30,20,0,0.7) 0px 0px 5px;
+  box-shadow: inset rgba(30,20,0,0.7) 0px 0px 5px 1px;
+  background: url(../smallme.jpg);
+  background-size: cover;
 }
 
 
@@ -97,8 +100,8 @@ h1 {
   text-align:center
   font-family: "Optima", Verdana;
   font-size: 2em;
-  color: #06c; 
-  color: #050; 
+  color: #06c;
+  color: #050;
   color: black;
   font-weight: normal;
   margin: 0px;
@@ -156,4 +159,3 @@ h4 + ul {
   border: none;
   padding: 4px 7px;
 }
-
