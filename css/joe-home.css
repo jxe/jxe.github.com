@@ -83,8 +83,7 @@ li {
 .left div.photo {
   width: 250px;
   height: 300px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   border-radius: 10px;
   box-shadow: inset rgba(30,20,0,0.7) 0px 0px 5px 1px;
   background: url(../smallme.jpg);
