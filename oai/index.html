@@ -1,0 +1,74 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="i.css">
+
+
+<section class="article">
+	<article class="post">
+		<header>
+			<hgroup>
+				<h1>Towards an Outcome-Aware Internet</h1>
+				<p class="date">Joe Edelman</p>
+			</hgroup>
+		</header>
+		<div id="body"></div>
+	</article>
+</section>
+<footer><small>&copy; 2014 Joe Edelman</small></footer>
+
+
+<textarea id="text" style="display:none">
+
+The way we use the internet has gotten out of hand.  We've created navigation experiences that endlessly encourage us to waste our time and money.  We need new ways to organize our online experience, to use it how we really want:  for the good parts of our lives.  
+
+> Can we connect **online demand** to reports of **fully-informed and fulfilled lives**?
+
+
+## Deliverables
+
+In exploration of an outcome-aware internet, here are four things we'll make in the next six months:
+
+* **isgoodforwhat.org** -- an index to the worlds apps, websites, and venues based on what you want to be part of, how you want to spend your time, and who you want to be.
+
+* **Two Lives Left** -- a calendar app that helps you visualize your life and makes it easy to add exercise, friend dates, and the things that make you happy to your week, and search the web for activities (not events!) to add to your calendar.
+
+* **Goal Goggles** -- a chrome extension which changes the browsing experience to give you heads-up when following a link is not in alignment with your current or life goals, and guides you towards better uses of your web time.
+
+* **The "Lives Well Lived" poster** -- a beautiful wall poster that shows how people's activities and goals change as they live, and which goals and activities they wish they had known about sooner.
+
+
+## Long term goals
+
+In the long run, we believe collective wisdom needs to be an internet-level concern, below the content and application layers.  We'll need distributed services for *best things for this goal*, *goal-related reviews of this*, and *friends to do this with*. But, for now, we think it's best to start with clear deliverables that touch people.
+
+
+## The data
+
+It takes data to recommend meaningful activity.  When we have little understanding of the users' actual situation and desires, or about how to contribute to them, we can only recommend popular links and "top picks."  The internet becomes a popularity contest.  In order to overcome this, we need: (a) a model of the context that users are in when they are using the web or apps, including location, social context, and their desires for their time; and (b) open information about what material is *truly relevant* to various contexts and people, rather than merely clickbait.  This project will begin to produce that data, starting with the most popular websites and apps on the internet.
+
+
+## Open standards
+
+As part of our work, we will propose and documented potential web standards which can be used to create an outcome-aware ecosystem on the internet.
+
+For instance, we will propose a new URL scheme for personalization,  *desires://*, which can connect sites and apps that help the user specify what they want out of the day, the week, or their lives, with apps that provide relevant discovery and time-management experiences.
+
+The standard will combine "read it later" / Google Keep / Pocket / Reading List type uses with aspirational calendaring ("I want to run 3x/wk") and traditional calendaring, and provide these services with a common URL scheme.
+
+
+## Funding
+
+Tracking and surfacing outcomes is a high-trust economic activity, and one which cannot be trusted to advertising companies.  That's why we're turning to you. 
+
+
+## Thanks
+
+Thanks to [Tristan Harris](http://twitter.com/tristanharris), [Bret Victor](http://worrydream.org), [Tom Chi](http://tomchi.com), [Jonathan Harris](http://number27.org), [Aza Raskin](http://azarask.in), and [Dan Mosedale](http://github.com/dmose) for motivating and clarifying discussions.
+
+</textarea>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js"></script>
+<script type="text/javascript">
+  body.innerHTML = marked(text.value, { sanitize: false, gfm: true });
+</script>
+
