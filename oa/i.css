@@ -178,3 +178,49 @@ p {
     text-align: justify;
     word-spacing: -1px;
 }
+
+
+@media (max-width: 699px) {
+  .container {
+    width:300px;
+    margin-left: 10px;
+  }
+  .header {
+      padding-left: 10px;
+  }
+  .sidenote {
+      position: static;
+      display:block;
+      width: auto;
+      left: auto;
+      background: #eee;
+  }
+}
+
+
+/* not a good idea for real */
+p img {
+max-width: 400px;
+margin-left: 50px;
+}
+
+
+p img.zoomed, p img.smaller.zoomed {
+    max-width: none;
+    margin-left: 0px;
+}
+
+p img.smaller {
+    max-width: 200px;
+}
+
+.ack {
+    padding-top: 10px;
+    margin-top:50px;
+    border-top: solid thin #bbb;
+    color: #aaa;
+}
+.ack a {
+    color: #88f;
+    text-decoration: none;
+}
