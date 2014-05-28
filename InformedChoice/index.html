@@ -49,15 +49,15 @@ Indeed, it's not clear if anyone knows the overall likelihood of getting fit by 
 
 ## Thinking about thinking about choices
 
-Some decisions--visiting facebook, downloading angry birds, buying a donut--have an unusually high chance of being regretted. Others--messaging a friend for a picnic, playing games with your kids, dreaming about your future--are rarely regretted.
+Let's consider regret for a moment, the emotion we feel when we wish we had chosen differently.  Some decisions--buying a donut, downloading angry birds, visiting facebook--have a higher chance of being regretted. Others--messaging a friend for a picnic, playing games with your kids, dreaming about your future--are rarely regretted.
 
-A week without regrets is a week of retrospective gladness that we spent our time the way we did.  Day after day, time well spent makes for a life well lived.  What could be more important?
+The opposite of regret is called gladness, by which we mean we are glad we spent our time the way we did.  We can be glad in this sense even when we were not happy--for instance, childbirth is not enjoyable but is still regarded as time well spent.  If we were to review fifty two weeks of life and were glad about how we spent them, we would say it was a year well lived.  A lifetime becomes a life well lived.
 
-Unfortunately, the &ldquo;engagement metrics&rdquo; which increasingly drive attention on phones are steps in the wrong direction.  Rather than &ldquo;collective intelligence&rdquo; that helps us live well, an internet built on virality, popularity, top grossing and most downloaded apps, clicks, views, likes, shares, reshares, etc--fosters a kind of group impulsiveness that leads away from time well spent.
+Unfortunately, the &ldquo;engagement metrics&rdquo; which increasingly drive attention on phones are in conflict with this. An internet built on virality, popularity, top grossing and most downloaded apps, clicks, views, likes, shares, reshares, etc--fosters a kind of group impulsiveness that leads away from time well spent.
 
-We want browsing and buying interfaces to include personalized information to help us decide which options make for lives well lived and money well spent.  Here, we'll focus especially on averting the particular kind of regret we feel when we realize either (a) that our hopes with a thing were never likely, or (b) that we've underestimated the direct costs (e.g., how much time it would take) or the opportunity costs (e.g., when we find a more effective action we could have taken instead).
+If we surface and sort by other measures of success, we can do better.  Here, we'll focus especially on averting the particular kind of regret we feel when we realize either (a) that our hopes with a thing--either conscious or unconscious--were never likely, or (b) that we've underestimated the direct costs (e.g., how much time it would take) or the opportunity costs (e.g., when we find a more effective action we could have taken instead).
 
-Surfacing the necessary information presents challenges both for menu interfaces and for community data collection.
+This is a kind of regret that technology can help us with, once certain design and data challenges are solved.
 
 
 
@@ -87,7 +87,7 @@ We are all familiar with the venerable five-star review.
 
 ![](img/stars.png)
 
-These reviews--while they guide us better than popularity and virality metrics--don't reflect observed outcomes.  A product like Angry Birds can receive excellent reviews and still be a regretted engagement for many users.  Besides unexpected time costs, someone might have downloaded angry birds to take a relaxing break from work, and then later found a much better option.  Let's see if we can make a review that would capture this information.
+These reviews--while they guide us better than popularity and virality metrics--don't reflect observed outcomes.  A product like Angry Birds can receive excellent reviews and still be a regretted engagement for many users.  Besides unexpected time costs, someone might have downloaded angry birds to take a relaxing break from work, then later found that they weren't relaxed, or that there was an option that worked better for them for work breaks.  Let's see if we can make a review that would capture this information.
 
 Reviewers will need to be reminded of the costs involved in the engagement, to be given a quick and articulate way to report what the engagement was *about* for them, and then to report how their desired outcomes have worked out so far and what else has happened.  Occasionally, they'll need to be able to extend the schema of desired outcomes in a way that keeps the schema tight.
 
@@ -95,27 +95,35 @@ Here's a first attempt at a values-aware, retrospective review:
 
 <img src="img/review.png">
 
+<div class="sidenote">
+  While there is infinite variety to human pursuits, it is possible to design an automcomplete-ready tagspace for desired outcomes that includes what most of us want from our engagements most of the time, including synonyms, hypernyms, etc.  A good start is terms related to ideal schedules (e.g. "frequent exercise"), ideal personal states (e.g. "getting hitched"), and ideal tactics (e.g., "acting boldly").
+</div>
+
 To provide meaningful signals across the top apps and web products, we won't need millions of reviews, but we would need an articulate, representative, and accurately retrospective set of reviewers.  Perhaps like the Neilsen families but for the internet age, and capturing not just the fact of the engagement, but what it was about.
 
 
 
 ## Aggregating outcome data
 
-If we were to collect a small number, say [50,000](/OpenOutcomes/) of these reviews, we would have a significant public resource.
+If we were to collect a small number (say [50,000](/OpenOutcomes/)) of these reviews, we might have a significant public resource.
 
-Consider the possibility of a community-produced destination site, Wikipedia-like, but focused on life choices made, what they were about for the individuals involved, and how it all worked out.  Visitors could review choices about downloading/using apps, websites, products, etc--but they could also review larger life choices, like moving to a new city, quitting a job, and so on.
+When the same user reviews multiple engagemeents across the same or different desired outcome, we can start to map migrations.  How do people change their activities as they learn about what's possible or what satisfies them?  In the map below, an arrow is drawn when reviewers tend to migrate in one direction only from activity to activity, presumably because the latter activity satisfies their desires more effectively:
+
+![](img/activities.png)
+
+Many such maps are possible, creating an opportunity for data visualizers and storytellers [to map our collective wisdom](/OpenOutcomes/). What do people that want to "be successful" or "get fit" tend to want 6 months or a year later?  Which desires are the most durable--are a users current desires likely to last through short-term changes in perspective?  What works best for getting fit--apps, gyms, trainers, fitness buddies, or equipment?
+
+<div class="sidenote">
+Collective wisdom about outcomes may eventually be a distributed, internet-level concern, below the content and application layers.
+</div>
+
+A community database would be useful: like Wikipedia, but focused on life choices made, what they were about for the individuals involved, and how it all worked out.  Visitors could review choices about downloading/using apps, websites, products, etc--but they could also review larger life choices, like moving to a new city, quitting a job, and so on.
 
 <img src="img/diy-oll.png" class="smaller"><img src="img/profile-oll.png" class="smaller">
 
 <img src="img/feed.png" class="smaller">
 
-When the same user reviews multiple engagemeents across the same or different desired outcome, we can start to map migrations.  How do people change their activities as they learn about what's possible or what satisfies them?  In this map, an arrow is drawn when reviewers tend to migrate in one direction only from activity to activity, presumably because the latter activity satisfies their desires more effectively:
 
-![](img/activities.png)
-
-Many such maps are possible.  What do people that want to "be successful" or "get fit" tend to want 6 months or a year later?  Which desires are the most durable--are a users current desires likely to last through short-term changes in perspective?  What works best for getting fit--apps, gyms, trainers, fitness buddies, or equipment?
-
-[Data visialization and data storytelling opportunities abound](/OpenOutcomes/).
 
 
 
@@ -150,7 +158,7 @@ With browsing, besides the chrome bar indicators above, an extension could chang
 
 ## Social benefits of informed choice
 
-The epidemics in the modernized countries--obesity, social isolation, depression, a lack of meaningful work, a widening class gap, etc--reveal a misalignment between industry and marketing, on the one hand, and the true interests of the "users" of the economy, on the other.  Engineering a realignment will involve both detecting whether and how their true interests can be satisfied, and then changing incentives for businesses and organizations to align with that long-term satisfaction.  Informed choice interfaces may redirect demand to accomplish the latter, but even if they do not, retrospective reviews provide a way to measure what was in our true interests and what was not.  We can then decide as a society whether to disincentivize business which operate principally by leading us into unsatisfying activities.
+The epidemics of the fully-modernized countries--obesity, social isolation, depression, a lack of meaningful work, etc--reveal a misalignment between industry and marketing, on the one hand, and the true interests of the "users" of the economy, on the other.  Engineering a realignment will involve both (a) detecting whether and how our true interests can be satisfied, and (b) changing incentives for businesses and organizations to align with that long-term satisfaction.  Informed choice interfaces may redirect demand to accomplish the latter, but even if they do not, retrospective reviews provide a way to measure retrospectively what was in our true interests and what was not.  We can then decide as a society whether to disincentivize business which operate through leading us into unsatisfying activities.
 
 In 1930, economist John Maynard Keynes claimed that the sales metrics that drive capitalism would at some point start driving us in the wrong direction.  He writes that our society would have a collective "nervous breakdown" unless:
 
@@ -158,7 +166,7 @@ In 1930, economist John Maynard Keynes claimed that the sales metrics that drive
 
 Perhaps it's finally time to follow Keynes' advice, and to better align economic demand with retrospective reports of informed and fulfilled lives.  Can we measure demand with the question &ldquo;what are you glad that you bought?&rdquo; instead of &ldquo;what did you buy?&rdquo;, or online, with &ldquo;what are you glad you clicked?&rdquo; rather than &ldquo;what did you click?&rdquo;  Can we couple cashflow to reports of informed and fulfilled lives?
 
-How would that change consumer spending profiles?
+Would that change consumer spending profiles?
 
 <div class="sidenote">
 <a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">explorable map from nytimes.com</a>
@@ -166,7 +174,7 @@ How would that change consumer spending profiles?
 
 <img src="img/nytspending.png">
 
-Ideally, people will work together to create the most fulfilling outcomes for one another in much the same way they currently collaborate to generate sales, clicks, and views.  Collective wisdom about outcomes may eventually be a distributed, internet-level concern, below the content and application layers.
+If we were able to incentivize it, would people work together to create the most lastingly fulfilling outcomes for one another--in much the same way they currently collaborate to generate sales, clicks, and views?
 
 
 ## Next steps
