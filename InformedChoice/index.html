@@ -8,46 +8,62 @@
 </header>
 <div id="body" class="container"></div><textarea id="text" style="display:none">
 
-Year by year, our phones guide ever more of our time allocation and purchasing decisions. Can our phones help us use our time and money in a way we feel good about?
-
-Some decisions--visiting facebook, downloading angry birds, buying a donut--have an unusually high chance of being regretted. Others--messaging a friend for a picnic, playing games with your kids, dreaming about your future--are rarely regretted, but are missing from our homescreens or notifications.
-
-Ideally, browsing and buying interfaces would include information about what we're likely/unlikely to regret.
-
-Unfortunately, the &ldquo;engagement metrics&rdquo; which drive our attention on phones are steps in the wrong direction.  Rather than &ldquo;collective intelligence&rdquo; that helps us live well, an internet built on virality, popularity, top grossing and most downloaded apps, clicks, views, likes, shares, reshares, etc--fosters a kind of group impulsiveness.
-
-Below we'll consider data and UX requirements for informed choices about time and money.  We'll focus on averting a particular kind of regret:  that which we feel upon realizing either that our hopes with a thing were never likely, or that we've underestimated the direct costs (e.g., how much time it would take) or the opportunity costs (e.g., when we find a more effective action we could have taken instead).  The opposite of regret is to be glad we spent our time the way we did.  Day after day, time well spent makes a life well lived.  What could be more important?
+Many of us have come to regret certain hours spent on our phones or our computers.  Certainly we've all bought things that we didn't end up using like we thought.  Let's consider whether the device that mediated the choice could have done us a solid and surfaced information to help us choose better.  We'll first look at how costs and benefits are currently conveyed, and then turn to a new appoach to informing users about the choices available on and off-screen.  Finally we'll look at the social benefits of moving from a society of marketing-driven consumption to one of where informed choice is available.
 
 
+## Costs
 
-## The state of the art
+First lets consider *direct costs*, often denominated in dollars or hours.  Products are often listed with their prices, and we consider it a bad business practice when there are hidden costs via fees or other tricks.
 
-As we browse options, we have certain idealized outcomes in mind that structure our search, and we make local choices with those in mind.  To do this well, we need at least two kind of information: information about costs (which can be high in unexpected ways), and information about our expected benefits and how those pursuits pan out for other people whether via the options under sconsideration or via other options.
+![](img/airbnb.png)
 
-Our clearest direct costs are measured in hours or dollars.  A few products already provide estimates of time to engage, and users love it.
+However, we put up with hidden *time costs* every day.  Only the greatest web products display estimates of time to engage.
 
 ![](img/medium.png)
 
-Benefits are more subtle.  Often they guide us subconsciously and we don't consciously know what we are searching for.  The closest thing to a standard for conveying benefits are the SIPs pulled out of reviews by Yelp, Amazon, and Google.
+Obviously some products would need to be unbundled to have their direct costs make sense:
+
+![](img/fb-read-time.png)
+
+
+
+## Benefits
+
+Benefits are more subtle.  Often they guide us subconsciously and we don't consciously know what we are searching for. Nonetheless, as we browse options, we have certain idealized outcomes in mind that structure our search, and we make local choices with those in mind.
+
+The closest thing to a standard for conveying benefits are the highlighted [collocations](http://en.wikipedia.org/wiki/Collocation) pulled out of reviews by Yelp, Amazon, and Google.
 
 ![](img/yelp.png)
 
-But these don't match our subconscious hopes very well.  A few products go more directly after outcomes.
+But these don't match the intuitive space of our subconscious hopes very well.  A few products go more directly after outcomes.
 
 ![](img/diy.jpg)
 
 ![](img/meetup-unresolutions.png)
 
-The products that can take this approach are the ones that are most aligned with users wellbeing.  But even these cannot provide information about the probability of reaching the benefit using the product with a given investment of time.
+The products above--Yelp, DIY, Meetup--are especially aligned with user wellbeing.  Naming outcomes outright produces incredulity unless there are good and plausible outcomes to name.  This is why cigarette and beer commercials are so oblique.  But even companies like Yelp or Meetup do not attempt to provide information about how well and efficiently they work, i.e. the probability of reaching each benefit by using the product with a given investment of time.
 
-Indeed, it's not clear if anyone knows the overall likelihood of getting fit via joining a running meetup, or finding a life partner via investing 40 hours in a dating app.  Do these things work out?  What kind of investment is required for what kind of payoff?  How do the alternatives compare?
-
-Currently the issue of whether engaging with an app or a product is worth it is sometimes addressed using five star user generated reviews.  These reviews, while producing better guidance than do popularity and virality metrics, do not reflect observed outcomes.  A product like Angry Birds can receive excellent reviews and still be a regretted engagement for many users.  Let's see if we can do better.
+Indeed, it's not clear if anyone knows the overall likelihood of getting fit by joining a running meetup, or finding a life partner by investing 40 hours in a dating app.  Do these things work out?  What kind of investment is required for what kind of payoff?  How do the alternatives compare?  The data will likely be fuzzy, different for different demographics perhaps, but why not collect it and see?
 
 
-## An named-outcome approach
 
-Consider an approach where we identify (either by guessing or by outright asking the user) what the hoped for outcomes are for a particular site, app, product, venue, etc.
+## Thinking about thinking about choices
+
+Some decisions--visiting facebook, downloading angry birds, buying a donut--have an unusually high chance of being regretted. Others--messaging a friend for a picnic, playing games with your kids, dreaming about your future--are rarely regretted.
+
+A week without regrets is a week of retrospective gladness that we spent our time the way we did.  Day after day, time well spent makes for a life well lived.  What could be more important?
+
+Unfortunately, the &ldquo;engagement metrics&rdquo; which increasingly drive attention on phones are steps in the wrong direction.  Rather than &ldquo;collective intelligence&rdquo; that helps us live well, an internet built on virality, popularity, top grossing and most downloaded apps, clicks, views, likes, shares, reshares, etc--fosters a kind of group impulsiveness that leads away from time well spent.
+
+We want browsing and buying interfaces to include personalized information to help us decide which options make for lives well lived and money well spent.  Here, we'll focus especially on averting the particular kind of regret we feel when we realize either (a) that our hopes with a thing were never likely, or (b) that we've underestimated the direct costs (e.g., how much time it would take) or the opportunity costs (e.g., when we find a more effective action we could have taken instead).
+
+Surfacing the necessary information presents challenges both for menu interfaces and for community data collection.
+
+
+
+## Benefits: a named-outcome approach
+
+Returning to the question of how best to present the hoped-for benefits of a product, service, app, etc--let's consider an approach where we identify (either by guessing or by outright asking the user) what the hoped for outcomes are for a particular site, app, product, venue, etc.
 
 Here's *facebook.com*.  A hypothetical chrome plugin has indicated that the outcomes the user may have in mind haven't quite worked out for others.
 
@@ -57,76 +73,105 @@ We could also provide hints as to what other engagements might work better.
 
 ![](img/fb-w-hint.png)
 
-What works for websites and apps can also work for products.
+We can do the same for physical goods:
 
 <img src="img/amazon-warning.png" class="smaller">
+
+OK, but how would we gather this data?
 
 
 
 ## Data about outcomes
 
-To provide this UX we need data.  Specifically, we must capture outcomes--both desired and observed--from the users who've engaged with each app, website, product, venue, event series, etc.  To provide meaningful signals across the top apps and web products, we won't need millions of reviews, but we would need an articulate, representative, and accurately retrospective set of reviewers.  Perhaps like the Neilsen families but for the internet age, and capturing not just the fact of the engagement, but what it was about.
+We are all familiar with the venerable five-star review.
+
+![](img/stars.png)
+
+These reviews--while they guide us better than popularity and virality metrics--don't reflect observed outcomes.  A product like Angry Birds can receive excellent reviews and still be a regretted engagement for many users.  Besides unexpected time costs, someone might have downloaded angry birds to take a relaxing break from work, and then later found a much better option.  Let's see if we can make a review that would capture this information.
 
 Reviewers will need to be reminded of the costs involved in the engagement, to be given a quick and articulate way to report what the engagement was *about* for them, and then to report how their desired outcomes have worked out so far and what else has happened.  Occasionally, they'll need to be able to extend the schema of desired outcomes in a way that keeps the schema tight.
 
-We've created a new survey instrument for conducting these values-aware, retrospective reviews.
+Here's a first attempt at a values-aware, retrospective review:
 
 <img src="img/review.png">
+
+To provide meaningful signals across the top apps and web products, we won't need millions of reviews, but we would need an articulate, representative, and accurately retrospective set of reviewers.  Perhaps like the Neilsen families but for the internet age, and capturing not just the fact of the engagement, but what it was about.
 
 
 
 ## Aggregating outcome data
 
-To collect the choices made by various people, what they were about, and how they turned out--this can be a powerful resource and not just at the moment of choice.  Consider the possibility of a community-produced destination site, Wikipedia-like, but focused on life choices made, what they were about for the individuals involved, and how it all worked out.  There would be interest in choices involving apps, websites, products, but also in larger life choices, like moving to a new city, quitting a job, etc.
+If we were to collect a small number, say [50,000](/OpenOutcomes/) of these reviews, we would have a significant public resource.
 
-<img src="img/diy-oll.png" class="smaller">
+Consider the possibility of a community-produced destination site, Wikipedia-like, but focused on life choices made, what they were about for the individuals involved, and how it all worked out.  Visitors could review choices about downloading/using apps, websites, products, etc--but they could also review larger life choices, like moving to a new city, quitting a job, and so on.
 
-<img src="img/profile-oll.png" class="smaller">
+<img src="img/diy-oll.png" class="smaller"><img src="img/profile-oll.png" class="smaller">
 
 <img src="img/feed.png" class="smaller">
 
-Of special interest would be to map migrations across desired outcomes.  For instance, how do people change their activities as they learn about what's possible or what satisfies them?
+When the same user reviews multiple engagemeents across the same or different desired outcome, we can start to map migrations.  How do people change their activities as they learn about what's possible or what satisfies them?  In this map, an arrow is drawn when reviewers tend to migrate in one direction only from activity to activity, presumably because the latter activity satisfies their desires more effectively:
 
 ![](img/activities.png)
 
-Many such maps are possible.  What do people that want to "be successful" or "get fit" tend to want 6 months or a year later?  Which desires are the most durable--are a users current desires likely to last through changes in perspective during an engagement?
+Many such maps are possible.  What do people that want to "be successful" or "get fit" tend to want 6 months or a year later?  Which desires are the most durable--are a users current desires likely to last through short-term changes in perspective?  What works best for getting fit--apps, gyms, trainers, fitness buddies, or equipment?
 
-This is a data visialization and data storytelling challenge.
+[Data visialization and data storytelling opportunities abound](/OpenOutcomes/).
 
 
 
 ## Interfaces for informed choice
 
-While the outcome indicators above may change some browsing and buying behavior, the greatest promise lies in contructing new browsing and shopping interfaces that could only exist with outcomes data.  Recommendation interfaces are some of the most promising.  Our previous studies have indicated that user behavior can change significantly when recommendations are ordered by desired outcome and ranked by reported likelihood of an outcome working out.
+Outcomes data can provide the structure for browsing and discovery interfaces that otherwise couldn't exist.  We can look at reorganizing device home screens, new groupings in recommendation and discovery interfaces like Google Now, and restructuring the app-user relationship including switching from notifications to value- and outcome-aware opportunity suggestions.
 
-<img src="img/bright-ideas-3up.png" class="smaller">
+<img src="img/siri.jpg" class="smaller"><img src="img/gnow.png" class="smaller">
+
+
+Ultimately the goal is to provide data at the moment when important life choices are made, including purchasing, calendaring, and browsing choices.  Here is what a calendaring interface might look like with a notion of activities built-in:
 
 <div class="sidenote">
 Two Lives Left -- a demo calendar app using our data, that helps you visualize your life and makes it easy to add exercise, friend dates, and the things that make you happy to your week, and browse the web for activities (not just events!) to add to your calendar. https://itunes.apple.com/us/app/sand-calendar-day-planner/id687579461
 </div>
 
-Ultimately the goal is to provide data at the moment when important life choices are made, including purchasing, calendaring, and browsing choices.  Here is what a calendaring interface might look like with a notion of activities built-in:
-
 <img src="img/sand.png" class="smaller">
 
-<div class="sidenote">(see https://github.com/timewellspent/NoRegrets for some previous work with Aza Raskin that we'll be repurposing)</div>
+And here is another scheduling interface, this one focused on friend dates.  This interface was tested with a few thousand users as part of a defunct startup. The results suggested that user behavior can change significantly when recommendations are ordered by desired outcome and ranked by reported likelihood of an outcome working out.
+
+<img src="img/bright-ideas-3up.png" class="smaller">
 
 With browsing, besides the chrome bar indicators above, an extension could change the browsing experience to give you heads-up when following a link is not in alignment with your current or life goals, or guides you towards better uses of your web time.
 
-The biggest changes will come from reorganizing device home screens, discovery interfaces like Google Now, and the app-user relationship including notifications, in accord with the desires of the user.
+<div class="sidenote">(see https://github.com/timewellspent/NoRegrets for some previous work with Aza Raskin that we'll be repurposing)</div>
 
-**TODO: discovery mock up**
+<img src="img/nr.png" class="smaller">
 
 
-## Conclusion
 
-In 1930, economist John Maynard Keynes saw that the particular metrics that drive capitalism--sales, clicks, views, etc--would at some point cease to be useful and in fact would start driving us in the wrong direction.  He writes that our society would have a collective "nervous breakdown" unless:
+
+
+## Social benefits of informed choice
+
+The epidemics in the modernized countries--obesity, social isolation, depression, a lack of meaningful work, a widening class gap, etc--reveal a misalignment between industry and marketing, on the one hand, and the true interests of the "users" of the economy, on the other.  Engineering a realignment will involve both detecting whether and how their true interests can be satisfied, and then changing incentives for businesses and organizations to align with that long-term satisfaction.  Informed choice interfaces may redirect demand to accomplish the latter, but even if they do not, retrospective reviews provide a way to measure what was in our true interests and what was not.  We can then decide as a society whether to disincentivize business which operate principally by leading us into unsatisfying activities.
+
+In 1930, economist John Maynard Keynes claimed that the sales metrics that drive capitalism would at some point start driving us in the wrong direction.  He writes that our society would have a collective "nervous breakdown" unless:
 
 > "we shall once more value ends above means and prefer the good to the useful. We shall honour those who can teach us how to pluck the hour and the day virtuously and well."
 
-Perhaps it's finally time to address that situation, to better align economic demand with retrospective reports of informed and fulfilled lives.  Can we measure demand with the question &ldquo;what are you glad that you bought?&rdquo; instead of &ldquo;what did you buy?&rdquo;, or online, with &ldquo;what are you glad you clicked?&rdquo; rather than &ldquo;what did you click?&rdquo;  Can we couple cashflow to reports of informed and fulfilled lives?
+Perhaps it's finally time to follow Keynes' advice, and to better align economic demand with retrospective reports of informed and fulfilled lives.  Can we measure demand with the question &ldquo;what are you glad that you bought?&rdquo; instead of &ldquo;what did you buy?&rdquo;, or online, with &ldquo;what are you glad you clicked?&rdquo; rather than &ldquo;what did you click?&rdquo;  Can we couple cashflow to reports of informed and fulfilled lives?
 
-If a named-outcome approach succeeds, we can hope that collective wisdom about outcomes will eventually be a distributed, internet-level concern, below the content and application layers, and that people will work together to create the most fulfilling outcomes for one another in much the same way they currently collaborate to generate sales, clicks, and views.  Our first step is the [OpenOutcomes project](/OpenOutcomes/), which will collect the first 50,000 reviews and tell the world about them.
+How would that change consumer spending profiles?
+
+<div class="sidenote">
+<a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">explorable map from nytimes.com</a>
+</div>
+
+<img src="img/nytspending.png">
+
+Ideally, people will work together to create the most fulfilling outcomes for one another in much the same way they currently collaborate to generate sales, clicks, and views.  Collective wisdom about outcomes may eventually be a distributed, internet-level concern, below the content and application layers.
+
+
+## Next steps
+
+Help us with [the OpenOutcomes project](/OpenOutcomes/), which will collect the first 50,000 reviews and find exciting stories to about what people try vs what works out, within the areas of fitness, education, and sociality.
 
 
 

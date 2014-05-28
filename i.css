@@ -200,8 +200,13 @@ p {
 
 /* not a good idea for real */
 p img {
-max-width: 400px;
-margin-left: 50px;
+    max-width: 400px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+p img:first-child {
+    margin-left: 40px;
 }
 
 
