@@ -13,7 +13,7 @@ Many of us have come to regret certain hours spent on our phones or our computer
 
 ## Costs
 
-First lets consider *direct costs*, often denominated in dollars or hours.  Products are often listed with their prices, and we consider it a bad business practice when there are hidden costs via fees or other tricks.
+First lets consider *direct costs*, often denominated either in dollars or hours.  When it's dollars, we are used to a certain level of transparency.  Products are listed with their prices, and we consider it a bad business practice when there are hidden costs via fees or other tricks.
 
 ![](img/airbnb.png)
 
@@ -49,16 +49,21 @@ Indeed, it's not clear if anyone knows the overall likelihood of getting fit by 
 
 ## Thinking about thinking about choices
 
-Let's consider regret for a moment, which we feel when we wish we had chosen differently.  Some decisions--buying a donut, downloading angry birds, visiting facebook--have a higher chance of being regretted, while others--messaging a friend for a picnic, playing games with your kids, dreaming about your future--are rarely regretted.  Rarely regretted activities are almost guarranteed to be remembered as time well spent.  This is not the same as activities that make us happy--for instance, childbirth is not enjoyable but is still regarded as time well spent.
+The tech industry is all about marketplaces and menus, but somehow it is still impoverished in terms about choice.  One the one hand we talk about technology as addiction, the names of neurotransmitters like dopamine are thrown around, and VCs exhort would-be founders to focus on the seven deadly sins.  On the other we insist that clicks, views, and repeat users are articulations of what we the users "want" most.
 
-A lifetime of time well spent becomes a life well lived.
+Economics has done better.  Starting with the difficult case of explaining "addictive" behavior, we find three common types of explanations:  (a) as a kind of impairment of the ability to choose  ("OMG I just spent 4 hours on facebook."), (b) as a rational choice made with a misunderstanding  ("I thought I could resist!" or "I thought it'd make me popular!"), or (c) as a rational choice made in a bad situation ("Life sucks lets get high.").
 
+Although pop culture is stuck with explanation (a), economists have focused on (b) and (c) because of [a landmark paper by Becker and Murphy](http://www.jstor.org/discover/10.2307/1830469?uid=3737864&uid=2&uid=4&sid=21104100113327) which found that cigarette smoking and heroin use are sensitive both to announcements of future tax levels and to independent improvements in life circumstances.  That is, people stop doing heroin when they suddenly have a chance to go to college, and they can stop smoking if they figure out it's going to be more expensive than they thought.  I.e., if they recalculate the direct costs or opportunity costs.
+
+That said, the overwhelming majority of heavy smokers regret their decision to start.  Indeed, some decisions we make more often--buying a donut, downloading angry birds, visiting facebook--have quite a high chance of being regretted, especially if we feel later we could have organized something social, more fun, healthier, etc.  What is this regret all about?  Did we or did we not make a choice?
+
+One explanation is that we have states of mind where it is too difficult to figure out better options for ourselves, even if we think abstractly that they may exist.  The activities that we regret are the ones where we know (at least later) that we could have done better by ourselves.  In the case of the donut, we could have found better food, and in the case of facebook, a better form of social engagement, but the search itself seemed exhausting.
+
+<div class="sidenote">
 Unfortunately, the &ldquo;engagement metrics&rdquo; which are driving attention on phones are in conflict with this. An internet built on virality, popularity, top grossing and most downloaded apps, clicks, views, likes, shares, reshares, etc--fosters a kind of group impulsiveness that leads away from time well spent.
+</div>
 
-If we surface and sort by other measures of success, we can do better.  Here, we'll focus especially on averting the particular kind of regret we feel when we realize either (a) that our hopes with a thing--either conscious or unconscious--were never likely, or (b) that we've underestimated the direct costs (e.g., how much time it would take) or the opportunity costs (e.g., when we find a more effective action we could have taken instead).
-
-This is a kind of regret that technology can help us with, once certain design and data challenges are solved.
-
+The opportunity for technology, then, is in helping us with that search:  helping us position our hopes with a thing--conscious or unconscious--within the space of possibilities and their likely outcomes and costs.  The more we can do this, the more our users will review time choices as having been time well spent.  A lifetime of time well spent becomes a life well lived.
 
 
 ## Benefits: a named-outcome approach
@@ -66,6 +71,11 @@ This is a kind of regret that technology can help us with, once certain design a
 The space of unconscious, desired outcomes may be small enough that it can be canonicalized, visually represented, and outcome-tracked, including synonyms, hypernyms, etc.  For instance, while there is infinite variety to human pursuits, a good start can be made by tracking only terms related to ideal schedules (e.g. "frequent exercise"), ideal personal states (e.g. "getting hitched"), and ideal tactics (e.g., "acting boldly").
 
 Here's *facebook.com*.  A hypothetical chrome plugin has indicated that the outcomes the user may have in mind haven't quite worked out for others.
+
+<div class="sidenote">
+Here, the red bars next to "mindless reading" and "feeling relaxed" indicate that facebook does not have a good track record for those two desired outcomes.  Clicking on them might reveal better choices.
+</div>
+
 
 ![](img/fb-warning-circled.png)
 
@@ -99,7 +109,7 @@ OK, but how would we collect this data? We are all familiar with the venerable f
 
 ![](img/stars.png)
 
-These reviews--while they guide us better than popularity and virality metrics--don't reflect observed outcomes.  A product like Angry Birds can receive excellent reviews and still be a regretted engagement for many users.  Besides unexpected time costs, someone might have downloaded angry birds to take a relaxing break from work, then later found that they weren't relaxed, or that there was an option that worked better for them for work breaks.  Let's see if we can make a review that would capture this information.
+These reviews--while they guide us better than popularity and virality metrics--don't reflect observed outcomes.  A product like Angry Birds can receive excellent reviews and still be a regretted engagement for many users.  Besides unexpected time costs, someone might have downloaded angry birds to take a relaxing break from work, then later found that they weren't relaxed, or that there was an option that worked better for them for work breaks.  We need a review that would capture this information.
 
 Reviewers will need to be reminded of the costs involved in the engagement, to be given a quick and articulate way to report what the engagement was *about* for them, and then to report how their desired outcomes have worked out so far and what else has happened.  Occasionally, they'll need to be able to extend the schema of desired outcomes in a way that keeps the schema tight.
 
@@ -107,7 +117,7 @@ Here's a first attempt at a values-aware, retrospective review:
 
 <img src="img/review.png">
 
-To provide meaningful signals across the top apps and web products, we won't need millions of reviews, but we would need an articulate, representative, and accurately retrospective set of reviewers.  Perhaps like the Neilsen families but for the internet age, and capturing not just the fact of the engagement, but what it was about.
+To provide meaningful signals across the top apps and web products, we won't need millions of reviews, but we would need an articulate, representative, and accurately retrospective set of reviewers.  Perhaps like the Nielsen families but for the internet age, and capturing not just the fact of the engagement, but what it was about.
 
 
 
@@ -115,7 +125,7 @@ To provide meaningful signals across the top apps and web products, we won't nee
 
 If we were to collect a small number (say [50,000](/OpenOutcomes/)) of these reviews, we might have a significant public resource.
 
-When the same user reviews multiple engagemeents across the same or different desired outcome, we can start to map migrations.  How do people change their activities as they learn about what's possible or what satisfies them?  In the map below, an arrow is drawn when reviewers tend to migrate in one direction only from activity to activity, presumably because the latter activity satisfies their desires more effectively:
+When the same user reviews multiple engagemeents across the same or different desired outcome, we can start to map migrations.  How do people change their activities as they learn about what's possible or what satisfies them?  In the map below, an arrow is drawn when reviewers tend to migrate in one direction only from activity to activity, the latter activity is reported to satisfy their desires more effectively, and the stick with it.
 
 ![](img/activities.png)
 
@@ -155,7 +165,7 @@ With browsing, besides the chrome bar indicators above, an extension could chang
 
 ## Social benefits of informed choice
 
-The epidemics of the fully-modernized countries--obesity, social isolation, depression, a lack of meaningful work, etc--reveal a misalignment between industry and marketing, on the one hand, and the true interests of the "users" of the economy, on the other.  Engineering a realignment will involve both (a) detecting whether and how our true interests can be satisfied, and (b) changing incentives for businesses and organizations to align with that long-term satisfaction.  Informed choice interfaces may redirect demand to accomplish the latter, but even if they do not, retrospective reviews provide a way to measure retrospectively what was in our true interests and what was not.  We can then decide as a society whether to disincentivize business which operate through leading us into unsatisfying activities.
+The epidemics currently facing the modernized countries--obesity, social isolation, depression, a lack of meaningful work, etc--reveal a stunning misalignment between the true interests of the "users" of the economy, on the one hand, and industry and marketing, on the other.  Engineering a realignment will involve both (a) detecting whether and how our true interests can be satisfied, and (b) changing incentives for businesses and organizations to align with that long-term satisfaction.  It's possible that informed choice will do both--redirecting demand to the best choices, but we can be almost certain that retrospective reviews provide a better way that clicks, views, etc to measure what was in our true interests and what was not.  We can then decide as a society whether to disincentivize business which operate through leading us into unsatisfying activities.
 
 In 1930, economist John Maynard Keynes claimed that the sales metrics that drive capitalism would at some point start driving us in the wrong direction.  He writes that our society would have a collective "nervous breakdown" unless:
 
@@ -163,7 +173,7 @@ In 1930, economist John Maynard Keynes claimed that the sales metrics that drive
 
 Perhaps it's finally time to follow Keynes' advice, and to better align economic demand with retrospective reports of informed and fulfilled lives.  Can we measure demand with the question &ldquo;what are you glad that you bought?&rdquo; instead of &ldquo;what did you buy?&rdquo;, or online, with &ldquo;what are you glad you clicked?&rdquo; rather than &ldquo;what did you click?&rdquo;  Can we couple cashflow to reports of informed and fulfilled lives?
 
-Would that change consumer spending profiles?
+If we were able to incentivize these longer-term forms of satisfaction, would people work together to create the best outcomes for one another--in much the same way they currently collaborate to generate sales, clicks, and views?  How would we collectively choose differently?
 
 <div class="sidenote">
 <a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">explorable map from nytimes.com</a>
@@ -171,7 +181,6 @@ Would that change consumer spending profiles?
 
 <img src="img/nytspending.png">
 
-If we were able to incentivize it, would people work together to create the most lastingly fulfilling outcomes for one another--in much the same way they currently collaborate to generate sales, clicks, and views?
 
 
 ## Next steps
