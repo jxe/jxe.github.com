@@ -212,7 +212,14 @@ img {
     font-size: 11px;
     font-family: Verdana, Arial, sans-serif;
     margin-top: 23px;
+    background:white;
+    padding: 5px;
+    border-left: yellow  2px solid
 }
+.sidenote.zoomed {
+    left: 820px;
+}
+
 .sidenote a {
     color: inherit;
 }
@@ -252,6 +259,9 @@ p img {
     max-width: 400px;
     margin-left: 10px;
     vertical-align: middle;
+    box-shadow: rgb(111, 111, 111) 0px 1px 2px;
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
 }
 
 p img:first-child {
@@ -262,6 +272,7 @@ p img:first-child {
 p img.zoomed, p img.smaller.zoomed {
     max-width: none;
     margin-left: 0px;
+    cursor: -webkit-zoom-out;
 }
 
 p img.smaller {
@@ -277,4 +288,10 @@ p img.smaller {
 .ack a {
     color: #88f;
     text-decoration: none;
+}
+
+.highlight {
+    background: rgba(255, 255, 0, 0.12);
+    margin: -10px;
+    padding: 10px;
 }
