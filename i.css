@@ -196,17 +196,11 @@ h1 {
 h1, h2, strong, b {
     color: black;
 }
-.container {
-    width: 500px;
-    margin-left: 100px;
-}
+
 img {
     border: 1px solid #eee;
 }
 .sidenote {
-    position: absolute;
-    left: 690px;
-    width: 230px;
     color: #aaa;
     line-height: 1.5;
     font-size: 11px;
@@ -214,7 +208,7 @@ img {
     margin-top: 23px;
     background:white;
     padding: 5px;
-    border-left: yellow  2px solid
+    border-left: yellow 2px solid
 }
 .sidenote.zoomed {
     left: 820px;
@@ -236,24 +230,6 @@ p {
 }
 
 
-@media (max-width: 699px) {
-  .container {
-    width:300px;
-    margin-left: 10px;
-  }
-  .header {
-      padding-left: 10px;
-  }
-  .sidenote {
-      position: static;
-      display:block;
-      width: auto;
-      left: auto;
-      background: #eee;
-  }
-}
-
-
 /* not a good idea for real */
 p img {
     max-width: 400px;
@@ -268,12 +244,6 @@ p img:first-child {
     margin-left: 40px;
 }
 
-
-p img.zoomed, p img.smaller.zoomed {
-    max-width: none;
-    margin-left: 0px;
-    cursor: -webkit-zoom-out;
-}
 
 p img.smaller {
     max-width: 200px;
@@ -294,4 +264,57 @@ p img.smaller {
     background: rgba(255, 255, 0, 0.12);
     margin: -10px;
     padding: 10px;
+}
+
+
+
+
+
+@media screen {
+    p img.zoomed, p img.smaller.zoomed {
+        max-width: none;
+        margin-left: 0px;
+        cursor: -webkit-zoom-out;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        width: 500px;
+        margin-left: 100px;
+    }
+    .sidenote {
+        position: absolute;
+        left: 690px;
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+  .container {
+    width:300px;
+    margin-left: 10px;
+  }
+  .header {
+      padding-left: 10px;
+  }
+  .sidenote {
+      width: auto;
+  }
+}
+
+@media print {
+    p img {
+        max-height: 150px;
+    }
+    .container {
+        width: auto;
+        margin: 0px 10px;
+        width: 70%;
+        /*columns: 2;*/
+        /*-webkit-columns: 2;*/
+    }
+    .header {
+        padding-left: 10px;
+    }
 }
