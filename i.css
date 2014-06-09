@@ -240,9 +240,6 @@ p img {
     cursor: -webkit-zoom-in;
 }
 
-p img:first-child {
-    margin-left: 40px;
-}
 
 
 p img.smaller {
@@ -288,18 +285,28 @@ p img.smaller {
         left: 690px;
         width: 230px;
     }
+    p img:first-child {
+        margin-left: 40px;
+    }
 }
 
 @media screen and (max-width: 699px) {
   .container {
-    width:300px;
-    margin-left: 10px;
+    width:auto;
+    margin: 0px 10px;
   }
   .header {
       padding-left: 10px;
   }
+  .header h1 {
+      font-size:36px;
+  }
   .sidenote {
       width: auto;
+  }
+  p img {
+      max-width: 90%;
+      margin: 0px 10px;
   }
 }
 
