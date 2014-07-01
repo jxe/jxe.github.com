@@ -151,6 +151,7 @@ h2 {
 }
 h1 {
     font-size: 52px;
+    font-size: 25px;
     /*font-family: Georgia, "Times New Roman", serif;*/
     margin: 0;
 }
@@ -286,7 +287,7 @@ p img.smaller {
         width: 230px;
     }
     p img:first-child {
-        margin-left: 40px;
+        /*margin-left: 40px;*/
     }
 }
 
