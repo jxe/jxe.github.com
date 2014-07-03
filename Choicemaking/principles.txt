@@ -1,0 +1,147 @@
+
+Step 1 - (1h) apportion current text by section, and melt in ACE and hackpad and medium docs, including medium docs cutted into notational velocity
+
+Step 2 - (2d) write the middle sections (§2 §3 §4 §5)
+
+Step 3 - (1d) write the last section (§6)
+
+Step 4 - (1d) write the first sections  (§1 §0)
+
+Step 5 - (2d) edit edit
+
+Step 6 - (3d) send to friends
+
+total time:  (9 days / 2 weeks)  plus footnotes and add'l images
+
+------------------------
+
+
+§0 INTRO/TOC??
+
+§1. Define a higher standard of device responsibility in helping us conduct our daily lives well.  DEVICE RESPONSIBILITY
+
+§2. Present a model of how we consider an option and what information we would like to have available to us, such as time costs, money costs, likelihood of various outcomes, better options for similar outcomes, etc.  PROMISES, INFORMED CHOICE, & REGRET
+
+§3. Consider how to turn the distracting choices which often lead to regret and user burnout into meaningful choices--which relate to values and outcomes that are important to us.  IDENTITY AND EXPRESSIVE CHOICE
+
+§4. LIFE IN REVIEW, SEARCH COSTS, & REGRET
+
+§5. Describe the public data service about people, choices, and outcomes that's implied by these approaches, and how this pubilic data could change search costs and behavior.  COLLECTIVE WISDOM & SEARCH COSTS
+
+§6. Locate these models of informed choice, expressive choice, and collective wisdom in terms of the microeconomics of addiction, behavioral economics, and current social issues like obesity, depression, a lack of meaningful work, sexual dysfunction, clickhole media / the buzzfeedification of media, and "internet addiction". CONDITIONS FOR AND FEATURES OF AN OUTCOME ECONOMY
+
+
+------------------------
+
+
+§1. THEORY OF DEVICE RESPONSIBILITY
+
+*Define a higher standard of device responsibility in helping us conduct our daily lives well.*
+
+*** Menus should serve users, not the engagement metrics of the big internet media companies.
+
+We are surrounded by menus.
+
+The thesis of this entire paper is that menus should serve users-- not the engagement metrics of the big internet media companies-- and that the consequences of redesigning menus to align with end-user interest would be huge.
+
+Along the way we'll... look at best practices / warnings, truth in advertising, ... etc ... (with screenshots)
+
+* We need software we can trust *with our lives*.
+* We need apps, websites, and devices that won't lead us astray.
+* Addiction is directly related to search costs
+
+(( HCI, Linklidder, Victor, Kay, etc? ))
+
+------------------------
+
+
+§2. THEORY OF PROMISES & INFORMED CHOICE
+
+*Present a model of how we consider an option and what information we would like to have available to us, such as time costs, money costs, likelihood of various outcomes, better options for similar outcomes, etc. *
+
+*** We choose to engage with a resource (go to an event, use an app, buy a thing) because we are taken with its promise.  False promises are no longer something we have to put up with.
+
+For an example of what I mean, let's take web browsing.  In these screens, the device has annotated browsing options so as to make promises explicit.
+
+Something our OSes don't do currently is collect data to indicate whether promises are true or false.  I.e., whether the outcomes we hope for are likely.
+
+* The opportunity for technology, then, is in helping us with that search:  helping us position our hopes regarding a choice--whether they are conscious or unconscious--within wisdom about alternatives, likely outcomes, and likely costs.
+## What we know about benefits / promises
+
+(( branding and credence papers, max neef, coming insurrection, society of the spectacle ))
+((- lozenge, typologies, maps of cost / benefit -))
+
+------------------------
+
+
+§3.  THEORY OF IDENTITY AND EXPRESSIVE CHOICE
+
+*Consider how to turn the distracting choices which often lead to regret and user burnout into meaningful choices--which relate to values and outcomes that are important to us.*
+
+*** Users want to express and interact with what matters to them, not merely what's in front of them.
+
+I've spent a lot of time making user interfaces, which are mostly menus of various kinds.  In other words, they are environments for making choices.
+
+And I've noticed that people tend to choose from what's in front of them.  This means that whomever designs the menus is very powerful, because people will make a lot of choices based on the information on the menu, and rarely consider options that aren't on the menu in front of them.
+
+To the extent that our identities are shaped by the choices we make, the person who designs the menu can shape our identity.  This is not the domain of a responsible/trustworthy device.  A trustworthy device must let us shape our own identity, which means that our menus need to be malleable based on what's important to us.
+
+* Increasingly we make choices using the device, rather than just researching options, and communicating.
+
+(( ted talk lady, r marie cox ))
+((- map of goals, dreambox, profile box -))
+
+
+------------------------
+
+§4.   THEORY OF LIFE IN REVIEW, SEARCH COSTS, & REGRET
+
+*** A regrettable choice is not a character defect or a weird preference, but a lack of options at hand (i.e. with low search costs)
+
+* When we think about improving lives or ending addictions, it makes sense to think in terms of providing better opportunities at the moment of choice.
+
+* The test of a device-assisted choice is that the user is glad about what they did on review.
+
+* The activities that we regret are the ones where we know (at least later) that we could have done better for ourselves, if search costs had been lower.  In the case of the donut, we could have found better food, and in the case of facebook, a better form of social engagement, but the search itself seemed exhausting.
+
+## What we know about unexpected costs, addiction, regret
+(( becker murphy and other addiction models))
+
+------------------------
+
+§5.  THEORY OF COLLECTIVE WISDOM
+
+*Describe the public data service about people, choices, and outcomes that's implied by these approaches, and how this pubilic data could change search costs and behavior.*
+
+*** If regrettable choices / lives in review regretted are a function of the options at hand, then the metrics we use to surface media are paramount. .... Metrics like viewers views clicks will mean more regretted hours and metrics like five star review count and outcomes going well will mean more lives well lived.
+
+** When we think about improving lives or ending addictions... Mostly this amounts to transmitting wisdom rather than impulse through our networks.
+
+* What parts of us are we gathering up?
+
+## Recommenders, how choices are increasingly made
+
+* obesity, depression, a lack of meaningful work, sexual dysfunction, clickhole, ...
+
+(( postman, other info econ, especially the other becker paper ))
+((- google now and siri, profile page, other OLL pages -))
+
+
+------------------------
+
+§6. NECESSARY CONDITIONS FOR AN OUTCOME ECONOMY
+
+*Locate these models of informed choice, expressive choice, and collective wisdom in terms of the microeconomics of addiction, behavioral economics, and current social issues like obesity, depression, a lack of meaningful work, sexual dysfunction, clickhole media / the buzzfeedification of media, and "internet addiction"*
+
+*** Organizations in an economy can be said to be *outcome-aligned* if they have no economic interest besides positive outcomes for those who come to them.
+
+* ((Finally we'll ask whether augmenting OSes and browsers with displays for *expressive and honest choice* could direct attention and cashflow towards better providers and sites--i.e., those which produce the best outcomes, best likelihoods, and lowest costs in users' lives, rather than those with viral loops, network effects, marketing deals, or other advantages.))
+
+* Verifying outcomes
+* ((We'll ask whether, by using this new labeling system and public data, we may be able to switch from marketplaces that are mostly about transactions to marketplaces for personal outcomes.))
+* obesity, depression, a lack of meaningful work, sexual dysfunction, clickhole, ...
+* Social problems can be solved by transitioning to a marketplace for personal outcomes.
+
+(( folbre, story of stuff ))
+((- report for facebook, leaderboard, consumer spending, hours desired -))
+((* pull from hackpad shared with jordan and jim, and ACE omnigraffle *))
