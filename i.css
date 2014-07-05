@@ -149,7 +149,7 @@ h2 {
     /*padding-left: 12px;*/
     margin: 2em 0 0 0;
     /*font-family: Georgia, "Times New Roman", serif;*/
-    font-size: 20px;
+    font-size: 18px;
     color: hsl(120, 100%, 17%);
     margin-left: -10px;
     font-weight: normal;
@@ -183,8 +183,9 @@ h1 {
     margin: 0;
     padding: 0;
     font-weight: normal;
-    font-size: 21px;
+    font-size: 15px;
     display: inline-block;
+    text-transform: uppercase;
 }
 .header h3 {
     display: inline-block;
@@ -337,9 +338,14 @@ p img.smaller {
     }
 }
 
-strong a {
+strong a, p > em:first-child > a {
     text-decoration: none;
 }
+
+p > em:first-child > a {
+    color: #333    ;
+}
+
 
 a, a:visited {
     color: hsl(211, 53%, 49%);
@@ -348,4 +354,31 @@ a, a:visited {
 ul {
     padding-left: 14px;
     list-style: square  url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==');
+    margin-top: -15px;
+}
+
+#abstract {
+    font-size: 15px;
+}
+
+header + h2 {
+    margin-top: 1em;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+h3 em {
+    display:block;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    color: hsl(0, 0%, 64%);
+}
+
+h4 {
+    margin-top: 30px;
+color: hsl(120, 100%, 17%);
+margin-bottom: -13px;
 }
