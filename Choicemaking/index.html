@@ -13,23 +13,10 @@
 ## Abstract
 
 <p id="abstract">
-*Given the information requirements of good choices, we find current on-device menus to be inadequate, untrustworthy, and biased toward regrettable choices.  A new public data repository and a series of redesigns for browers, app stores, recommenders, and other menu systems are presented.  Finally, potential effects on the media ecosystem and on business incentives are discussed.*
+*Considering the information requirements of choosing, current on-device menus are found to be inadequate, untrustworthy, isolating, and biased toward regrettable choices.  To address this, I'll suggest principles for the redesign of browers, app stores, recommenders, notifications, and other menu systems, as well as a public data repository about the outcomes of various choices.  Finally, I'll discuss potential impacts on the media ecosystem and on incentives for business.*
 </div>
 
-<!--
 
-A higher standard of device responsibility in helping us conduct our daily lives well.
-
-A model of how we consider an option and what information we would like to have available to us, such as time costs, money costs, likelihood of various outcomes, better options for similar outcomes, etc.
-
-How to turn the distracting choices which often lead to regret and user burnout into meaningful choices--which relate to values and outcomes that are important to us.
-
-A public data service about people, choices, and outcomes that's implied by these approaches, and how this pubilic data could change search costs and behavior.
-
-Locate these models of informed choice, expressive choice, and collective wisdom in terms of the microeconomics of addiction, behavioral economics, and current social issues like obesity, depression, a lack of meaningful work, sexual dysfunction, clickhole media / the buzzfeedification of media, and "internet addiction".
-
-
--->
 
 ## Contents
 
@@ -37,17 +24,27 @@ Locate these models of informed choice, expressive choice, and collective wisdom
 
 * **[Untrustworthy Technology](#device-responsibility)**
   *Our tricky devices & their responsibilty.*
-* **[Shitty Menus, Regretted Choices](#life-in-review)**
-   *Uninformed choices & life in review.*
-* **[Desperate Choices](#addiction)**
-   *Even addiction is rational when search is costly.*
+
+Human choicemaking
+
+* **[Evaluating Choices](#life-in-review)**
+   *Shitty Menus, Regretted Choices: Uninformed choices & life in review.*
+* **[Information and Choice](#addiction)**
+  *Even addiction responds to information.*
+* **[Expressivity of Choices](#expressive-choice)**
+  *We construct our values by choosing.*
 
 *[Repairing individual choicemaking](#repair)*
 
-* **[Informed Choices](#informed-choice)**
-  *The information required to choose well.*
-* **[Expressive Choices](#expressive-choice)**
-  *We construct our values by choosing.*
+* **[Revealed Promises](#promises)**
+  *...*
+* **[Promise Neighborhoods](#neighborhoods)**
+  *...*
+* **[Allegiances](#allegiances)**
+  *...*
+* **[Inviters](#inviters)**
+  *...*
+
 
 *[Beyond individual choicemaking](#beyond)*
 
@@ -59,12 +56,14 @@ Locate these models of informed choice, expressive choice, and collective wisdom
   *Consequences for business and society.*
 
 <a name="situation"></a>
-## Our Situation
+## Our Situation  *In which we examine what the device's responsibility to its users might be, and how it is doing in that department.*
 
 <a name="device-responsibility"></a>
-### Untrustworthy Technology *In which we define the device's responsibility to its user and how it has been failing us.*
+### Untrustworthy Technology
 
-We've come to rely on our phones to plan and to coordinate almost everything we do.  It follows that we need software we can trust *with our lives*.  We need apps, websites, and devices that won't lead us astray.
+If doctors have responsibilities to their patients--to help them make informed choices, to present infrormation in an unbiased way, and to act in their best interests rather than exploiting them--might we say that our computing devices (and the companies that produce them) have a similar set of responsibilities to us?
+
+Here we'll focus on one such responsibility--the responsibility not to present biased information that will lead us astray.
 
 We have names for business that mislead us about benefits or about costs, but we aren't as articulate yet when talking about hidden costs, unfair manipulation, and false promises on our phones.
 
@@ -74,7 +73,7 @@ We call a business *dishonest* when costs are higher that we were informed--e.g.
 
 If a salesman misleads us about the promise of a product, we call him a *charlatan* or a *quack*.  But when an app store indicates a fitness app or a dating app may help us--without providing information about other options and how they all work out for people, it's harder to point a finger.
 
-Menus should serve users.  At the platform level, devices should give us options aligned with our own interests--rather than in the interests of increasing engagement metrics for media companies--and should allow us to make informed, expressive, and social choices among those options.
+Menus should serve users.  At the platform level, devices should give us options aligned with our own interests--rather than in the interests of increasing engagement metrics for media companies, and should present those options in a way that lets us choose well.  Below I'll try to show that this requires giving us informed, expressive, and social choices.
 
 
 <!--
@@ -82,16 +81,26 @@ Menus should serve users.  At the platform level, devices should give us options
 -->
 
 
+## Human choicemaking *In which I discuss value-neutral ways of distinguishing "good" and "bad" choices, the profound ways that information affects certain kinds of choice, and how personal values and choices interact.*
+
+<!-- In which I discuss the kinds of choices we want to make, and consider the information requirements of such choices. -->
+
+
+
+
 <a name='life-in-review'></a>
-### Shitty Menus, Regretted Choices  *In which we clarify the kinds of choices we want to make, and consider the information requirements of such choices.*
+### Shitty Menus, Regretted Choices
 
-We would like our devices to help us live well according to our own judgement.  When there is information that would help us in this endeavor, we would like our devices to surface it promptly and at the moment of choice.
+> *"There are goals other than well-being, and values other than goals"* - Amartya
+Sen:, 1984
 
-Another way of saying this is that we want to avoid a certain kind of regret--regret where we wish the device had told us something before we made a regrettable choice (e.g., by engaging with an app, a site, a notification, etc).
+What does it means for a device to let us "choose well"--or inversely, what it means for a device to "trick" us into a bad choice?  The definition I'll use here is that, if a device leads us, through missing information, to do something we regret, then it has tricked us and prevented us from choosing well. &#10033;<span class="sidenote">&#10033; A full explanation of why "I-Wish-I-Had-Known Regret" (IWIHKR) is a good foundation for defining good and bad choices is beyond our scope here.  But consider that, in choosing a metric around which to characterise choices, we would want one that: (a) accommodates many value systems across different users, (b) aligns with user intuitions about what's good, and (c) aligns with human needs.  An inferior metric like "maximal moment-to-moment happiness" fails all of these:  some people don't value happiness, many things widely regarded to be good like grad school and childbirth are not about happiness, and there are ways to be happy that don't align well with human needs.  Furthermore: (d) IWIHKR is clearly and quickly evaluable via user reports, (e) that evaluation once made is durable over time, and (f) minimizing IWIHKR correlates well with existing metrics, including maximizing brand trust and net promoter, maximizing positive user sentiment, and minimizing burnout.</span>
 
-It is important, then, to clarify the types of information that might avert a regrettable choice--especially the most common regrettable choices.  This will include information (at minimum) such as time costs, money costs, the likelihood of various outcomes, and whether there are better options for similar outcomes.
+When I focus on regret, I mean not the emotion of regret, but any kind of negative retrospective review.  I.e., we would like our devices to help us live well according to our own judgement.  When there is information that would help us in this endeavor, we would like our devices to surface it promptly and at the moment of choice.
 
-In sections 3 and 4 we'll take on the challenge of designing menus for browsers, app stores, etc, that convey this information.
+It is important, then, to clarify the types of information that might avert a regrettable choice--especially the most common regrettable choices.  This will include information such as likely time costs, likely money costs, the unlikelihood of various hoped-for outcomes, the likelihood of unhoped-for outcomes, whether there are less-costly or better-success-rate options for similar outcomes, and even whether our hopes themselves are likely to change.
+
+Below I'll take on the challenge of designing menus for browsers, app stores, etc, that convey this information.
 
 
 <!--
@@ -99,49 +108,79 @@ Consider how biased the information they give us is:  when you receive a notific
 -->
 
 
-
-
-
-
 <a name='addiction'></a>
-### Desperate Choices *In which we challenge the notion of addiction as a non-choice and turn instead to the role of search costs.*
+### Information and Choice
 
-Economists have been taking on the task of explaining "bad" choices for decades, including the behavior of addicts.
+The next thing to address is the degree to which the information surfaced in menus affects choicemaking.
 
-We find three common types of explanations:  (a) as a kind of impairment of the ability to choose  ("OMG I just spent 4 hours on facebook."), (b) as a rational choice made with a misunderstanding  ("I thought I could spend just a few minutes!" or "I thought it'd make me popular and happy!"), or (c) as a rational choice made in a bad situation ("Life sucks lets get high and watch cat videos.").
+Does information really help us make different choices?  Perhaps we're just very conflicted about what they want, and we want something one minute but then regret it the next? Or, what about addiction--isn't addiction an impairment of the mechanism of choice itself?
 
-Although pop culture is stuck with explanation (a), economists have focused on (b) and (c) because of [a landmark paper by Becker and Murphy](http://www.jstor.org/discover/10.2307/1830469?uid=3737864&uid=2&uid=4&sid=21104100113327) which found that cigarette smoking and heroin use are sensitive both to announcements of future tax levels and to independent improvements in life circumstances.  That is, people do stop doing heroin when they suddenly have a chance to go to college, and they can stop smoking if they figure out it's going to be more expensive than they thought.  I.e., if they recalculate the direct costs or opportunity costs.
+Economists have been studying so-called "bad" choices for decades, including the behavior of addicts.  Here are three common ways of understanding bad / addictive choices:
 
-This suggests that a regrettable choice is not a character defect or a weird preference, but a lack of options at hand--i.e, options with low search costs. And that it's less important to provide "speedbumps" or to otherwise deprive the addict of their drug, and more important to provide better situations for people and better opportunities at the moment of choice.
+* as a kind of impairment of the ability to choose  ("OMG I just spent 4 hours on facebook."),
+* as a rational choice made with a misunderstanding  ("I thought I could spend just a few minutes!" or "I thought it'd make me popular and happy!"), or
+* as a rational choice made in a bad situation ("Life sucks lets get high and watch cat videos.").
 
-A way this kind of behavior can play out in daily device use is the following:  perhaps we have states of mind where it is too difficult to figure out better options for ourselves, even if we think abstractly that they may exist.  The activities that we regret are the ones where we know (at least later) that we could have done better by ourselves, but the search itself seemed exhausting.
+Popular thinking leans on the first explanation, but economists have focused on the other two, because of [a landmark paper by Becker and Murphy](http://www.jstor.org/discover/10.2307/1830469?uid=3737864&uid=2&uid=4&sid=21104100113327) which found that cigarette smoking and heroin use are sensitive both to announcements of future tax levels and to independent improvements in life circumstances.  That is, people do stop doing heroin when they suddenly have an unexpected chance to go to college, and they can stop smoking if they figure out it's going to be more expensive than they thought.  I.e., if they recalculate the direct costs or opportunity costs.
 
+This suggests that a regrettable choice is not a character defect, a failure to choose, or a weird preference, but a lack of options at hand.  In other words, a lack of options with low search costs. And that means it's less important to provide "speedbumps" or to otherwise deprive the addict of their drug, and more important to provide better situations for people and better opportunities at the moment of choice.
+
+Let's use the term *desperate choices* to refer to regrettable choices that were made because the alternatives were too hard to search for.  The donut bought because you didn't know where to get good food.  A visit to facebook to take a break because there wasn't a meditation teacher nearby.  This is I-Wish-I-Had-Known Regret.  The activities that we regret are the ones where we know (at least later) that we could have done better by ourselves, but the search itself seemed exhausting.
+
+
+
+
+<a name='expressive-choice'></a>
+### Expressive Choices
+
+<!-- add
+(( ted talk lady, r marie cox ))
+((- map of goals, profile box -))
+-->
+
+> *In which we discuss methods for turning the distracting choices which often lead to regret and user burnout into expressive, meaningful choices which relate to values and outcomes that are important to us.*
+
+People tend to choose from what's in front of them.  This means that whomever designs the menus is very powerful, because people will make a lot of choices based on the information on the menu, and rarely consider options that aren't on the menu in front of them.
+
+To the extent that our identities are shaped by the choices we make, the person who designs the menu can shape our identity.  This is not the domain of a responsible/trustworthy device.  A trustworthy device must let us shape our own identity, which means that our menus need to be malleable based on what's important to us.
+
+There is another kind of "I wish-i-had-known regret"... that concerns our values.
+
+**If users are to feel good in the long run, they need to be able to organize *what's in front of them* in terms of *what matters to them.**
+
+Choices are an opportunity to examine our values and come up with new reasons.
+
+The full job of a menu is to surface information to help us make decisions we won't regret, and to let us navigate according to what's important to us
 
 
 <a name="repair"></a>
 ## Redesigns
 
-<a name='informed-choice'></a>
-### Informed Choices  *In which we apply our model to demonstrate informative designs for browsing, shopping, and recommenders.*
+<a name='promises'></a>
+### Revealed Promises  *In which....*
+
+Much of the information we suggested earlier might be necessary-- likely time costs, likely money costs, the unlikelihood of various hoped-for outcomes, the likelihood of unhoped-for outcomes, whether there are less-costly or better-success-rate options for similar outcomes, and even whether our hopes themselves are likely to change--concerns the hopes of the user.
+
+In order to understand what information will minimize regret, we need to understand what we are hoping for when we click on an option--i.e., when we decide to **engage with a resource** (go to an event, to use an app, buy a thing, follow a link, etc).
+
+A design approach is to give each such hope a name and some screen real estate.  If we take it as given that we choose to engage with a resource because we are taken with its **promise** (perhaps an **outcome** we hope will result from the engagement or a **value** embodied in the choice itself) and are willing to pay the **assumed costs**--then perhaps we can display that promise on screen, along with how well it works out for people.
+
+Here is an example for gmail.com.
+
+<img src="img/gmail-w-lozenge-and-border.jpg" class="zoomed">
+
+Surprisingly often, these are false promises.  Facebook tells us it will be quick break, Sports Authority tells us we will get fit.  When we can make promises explicit, it may be that **false promises are no longer something we have to put up with.**
+
 
 <!--
 (( branding and credence papers, max neef, coming insurrection, society of the spectacle ))
 -->
 
-In order to understand what information will minimize regret, we need to understand what we are hoping for when we click on an option--i.e., when we decide to **engage with a resource** (go to an event, to use an app, buy a thing, follow a link, etc).
-
-A thesis here is that we choose to engage with a resource because we are taken with its **promise** and are willing to pay the **assumed costs**.  By promise, I mean either an **outcome** we hope will result from the engagement or a **value** embodied in the choice itself.
-
-Surprisingly often, these are false promises.  Facebook tells us it will be quick break, Sports Authority tells us we will get fit.
-
-False promises are no longer something we have to put up with.
-
-The opportunity for technology is in helping us position our hopes regarding a choice--whether they are conscious or unconscious--within wisdom about alternatives, likely outcomes, and likely costs.
-
-Below we'll look at modifications to a web browsing interface that makes promises explicit and indicates whether the outcomes we hope for are likely as we browse.
-
-
 #### Browsing
+
+> *"The thing I hate the most about advertising is that it attracts all the bright, creative and ambitious young people, leaving us mainly with the slow and self-obsessed to become our artists."* -- Banksy
+
+Below I'll present modifications to a web browsing interface that makes promises explicit and indicates whether the outcomes we hope for are likely as we browse.
 
 Most of us have visited facebook.com at some point during work when we needed a break. We type 'f' into the box at the top of your window and it autocompletes and then you are browsing facebook.
 
@@ -202,27 +241,11 @@ The closest thing to a standard for conveying benefits are the [highlighted phra
 The phrases capture *features* of a product or service, like "great view" and "mozarella sticks", but they don't capture our actual hopes, which are both more general and more specific--things like "quality time with friends", "an adventurous weekend", "feeling refreshed", "getting fit", or "learning to knit".
 
 
-<a name='expressive-choice'></a>
-### Expressive Choices
 
-<!-- add
-(( ted talk lady, r marie cox ))
-((- map of goals, profile box -))
--->
 
-> *In which we discuss methods for turning the distracting choices which often lead to regret and user burnout into expressive, meaningful choices which relate to values and outcomes that are important to us.*
+<a name="neighborhoods"></a>
+## Promise neighborhoods
 
-People tend to choose from what's in front of them.  This means that whomever designs the menus is very powerful, because people will make a lot of choices based on the information on the menu, and rarely consider options that aren't on the menu in front of them.
-
-To the extent that our identities are shaped by the choices we make, the person who designs the menu can shape our identity.  This is not the domain of a responsible/trustworthy device.  A trustworthy device must let us shape our own identity, which means that our menus need to be malleable based on what's important to us.
-
-There is another kind of "I wish-i-had-known regret"... that concerns our values.
-
-**If users are to feel good in the long run, they need to be able to organize *what's in front of them* in terms of *what matters to them.**
-
-Choices are an opportunity to examine our values and come up with new reasons.
-
-The full job of a menu is to surface information to help us make decisions we won't regret, and to let us navigate according to what's important to us
 
 <img src="img/fb-w-lozenge-and-popup.jpg" class="zoomed">
 
@@ -246,6 +269,16 @@ Many such maps are possible, creating an opportunity for data visualizers and st
 ### Social Choices
 
 > *Isolation underpins technology, and technology isolates in its turn; all goods proposed by the spectacular system, from cars to televisions, also serve as weapons for that system as it strives to reinforce the isolation of "the lonely crowd."* -- Guy Debord
+
+
+It appears as though we might decide “I’m going to this event” or “I like this video.”
+
+The playground reveals that our choices are usually provisional, invitational, or suggestive, rather than truly personal. Our choices are actually of the form “I will if you will” or “why don’t we” or “here is an example” or “I’ll join you in” or “this I believe in.”
+
+To choose an activity on the playground is to lead a friend, or to hope for a friend, or to invite a stranger with your mere presence, or perhaps even just to enter into a reverie with some equipment or the landscape. The act of rapport and the act of choice cannot be other than simultaneous and it is a conceit unique to consumerism and our tech landscape that we make choices without realizing each choice is as much a planning of others’ lives as of our own.
+
+On some days we may play with the authors of books or the shapers of landscapes now far away, we very rarely play alone, and even the act of sitting quietly with a book in a public space is an act of leadership or following. The playground lays this bare.
+
 
 
 
@@ -387,9 +420,21 @@ If we imagine an outcome economy--our society re-gearing around longer-term form
 
 ## Summary
 
-* At the platform level, devices should give us options aligned with our own interests, and should allow us to make informed, expressive, and social choices among them.
+* A standard for judging the device's responsibility to its owner is advisable.
 
-* Options should be displayed with time costs, money costs, the likelihood of various outcomes, and whether there are better options for similar outcomes.
+* At the platform level, devices should give us options aligned with our own interests--rather than in the interests of increasing engagement metrics for media companies, and should present those options in a way that lets us choose well.
+
+* This requires giving us informed, expressive, and social choices.
+
+* Enabling informed choice may require that options listings be augmented with likely time costs, likely money costs, the unlikelihood of various hoped-for outcomes, the likelihood of unhoped-for outcomes, whether there are less-costly or better-success-rate options for similar outcomes, and even whether our hopes themselves are likely to change.
+
+* Enable expressive choice means that options presented must relate to values and outcomes that are or that could be important to us.
+
+* A public data service about people, choices, and outcomes could change search costs and behavior.
+
+* These models of informed choice, expressive choice, and collective wisdom relate to microeconomics of addiction, behavioral economics, and current social issues like obesity, depression, a lack of meaningful work, sexual dysfunction, clickhole media / the buzzfeedification of media, and "internet addiction".
+
+
 
 ## Recommended Reading
 
