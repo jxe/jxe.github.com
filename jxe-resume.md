@@ -1,47 +1,60 @@
-Joe Edelman <joe@nxhx.org> 413.250.8007
+# Joe Edelman
 
+* http://nxhx.org/
+* joe@nxhx.org
 * http://github.com/jxe • http://couchsurfing.com/joe_edelman • http://www.linkedin.com/in/joeedelman
-* Dartmouth College (BA); MIT (HSSP)
 
 
-## Experience
+## Software Engineering & Algorithms Research
 
-* Open source commiter since 1993.  Patches to emacs, trn, zsh...
-* Scientific research since 1995.  Contributions to HCI, CSSW, neuroinformatics, bioinformatics.
-* Management since 2000. Generally small teams (7 engineers or fewer).
-* Real world games & experimental theater since 1999.
-* javascript, C, golang, ruby, zsh, iOS / Objective-C, mongo, redis, python, SuperCollider
+* **Citizen Logistics** - designed a programming language for coordinating workforces and built entire parser/runtime/IDE stack (github.com/citizenlogistics/ceml);  shipped a modded version of google maps v3 that supported fast simultaneous movement of 10k markers on screen for realtime workforce coordination (github.com/citizenlogistics/groundcrew-viewer);  lead development of three iphone and web apps, all for realtime coordination
+* **CouchSurfing** - invented the metrics and dashboards that drove the organization; developed the couchsearch algorithm which matches surfers and hosts using trust, reputation, and affinity data;  developed machine learning algorithms for keeping the site free of bad guys
+* **Renesys** - developed planet-scale systems for monitoring, alerting, and logging about the realtime health of the internet, including BGP, ASN, router traffic, botnet activity, etc
+* **Interval Research** - worked on the team that prototyped what later became the Kinect; developed rhythm recognition algorithms based on cogsci research to turn bodily flailing into intersting drumbeats
+* **fMRI Data Center, Dartmouth** - developed semantic web search engines and ontology-based documentation, tagging, and analysis systems to simplify the reuse of scientific data sets
+* **Computer-Aided Drug Design Lab, Dartmouth** - invented algorithms for discovering and evaluating protein-ligand binding sites based on geometric hashing which have been used to discover leukemia drugs
+* **Charles River Analytics** - used neural network object identification algorithms to stop air force bomber jets from bombing trees using LIDAR data
+* **MIT AI Lab** - built early semantic web classifiers and web spidering tools to find arguments for and against various propositions on the open web as an experimental part of Al Gore's Reinventing Government project
+* **Harvard Medical** - built data analysis tools for realtime animal cardiovascular data
 
+* **Eduction** - MIT (HSSP), Dartmouth College (BA, "Simulation in the Sciences");
 
-## Skills
-
-* robust, distributed systems
-* terabytes/day of data or traffic, in real time and globally
-* social design for stranger/stranger interactions
-* social design for activities/invites/events
-* transaction cost and search cost economics
-* real world games
-
-
-## Positions
-
-* CEO, Citizen Logistics - 2008-2013
-* Dir. Tech, CouchSurfing, Inc, incl new systems for reputation, safety, search - 2006
-* Systems Architect, Renesys Corp, realtime internet connectivity alerting - 2004
-* Software Architect, fMRI Data Center, neuroinformatics - 2002
-* PM, Government of Tibet in Exile, anonymous remote voting - 2001
-* Lead Dev, Skyfish.com, airplane auctions - 2000
-* Researcher, Dartmouth College, Algorithms for Computer-Aided Drug Design - 1998
-* Social Design & Software Architect, WGBH Television "Zoom!" Online - 1997
-* HCI Research, Interval Research Corporation, early Kinect prototypes - 1996
-* SE & AI Research, Charles River Analytics, LIDAR identification of ground features - 1995
-* Systems, Harvard Medical, realtime central data collection - 1995
-* HCI/CSCW Research, MIT Artificial Intelligence Lab, structured forums - 1993
-* born: September 1976
+* **Open source** commiter since 1993.  Patches to emacs, trn, zsh.
+* **Scientific research** since 1995.  Contributions to HCI, CSSW, neuroinformatics, bioinformatics.
+* Various projects in javascript, C, node, ruby, rubymotion, html5/css3, mongo, redis, mysql, objc/iOS, golang, python, etc
 
 
-## As a consultant.
+## Project Management & Operations
 
-* *Data architecture* - I've helped companies think about object and database design, latency and scalability, frameworks, numbers of servers, project sizing, etc. 
+* **Citizen Logistics** (CEO) - ultimate responsibility for funding, hiring, and managing a team of 3-7, technical direction, and product releases; released one business and two consumer apps which were covered in the technical press, nytimes, etc
+* **Come Out and Play** - co-managed a real-world games festival in SF that draws 6000 people to play new games out in the city, including busines relations, print and online materials, insurance, etc
+* **CouchSurfing** - managed the engineers and engineering priorities during a period of rapid growth
+* **Emergency Communities** - operations team for a soup kitchen / community center in post-Katrina New Orleans which served thousands three meals a day, including logistics of food suppliers and trucking, volunteer supply, etc
 
-* *Social design* - I've helped dramatically improve flows that connect strangers and friends in realworld or chat activities, built event suggestion interfaces with 100-1000x improved conversions, and dramatically improved signup stickiness by engineering community across many products.
+* other leadership and PM roles at the Gov't of Tibet in Exile, Skyfish.com, WGBH Television, and various small consultancies and shops
+
+
+
+## Additional Creativity
+
+* **Sand** - an iOS calendar app that reminds you of your mortality
+* **OpenOutcomes** - the public data repository that will help people waste less time online
+* **Analog Cupid** - a real-life dating site (i.e., a table in a park)
+* More than 40 in-person **games and theatrical events** (see http://nxhx.org)
+* Successful products in stranger-stranger networking, workforce coordination, games, programming languages, and event listings.
+
+
+### Code samples
+
+* Go:  https://github.com/OpenOutcomes/gldb
+* iOS:  https://github.com/jxe/sand
+* node:  https://github.com/jxe/forthedead
+* coffeescript:  https://github.com/OpenOutcomes/hindsight
+* ruby: unicorn_horn,  https://github.com/jxe/unicorn_horn
+* Optimized JS/DOM: http://github.com/citizenlogistics/groundcrew-viewer
+* A Chrome extension: https://github.com/OpenOutcomes/NoRegrets
+
+
+## Seeking
+
+I'm looking for anything between a consulting gig for a few hours each week to a quick two week project. I can help plan projects, help assess team requirements or candidates in a variety of positions, advise about tech infrastructure or scaling, code something tricky, critique product plans (especially consumer apps), advise about fundraising or marketing channels, etc.
