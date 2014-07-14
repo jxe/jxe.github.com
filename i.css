@@ -220,7 +220,8 @@ img {
     /*margin-top: 23px;*/
     background:white;
     padding: 5px;
-    border-left: yellow 2px solid
+    border-left: yellow 2px solid;
+    display: inline;
 }
 .sidenote.zoomed {
     left: 820px;
