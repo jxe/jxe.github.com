@@ -168,6 +168,7 @@ article img {
   max-height: 100px; max-width: 180px;
   border-radius: 10px;
   box-shadow: #888 0px 1px 7px;
+  background: white;
 }
 article h2 { margin:0; font-size: 16px; color: #222; margin-top: 4px; margin-bottom: 1px; }
 article p { margin:0; font-size: 14px; color: rgb(92, 89, 89); }
