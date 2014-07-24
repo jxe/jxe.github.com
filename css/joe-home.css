@@ -5,7 +5,7 @@ body {
   font-size: 13px;
   background: white;
   color: black;
-  background: #fff url('../img/brgrad.png') repeat-x scroll;
+  background: #fff -webkit-linear-gradient(hsl(30, 69%, 83%), #eee 0.1%) repeat-x scroll;
 }
 
 p {
@@ -61,7 +61,7 @@ li {
   .right {
     float: left;
     max-width: 500px;
-    margin-left: 20px;
+    margin-left: 30px;
   }
 
   .narrow {
@@ -70,7 +70,7 @@ li {
 }
 
 .right {
-    margin-top: 27px;
+    margin-top: 22px;
     font-size: 14px;
     color: hsl(60, 1%, 15%)
 }
@@ -85,7 +85,7 @@ li {
   height: 300px;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: inset rgba(30,20,0,0.7) 0px 0px 5px 1px;
+  box-shadow: inset hsla(40, 100%, 6%, 0.37) 0px 0px 5px 1px;
   background: url(../smallme.jpg);
   background-size: cover;
 }
@@ -94,6 +94,17 @@ li {
 .right p {
   line-height: 1.35;
 }
+
+p.first {
+      color: hsl(228, 0%, 26%);
+    font-size: 22px;
+    max-width: 400px;
+    text-shadow: white 0px 0px 2px;
+}
+
+
+
+
 
 h1 {
   text-align:center
@@ -108,9 +119,9 @@ h1 {
 }
 
 h2 {
-  margin-top: 40px;
-  font-size: 22px;
-  color: #000;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #c60;
 }
 
 h2 + h3 {
@@ -161,14 +172,15 @@ h4 + ul {
 
 
 .right section > a { text-decoration:none; border-bottom: none; }
-section { padding: 5px 0px; margin:15px 0px; }
+section { margin: 0px 20px;  }
 section h2 { margin:10px 0px; font-size: 22px; color: #b67d18; font-weight: normal; }
-article { min-height: 100px; min-width: 100px; display: inline-block;  margin:10px; vertical-align: top; width: 200px; }
+article { min-height: 100px; min-width: 100px;  margin:15px 15px; vertical-align: top; width: 200px; }
 article img {
-  max-height: 100px; max-width: 180px;
-  border-radius: 10px;
-  box-shadow: #888 0px 1px 7px;
+  max-height: 50px; max-width: 180px;
+  border-radius: 50%;
   background: white;
+  padding: 10px;
+  border: solid thin hsl(0, 0%, 57%);
 }
 article h2 { margin:0; font-size: 16px; color: #222; margin-top: 4px; margin-bottom: 1px; }
 article p { margin:0; font-size: 14px; color: rgb(92, 89, 89); }
