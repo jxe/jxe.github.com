@@ -54,7 +54,7 @@
         desc: "We make a thousand choices a day, and the character of those choices is in the end who we become.",
         tags: 'essay'
       },
-      "Collective Experieence Project": {
+      "Collective Experience Project": {
         img: "img/signpost.png",
         url: "http://willandintent.org/cxp/",
         desc: "open, structured data about what people try and how it works out for them",
