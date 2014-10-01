@@ -1,7 +1,8 @@
 body {
   /*margin-top: 15px;*/
   margin:0;
-  font-family: 'Gill Sans', Verdana, sans-serif;
+  /*font-family: 'Gill Sans', Verdana, sans-serif;*/
+  font-family: Verdana, sans-serif;
   font-size: 13px;
   background: white;
   color: black;
@@ -118,7 +119,7 @@ h1 {
   color: rgb(92, 89, 89);
 }
 
-h2 {
+#render h2 {
   margin-top: 20px;
   font-size: 17px;
   color: #c60;
@@ -128,13 +129,13 @@ h2 + h3 {
   margin-top: 0px;
 }
 
-h3 {
+#render h3 {
   margin-top: 30px;
   font-size: 18px;
   color: #c60;
 }
 
-h4 {
+#render h4 {
   margin-top: 50px;
 }
 
@@ -172,8 +173,8 @@ h4 + ul {
 
 
 .right section > a { text-decoration:none; border-bottom: none; }
-section { margin: 0px 20px;  }
-section h2 { margin:10px 0px; font-size: 22px; color: #b67d18; font-weight: normal; }
+#render section { margin: 0px 20px;  }
+#render section h2 { margin:10px 0px; font-size: 22px; color: #b67d18; font-weight: normal; }
 article { min-height: 100px; min-width: 100px;  margin:15px 15px; vertical-align: top; width: 200px; }
 article img {
   max-height: 50px; max-width: 180px;
