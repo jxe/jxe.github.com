@@ -2,7 +2,7 @@ body {
   /*margin-top: 15px;*/
   margin:0;
   /*font-family: 'Gill Sans', Verdana, sans-serif;*/
-  font-family: Verdana, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 13px;
   background: white;
   color: black;
@@ -85,8 +85,8 @@ li {
   width: 250px;
   height: 300px;
   margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: inset hsla(40, 100%, 6%, 0.37) 0px 0px 5px 1px;
+  /*border-radius: 10px;*/
+  /*box-shadow: inset hsla(40, 100%, 6%, 0.37) 0px 0px 5px 1px;*/
   background: url(../smallme.jpg);
   background-size: cover;
 }
@@ -217,10 +217,10 @@ padding-left: 10px;
 text-shadow: hsla(0, 100%, 100%, 0.72) 0px 1px 1px;
 margin-top: 6px;
 color: hsl(0, 1%, 13%);
-background: hsla(60, 12%, 86%, 0.33);
+/*background: hsla(60, 12%, 86%, 0.33);*/
 padding: 6px 10px;
 padding-bottom: 6px;
-box-shadow: inset hsla(0, 0%, 0%, 0.06) 0px -2px 2px;
+/*box-shadow: inset hsla(0, 0%, 0%, 0.06) 0px -2px 2px;*/
 }
 
 .research section {
@@ -231,8 +231,8 @@ box-shadow: inset hsla(0, 0%, 0%, 0.06) 0px -2px 2px;
 
 .research .list {
   background: hsl(207, 3%, 91%);
-  border-radius: 4px;
-  box-shadow: hsla(0, 0%, 0%, 0.38) 0px 1px 3px;
+  /*border-radius: 4px;*/
+  /*box-shadow: hsla(0, 0%, 0%, 0.38) 0px 1px 3px;*/
   overflow: hidden;
   margin-bottom: 5px;
 }
@@ -248,7 +248,7 @@ font-size: 12px;
 }
 
 .research h2 {
-  text-align: center;
+  /*text-align: center;*/
   margin-bottom: 3px;
 }
 
@@ -271,14 +271,14 @@ span.readtime {
 }
 
 span.tag {
-color: hsla(235, 87%, 37%, 0.74);
-border-radius: 5px;
-background: hsla(219, 100%, 50%, 0.21);
-text-transform: uppercase;
-margin-left: 10px;
-padding: 0px 4px;
-font-weight: bold;
-font-size: 10px;
-white-space: nowrap;
-text-shadow: hsl(219, 93%, 91%) 0px 0px 1px;
+  color: hsla(235, 87%, 37%, 0.74);
+  border-radius: 5px;
+  background: hsla(219, 100%, 50%, 0.21);
+  text-transform: uppercase;
+  margin-left: 10px;
+  padding: 0px 4px;
+  font-weight: bold;
+  font-size: 10px;
+  white-space: nowrap;
+  text-shadow: hsl(219, 93%, 91%) 0px 0px 1px;
 }
