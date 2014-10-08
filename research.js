@@ -20,19 +20,19 @@
       }
     },
     "Creating moral nuance in the tech sector": {
-      "Deep Optimism": {
-        img: "img/lighthouse.png",
-        url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb",
-        readtime: '1 min',
-        desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly.",
-        tags: 'essay'
-      },
       "Winning the Platform Wars with Morality": {
         tags: "essay",
         img: "img/wandi.png",
         url: "https://medium.com/@edelwax/mobile-platforms-and-human-values-74e5380713eb",
         readtime: '2 min',
         desc: "Design is no longer enough for your customers; the next decade is about values-alignment"
+      },
+      "Deep Optimism": {
+        img: "img/lighthouse.png",
+        url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb",
+        readtime: '1 min',
+        desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly.",
+        tags: 'essay'
       },
       "Doubt Club": {
         tags: "event series",
@@ -78,12 +78,6 @@
       }
     },
     "Just-in-time Societies": {
-      "Analog Cupid": {
-        img: "img/flaskhat.png",
-        url: "https://www.facebook.com/analogcupid",
-        desc: "Local matchmaking, with polaroids and paper profiles",
-        tags: 'event series'
-      },
       "Sandbox SF": {
         img: "img/sandbox.jpg",
         desc: "An open mic and testing ground for newly invented group activities and games.",
@@ -101,6 +95,12 @@
         url: "#groundcrew",
         tags: 'app',
         desc: "a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
+      },
+      "Analog Cupid": {
+        img: "img/flaskhat.png",
+        url: "https://www.facebook.com/analogcupid",
+        desc: "Local matchmaking, with polaroids and paper profiles",
+        tags: 'event series'
       },
       "WPE": {
         img: "img/codered.jpg",
