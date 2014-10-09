@@ -49,7 +49,7 @@
         desc: "We make a thousand choices a day, and the character of those choices is in the end who we become.",
         tags: 'essay'
       },
-      "Choicemaking, Human Values, and Technology": {
+      "Human Values, Choicemaking, and Interface Design": {
         img: "img/menu.png",
         url: "http://nxhx.org/Choicemaking/",
         desc: "Why we're all wasting time on the internet, and what to do about it.",
