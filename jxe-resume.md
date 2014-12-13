@@ -7,6 +7,7 @@
 
 ## Software Engineering & Algorithms Research
 
+* **Will & Intent** - prototyping software and internet architecture around ideas of collective wisdom and time well spent. Including: a chrome extension which asks you about your web use; a calendar app that helps you consider the balance of your day; a social network about our human values and how they change over time; etc.
 * **Citizen Logistics** - designed a programming language for coordinating workforces and built entire parser/runtime/IDE stack (github.com/citizenlogistics/ceml);  shipped a modded version of google maps v3 that supported fast simultaneous movement of 10k markers on screen for realtime workforce coordination (github.com/citizenlogistics/groundcrew-viewer);  lead development of three iphone and web apps, all for realtime coordination
 * **CouchSurfing** - invented the metrics and dashboards that drove the organization; developed the couchsearch algorithm which matches surfers and hosts using trust, reputation, and affinity data;  developed machine learning algorithms for keeping the site free of bad guys
 * **Renesys** - developed planet-scale systems for monitoring, alerting, and logging about the realtime health of the internet, including BGP, ASN, router traffic, botnet activity, etc
@@ -53,8 +54,3 @@
 * ruby: unicorn_horn,  https://github.com/jxe/unicorn_horn
 * Optimized JS/DOM: http://github.com/citizenlogistics/groundcrew-viewer
 * A Chrome extension: https://github.com/OpenOutcomes/NoRegrets
-
-
-## Seeking
-
-I'm looking for anything between a consulting gig for a few hours each week to a quick two week project. I can help plan projects, help assess team requirements or candidates in a variety of positions, advise about tech infrastructure or scaling, code something tricky, critique product plans (especially consumer apps), advise about fundraising or marketing channels, etc.
