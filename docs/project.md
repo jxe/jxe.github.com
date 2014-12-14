@@ -1,5 +1,5 @@
 
-# Intro
+# Beyond Engagement Metrics, Beyond Addictive Design
 
 The architects of the television industry worked hard to keep people seated in front of the screen, but they had nothing on what's going on right now with mobile.
 
@@ -17,7 +17,7 @@ It's my contention that, just as cities around the world have been shaped by a t
 
 
 
-# How?
+## How?
 
 One approach would be to try to create some utopian dream phone and social network, and then try to compete with the big companies to get everyone to use it.  We're taking a more nuanced, grassroots tack, inspired by the Organic food movement, LEED certification in architecture, the user-centered design movement, and tech-for-good movements like Gov 2.0.
 
@@ -33,14 +33,14 @@ As examples appear, we believe users will clamour for more values-aligned tech. 
 
 
 
-## Timeline
+### Timeline
 
 In the beginning of 2015 I will be polishing and giving a design methodology talk.  You can see an early draft version here:  xxx 
 
 I will also be spending time polishing my chrome extension, Hindsight, which collects wisdom about web usage, why people do it, and how it works out for people.  It has a small group of alpha testers now.  It will have community features and exciting visualizations before my fellowship begins.
 
 
-### Month 1 & 2
+#### Month 1 & 2
 
 * User testing and evolution of chrome extension
   (see https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl)
@@ -48,7 +48,7 @@ I will also be spending time polishing my chrome extension, Hindsight, which col
   (see http://nxhx.org/Choicemaking/ for draft material)
 
 
-### Month 3 & 4
+#### Month 3 & 4
 
 * Ship design methodology packet to teams (Aral, etc) get impl. feedback
 * Create a design methology pledge page for designers
@@ -56,14 +56,14 @@ I will also be spending time polishing my chrome extension, Hindsight, which col
 * Start hosting hackathons and meetups around collective experience data
 
 
-### Month 5 & 6
+#### Month 5 & 6
 
 * Gather advisors for consumer demand projects
 * Continue with hackathons and meetups
 * Revise design methology and publish case studies / field reports
 
 
-### Month 7+
+#### Month 7+
 
 * Raise add'l funds (from Stripe, Mozilla, Bret, etc)
 * Organize work on one or more demand projects:  a newsletter, a kickstarter for an android homescreen app, a series of dataviz stories, an ads-you-can-trust deploy / product hunt alternative, a little network of goal profiles
@@ -72,7 +72,7 @@ I will also be spending time polishing my chrome extension, Hindsight, which col
 
 
 
-## Budget
+### Budget
 
 * design for: cxp site; oll; hinsight; mocks/talks/hig
 * dataviz for example gallery
@@ -93,7 +93,7 @@ BONUS BUDGET
 
 
 
-# Influences and Audiences
+## Influences and Audiences
 
 Our aim is to inspire **designers throughout the consumer tech industry**, as well as other **employees of the major platform companies** (Google, Apple, Facebook), and to convey a basic understanding of what sort of top-level OS interfaces would help people use their time according to their true values.  Much as the tech world discovered the importance of design over the last ten years, we hope to lead them to discover the importance of high quality choicemaking environments, by creating talks, demos, publicity.
 
@@ -103,7 +103,7 @@ Finally, there are certain companies that are in a position to help orchestrate 
 
 
 
-# Team 
+## Team 
 
 Joe Edelman is the project lead. Previously:  tech and analytics at CouchSurfing; CEO of the KF funded 'Groundcrew'.
 
@@ -120,9 +120,7 @@ ADVISORS
 * Patrick Collison, CEO Stripe and board YCombinator,
 
 
-
-
-# For more information
+## For more information
 
 * For more about our work towards codifying consequential design, see http://nxhx.org/Choicemaking/
 * For the collective experience database and the chrome extension, see http://willandintent.org/cxp/
