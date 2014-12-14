@@ -1,8 +1,9 @@
 # Joe Edelman
 
     413-250-8007
-    http://nxhx.org/
     joe@nxhx.org
+    
+    http://nxhx.org/
     http://github.com/jxe http://couchsurfing.com/joe_edelman http://www.linkedin.com/in/joeedelman
 
 
