@@ -1,0 +1,30 @@
+<textarea>
+
+
+<header class="header">
+<h1>The talk</h1>
+<h3><b>Joe Edelman</b> Dec 2015. DRAFT</h3>
+</header>
+
+Find a link [here](http://youtube.com).
+
+</textarea>
+<link rel="stylesheet" href="../i.css">
+<script src="../marked.min.js"></script>
+<script type="text/javascript">
+  var v = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+ document.getElementsByTagName('head')[0].insertAdjacentHTML('afterbegin', v);
+  var text = document.getElementsByTagName('textarea')[0].value;
+  var body = document.createElement('div');
+  body.className = 'container';
+  body.innerHTML = marked(text, { smartypants: true });
+  document.body.appendChild(body);
+
+  var header_h1_text = document.querySelector('header h1').innerText;
+  document.title = header_h1_text;
+
+  var zs = document.querySelectorAll('p img');
+  for (var i = 0; i < zs.length; i++) {
+    zs[i].onclick = function () { this.classList.toggle('zoomed'); }
+  }
+</script>
