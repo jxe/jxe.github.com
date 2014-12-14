@@ -74,23 +74,15 @@ I will also be spending time polishing my chrome extension, Hindsight, which col
 
 ### Budget
 
-* design for: cxp site; oll; hinsight; mocks/talks/hig
-* dataviz for example gallery
-* illustration for talk
-* event stuff for events
-* my time
+The following is a budget for the project for the year.  Not all of it must come from D&S: should I be accepted, I believe I'll be able to raise additional funding from other sources, even for my first six months.  It would be best if D&S contributed an amount that signaled a strong endorsement of the work.
 
-(me) ~$40k/yr
-(short projs w des & dataviz) $5k * 4 = $20k
-(events in NY) $1k * 6 = $6k
--> $66k
+* $40k - stipend for Joe Edelman, 1yr
+* $25k (5x$5k) - to engage a series of designers and data visualizers to inspire exploration of collective experience data
+* $6k - budget for a monthly events series
+* $3k - travel
+* total = $74k
 
-BONUS BUDGET
-- oll
-- asym ads
-- android homescreen
-- cxp collaborators
-
+I'm also looking forward to working with a strong community of scholars.
 
 
 ## Influences and Audiences
