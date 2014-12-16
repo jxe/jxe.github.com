@@ -18,7 +18,7 @@
 
 window.research = 
 
-	"Manipulative and nonmanipulative economies":
+	"Big Data and Human Values":
 		"Two Kinds of Demand":
 			img: "img/slots.jpeg"
 			url: "https://medium.com/@edelwax/two-kinds-of-demand-a36c54b97ee1"
@@ -31,34 +31,12 @@ window.research =
 			desc: "In the ideal economy, business interests align with the long-term wellbeing of customers"
 			tags: 'essay'
 			readtime: '4 min'
-
-
-	"Creating moral nuance in the tech sector":
 		"Winning the Platform Wars with Morality":
 			tags: "essay"
 			img: "img/wandi.png"
 			url: "https://medium.com/@edelwax/mobile-platforms-and-human-values-74e5380713eb"
 			readtime: '2 min'
 			desc: "Design is no longer enough for your customers; the next decade is about values-alignment"
-		"Deep Optimism":
-			img: "img/lighthouse.png"
-			url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb"
-			readtime: '1 min'
-			desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly."
-			tags: 'essay'
-		"Doubt Club":
-			tags: "event series"
-			img: "img/question-gear.png"
-			url: "http://twitter.com/doubtclubsf"
-			desc: "a structured monthly event where leaders in the SF tech scene have a safe space to think philosophically about their impact"
-		
-		# "Utopian Interfaces Gallery":
-		# 	tags: 'willandintent'
-		# 	img: ""
-		# 	url: "#uig"
-
-
-	"Values-based OS Experiences":
 		"Every Screen Empowers Us or Weakens Us":
 			img: "img/walle.jpeg"
 			url: "https://medium.com/@edelwax/every-screenful-of-every-app-either-empowers-us-or-weakens-us-2ef22a472b30"
@@ -95,15 +73,8 @@ window.research =
 			desc: "a taxonomy of valueable things—including everything users find important as they browse the web, use apps, or schedule thier lives"
 			tags: 'data'
 
-	"Just-in-time Societies":
-		"Sandbox SF":
-			img: "img/sandbox.jpg"
-			desc: "An open mic and testing ground for newly invented group activities and games."
-			url: "https://www.facebook.com/groups/496677353748745/"
-			tags: 'event series'
-		# "free critical discussion":
-		# 	img: "img/fcd.jpg"
-		# 	url: "#"
+
+	"Creative Tools for Rapid Coordination":
 		"CEML":
 			img: "img/ceml.png"
 			url: "https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md"
@@ -114,6 +85,14 @@ window.research =
 			url: "#groundcrew"
 			tags: 'app'
 			desc: "a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
+		"Sandbox SF":
+			img: "img/sandbox.jpg"
+			desc: "An open mic and testing ground for newly invented group activities and games."
+			url: "https://www.facebook.com/groups/496677353748745/"
+			tags: 'event series'
+		# "free critical discussion":
+		# 	img: "img/fcd.jpg"
+		# 	url: "#"
 		"Analog Cupid":
 			img: "img/flaskhat.png"
 			url: "https://www.facebook.com/analogcupid"
@@ -130,9 +109,31 @@ window.research =
 			desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS"
 			tags: 'event series'
 
+
+	"Creating moral nuance in the tech sector":
+		"Deep Optimism":
+			img: "img/lighthouse.png"
+			url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb"
+			readtime: '1 min'
+			desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly."
+			tags: 'essay'
+		"Doubt Club":
+			tags: "event series"
+			img: "img/question-gear.png"
+			url: "http://twitter.com/doubtclubsf"
+			desc: "a structured monthly event where leaders in the SF tech scene have a safe space to think philosophically about their impact"
+		
+		# "Utopian Interfaces Gallery":
+		# 	tags: 'willandintent'
+		# 	img: ""
+		# 	url: "#uig"
+
+
+
 html = []
 for section_title, section of window.research
-	html.push "<section><h3>#{section_title}</h3><div class='list'>"
+	section_link = section_title.toLowerCase().replace /\ /g, '-'
+	html.push "<section><a id='#{section_link}'><h3>#{section_title}</h3><div class='list'>"
 	for project_title, project of section
 		html.push "<a href='#{project.url}'><div class='researchItem'>"
 		if project.img
