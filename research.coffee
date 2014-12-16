@@ -19,12 +19,29 @@
 window.research = 
 
 	"Big Data and Human Values":
+		"Human Values, Choicemaking, and Interface Design":
+			img: "img/menu.png"
+			url: "http://nxhx.org/Choicemaking/"
+			desc: "Why we're all wasting time on the internet, and what to do about it."
+			tags: 'article'
+			readtime: '2 hour'
 		"Two Kinds of Demand":
 			img: "img/slots.jpeg"
 			url: "https://medium.com/@edelwax/two-kinds-of-demand-a36c54b97ee1"
 			readtime: '2 min'
 			desc: "Is our economy powered by activities (and pageviews) we later regret?"
 			tags: 'essay'
+		"Collective Experience Project":
+			img: "img/signpost.png"
+			url: "http://willandintent.org/cxp/"
+			desc: "open, structured data about what people try and how it works out for them"
+			tags: 'data'
+		"A Taxonomy of Human Values":
+			img: "img/values.png"
+			url: "http://willandintent.org/cxp/#values"
+			tags: "willandintent"
+			desc: "a taxonomy of valueable things—including everything users find important as they browse the web, use apps, or schedule thier lives"
+			tags: 'data'
 		"Best-Outcome Economies":
 			img: "img/coin.jpg"
 			url: "http://nxhx.org/Choicemaking/#outcome-economy"
@@ -43,12 +60,6 @@ window.research =
 			readtime: '4 min'
 			desc: "We make a thousand choices a day, and the character of those choices is in the end who we become."
 			tags: 'essay'
-		"Human Values, Choicemaking, and Interface Design":
-			img: "img/menu.png"
-			url: "http://nxhx.org/Choicemaking/"
-			desc: "Why we're all wasting time on the internet, and what to do about it."
-			tags: 'article'
-			readtime: '2 hour'
 		# "sand":
 		# 	img: "twolivesicon120.png"
 		# 	url: "https://www.dropbox.com/sh/oi23wtqpolnlnqx/_1zjdsT4Vx"
@@ -61,17 +72,6 @@ window.research =
 			tags: "willandintent"
 			desc: "a chrome extension which matches your web use to your underlying values and goals"
 			tags: 'chrome ext'
-		"Collective Experience Project":
-			img: "img/signpost.png"
-			url: "http://willandintent.org/cxp/"
-			desc: "open, structured data about what people try and how it works out for them"
-			tags: 'data'
-		"A Taxonomy of Human Values":
-			img: "img/values.png"
-			url: "http://willandintent.org/cxp/#values"
-			tags: "willandintent"
-			desc: "a taxonomy of valueable things—including everything users find important as they browse the web, use apps, or schedule thier lives"
-			tags: 'data'
 
 
 	"Creative Tools for Rapid Coordination":
@@ -85,14 +85,22 @@ window.research =
 			url: "#groundcrew"
 			tags: 'app'
 			desc: "a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
+		# "free critical discussion":
+		# 	img: "img/fcd.jpg"
+		# 	url: "#"
+
+
+	"Group Games":
+		"Doubt Club":
+			tags: "event series"
+			img: "img/question-gear.png"
+			url: "http://twitter.com/doubtclubsf"
+			desc: "a structured monthly event where leaders in the SF tech scene have a safe space to think philosophically about their impact"
 		"Sandbox SF":
 			img: "img/sandbox.jpg"
 			desc: "An open mic and testing ground for newly invented group activities and games."
 			url: "https://www.facebook.com/groups/496677353748745/"
 			tags: 'event series'
-		# "free critical discussion":
-		# 	img: "img/fcd.jpg"
-		# 	url: "#"
 		"Analog Cupid":
 			img: "img/flaskhat.png"
 			url: "https://www.facebook.com/analogcupid"
@@ -108,25 +116,17 @@ window.research =
 			url: "/misc/notecard-party-faq.html"
 			desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS"
 			tags: 'event series'
-
-
-	"Creating moral nuance in the tech sector":
-		"Deep Optimism":
-			img: "img/lighthouse.png"
-			url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb"
-			readtime: '1 min'
-			desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly."
-			tags: 'essay'
-		"Doubt Club":
-			tags: "event series"
-			img: "img/question-gear.png"
-			url: "http://twitter.com/doubtclubsf"
-			desc: "a structured monthly event where leaders in the SF tech scene have a safe space to think philosophically about their impact"
 		
 		# "Utopian Interfaces Gallery":
 		# 	tags: 'willandintent'
 		# 	img: ""
 		# 	url: "#uig"
+		# "Deep Optimism":
+		# 	img: "img/lighthouse.png"
+		# 	url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb"
+		# 	readtime: '1 min'
+		# 	desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly."
+		# 	tags: 'essay'
 
 
 
