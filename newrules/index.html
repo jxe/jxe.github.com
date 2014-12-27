@@ -59,7 +59,7 @@ function draw(data){
        
         upneed=upneed[0].toUpperCase() + upneed.slice(1);
         s.append("<h3>#NewRulesFor"+S(upneed)+"</h3>");
-        var url="https://twitter.com/intent/tweet?text=We+need&hashtags=NewRulesFor"+upneed+",31C3&url="+urlencode(site_url);
+        var url="https://twitter.com/intent/tweet?text=We+need&hashtags=NewRulesFor"+upneed+",31C3&url="+encodeURIComponent(site_url);
         s.append('<a href="'+S(url)+'">tweet</a>');
         var ul = $('<ul></ul>');
         var make_suggestion = $('<li></li>');
