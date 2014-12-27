@@ -96,7 +96,7 @@ function draw(data){
             for (var author in data[need].rulesets){
                 var x = data[need].rulesets[author];
                 var line = $("<li><b>"+S(author)+"</b> suggested &ldquo;"+S(x.text)+"&rdquo;</li>");
-                 var url = tweet(author + " suggested '"+x.text+"' #NewRulesFor"+upneed);
+                 var url = tweet("#NewRulesFor"+upneed+": from "+author + ", '"+x.text+"'");
                  line.append('<a href="'+url+'">tweet</a>');
                 ul.append(line);
             }
