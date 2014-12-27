@@ -55,6 +55,11 @@ var sample_data={
     }
 };
 
+function tweet(text){
+  var txt = encodeURIComponent(text+" #31C3 "+site_url);
+  return "https://twitter.com/intent/tweet?text="+txt;
+}
+
 function draw(data){
     $('#body').empty();
     for (var need in data){
@@ -64,9 +69,7 @@ function draw(data){
        
         upneed=upneed[0].toUpperCase() + upneed.slice(1);
         var header = $("<h3>#NewRulesFor"+S(upneed)+"</h3>");
-        //var url="https://twitter.com/intent/tweet?text=We+need&hashtags=NewRulesFor"+upneed+",31C3&url="+encodeURIComponent(site_url);
-        var text = encodeURIComponent("We need #NewRulesFor"+upneed+" #31C3 "+site_url);
-        var url="https://twitter.com/intent/tweet?text="+text;
+        var url = tweet("Any suggestions? #NewRulesFor"+upneed);
         header.append('<a href="'+url+'">tweet</a>');
         s.append(header);
         var ul = $('<ul></ul>');
@@ -92,7 +95,10 @@ function draw(data){
         if (data[need].rulesets){
             for (var author in data[need].rulesets){
                 var x = data[need].rulesets[author];
-                ul.append("<li><b>"+S(author)+"</b> suggested &ldquo;"+S(x.text)+"&rdquo;</li>");
+                var line = $("<li><b>"+S(author)+"</b> suggested &ldquo;"+S(x.text)+"&rdquo;</li>");
+                 var url = tweet(author + " suggested '"+x.text+"' #NewRulesFor"+upneed);
+                 line.append('<a href="'+url+'">tweet</a>');
+                ul.append(line);
             }
         }
         s.append(ul);
