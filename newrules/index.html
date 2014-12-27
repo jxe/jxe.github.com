@@ -6,13 +6,13 @@
 
 <style>
 body { font-family: sans-serif; }
-h3 a { color: #88f; font-size: 13px margin-left: 10px; }
+h3 a, li a { color: #88f; font-size: 12px margin-left: 10px; display: inline-block; }
 </style>
 
 <h2>Welcome to 31C3!</h2>
 <h1>Let's collect new ways to play the games here!</h1>
-<form id=need><input name="need" placeholder="NewRulesFor..."><button>add</button></form>
 <div id="body"></div>
+<form id=need><input name="need" placeholder="NewRulesFor..."><button>add</button></form>
 
 
 
@@ -24,7 +24,6 @@ var $need = $('#need');
 $need.submit(function(){
     var need = $("#need input").val();
     need = need.replace(/NewRulesFor/i, '');
-    need = need.toLowerCase();
     console.log('new need', need);
     var d = {};
     d[need] =  { suggested_at: Date.now() };
@@ -86,6 +85,9 @@ function draw(data){
                 var d = {};
                 var author = form[0].name.value;
                 author = author.toLowerCase();
+                if (!author.match(/^@/)){
+                  author = '@'+author;
+                }
                 d[author] = { text: form[0].text.value };
                 F.child(n).child('rulesets').update(d);
                 return false;
