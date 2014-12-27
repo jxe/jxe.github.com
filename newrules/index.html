@@ -64,8 +64,8 @@ function draw(data){
        
         upneed=upneed[0].toUpperCase() + upneed.slice(1);
         var header = $("<h3>#NewRulesFor"+S(upneed)+"</h3>");
-        var url="https://twitter.com/intent/tweet?text=We+need&hashtags=NewRulesFor"+upneed+",31C3&url="+encodeURIComponent(site_url);
-        var text = encodeURIComponent("We need #NewRulesFor"+upneed+" #31C3 "+site_url;
+        //var url="https://twitter.com/intent/tweet?text=We+need&hashtags=NewRulesFor"+upneed+",31C3&url="+encodeURIComponent(site_url);
+        var text = encodeURIComponent("We need #NewRulesFor"+upneed+" #31C3 "+site_url);
         var url="https://twitter.com/intent/tweet?text="+text;
         header.append('<a href="'+url+'">tweet</a>');
         s.append(header);
