@@ -22,6 +22,7 @@ var $need = $('#need');
 $need.submit(function(){
     var need = $("#need input").val();
     need = need.replace(/NewRulesFor/i, '');
+    need = need.toLowerCase();
     console.log('new need', need);
     var d = {};
     d[need] =  { suggested_at: Date.now() };
@@ -64,6 +65,8 @@ function draw(data){
         upneed=upneed[0].toUpperCase() + upneed.slice(1);
         var header = $("<h3>#NewRulesFor"+S(upneed)+"</h3>");
         var url="https://twitter.com/intent/tweet?text=We+need&hashtags=NewRulesFor"+upneed+",31C3&url="+encodeURIComponent(site_url);
+        var text = encodeURIComponent("We need #NewRulesFor"+upneed+" #31C3 "+site_url;
+        var url="https://twitter.com/intent/tweet?text="+text;
         header.append('<a href="'+url+'">tweet</a>');
         s.append(header);
         var ul = $('<ul></ul>');
@@ -76,7 +79,9 @@ function draw(data){
                 console.log('submit'+ n+form[0].name.value+ form[0].text.value);
                
                 var d = {};
-                d[form[0].name.value] = { text: form[0].text.value };
+                var author = form[0].name.value;
+                author = author.toLowerCase();
+                d[author] = { text: form[0].text.value };
                 F.child(n).child('rulesets').update(d);
                 return false;
             });
@@ -99,3 +104,6 @@ function draw(data){
 F.on('value', function(snap){ draw(snap.val() || {}); }); 
 //draw(sample_data);
 </script>
+
+<hr>
+By <a href="http://twitter.com/edelwax">@edelwax</a>; send pull requests to https://github.com/jxe/jxe.github.com/tree/master/newrules
