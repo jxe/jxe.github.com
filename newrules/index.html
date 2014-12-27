@@ -6,7 +6,7 @@
 
 <style>
 body { font-family: sans-serif; }
-h3 a, li a { color: #68f; font-size: 12px; margin-left: 10px; display: inline-block; text-decoration: none; font-weight: normal; }
+h3 a, li a.tweet { color: #68f; font-size: 12px; margin-left: 10px; display: inline-block; text-decoration: none; font-weight: normal; }
 </style>
 
 <h2>Welcome to 31C3!</h2>
@@ -101,7 +101,7 @@ function draw(data){
                 var x = data[need].rulesets[author];
                 var line = $("<li><b>"+S(author)+"</b> suggested &ldquo;"+S(x.text)+"&rdquo;</li>");
                  var url = tweet("#NewRulesFor"+upneed+": from "+author + ", '"+x.text+"'");
-                 line.append('<a href="'+url+'"> tweet</a>');
+                 line.append('<a class=tweet href="'+url+'"> tweet</a>');
                 ul.append(line);
             }
         }
