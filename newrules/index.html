@@ -1,0 +1,95 @@
+<!-- new rules index.html -->
+
+<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+<script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+
+<h1>What at 31C3 needs new rules?</h1>
+<form id=need><input name="need" placeholder="NewRulesFor..."><button>add</button></form>
+<div id="body"></div>
+
+
+
+<script>
+
+var url = window.location.href;
+var F = new Firebase('http://sandstore.firebaseio.com/31c3');
+var $need = $('#need');
+$need.submit(function(){
+    var need = $("#need input").val();
+    console.log('new need', need);
+    var d = {};
+    d[need] =  { suggested_at: Date.now() };
+    F.update(d);
+    $("#need input").val('');
+    return false;
+});
+
+function S(x){
+    return x.replace(/["'&]/g, '');
+}
+
+var sample_data={
+    conversations: {
+        suggested_at: 1378127312,
+        rulesets: {
+            dan: {
+                text: "talk like a pirate",
+                shared_by: {
+                    dan: 18371232131
+                }
+                }
+        }
+    },
+    newbies: {
+        suggested_at: 1378127312
+    },
+    eating: {
+        suggested_at: 1378127312
+    }
+};
+
+function draw(data){
+    $('#body').empty();
+    for (var need in data){
+        console.log('need'+  need);
+        var s = $('<section need="'+S(need)+'"></section>');
+        var upneed = need.slice(0);
+       
+        upneed=upneed[0].toUpperCase() + upneed.slice(1);
+        s.append("<h3>#NewRulesFor"+S(upneed)+"</h3>");
+        var url="https://twitter.com/intent/tweet?text=We+need&url="+url+"&hashtags=NewRulesFor"+upneed+",31C3";
+        s.append('<a href="'+S(url)+'">tweet</a>');
+        var ul = $('<ul></ul>');
+        var make_suggestion = $('<li></li>');
+        var link = $('<a href="#">make a suggestion</a>').click(function(ev){
+        
+            var form =$("<form><input name=name placeholder='twitter name'> suggests <input name=text><button>send</button></form>");
+            form.submit(function(ev){
+                var n = $(ev.target).closest("section").attr('need');
+                console.log('submit'+ n+form[0].name.value+ form[0].text.value);
+               
+                var d = {};
+                d[form[0].name.value] = { text: form[0].text.value };
+                F.child(n).child('rulesets').update(d);
+                return false;
+            });
+            $(ev.target.parentNode).replaceWith(form);
+        });
+        make_suggestion.append(link);
+        ul.append(make_suggestion);
+        if (data[need].rulesets){
+            for (var author in data[need].rulesets){
+                var x = data[need].rulesets[author];
+                ul.append("<li><b>"+S(author)+"</b> suggested &ldquo;"+S(x.text)+"&rdquo;</li>");
+            }
+        }
+        s.append(ul);
+        $('#body').append(s);
+        console.log('appended');
+    }
+}
+
+F.on('value', function(snap){ draw(snap.val() || {}); }); 
+//draw(sample_data);
+</script>
