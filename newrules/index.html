@@ -12,11 +12,12 @@
 
 <script>
 
-var url = window.location.url;
+var site_url = window.location.href;
 var F = new Firebase('http://sandstore.firebaseio.com/31c3');
 var $need = $('#need');
 $need.submit(function(){
     var need = $("#need input").val();
+    need = need.replace(/NewRulesFor/i, '');
     console.log('new need', need);
     var d = {};
     d[need] =  { suggested_at: Date.now() };
@@ -58,7 +59,7 @@ function draw(data){
        
         upneed=upneed[0].toUpperCase() + upneed.slice(1);
         s.append("<h3>#NewRulesFor"+S(upneed)+"</h3>");
-        var url="https://twitter.com/intent/tweet?text=We+need&url="+url+"&hashtags=NewRulesFor"+upneed+",31C3";
+        var url="https://twitter.com/intent/tweet?text=We+need&url="+site_url+"&hashtags=NewRulesFor"+upneed+",31C3";
         s.append('<a href="'+S(url)+'">tweet</a>');
         var ul = $('<ul></ul>');
         var make_suggestion = $('<li></li>');
