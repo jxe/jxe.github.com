@@ -8,7 +8,7 @@
         img: "img/menu.png",
         url: "http://nxhx.org/Choicemaking/",
         desc: "Why we're all wasting time on the internet, and what to do about it.",
-        tags: 'article',
+        tags: 'long article',
         readtime: '2 hour'
       },
       "Two Kinds of Demand": {
@@ -24,20 +24,6 @@
         desc: "open, structured data about what people try and how it works out for them",
         tags: 'data'
       },
-      "A Taxonomy of Human Values": {
-        img: "img/values.png",
-        url: "http://willandintent.org/cxp/#values",
-        tags: "willandintent",
-        desc: "a taxonomy of valueable things—including everything users find important as they browse the web, use apps, or schedule thier lives",
-        tags: 'data'
-      },
-      "Best-Outcome Economies": {
-        img: "img/coin.jpg",
-        url: "http://nxhx.org/Choicemaking/#outcome-economy",
-        desc: "In the ideal economy, business interests align with the long-term wellbeing of customers",
-        tags: 'essay',
-        readtime: '4 min'
-      },
       "Winning the Platform Wars with Morality": {
         tags: "essay",
         img: "img/wandi.png",
@@ -50,14 +36,33 @@
         url: "https://medium.com/@edelwax/every-screenful-of-every-app-either-empowers-us-or-weakens-us-2ef22a472b30",
         readtime: '4 min',
         desc: "We make a thousand choices a day, and the character of those choices is in the end who we become.",
-        tags: 'essay'
+        tags: "essay"
+      }
+    },
+    "Discussion Formats for Playful Strategy and Critique": {
+      "Hyperactive Listening": {
+        tags: "group activity",
+        img: "img/question-gear.png",
+        url: "https://quip.com/kc4jAKO83gUD",
+        desc: "A game where people bring their hopes, fears, or plans, and a team of listeners does live, playful research and simulations."
       },
-      "Hindsight for Chrome": {
-        img: "img/crxsq.png",
-        url: "https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl",
-        tags: "willandintent",
-        desc: "a chrome extension which matches your web use to your underlying values and goals",
-        tags: 'chrome ext'
+      "Doubt Club": {
+        tags: "event series",
+        img: "img/question-gear.png",
+        url: "http://twitter.com/doubtclubsf",
+        desc: "A monthly event giving SF tech leaders a safe space for philosophically thinking about their impact."
+      },
+      "Free Critical Discussion": {
+        tags: "public interventions",
+        img: "img/fcd.jpg",
+        url: "https://m.facebook.com/profile.php?id=523439091118445",
+        desc: "Just like free hugs, but different"
+      },
+      "Nut or Fish": {
+        tags: "group activity",
+        img: "",
+        url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game",
+        desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
       }
     },
     "Creative Tools for Rapid Coordination": {
@@ -75,12 +80,6 @@
       }
     },
     "Group Games": {
-      "Doubt Club": {
-        tags: "event series",
-        img: "img/question-gear.png",
-        url: "http://twitter.com/doubtclubsf",
-        desc: "a structured monthly event where leaders in the SF tech scene have a safe space to think philosophically about their impact"
-      },
       "Sandbox SF": {
         img: "img/sandbox.jpg",
         desc: "An open mic and testing ground for newly invented group activities and games.",
