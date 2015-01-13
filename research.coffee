@@ -92,7 +92,7 @@ window.research =
 			desc: "Just like free hugs, but different"
 		"Nut or Fish":
 			tags: "group activity"
-			img: "nutfish.jpg"
+			img: "img/nutfish.jpg"
 			url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game"
 			desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
 
