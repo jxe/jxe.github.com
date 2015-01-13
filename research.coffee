@@ -77,7 +77,7 @@ window.research =
 	"Discussion Formats for Playful Strategy and Critique":
 		"Hyperactive Listening":
 			tags: "group activity"
-			img: "img/question-gear.png"
+			img: "img/hyperl.jpg"
 			url: "https://quip.com/kc4jAKO83gUD"
 			desc: "A game where people bring their hopes, fears, or plans, and a team of listeners does live, playful research and simulations."
 		"Doubt Club":
@@ -92,7 +92,7 @@ window.research =
 			desc: "Just like free hugs, but different"
 		"Nut or Fish":
 			tags: "group activity"
-			img: ""
+			img: "nutfish.jpg"
 			url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game"
 			desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
 
