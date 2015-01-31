@@ -1,0 +1,35 @@
+<textarea>
+
+
+<header class="header">
+<h1>Contemplative Media</h1>
+<h3><b>Joe Edelman</b> January 2015. </h3>
+</header>
+
+I will be giving five talks, on design, analytics, postvirality, OS architecture, and economics.
+
+This is the design talk.  If you are a designer and would like to get involved or practice this type of design, please join the [empowering design newsletter](http://tinyletter.com/contemplativemedia).  We will have a gallery of redesigns coming soon!
+
+<iframe src="//player.vimeo.com/video/117389218" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/117389218">empowering design, live from Berlin</a> from <a href="http://vimeo.com/gcrew">Joe Edelman</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+</textarea>
+<link rel="stylesheet" href="../i.css">
+<script src="../marked.min.js"></script>
+<script type="text/javascript">
+  var v = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+ document.getElementsByTagName('head')[0].insertAdjacentHTML('afterbegin', v);
+  var text = document.getElementsByTagName('textarea')[0].value;
+  var body = document.createElement('div');
+  body.className = 'container';
+  body.innerHTML = marked(text, { smartypants: true });
+  document.body.appendChild(body);
+
+  var header_h1_text = document.querySelector('header h1').innerText;
+  document.title = header_h1_text;
+
+  var zs = document.querySelectorAll('p img');
+  for (var i = 0; i < zs.length; i++) {
+    zs[i].onclick = function () { this.classList.toggle('zoomed'); }
+  }
+</script>
