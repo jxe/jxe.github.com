@@ -3,37 +3,7 @@
   var html, project, project_title, ref, section, section_link, section_title;
 
   window.research = {
-    "Essays": {
-      "Human Values, Choicemaking, and Interface Design": {
-        img: "img/menu.png",
-        url: "http://nxhx.org/Choicemaking/",
-        desc: "Why we're all wasting time on the internet, and what to do about it.",
-        tags: 'long article',
-        readtime: '2 hour'
-      },
-      "Two Kinds of Demand": {
-        img: "img/slots.jpeg",
-        url: "https://medium.com/@edelwax/two-kinds-of-demand-a36c54b97ee1",
-        readtime: '2 min',
-        desc: "Is our economy powered by activities (and pageviews) we later regret?",
-        tags: 'essay'
-      },
-      "Winning the Platform Wars with Morality": {
-        tags: "essay",
-        img: "img/wandi.png",
-        url: "https://medium.com/@edelwax/mobile-platforms-and-human-values-74e5380713eb",
-        readtime: '2 min',
-        desc: "Design is no longer enough for your customers; the next decade is about values-alignment"
-      },
-      "Every Screen Empowers Us or Weakens Us": {
-        img: "img/walle.jpeg",
-        url: "https://medium.com/@edelwax/every-screenful-of-every-app-either-empowers-us-or-weakens-us-2ef22a472b30",
-        readtime: '4 min',
-        desc: "We make a thousand choices a day, and the character of those choices is in the end who we become.",
-        tags: "essay"
-      }
-    },
-    "Code": {
+    "Tech": {
       "Collective Experience Project": {
         img: "img/signpost.png",
         url: "http://willandintent.org/cxp/",
@@ -55,54 +25,71 @@
     },
     "Group Games": {
       "Hyperactive Listening": {
-        tags: "group activity",
         img: "img/hyperl.jpg",
         url: "https://quip.com/kc4jAKO83gUD",
         desc: "A game where people bring their hopes, fears, or plans, and a team of listeners does live, playful research and simulations."
       },
-      "Notecard parties": {
-        img: "img/cards.png",
-        url: "/misc/notecard-party-faq.html",
-        desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS",
-        tags: 'event series'
-      },
       "Free Critical Discussion": {
-        tags: "public interventions",
         img: "img/fcd.jpg",
         url: "https://m.facebook.com/profile.php?id=523439091118445",
         desc: "Just like free hugs, but different"
       },
       "Nut or Fish": {
-        tags: "group activity",
         img: "img/nutfish.jpg",
         url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game",
         desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
-      }
-    },
-    "Events": {
+      },
       "Sandbox SF": {
         img: "img/sandbox.jpg",
         desc: "An open mic and testing ground for newly invented group activities and games.",
-        url: "https://www.facebook.com/groups/496677353748745/",
-        tags: 'event series'
+        url: "https://www.facebook.com/groups/496677353748745/"
       },
       "Analog Cupid": {
-        img: "img/flaskhat.png",
+        img: "img/anac.jpg",
         url: "https://www.facebook.com/analogcupid",
-        desc: "Local matchmaking, with polaroids and paper profiles",
-        tags: 'event series'
+        desc: "Local matchmaking, with polaroids and paper profiles"
       },
       "WPE": {
         img: "img/codered.jpg",
         url: "https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU",
-        desc: "Immersive experiences in the unlikeliest places.",
-        tags: 'event series'
+        desc: "Immersive experiences in the unlikeliest places."
+      },
+      "Notecard parties": {
+        url: "/misc/notecard-party-faq.html",
+        desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS"
       },
       "Doubt Club": {
-        tags: "event series",
-        img: "img/question-gear.png",
         url: "http://twitter.com/doubtclubsf",
         desc: "A monthly event giving SF tech leaders a safe space for philosophically thinking about their impact."
+      }
+    },
+    "Writing": {
+      "Human Values, Choicemaking, and Interface Design": {
+        url: "http://nxhx.org/Choicemaking/",
+        desc: "Why we're all wasting time on the internet, and what to do about it.",
+        readtime: '2 hour'
+      },
+      "Two Kinds of Demand": {
+        img: "img/slots.jpeg",
+        url: "https://medium.com/@edelwax/two-kinds-of-demand-a36c54b97ee1",
+        readtime: '2 min',
+        desc: "Is our economy powered by activities (and pageviews) we later regret?"
+      },
+      "Winning the Platform Wars with Morality": {
+        url: "https://medium.com/@edelwax/mobile-platforms-and-human-values-74e5380713eb",
+        readtime: '2 min',
+        desc: "Design is no longer enough for your customers; the next decade is about values-alignment"
+      },
+      "Every Screen Empowers Us or Weakens Us": {
+        img: "img/walle.jpeg",
+        url: "https://medium.com/@edelwax/every-screenful-of-every-app-either-empowers-us-or-weakens-us-2ef22a472b30",
+        readtime: '4 min',
+        desc: "We make a thousand choices a day, and the character of those choices is in the end who we become."
+      },
+      "Deep Optimism": {
+        url: "https://medium.com/@edelwax/deep-optimism-ba527ef817bb",
+        readtime: '1 min',
+        desc: "Ask them how the world works, or what can be improved—deep optimists will not answer quickly."
       }
     }
   };
@@ -113,13 +100,10 @@
   for (section_title in ref) {
     section = ref[section_title];
     section_link = section_title.toLowerCase().replace(/\ /g, '-');
-    html.push("<section><a id='" + section_link + "'><h3>" + section_title + "</h3><div class='list'>");
+    html.push("<a id='" + section_link + "'/><section class='screenful'><h3>" + section_title + "</h3><div class='list'>");
     for (project_title in section) {
       project = section[project_title];
       html.push("<a href='" + project.url + "'><div class='researchItem'>");
-      if (project.img) {
-        html.push("<img src='" + project.img + "'>");
-      }
       html.push("<div><div class='title'>" + project_title);
       if (project.readtime) {
         html.push("<span class='readtime'>" + project.readtime + " read</span>");
@@ -132,7 +116,11 @@
         }
         html.push("</div>");
       }
-      html.push("</div></div></a>");
+      html.push("</div>");
+      if (project.img) {
+        html.push("<img src='" + project.img + "'>");
+      }
+      html.push("</div></a>");
     }
     html.push("</div></section>");
   }
