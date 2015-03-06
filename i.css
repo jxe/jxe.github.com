@@ -160,13 +160,11 @@ h1 {
     /*font-family: Georgia, "Times New Roman", serif;*/
     margin: 0;
 }
-.container .header {
-    padding-left: 0px;
-    padding-right: 0px;
-}
 .header {
     line-height: 1.15;
-    padding: 40px 0 25px 100px;
+    padding: 30px 0 25px 100px;
+    padding-left: 0px;
+    padding-right: 0px;
     /*background-image: url(old_mathematics.png);*/
     /*box-shadow: 0 0 10px #ADADAD inset;*/
     /*margin-bottom: 35px;*/
@@ -204,12 +202,19 @@ h1 {
     text-decoration: underline;
     color: #333;
 }
+
+.header p {
+  margin-top:0px;
+  font-size: 14px;
+  color: #999;
+}
+
 h1, h2, strong, b {
     color: black;
     color: hsl(120, 100%, 17%);
 }
 
-img {
+p img {
     border: 1px solid #eee;
 }
 .sidenote {
@@ -288,8 +293,20 @@ p img.smaller {
     }
 }
 
+@media screen and (min-width: 500px) {
+    body {
+        width: 500px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  .sidenote {
+      width: auto;
+  }
+}
+
+
 @media screen and (min-width: 700px) {
-    .container {
+    body {
         width: 500px;
         margin-left: 100px;
     }
@@ -303,16 +320,11 @@ p img.smaller {
     }
 }
 
-@media screen and (max-width: 699px) {
-  .container {
+
+@media screen and (max-width: 499px) {
+  body {
     width:auto;
     margin: 0px 10px;
-  }
-  .header {
-      padding-left: 10px;
-  }
-  .header h1 {
-      font-size:36px;
   }
   .sidenote {
       width: auto;
@@ -327,7 +339,7 @@ p img.smaller {
     p img {
         max-height: 150px;
     }
-    .container {
+    body {
         width: auto;
         margin: 0px 10px;
         width: 70%;
@@ -367,7 +379,8 @@ header + h2 {
 }
 
 h3 {
-    margin-top: 30px;
+    margin-top: 0px;
+    font-size: 14px;
 }
 
 h3 em, h2 em {
@@ -382,4 +395,51 @@ h4 {
     margin-top: 30px;
 color: hsl(120, 100%, 17%);
 margin-bottom: -13px;
+}
+
+
+ul.thumbnails {
+  list-style: none;
+  margin: 10px;
+  margin-left: 3px;
+  padding:0;
+  margin-bottom: 30px;
+}
+
+ul.thumbnails li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 8px; 
+}
+
+ul.thumbnails li p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+ul.thumbnails li img {
+  height: 81px;
+  width: 145px;
+}
+
+p.desc + ul.thumbnails {
+  margin-top: -15px;
+}
+
+.csoon {
+  height: 81px;
+  width: 145px;
+  background: #ccc;
+  color: white;
+  vertical-align: middle;
+  line-height: 81px;
+  font-size: 14px;
+}
+
+h3 + p.desc {
+  margin-top:-20px;
+  color: #999;
+  font-size: 14px;
 }
