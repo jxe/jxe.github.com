@@ -41,18 +41,20 @@ li {
 }
 
 @media (max-width: 600px) {
-  .right {
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+  .right, .left {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
 @media (min-width: 600px) {
   .left {
-    margin-left: 30px;
-    margin-right: 20px;
-    float: left;
+    width: 200px;
+    padding-left: 30px;
+    padding-right: 20px;
+    position: absolute;
+    top:0px;
+    height: 100%;
   }
 
   .left img {
@@ -60,9 +62,12 @@ li {
   }
 
   .right {
-    float: left;
-    max-width: 500px;
-    margin-left: 30px;
+    position: absolute;
+    top:0px;
+    left: 280px;
+    width: 400px;
+    height: 100%;
+    overflow-y: scroll;
   }
 
   .narrow {
@@ -70,18 +75,34 @@ li {
   }
 }
 
+@media (min-width: 800px) {
+  .right {
+    left: 330px;
+    width: 500px;
+  }
+}
+
 .right {
-    margin-top: 22px;
     font-size: 14px;
-    color: hsl(60, 1%, 15%)
+    color: hsl(60, 1%, 15%);
+}
+
+body {
+  height: 100%;
+  position: absolute;
 }
 
 .left {
-    margin-top: 0px;
-    text-align:center
+  padding-top: 20px;
+  line-height: 1.5em;
+  background: #eee;
 }
 
-.left div.photo {
+.left a { 
+  color: black;
+}
+
+.right div.me_photo {
   width: 250px;
   height: 300px;
   margin: 20px auto;
@@ -109,12 +130,12 @@ p.first {
 
 h1 {
   text-align:center
-  font-family: "Optima", Verdana;
+/*  font-family: "Optima", Verdana;*/
   font-size: 2em;
   color: #06c;
   color: #050;
   color: black;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0px;
   color: rgb(92, 89, 89);
 }
@@ -281,4 +302,16 @@ span.tag {
   font-size: 10px;
   white-space: nowrap;
   text-shadow: hsl(219, 93%, 91%) 0px 0px 1px;
+}
+
+div.screenful {
+  min-height: 100%;
+  padding-top: 50px;
+}
+
+.left span.yay {
+  text-transform: uppercase;
+  color: #999;
+  font-size: 11px;
+  display: block;
 }

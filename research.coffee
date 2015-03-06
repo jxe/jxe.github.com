@@ -18,7 +18,7 @@
 
 window.research = 
 
-	"Big Data and Human Values":
+	"Essays":
 		"Human Values, Choicemaking, and Interface Design":
 			img: "img/menu.png"
 			url: "http://nxhx.org/Choicemaking/"
@@ -31,35 +31,12 @@ window.research =
 			readtime: '2 min'
 			desc: "Is our economy powered by activities (and pageviews) we later regret?"
 			tags: 'essay'
-		"Collective Experience Project":
-			img: "img/signpost.png"
-			url: "http://willandintent.org/cxp/"
-			desc: "open, structured data about what people try and how it works out for them"
-			tags: 'data'
-#		"A Taxonomy of Human Values":
-#			img: "img/values.png"
-#			url: "http://willandintent.org/cxp/#values"
-#			tags: "willandintent"
-#			desc: "a taxonomy of valueable things—including everything users find important as they browse the web, use apps, or schedule thier lives"
-#			tags: 'data'
 #		"Best-Outcome Economies":
 #			img: "img/coin.jpg"
 #			url: "http://nxhx.org/Choicemaking/#outcome-economy"
 #			desc: "In the ideal economy, business interests align with the long-term wellbeing of customers"
 #			tags: 'essay'
 #			readtime: '4 min'
-# "sand":
-#	img: "twolivesicon120.png"
-#	url: "https://www.dropbox.com/sh/oi23wtqpolnlnqx/_1zjdsT4Vx"
-#	desc: "The calendar app that supports how you want to live."
-#	tags: 'app'
-#  https://itunes.apple.com/us/app/sand-calendar-day-planner/id687579461
-#		"Hindsight for Chrome":
-#			img: "img/crxsq.png"
-#			url: "https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl"
-#			tags: "willandintent"
-#			desc: "a chrome extension which matches your web use to your underlying values and goals"
-#			tags: 'chrome ext'
 		"Winning the Platform Wars with Morality":
 			tags: "essay"
 			img: "img/wandi.png"
@@ -73,30 +50,12 @@ window.research =
 			desc: "We make a thousand choices a day, and the character of those choices is in the end who we become."
 			tags: "essay"
 
-
-	"Discussion Formats for Playful Strategy and Critique":
-		"Hyperactive Listening":
-			tags: "group activity"
-			img: "img/hyperl.jpg"
-			url: "https://quip.com/kc4jAKO83gUD"
-			desc: "A game where people bring their hopes, fears, or plans, and a team of listeners does live, playful research and simulations."
-		"Doubt Club":
-			tags: "event series"
-			img: "img/question-gear.png"
-			url: "http://twitter.com/doubtclubsf"
-			desc: "A monthly event giving SF tech leaders a safe space for philosophically thinking about their impact."
-		"Free Critical Discussion":
-			tags: "public interventions"
-			img: "img/fcd.jpg"
-			url: "https://m.facebook.com/profile.php?id=523439091118445"
-			desc: "Just like free hugs, but different"
-		"Nut or Fish":
-			tags: "group activity"
-			img: "img/nutfish.jpg"
-			url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game"
-			desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
-
-	"Creative Tools for Rapid Coordination":
+	"Code":
+		"Collective Experience Project":
+			img: "img/signpost.png"
+			url: "http://willandintent.org/cxp/"
+			desc: "open, structured data about what people try and how it works out for them"
+			tags: 'data'
 		"CEML":
 			img: "img/ceml.png"
 			url: "https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md"
@@ -107,9 +66,54 @@ window.research =
 			url: "#groundcrew"
 			tags: 'app'
 			desc: "a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
+#		"A Taxonomy of Human Values":
+#			img: "img/values.png"
+#			url: "http://willandintent.org/cxp/#values"
+#			tags: "willandintent"
+#			desc: "a taxonomy of valueable things—including everything users find important as they browse the web, use apps, or schedule thier lives"
+#			tags: 'data'
+# "sand":
+#	img: "twolivesicon120.png"
+#	url: "https://www.dropbox.com/sh/oi23wtqpolnlnqx/_1zjdsT4Vx"
+#	desc: "The calendar app that supports how you want to live."
+#	tags: 'app'
+#  https://itunes.apple.com/us/app/sand-calendar-day-planner/id687579461
+#		"Hindsight for Chrome":
+#			img: "img/crxsq.png"
+#			url: "https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl"
+#			tags: "willandintent"
+#			desc: "a chrome extension which matches your web use to your underlying values and goals"
+#			tags: 'chrome ext'
+
+
 
 
 	"Group Games":
+		"Hyperactive Listening":
+			tags: "group activity"
+			img: "img/hyperl.jpg"
+			url: "https://quip.com/kc4jAKO83gUD"
+			desc: "A game where people bring their hopes, fears, or plans, and a team of listeners does live, playful research and simulations."
+		"Notecard parties":
+			img: "img/cards.png"
+			url: "/misc/notecard-party-faq.html"
+			desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS"
+			tags: 'event series'
+		"Free Critical Discussion":
+			tags: "public interventions"
+			img: "img/fcd.jpg"
+			url: "https://m.facebook.com/profile.php?id=523439091118445"
+			desc: "Just like free hugs, but different"
+		"Nut or Fish":
+			tags: "group activity"
+			img: "img/nutfish.jpg"
+			url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game"
+			desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
+            
+            
+            
+            
+	"Events":
 		"Sandbox SF":
 			img: "img/sandbox.jpg"
 			desc: "An open mic and testing ground for newly invented group activities and games."
@@ -125,11 +129,11 @@ window.research =
 			url: "https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU"
 			desc: "Immersive experiences in the unlikeliest places."
 			tags: 'event series'
-		"Notecard parties":
-			img: "img/cards.png"
-			url: "/misc/notecard-party-faq.html"
-			desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS"
-			tags: 'event series'
+		"Doubt Club":
+			tags: "event series"
+			img: "img/question-gear.png"
+			url: "http://twitter.com/doubtclubsf"
+			desc: "A monthly event giving SF tech leaders a safe space for philosophically thinking about their impact."
 		
 		# "Utopian Interfaces Gallery":
 		#	tags: 'willandintent'
