@@ -19,21 +19,23 @@
 window.research = 
 
 	"Tech":
+		"Metrics @ Couchsurfing":
+			url: "https://github.com/jxe/jxe.github.com/tree/master/csmetrics"
+			desc: "While at CouchSurfing, I developed these analytics to guide safety, search, and for internal and external dashboards."
+		"Groundcrew":
+			img: "img/groundcrew2.jpg"
+			url: "#groundcrew"
+			tags: 'app'
+			desc: "My startup from 2008-2012 was a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
+		"CEML":
+			img: "img/ceml.png"
+			desc: "a programming environment for describing &amp; coordinating group work. see <a href='https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md'>the documentation</a> for sample code or <a href='http://github.com/citizenlogistics/ceml'>install it yourself</a>."
+			tags: 'language'
 		"Collective Experience Project":
 			img: "img/signpost.png"
 			url: "http://willandintent.org/cxp/"
 			desc: "open, structured data about what people try and how it works out for them"
 			tags: 'data'
-		"CEML":
-			img: "img/ceml.png"
-			url: "https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md"
-			desc: "a programming environment for describing &amp; coordinating group work"
-			tags: 'language'
-		"Groundcrew":
-			img: "img/groundcrew2.jpg"
-			url: "#groundcrew"
-			tags: 'app'
-			desc: "a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
 #		"A Taxonomy of Human Values":
 #			img: "img/values.png"
 #			url: "http://willandintent.org/cxp/#values"
@@ -125,7 +127,9 @@ for section_title, section of window.research
 	section_link = section_title.toLowerCase().replace /\ /g, '-'
 	html.push "<a id='#{section_link}'/><section class='screenful'><h3>#{section_title}</h3><div class='list'>"
 	for project_title, project of section
-		html.push "<a href='#{project.url}'><div class='researchItem'>"
+		if project.url
+				html.push "<a href='#{project.url}'>"
+		html.push "<div class='researchItem'>"
 		html.push "<div><div class='title'>#{project_title}"
 		if project.readtime
 			html.push "<span class='readtime'>#{project.readtime} read</span>"
@@ -138,6 +142,8 @@ for section_title, section of window.research
 		html.push "</div>"
 		if project.img
 			html.push "<img src='#{project.img}'>"
-		html.push "</div></a>"
+		html.push "</div>"
+		if project.url
+				html.push "</a>"
 	html.push "</div></section>"
 document.write html.join ''

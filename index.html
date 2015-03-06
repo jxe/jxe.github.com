@@ -22,13 +22,24 @@
     <div class="me_photo"></div>
   </div>
 
+  
+  <div class="screenful">
+    <a href="RedefiningSoftware/">
+      <h3>Redefining Software to Serve Life</h3>
+      <p>
+        What would it mean for software to serve us in living well? I'll be giving talks about redesigning screens, reinventing analytics, and creating better platform APIs.
+      </p>
+      <a href="RedefiningSoftware/">visit the site</a>
+    </a>
+  </div>
+  
     <div class="research">
   <script src="research.js"></script>
     </div>
 
   <div id="statement" class="screenful">
-  <h3>My Research</h3>
-  <p>I study the economy as a thing with sensors and actuators.  The principal sensor, currently, is the consumer's decision to buy or not buy a thing at a certain price.  This is a crude way of detecting what people truly value.  The principal actuator, currently, is the firm, which is a heavyweight way to organize.  To upgrade the sensors, I study <a href="#big-data-and-human-values">big data ways of detecting our true preferences</a> (using locations, transactions, and by instrumenting and modifying mobile menus).  To upgrade the actuators, I focus on <a href="#creative-tools-for-rapid-coordination">creative tools for lightweight coordination</a>.  My work on detecting true preferences intersects with the foundations of microeconomics and the theory of choice.  I often structure my experiments as <a href="#group-games">group games</a>.</p>
+
+  <p>We can think of the economy as a kind of robot.  Its only sensor is the consumer's decision to buy or not buy a thing at a certain price.  Indeed, hardly an ideal way to know what people truly value!  It's main actuator is the firm.  What a difficult way to organize!  Perhaps we can use location trails, transaction histories, and mobile menus to know people's true preferences instead.  Perhaps we can build creative tools for lightweight coordination.</p>
 </div>
   
 <div id="render" class="narrow"></div>
@@ -67,21 +78,19 @@
 <textarea id="text" style="display:none">
 <!---------------------------------------------------------------->
 
-## More details on the above
+## Writing
+  
+* <a id="healthy-communities"></a>**Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
 
+
+  
+## Games
 
 * <a id="cardparties"></a> **Card Parties** are events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS.  Tasks interweave. Strangers find themselves in intimate encounters, quiet moments, facing challenges together, being theatrical, etc.  I have [an old FAQ](/misc/notecard-party-faq.html) for running one of your own and [some software and a mission database](http://github.com/jxe/Participatorium) that will help.
-
+  
 * **[SandboxSF](https://www.facebook.com/groups/496677353748745/)** -- I co-organize a monthly playtest for realworld games and a yearly festival ([Come Out and Play SF](http://comeoutandplaysf.org)) in SF.  Many of the games presented by others involve just-in-time teamwork, and often they are also about turning nonaffiliated strangers into affiliated groups in some public or semi-public-space venue.
 
 * **Worst Party Ever** -- Since 2011, I've been part of a crew that makes immersive experiences in public space.  Often simple.  Often beautiful.  Sometimes vaguely illegal.  These events are all multi-party markets in interaction and rapport.  They are physical markets, just like a farmer's market, and we have been making adjustments to optimize the emergence of the right audience-member / fulfilling experience transactions.
-
-* <a id="ceml"></a>**CEML** is a programming language for coordination.  Please see [the documentation](https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md) for sample code.  There used to be a hosted version of CEML that let you try it yourself and attach scripts to twilio phone numbers for text message coordination.  I hope to get it back up soon, but for now [install it yourself](http://github.com/citizenlogistics/ceml).
-
-* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
-
-
-## Group Games and Public Interventions
 
 I've made and tested over 200 group games and theatrical, participatory interventions.  Only a couple dozen are linked here, but I will be slowly filling in the portfolio.  You can also see very news ones on my [rulesets blog](http://jxe-games.tumblr.com/).
 
@@ -117,14 +126,20 @@ I've made and tested over 200 group games and theatrical, participatory interven
 
 * *Ruby Goldberg Instruction Series* (2005-) -- Everyone at an open mic or other gathering sends a text message and receives one back from a server.  Each text has an instruction with a trigger event and an action to be taken by the recipient, for instance: "Take off your shoe. When you hear the bell, step into the aisle and hold up your shoe and shake it."  Someone else would receive: "When you see someone shaking one of their shoes in the air, begin to tell a short (20 second) story about your childhood."
 
-
-## Theater and Games Metastructures
-
 * **Pantheon** - a theater piece for 12 actors that need to be unlocked by the audience.  In *Pantheon*, every actor gets a binder of games to play and stories to exchange with audience members, and makes a secret decision before the show about what kind of presentation from an audience member will wake them from silence.  The binders are being collaboratively written.  [Join us!](https://hackpad.com/PANTHEON-iLG8ZLrtOIu)  <span vous="play" topic="Pantheon"></span>
 
 * **Microperformance potluck** - This is a kind of event where people get together to eat and participate in eachother's projects.  Each attendee brings a thing for the whole group to do together or to witness in less than 2 minutes.  A timer is set and if any partipant uses more than two minutes of the group's time, they are tackled and carried out of the room by the audience.  [Flyer](/pdf/micropotluck2.pdf)
 
 * **Northampton Adventure Exchange** (2007) -- Residents of the small town of Northampton, MA filled out an online form where they specified a kind of quality they wanted to have added to their lives.  The choices included "surprise", "peace and quiet", "danger", "challenge", "warmth", etc.  They also reported their schedules.  A massive potluck was held once a week in which 30+ people attempted to pair up people from the database and make adventures for them to go on together which related to their desires.
+
+* **Various Theater Games and Warmups for Contact Improvisers** (2006) -- [A small booklet](/pdf/scorebook.pdf) for dancers.  <span vous="play" topic="Theater Games"></span>
+
+
+  
+## Tech
+
+
+* <a id="groundcrew"></a>**Groundcrew** is a realtime teambuilding command console which was used by disaster relief agencies, city halls during snow storms, political and activist campaign coordinators, and field service and field medical companies. [screenshots](https://www.dropbox.com/s/7q0o8s921c8kzzi/2up-interagency.pdf) [a review](http://www.rebellionlab.com/2010/03/29/groundcrew-the-first-stage-of-location-based-services/) [video walkthrough](http://www.youtube.com/watch?v=9FPMGfAenZg)
 
 * **EarthSync** (2006)&mdash;A social calendar-sharing website.  Allowed
   you to see what all of your geographically-dispersed friends are doing
@@ -154,27 +169,28 @@ I've made and tested over 200 group games and theatrical, participatory interven
 
 * I've created software for forming just-in-time opt-in teams with high opt-in rates and high performance.  These have been tested in environments ranging from art museum openings to disaster sites. **Cadre Events** is a mobile web- and sms-based interface for talking groups of people texting in at the same event and funneling them in chatrooms that coordinate group actitivies between strangers.   [screenshots](https://www.dropbox.com/sh/90olm7apkfbg374/d4SNqanDFn).  Deployed and refined at events at YBCA, CoAPSF 2011, and at several Occupy Wall Street sites!  Here are [some missions from CoAP](https://hackpad.com/Cadre-Events-missions-from-COAP2011-ZXCE1SjUZ4y)
 
-  
+* <a id="sand"></a>**Two Lives Left** is a calendar app that helps you visualize your life and makes it easy to add exercise, friend dates, and the things that make you happy to your week.  [Screenshots](https://www.dropbox.com/sh/oi23wtqpolnlnqx/_1zjdsT4Vx).
+
+* <a id="brightideas"></a>**Bright Ideas** is a directory of easy and more satisfying things you could do with your friends.  [Screenshots](https://www.dropbox.com/sh/hzzsdtcjzh4pv55/jvoZ8M0YYm).  Using the *Bright Ideas* interface, we asked a few thousand people in the bay area to check if they saw better ideas for things to do with their friends (and better friends to do them with) and if they did, they made plans using the app and facebook or text messaging.  Some of these participants were tracked longitudinally and we saw surprising levels of lifestyle change.  This was not a scientific study, but we hope to make data available, and we would love to work with scientists on a proper redo with a control group, etc.
+
 
   
 <a id="software">
 ## Environments for Choosing and Organizing
 
-* <a id="sand"></a>**Two Lives Left** is a calendar app that helps you visualize your life and makes it easy to add exercise, friend dates, and the things that make you happy to your week.  [Screenshots](https://www.dropbox.com/sh/oi23wtqpolnlnqx/_1zjdsT4Vx).
-
-* <a id="brightideas"></a>**Bright Ideas** is a directory of easy and more satisfying things you could do with your friends.  [Screenshots](https://www.dropbox.com/sh/hzzsdtcjzh4pv55/jvoZ8M0YYm).  Using the *Bright Ideas* interface, we asked a few thousand people in the bay area to check if they saw better ideas for things to do with their friends (and better friends to do them with) and if they did, they made plans using the app and facebook or text messaging.  Some of these participants were tracked longitudinally and we saw surprising levels of lifestyle change.  This was not a scientific study, but we hope to make data available, and we would love to work with scientists on a proper redo with a control group, etc.
+<!--
 
 * <a id="gldb"></a> **GLDB** is a nascent public database of which activities people feel best about at least a week after the fact, and which lifestyles feel best to the people who live them, relative to lifestyles they've had in the past.  It includes [an API](https://github.com/timewellspent/gldb/tree/master/gldb-server) for asking about whether URLs are likely to be long-term fulfilling, for making your own reports, and for querying fulfilling activities, and [a web scraper](https://github.com/timewellspent/gldb/blob/master/scraper/scraper.go) for parsing the web as activities rather than as content objects.
 
 * <a id="fkit"></a> **FulfillmentKit** is a javascript library of sample heuristics for guessing which activities (for example, from those presented by newsfeed) are most likely to be fulfilling for the user.  It could be useful in, say, a chrome extension for pruning newsfeed.  Or as an example to the authors of newsfeed algorithm and other recommender serveices.   [first demo](http://timewellspent.github.io/demos/recommender1/)
 
 * <a id="libdeck"></a> **LibDeck** is a javascript library that provides an abstraction for multi-person, multi-role scheduling and buy-in on top of primatives like chatrooms and invites.  Simple JSON objects describe the actvities that could be coordinated, and notions like cohosts and locations/transit directions have a programmatic representation.  [jsdoc](http://citizenlogistics.github.io/libdeck/docs/libdeck.html)  [github](http://citizenlogistics.github.io/libdeck/)
+-->
 
-* **CouchSurfing**
+  
+## Ancient History
 
 * [Northstar](http://www.northstarteens.org) is an [unschool](http://en.wikipedia.org/wiki/Unschooling) in Western Mass where teenagers are asked every week what they would like to do with their week.  This simple act seems to precipitate significant lifestyle and activity changes.  As a board member for two years I had a chance to observe and take part in this process.
-
-* **Various Theater Games and Warmups for Contact Improvisers** (2006) -- [A small booklet](/pdf/scorebook.pdf) for dancers.  <span vous="play" topic="Theater Games"></span>
 
 * **Inaction at a Distance** (2003)&mdash;
   Site-specific performance.  Two people stand quietly, shoulder
@@ -198,8 +214,6 @@ I've made and tested over 200 group games and theatrical, participatory interven
 
 
 ## Earlier work
-
-* <a id="healthy-communities"></a>**Measuring Teamwork in Healthy Communities** (2011) -- [a paper](https://www.dropbox.com/s/dlsyg7tu9tacz0j/metrics2.pdf) on community health metrics for the Knight Foundation.
 
 
 
