@@ -1,6 +1,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../i.css">
 
+<style>
+.playthumb {
+  background-size:cover; width:145; height: 81;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+  
+.playthumb:after {
+  content: '';
+  background-image: url('../img/play.png');
+  display: block;
+  height: 35px;
+  width: 35px;
+  background-size: cover;
+}
+</style>
+
 <header class="header">
   <h1>Software that Serves Life</h1>
   <h3><b><a href="/">Joe Edelman</a></b> // March 2015. </h3>
@@ -14,8 +33,8 @@
 <p class="desc">How can menus and screens make room for what matters in life?</p>
 
 <ul class="thumbnails">
-  <li>
-    <iframe src="https://player.vimeo.com/video/117389218?title=0&byline=0" width="145" height="81" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <li><a href="http://vimeo.com/117389218" target="_blank">
+    <div class="playthumb" style="background-image:url(http://i.vimeocdn.com/video/509827175_640.jpg);"></div>
     <p>Intro</p>
   </li
   ><a href="redesign-worksheet.pdf"><li>
