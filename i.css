@@ -207,6 +207,8 @@ h1 {
   margin-top:0px;
   font-size: 14px;
   color: #999;
+  text-align: left;
+  max-width: 420px;
 }
 
 h1, h2, strong, b {
@@ -307,7 +309,7 @@ p img.smaller {
 
 @media screen and (min-width: 700px) {
     body {
-        width: 500px;
+        width: 550px;
         margin-left: 100px;
     }
     .sidenote {
@@ -398,18 +400,25 @@ margin-bottom: -13px;
 }
 
 
+
+
 ul.thumbnails {
   list-style: none;
   margin: 10px;
-  margin-left: 3px;
+  margin-left: 20px;
   padding:0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+ul.thumbnails a {
+  text-decoration: none;
 }
 
 ul.thumbnails li {
   display: inline-block;
   text-align: center;
-  margin-right: 8px; 
+  margin-right: 18px;
+  vertical-align: top;
 }
 
 ul.thumbnails li p {
@@ -417,6 +426,9 @@ ul.thumbnails li p {
   text-align: center;
   font-size: 14px;
   color: #666;
+  max-width: 140px;
+  line-height: 1.25;
+  margin-top: 5px;
 }
 
 ul.thumbnails li img {
@@ -425,14 +437,15 @@ ul.thumbnails li img {
 }
 
 p.desc + ul.thumbnails {
-  margin-top: -15px;
+  margin-top: 10px;
 }
 
 .csoon {
   height: 81px;
   width: 145px;
-  background: #ccc;
-  color: white;
+  background: #f5f5f5;
+  color: #999;
+  border: solid thin #ddd;
   vertical-align: middle;
   line-height: 81px;
   font-size: 14px;
@@ -442,4 +455,21 @@ h3 + p.desc {
   margin-top:-20px;
   color: #999;
   font-size: 14px;
+}
+
+.playthumb {
+  background-size:cover; width:145; height: 81;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.playthumb:after {
+  content: '';
+  background-image: url('../img/play.png');
+  display: block;
+  height: 35px;
+  width: 35px;
+  background-size: cover;
 }
