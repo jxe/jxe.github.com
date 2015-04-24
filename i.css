@@ -208,7 +208,7 @@ h1 {
   font-size: 14px;
   color: #999;
   text-align: left;
-  max-width: 420px;
+  /*max-width: 420px;*/
 }
 
 h1, h2, strong, b {
