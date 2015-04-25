@@ -17,7 +17,7 @@ MORTA, welcome to Mauer park.  You are a blacksmith God, and your first task is 
 
 12pm
 
-DECIMA, try to enter the Lustgarten park quickly and without looking around too much.  Approach a bench, sit, and put your blindfold on.  Once you've placed your blindfold, just wait.  There's no need to speak or to move around. You will be seated for about 20 minutes.  Someone will come and touch you.  Please wait at least 5 minutes afterwards before you take off your blindfold and check for your next instruction.
+DECIMA, try to enter the Lustgarten park quickly and without looking around too much.  At exactly 12pm, approach a bench, sit, and put your blindfold on.  Once you've placed your blindfold, just wait.  There's no need to speak or to move around. You will be seated for about 20 minutes.  Someone will come and touch you.  Please wait at least 5 minutes afterwards before you take off your blindfold and check for your next instruction.
 
 NONA, arrive at Lustgarten by 11:50a and find the others and hide.  You will give Lisa one or two kisses, without talking, and then leave the group and head north to James Simon Park across the river.  You should leave the rest of the group by 12:10.  Also take a quick photo of Lisa, blindfolded, if you can.
 
@@ -58,7 +58,7 @@ DECIMA, you should have quite a while to walk towards Alexanderplatz.  As you he
 
 1:30pm.
 
-NONA/DECIMA, you are going to play a game with your sister.  DECIMA has a printout / PDF called "The Menu".  Take turns.  The ASKER will ask to learn about something by pointing at it, or to have an experience by naming a type of experience, and so on.  Her sister's job is to tell her about the thing she points at, to lead her towards the type of experience she asks for, etc.  NONA gets to ask for three things and then the roles switch and DECIMA asks for three things.  Repeat.
+NONA/DECIMA, you are going to play a game with your sister.  DECIMA has <a href="../menu.pdf">a PDF called "The Menu"</a>.  Take turns choosing from this menu.  The ASKER will ask to learn about something by pointing at it, or to have an experience by naming a type of experience, and so on.  Her sister's job is to tell her about the thing she points at, to lead her towards the type of experience she asks for, etc.  NONA gets to ask for three things and then the roles switch and DECIMA asks for three things.  Repeat.
 
 After playing for 30 minutes, spend a few minutes considering whether asking for what you're really interested in is the best experience for both people, or whether it is better to not ask for what you really want. Then continue playing.
 

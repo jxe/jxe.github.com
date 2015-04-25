@@ -43,5 +43,6 @@ role.each do |r, lines|
     file.write PREAMBLE
     file.write "<h1>#{r}</h1>"
     file.write lines.join("\n")
+    file.write POSTAMBLE
   end
 end
