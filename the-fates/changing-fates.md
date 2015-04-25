@@ -179,9 +179,9 @@ DECIMA/NONA/MORTA, say aloud what you've learned about any life path alterations
 
 5:10pm.
 
-DECIMA, walk to Gorli with Morta.  Talk to each other about how you're doing.  You don't have to be there til 6p so take your time.
+DECIMA, walk to Gorli with Morta.  Talk to each other about how you're doing.  You don't have to be there til 6p so take your time.  Listen to <a href="http://grooveshark.com/#!/playlist/1429935565/105360819">this playlist</a>
 
-MORTA, walk to Gorli with Decima.  Talk to each other about how you're doing.  You don't have to be there til 6p so take your time.
+MORTA, walk to Gorli with Decima.  Talk to each other about how you're doing.  You don't have to be there til 6p so take your time.  Listen to <a href="http://grooveshark.com/#!/playlist/1429935565/105360819">this playlist</a>
 
 
 
@@ -194,7 +194,9 @@ NONA, where Weigandufer meets Fuldastr there is a grassy area near the canal.  G
 
 APOLLO/HERMES/ARES, ask Nona about how she feels like a warrior, and paint her face and possibly her body to match.  Ares is the executive director of this operation, and Apollo will be the art director.  Make sure she feels beautiful and strong.  Ares and Hermes have the facepaint.
 
-Once she is painted, walk with her to Gorlitzer park.  Walk around her as if she is royalty or a bride and you are her bridesmaids or courtiers.
+Once she is painted, walk with her to Gorlitzer park.  She will listen to a playlist on her headphones.  Walk surrounding her, as if she is royalty or a bride, and you are her bridesmaids or courtiers.
+
+NONA, when you head out, listen to <a href="http://grooveshark.com/#!/playlist/1429935565/105360819">this playlist</a>
 
 
 
@@ -202,14 +204,16 @@ Once she is painted, walk with her to Gorlitzer park.  Walk around her as if she
 
 6pm.
 
-APOLLO/HERMES/MUSES/ARES, go to the top of the terraced rock hill that people sit on, across from Das Edelweiss, the little restaurant.  Distribute the feathers.  One by one, invite the fates into the middle of the circle, have them close their eyes, and have them dance, and tickle them with the feathers.  Tickle the parts of their bodies that aren't dancing, to remind them to use all parts of their bodies when they are dancing.  If it feels right, they can later all dance together.
+APOLLO/HERMES/MUSES/ARES, go to the top of the terraced rock hill that people sit on, across from Das Edelweiss, the little restaurant.  Distribute the feathers.  One by one, invite the fates into the middle of the circle, have them close their eyes, and have them dance, and tickle them with the feathers.  Tickle the parts of their bodies that aren't dancing, to remind them to use all parts of their bodies when they are dancing.  If it feels right, they can later all dance together.  Use <a href="https://open.spotify.com/user/joe_edelman/playlist/1bv1s8hflYPSO3Km1wS1X0">this playlist</a> if you have spotify.
 
 NONA/DECIMA/MORTA, go to the top of the terraced rock hill that people sit on, across from Das Edelweiss, the little restaurant.
 
 
 6:45pm.
 
-NONA/DECIMA/MORTA/APOLLO/HERMES/MUSES/ARES, form a cuddle pile with whomever else wants to.  
+NONA/DECIMA/MORTA/APOLLO/HERMES/MUSES/ARES, end by reading the following quote, and then form a cuddle pile with whomever else wants to:
+
+"The Fates but only spin the coarser clue; The finest of the wool is left for you."
 
 NONA, show Lisa your photo.
 

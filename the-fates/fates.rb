@@ -6,12 +6,14 @@ role = Hash.new{ |h,k| h[k] = [] }
 time = nil
 
 PREAMBLE = <<EOT
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../style.css">
 
-<p><i>Reload this Saturday morning... it will likely change overnight.</i></p>
+<p><i>Your day has come. May the Gods smile upon you!  Call Apollo  (+33 7 52 67 47 24) or Hermes (+4917623734859) if there's an emergency. -- Zeus</i></p>
+EOT
 
+POSTAMBLE = <<EOT
+<p><i>I hope all went well. Message me a photo of the cuddles, please. -- Zeus</i></p>
 EOT
 
 
