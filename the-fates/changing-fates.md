@@ -17,11 +17,11 @@ MORTA, welcome to Mauer park.  You are a blacksmith God, and your first task is 
 
 12pm
 
-DECIMA, try to enter the Lustgarten park quickly and without looking around too much.  At exactly 12pm, approach a bench, sit, and put your blindfold on.  Once you've placed your blindfold, just wait.  There's no need to speak or to move around. You will be seated for about 20 minutes.  Someone will come and touch you.  Please wait at least 5 minutes afterwards before you take off your blindfold and check for your next instruction.
+DECIMA, try to enter the Lustgarten park quickly and without looking around too much.  At exactly 12pm, approach the raised concrete seating area near the fountain, sit, and put your blindfold on.  Once you've placed your blindfold, just wait.  There's no need to speak or to move around. You will be seated for about 20 minutes.  Someone will come and touch you.  Please wait at least 5 minutes afterwards before you take off your blindfold and check for your next instruction.
 
-NONA, arrive at Lustgarten by 11:50a and find the others and hide.  You will give Lisa one or two kisses, without talking, and then leave the group and head north to James Simon Park across the river.  You should leave the rest of the group by 12:10.  Also take a quick photo of Lisa, blindfolded, if you can.
+NONA, arrive at Lustgarten by 11:50a and find the others on the steps of the Berliner Dom, near the corner furthest from Scholsspl.  With them, you'll sneak up on Lisa and give her one or two kisses, without talking, and then leave the group and head north to James Simon Park across the river.  You should leave the Lustgarten area by 12:10.  Also take a quick photo of Lisa, blindfolded, if you can.
 
-HERMES/CHARON, arrive at Lustgarten by 11:50a and find the others and hide.  Watch for Lisa to arrive in Lustgarten, and to sit at a bench and put her blindfold on.  Then sneak up next to her and give her several kisses, all over her body, her neck, her face.  Don't talk, do it silently.  Kiss her for five minutes or so and then run away and leave her sitting in the park alone. Make sure you are all out of site before she takes off her blindfold.  Hermes, silently pick up the feathers and the facepaint next to Lisa on the bench.
+HERMES/CHARON, arrive at Lustgarten by 11:50a and find the others on the steps of the Berliner Dom, near the corner furthest from Scholsspl, and hide as a group.  Watch for Lisa to arrive in Lustgarten, and to sit at the raised concrete seating area near the fountain and put her blindfold on.  Then sneak up next to her and give her several kisses, on her face, her neck, and parts of her body.  Don't talk, do it silently.  Kiss her for a few minutes or so and then run away and leave her sitting in the park alone. Make sure you are all out of sight before she takes off her blindfold.  Hermes, silently pick up the feathers and the facepaint next to Lisa on the bench.
 
 
 
