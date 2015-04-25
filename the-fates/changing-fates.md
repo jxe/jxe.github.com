@@ -17,7 +17,7 @@ MORTA, welcome to Mauer park.  You are a blacksmith God, and your first task is 
 
 12pm
 
-DECIMA, try to enter the Lustgarten park quickly and without looking around too much.  Approach a bench, sit, and put your blindfold on.  Once you've placed your blindfold, just wait.  There's no need to speak or to move around. You will be seated for about 20 minutes.  Someone will come and touch them.  Please wait at least 5 minutes afterwards before you take off your blindfold and check for your next instruction.
+DECIMA, try to enter the Lustgarten park quickly and without looking around too much.  Approach a bench, sit, and put your blindfold on.  Once you've placed your blindfold, just wait.  There's no need to speak or to move around. You will be seated for about 20 minutes.  Someone will come and touch you.  Please wait at least 5 minutes afterwards before you take off your blindfold and check for your next instruction.
 
 NONA, arrive at Lustgarten by 11:50a and find the others and hide.  You will give Lisa one or two kisses, without talking, and then leave the group and head north to James Simon Park across the river.  You should leave the rest of the group by 12:10.  Also take a quick photo of Lisa, blindfolded, if you can.
 
@@ -30,7 +30,7 @@ HERMES/CHARON, arrive at Lustgarten by 11:50a and find the others and hide.  Wat
 
 12:20pm
 
-APOLLO, pick up at least a dozen flowers and hide in James Simon Park by 12:10.  Wait for NONA to show up and kneel on the ground and pray.  Let her wait for at least four minutes and then approach her.  As Apollo, come up behind her and announce yourself with the words "Have you identified what you most want?" (after she answers, long pause) "You are now a God."  Ask her what she most wants, give her the flowers ("you'll need these"), and send her towards Aplatz.
+APOLLO, pick up at least a dozen flowers and hide in James Simon Park by 12:10.  Wait for NONA to show up and kneel on the ground and pray.  Let her wait for at least four minutes and then approach her.  As Apollo, come up behind her and announce yourself with the words "Have you identified what you most want?" (after she answers, long pause) "You are now a God."  Ask her what she most wants, give her the flowers ("you'll need these"), and send her towards Aplatz.  Then stride quickly away.
 
 NONA, Head to James Simon Park, by crossing past the cathedral and taking a left on Spreepromenade and Burgstr.  When you get there, kneel on the ground in a prayer position, close your eyes, and see if you can decide what your strongest lasting desire in life is.  (Not your desire for the moment, but your desire for all of life.)  Someone will approach you after 5-10 minutes kneeling.
 
@@ -100,7 +100,10 @@ Apollo will tell Nona that she's suspected of violating her trust as a Fate by e
 
 Her sister Decima is not currently under suspicion and may remain a free and active Fate.
 
-Charon will take Nona to the Hidden Institute by riding the U8 with her to U Schönleinstr and then walking along the canal to Weigandufer 28, back house, 1st floor, where you'll meet Cerberus who will lock her in a dungeon.  Make sure to check out the Hidden Institute plaque at the front of the building.
+When Charon leaves with Nona, Apollo will stride quickly away in another direction, as if called.
+
+
+CHARON, take Nona to the Hidden Institute by riding the U8 with her to U Schönleinstr and then walking along the canal to Weigandufer 28, back house, 1st floor, where you'll meet Cerberus who will lock her in a dungeon.  Make sure to check out the Hidden Institute plaque at the front of the building.
 
 
 
@@ -133,7 +136,7 @@ CHARON, ring the doorbell or otherwise get in touch with Cerberus, who will lock
 
 3:30pm.
 
-APOLLO, meet the tallest of the three Fates, Decima / Lisa, in a cafe called K-Fetisch.  The closest U8 stop is U Schönleinstr.  Your job is to look at a table or chart she has made and to help her imagine having a very different life than than the one she currently plans to lead.
+APOLLO, meet the tallest of the three Fates, Decima / Lisa, in a cafe called K-Fetisch.  The closest U8 stop is U Schönleinstr.  Your job is to look at a table or chart she has made and to help her imagine having a very different life than than the one she currently plans to lead.  At 4:30 you'll both have somewhere else to be.  Apollo should exit quickly away in another direction without saying goodbye.
 
 DECIMA, go to K-Fetisch.  The closest U8 stop is U Schönleinstr.  You will be approached by a God.
 
