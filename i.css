@@ -474,3 +474,165 @@ h3 + p.desc {
   width: 35px;
   background-size: cover;
 }
+
+
+
+
+
+.researchItem {
+  padding: 5px 0px;
+  display: flex;
+/*  align-content: center;*/
+  min-height: 60px;
+/*  background: hsla(0, 100%, 100%, 0.69);*/
+/*  border-top: solid thin hsla(0, 1%, 79%, 0.6);*/
+}
+
+.research img {
+width: 60px;
+height: 60px;
+flex: auto 0 0;
+box-shadow: hsl(0, 0%, 42%) 0px 1px 3px;
+margin-left: 13px;
+  margin-right: 2px;
+}
+
+.researchItem > div {
+  flex: auto 1.0 1.0;
+}
+
+.research section {
+  overflow: hidden;
+  margin: 30px 0px;
+  margin-bottom: 0px;
+}
+
+.research .list {
+/*  background: hsl(207, 3%, 91%);*/
+  /*border-radius: 4px;*/
+  /*box-shadow: hsla(0, 0%, 0%, 0.38) 0px 1px 3px;*/
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.research .title {
+color: hsl(205, 81%, 42%);
+font-weight: bold;
+font-size: 12px;
+}
+
+.research .desc {
+  color: #666;
+}
+
+.research h2 {
+  /*text-align: center;*/
+  margin-bottom: 3px;
+}
+
+.research p {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.research {
+  margin-bottom: 60px;
+}
+
+span.readtime {
+  color: hsl(0, 0%, 50%);
+  font-size: 11px;
+  font-weight: normal;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+span.tag {
+  color: hsla(235, 87%, 37%, 0.74);
+  border-radius: 5px;
+  background: hsla(219, 100%, 50%, 0.21);
+  text-transform: uppercase;
+  margin-left: 10px;
+  padding: 0px 4px;
+  font-weight: bold;
+  font-size: 10px;
+  white-space: nowrap;
+  text-shadow: hsl(219, 93%, 91%) 0px 0px 1px;
+}
+
+
+
+div.me_photo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  /* border-radius: 10px; */
+  box-shadow: inset hsl(0, 100%, 100%) 0px 0px 7px 1px, rgba(0, 0, 0, 0.43) 0px 0px 5px;
+
+  /*inset hsla(40, 100%, 6%, 0.37) 0px 0px 5px 1px;*/
+  background: url(../img/joe.jpg);
+  background-size: cover;
+  position: absolute;
+  border-radius: 100px;
+}
+
+div.me_contact {
+  position: absolute;
+  left: 120px;
+  top: 20px;
+  color: #ccc;
+}
+
+div.me_contact a, div.me_contact b {
+  color: #777;
+}
+
+.projects {
+  padding-top: 150px;
+  margin-left: 100px;
+}
+
+.projects.top {
+  padding-top: 20px;
+  margin-left: 130px;
+}
+
+
+.projectBanner > b{
+  position:absolute;
+  font-size: 12px;
+  display: block;
+  right:-4px;
+  top: -18px;
+  color: #ccc;
+  font-weight: normal;
+}
+
+.projectBanner > h2 {
+  margin: 0px 0px 5px 0px;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+a.projectBanner{
+  position: relative;
+  display: inline-block;
+  width: 330px;
+  vertical-align: top;
+  color: #666;
+}
+
+.projectBanner:first-child {
+  margin-right: 70px;
+}
+
+.projectBanner img {
+  max-width: 100%;
+  display: block;
+  /* text-align: center; */
+  /* margin: auto; */
+  border-radius: 5px;
+}

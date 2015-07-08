@@ -1,38 +1,21 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-<link rel="apple-touch-icon-precomposed" href="/smallme.jpg" />
-<title>Joe Edelman</title>
-<link rel="stylesheet" href="css/joe-home.css" />
-<script src="/marked.min.js"></script>
-<body class="all">
-<a style="position:absolute; top:0" id="top"></a>
+<title>Joe Edelman / Games</title>
+<link rel="stylesheet" href="../css/joe-home.css" />
 
-<div class="me_photo"></div>
-
-<div class="me_contact">
-  <b>Joe Edelman</b> //
-  <a href="http://twitter.com/edelwax">@edelwax</a> //
-  <a href="https://www.couchsurfing.com/people/joe_edelman">couchsurfing</a> //
-  <a href="http://github.com/jxe">github</a>
+<a href=".."><div class="me_photo"></div></a>
+<div class="projects top">
+  <a class="projectBanner">
+    <img src="../img/penrose.jpg"/>
+    <h2>Rituals and Games for our Next Civilization</h2>
+    <p>Bored of bar trivia and wage labor?  Get a headstart on 21st century social forms!</p>
+  </a>
 </div>
 
-
-<div class="projects">
-
-  <a class="projectBanner" href="/LivableTech/">
-    <b>&#x2460;</b>
-    <h2>From Livable Cities to Livable Tech</h2>
-    <p>How to avoid turning the internet into a consumerist hell.</p>
-    <img src="img/walle.jpeg"/>
-  </a>
-
-  <a class="projectBanner" href="/RitualsAndGames/">
-    <b>&#x2461;</b>
-    <h2>Rituals and Games for our Next Civilization</h2>
-    <p>Bored of bar trivia and wage labor?  Get a headstart on 21st century social forms.</p>
-    <img src="img/penrose.jpg"/>
-  </a>
-
+<div class="right">
+  <div class="research">
+    <script src="games.js"></script>
+  </div>
+  <div id="render" class="narrow"></div></div>
 </div>
 
 
@@ -65,6 +48,43 @@
  -->
 
 
+
+<textarea id="text" style="display:none">
+<!---------------------------------------------------------------->
+
+## Other theater projects and online/offline games
+
+#### Performances and Events
+
+* **Pantheon** - a theater piece for 12 actors that need to be unlocked by the audience.  In *Pantheon*, every actor gets a binder of games to play and stories to exchange with audience members, and makes a secret decision before the show about what kind of presentation from an audience member will wake them from silence.  The binders are being collaboratively written.  [Join us!](https://hackpad.com/PANTHEON-iLG8ZLrtOIu)
+
+* **Northampton Adventure Exchange** (2007) -- Residents of the small town of Northampton, MA filled out an online form where they specified a kind of quality they wanted to have added to their lives.  The choices included "surprise", "peace and quiet", "danger", "challenge", "warmth", etc.  They also reported their schedules.  A massive potluck was held once a week in which 30+ people attempted to pair up people from the database and make adventures for them to go on together which related to their desires.
+
+* **Continuous Play** (2008)&mdash;A performance collaboration with
+  choreographer <a href="http://www.inmixedcompany.com/">Maura Donohue</a> in
+  which the audience switches from passive to very active performers,
+  directed via SMS, over the course of the evening.
+  (<a href="http://www.flickr.com/photos/inmixedcompany/2291504845/">photos</a>)
+
+
+
+#### Online Installations and Games
+
+* **Invoke** (2000)&mdash;
+  Web/physical installation.  A gift-exchange community was
+  created. Participants were making, hiding, and finding postcards
+  in back pages of low-circulation books in the San Francisco
+  public library. Each user would enter the call number and page
+  of a book within which he or she would like to receive a
+  postcard, and within a week another user would place one there.
+
+* **Yenta** - *down for the moment, help me get it back up* - an webapp that watches the twitter public feed for people that feel "bored" or are asking for something from "anyone".  When it finds two people who are both bored at the same time and live near one another, it asks the user if they'd like to suggest something for both people to do together.  This becomes a double @reply introducing the pair.  The user scores a point if their suggestion drives engagement between the two.
+
+
+</textarea>
+
+
+
 <!--
 
 
@@ -80,13 +100,6 @@ When people discuss the evenings, days, and weeks that make life worth living, t
 We use techniques from conn artistry, theme park design, game design, mythmaking, and immersive theatre to interfere with these habits and social codes.
 
 
-
-### <a id="coord"></a> Environments for Describing &amp; Coordinating Group Work <span vous="discuss"></span>
-
-Increasingly the expressive intent of artists and programmers involves connecting people in new ways and coordinating new forms of action. While languages that treat connections and coordination in the core semantics have started to appear (my own CEML, and Sep's Dog), the field is young and we are not yet in a place where an amateur can concoct new media with new interactional modes and/or new social forms of action without a great deal of forethought.
-
-* Software: [Groundcrew](#groundcrew), [CEML](#ceml), [LibDeck](#libdeck)
-* Games: [Card Parties](#cardparties)
 
 
 ### <a id="connection"></a> Social Software as a Playground for Teamwork and Connection with Strangers <span vous="discuss"</span>
@@ -124,19 +137,6 @@ Past projects
 
 
 
-## Past work
-
-### Environments for Describing &amp; Coordinating Group Work
-
-While most apps and websites are about coordinating social experiences, we're still coding at the level of individual experience.
-
-We have made [a programming language for describing and deploying group interactions directly](#ceml), [a map-based real-time tool](#groundcrew) for coordinating group work, [a JSON format and JavaScript library](#libdeck) for working with multiplayer tasks, and more. I am presently working on a more playful format for authoring and deploying group interactions:  a website for appreciating songs as a group called pressplayground. [read more](#coord)
-
-
-## <a id="tentative"></a> Odds and Ends
-
-* There might be a better way to do [economics 101](https://hackpad.com/Lets-Modernize-Econ-101-YHCWZmsRMpc)
-
 
 ### <a id="lwl"></a> Microeconomics Evaluated in Playground Terms <span vous="discuss"></span>
 
@@ -149,18 +149,6 @@ It is instructive to create situations where there are many providers of potenti
 **Learned:** There is a certain regularity to the things that emerge as frequently fulfilling in these environments.  [Diagram of Desires and Rapports](https://www.dropbox.com/s/qlreore5l5rixmx/desires-and-rapports.pdf).  There is also regularity to the information we need about a person in order to address interactions and rapports they will engage in to them, and regularity to the ways that "vendors" of interaction and rapport need to present themselves in order to be browsable and engagable.
 
 
-
-
-
-### <a id="lifestyle"></a> Dynamics of Lifestyle Change <span vous="discuss"</span>
-
-An individual's pattern of consumption, production, and time allocation can change dramatically as a result of life events (graduation from HS or college, moving to a city), shifts in affiliation (marriage, divorce, club memberships, new friends), and personal realizations. Although motivating lifestyle change is key to addressing major problems like carbon emissions, obesity, and poverty, little is understood about the conditions that produce positive lifestyle change and how to engineer more of them. We can use activity and event attendance, social graph, and location data to track lifestyle change in a global population and offer suggestions for encouraging certain changes globally.
-
-At couchsurfing we observed that users tended to change lifestyle as their affiliations changed.  And others have noted that who we affiliate with [is the major factor in determining lifestyle](http://www.ted.com/talks/nicholas_christakis_the_hidden_influence_of_social_networks.html).  This led me to question whether it might be possible to migrate people to new, more fulfilling lifestyles using the social graph and activity search.
-
-If social activity search and activity recommenders have the potential to change lifestyles dramatically, we can ask ourselves how we're doing on that front on the internet, and how we could do better.
-
-Users of facebook newsfeed say yes to more than 200 million person-hours of activities recommended by newsfeed each day.  Anecdotally, in a casual survey, we observe that users tend to regret accepting those recommendations when the last week of activity is summarized in front of them.  This is a far cry from a migration to a life well lived.
 
 
 
@@ -223,9 +211,7 @@ tell both: thanks so much for participating!
 
 -->
 
-<!-- deal w. markdown -->
-
-
-
-<!-- <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script> -->
-<!-- <script type="text/javascript" src="vous.js"></script> -->
+<script src="/marked.min.js"></script>
+<script type="text/javascript">
+  render.innerHTML = marked(text.value, { sanitize: false, gfm: true });
+</script>

@@ -3,75 +3,7 @@
   var html, project, project_title, ref, section, section_link, section_title;
 
   window.research = {
-    "Tech": {
-      "Metrics @ Couchsurfing": {
-        url: "https://github.com/jxe/jxe.github.com/tree/master/csmetrics",
-        desc: "While at CouchSurfing, I developed these analytics to guide safety, search, and for internal and external dashboards."
-      },
-      "Groundcrew": {
-        img: "img/groundcrew2.jpg",
-        url: "#groundcrew",
-        tags: 'app',
-        desc: "My startup from 2008-2012 was a realtime teambuilding command console used for disaster relief, city halls, political and activist campaign coordinators, etc"
-      },
-      "CEML": {
-        img: "img/ceml.png",
-        desc: "a programming environment for describing &amp; coordinating group work. see <a href='https://github.com/citizenlogistics/ceml/blob/master/guide/guide.md'>the documentation</a> for sample code or <a href='http://github.com/citizenlogistics/ceml'>install it yourself</a>.",
-        tags: 'language'
-      },
-      "Collective Experience Project": {
-        img: "img/signpost.png",
-        url: "http://willandintent.org/cxp/",
-        desc: "open, structured data about what people try and how it works out for them",
-        tags: 'data'
-      }
-    },
-    "Group Games": {
-      "Hyperactive Listening": {
-        img: "img/hyperl.jpg",
-        url: "https://quip.com/kc4jAKO83gUD",
-        desc: "A game where people bring their hopes, fears, or plans, and a team of listeners does live, playful research and simulations."
-      },
-      "Free Critical Discussion": {
-        img: "img/fcd.jpg",
-        url: "https://m.facebook.com/profile.php?id=523439091118445",
-        desc: "Just like free hugs, but different"
-      },
-      "Nut or Fish": {
-        img: "img/nutfish.jpg",
-        url: "http://jxe-games.tumblr.com/post/103312737380/nut-or-fish-a-micro-interaction-coaching-game",
-        desc: "Contemplate a big life choice with a stranger, then make a commitment to one another and seal it by eating an almond or a sardine."
-      },
-      "Sandbox SF": {
-        img: "img/sandbox.jpg",
-        desc: "An open mic and testing ground for newly invented group activities and games.",
-        url: "https://www.facebook.com/groups/496677353748745/"
-      },
-      "Analog Cupid": {
-        img: "img/anac.jpg",
-        url: "https://www.facebook.com/analogcupid",
-        desc: "Local matchmaking, with polaroids and paper profiles"
-      },
-      "WPE": {
-        img: "img/codered.jpg",
-        url: "https://www.dropbox.com/sh/pt5k3bg48j33utr/SHoH1sOsWU",
-        desc: "Immersive experiences in the unlikeliest places."
-      },
-      "Notecard parties": {
-        url: "/misc/notecard-party-faq.html",
-        desc: "events where guests at a party are assigned precisely-timed tasks, distributed on little cards or via SMS"
-      },
-      "Doubt Club": {
-        url: "http://twitter.com/doubtclubsf",
-        desc: "A monthly event giving SF tech leaders a safe space for philosophically thinking about their impact."
-      }
-    },
     "Writing": {
-      "Human Values, Choicemaking, and Interface Design": {
-        url: "http://nxhx.org/Choicemaking/",
-        desc: "Why we're all wasting time on the internet, and what to do about it.",
-        readtime: '2 hour'
-      },
       "Two Kinds of Demand": {
         img: "img/slots.jpeg",
         url: "https://medium.com/@edelwax/two-kinds-of-demand-a36c54b97ee1",
@@ -124,7 +56,7 @@
       }
       html.push("</div>");
       if (project.img) {
-        html.push("<img src='" + project.img + "'>");
+        html.push("<img src='../" + project.img + "'>");
       }
       html.push("</div>");
       if (project.url) {
