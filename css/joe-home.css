@@ -95,13 +95,6 @@ div.me_contact a, div.me_contact b {
   color: #777;
 }
 
-
-.right p {
-  line-height: 1.33;
-  font-size: 13px;
-  color: #333;
-}
-
 .projects {
   padding-top: 150px;
   margin-left: 100px;
@@ -151,6 +144,12 @@ a.projectBanner{
   border-radius: 5px;
 }
 
+
+.right p {
+  line-height: 1.33;
+  font-size: 13px;
+  color: #333;
+}
 
 
 p.first {
