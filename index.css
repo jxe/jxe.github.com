@@ -30,10 +30,7 @@ a[href] {
 }
 
 a:hover {
-  /*background: white;*/
   border-bottom: solid 2px #aeaeaf;
-	/*border-bottom: solid thin black; */
-	/*border-right: solid thin black; */
 }
 
 li {
@@ -75,7 +72,7 @@ div.me_photo {
   height: 100px;
   margin: 10px;
   /* border-radius: 10px; */
-  box-shadow: inset hsl(0, 100%, 100%) 0px 0px 7px 1px, rgba(0, 0, 0, 0.43) 0px 0px 5px;
+  /*box-shadow: inset hsl(0, 100%, 100%) 0px 0px 7px 1px, rgba(0, 0, 0, 0.43) 0px 0px 5px;*/
 
   /*inset hsla(40, 100%, 6%, 0.37) 0px 0px 5px 1px;*/
   background: url(../img/joe.jpg);
@@ -87,7 +84,7 @@ div.me_photo {
 div.me_contact {
   position: absolute;
   left: 120px;
-  top: 20px;
+  top: 55px;
   color: #ccc;
 }
 
@@ -107,18 +104,13 @@ div.me_contact a, div.me_contact b {
 }
 
 
-.projectBanner > b{
-  position:absolute;
-  font-size: 12px;
-  display: block;
-  right:-4px;
-  top: -18px;
-  color: #ccc;
-  font-weight: normal;
+.projectBanner:hover {
+  background: #eee;
+  border-bottom: none;
 }
 
 .projectBanner > h2 {
-  margin: 0px 0px 5px 0px;
+  margin: 4px 0px 5px 0px;
   color: #444;
   text-transform: uppercase;
   font-size: 13px;
