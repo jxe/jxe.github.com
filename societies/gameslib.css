@@ -1,0 +1,174 @@
+body {
+  margin:0;
+  margin-left: 200px;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  color: black;
+}
+
+@media (max-width: 860px) {
+  body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+p {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 7px;
+  max-width: 600px;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 2.5em;
+}
+
+a[href] {
+  text-decoration:none;
+	color: #222;
+  color: #06c;
+}
+
+a:hover {
+  border-bottom: solid 2px #aeaeaf;
+}
+
+
+h1 {
+  text-align:center
+  font-size: 2em;
+  line-height: 1.2em;
+  color: #06c;
+  color: #050;
+  color: black;
+  font-weight: bold;
+  margin: 0px;
+  color: rgb(92, 89, 89);
+  margin-top: 5px;
+}
+
+h2 {
+  font-size: 23px;
+  color: #c60;
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+h3 {
+  margin-bottom: 0px;
+  color: hsl(0, 0%, 43%);
+  padding-bottom: 6px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+dl { margin: 0; }
+dd, dt { display: inline; }
+dd {
+  font-size: 10px;
+  white-space: nowrap;
+  margin-left: 0px;
+}
+
+dd span {
+  /*color: hsla(235, 87%, 37%, 0.74);*/
+  border-radius: 5px;
+  /*background: hsla(219, 100%, 50%, 0.21);*/
+  text-transform: uppercase;
+  margin-left: 6px;
+  padding: 0px 4px;
+  /*font-weight: bold;*/
+  text-shadow: hsl(219, 93%, 91%) 0px 0px 1px;
+
+  color: hsla(245, 33%, 94%, 0.9);
+  background: hsla(219, 100%, 50%, 0.5);
+}
+
+dt {
+  color: gray;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+dd + dt {
+  margin-left: 20px;
+}
+
+
+.Society {
+  padding-top: 23px;
+}
+
+
+.Game {
+  margin: 18px 0px;
+  padding: 5px 10px;
+  min-height: 60px;
+  border-left: solid 2px rgb(205, 205, 205);
+  background: #f3f3f3;
+  max-width: 600px;
+  color: #555;
+}
+
+h4 {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+h4 span.attribution {
+  color: #aaa;
+  font-weight: normal;
+}
+
+
+.research img {
+width: 60px;
+height: 60px;
+flex: auto 0 0;
+box-shadow: hsl(0, 0%, 42%) 0px 1px 3px;
+margin-left: 13px;
+  margin-right: 2px;
+}
+
+.thumbnails {
+  padding: 0;
+  list-style: none;
+}
+
+.Intro, .Outro {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #666;
+}
+
+.Intro p, .Outro p {
+  line-height: 1.3em;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.Society .blurb {
+  background: rgba(5, 148, 255, 0.07);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin: 10px 40px;
+  line-height: 1.3;
+  color: rgb(115, 115, 115);
+  max-width: 520px;
+  font-style: italic;
+}
+
+
+.Society .blurb em {
+  color: rgb(84, 84, 84);
+  font-weight: bold;
+}

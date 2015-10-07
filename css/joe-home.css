@@ -97,7 +97,8 @@ div.me_contact a, div.me_contact b {
 
 .projects {
   padding-top: 150px;
-  margin-left: 100px;
+  /*margin-left: 100px;*/
+  margin-left: 58px;
 }
 
 .projects.top {
@@ -130,6 +131,9 @@ a.projectBanner{
   width: 330px;
   vertical-align: top;
   color: #666;
+  border-left: solid 4px orange;
+  padding-left: 10px;
+  margin-bottom: 30px;
 }
 
 .projectBanner:first-child {
