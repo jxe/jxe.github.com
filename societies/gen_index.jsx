@@ -16,10 +16,10 @@ var Page = ({societies}) => (
     <div className="Intro">
       <div className="blurb">
         <p>
-          There is a future society I'd like to be part of, but I cannot quite see its outline. I've gathered here notes for three societies, an ongoing exploration of different social values and of the rituals which might reproduce them. The rituals and games here have been tried, have been tested, their instructions refined. Many are played regularly. But the societies that could unite them are not (yet) real.
+          There is a future society I'd like to be part of, but I cannot quite see its outline. I've gathered here notes for three societies, an ongoing exploration of different social values and of the rituals which might reproduce them. The rituals and games here have been tried, have been tested, their instructions refined. Many are played regularly. But the societies that could hold them together are not (yet) real.
         </p>
         <p>
-          Within each society, the first games listed are good for beginners, then harder games, and lastly those requiring advanced training. A few of these rituals (as noted) are by other designers.  A few appear in more than one society. -- Joe
+          Within each society grouping, the first games listed are good for beginners, then harder games, and lastly those requiring advanced training. A few of these rituals (as noted) are by other designers.  A few appear in more than one grouping. -- Joe
         </p>
       </div>
       <h1>
