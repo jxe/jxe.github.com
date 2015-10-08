@@ -595,7 +595,7 @@ div.me_contact a, div.me_contact b {
 
 .projects.top {
   padding-top: 20px;
-  margin-left: 130px;
+  margin-left: 0px
 }
 
 
@@ -620,7 +620,7 @@ div.me_contact a, div.me_contact b {
 a.projectBanner{
   position: relative;
   display: inline-block;
-  width: 330px;
+  width: 430px;
   vertical-align: top;
   color: #666;
   line-height: 1.2em
