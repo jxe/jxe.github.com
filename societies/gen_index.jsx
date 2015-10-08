@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import marked from 'marked'
-
 // var base = require('airtable').base('appjIKQ1eAEJ4BHta')
-// curl "https://api.airtable.com/v0/appjIKQ1eAEJ4BHta/rituals?view=all" -H "Authorization: Bearer key45hB5ezeHNSpJ5" > rituals.json
-// curl "https://api.airtable.com/v0/appjIKQ1eAEJ4BHta/societies?view=all" -H "Authorization: Bearer key45hB5ezeHNSpJ5" > societies.json
 
 var societies  = require('./societies.json').records
 var allRituals = require('./rituals.json').records.reduce((acc, rec) => (
@@ -14,20 +11,32 @@ var allRituals = require('./rituals.json').records.reduce((acc, rec) => (
 var Page = ({societies}) => (
   <html>
     <link rel="stylesheet" href="gameslib.css"></link>
+    <a href=".."><div className="me_photo" /></a>
     <div className="Intro">
-      <h1>A Library of Rituals and Games</h1>
-      <p>
-        There is a future society I'd like to be part of, but I'm not sure how to draw its outline. Here are three imagined societies, each an exploration of a set of values and of the rituals which might reproduce them.  All these rituals and games have been tried and tested, and some are in regular use by various groups.
-      </p>
+      <div className="blurb">
+        <p>
+          There is a future society I'd like to be part of, but I cannot quite see its outline. I've gathered here notes for three societies, an ongoing exploration of different social values and of the rituals which might reproduce them. The rituals and games here have been tried, have been tested, their instructions refined. Many are played regularly. But the societies that could unite them are not (yet) real.
+        </p>
+        <p>
+          Within each society, the first games listed are good for beginners, then harder games, and lastly those requiring advanced training. A few of these rituals (as noted) are by other designers.  A few appear in more than one society. -- Joe
+        </p>
+      </div>
+      <h1>
+        <small>Before you, in boxes,</small>
+        a library of rituals and group games
+      </h1>
       <ul>
-        {societies.map( x => <li><a href={`#${x.id}`}>{x.fields.name}</a></li> )}
+        {societies.map( x => (
+          <li>
+            <a href={`#${x.id}`}>{x.fields.name}</a>
+            <br/>
+            <p className="byline">{x.fields.byline}</p>
+          </li>
+        ))}
       </ul>
-      <p>
-        Within each society, the first games listed are good for beginners, then harder games, followed by those that take advanced training. A few of these rituals (as noted) are by other designers.  Some rituals appear in more than one society.
-      </p>
     </div>
     {societies.map( x => <Society id={x.id} {...x.fields} /> )}
-    <div className="Outro">
+    <div className="Outro blurb">
       <p>
         Thanks for visiting the library. Contact me with any questions, send photos or comments if you play these games, and let's work together on these societies or on the societies that will come after.
       </p>
@@ -35,28 +44,27 @@ var Page = ({societies}) => (
   </html>
 );
 
-var Society = ({id, name, description, rituals}) => {
-  var games = rituals.map( id => allRituals[id] )
-  var easyGames = games.filter( x => x.difficulty == 'easy' )
-  var mediumGames = games.filter( x => x.difficulty == 'medium' )
-  var hardGames = games.filter( x => x.difficulty == 'hard' )
+var Society = ({id, name, byline, description, rituals}) => {
   var desc = {__html: marked(description || "")}
+  var games = rituals.map( id => allRituals[id] )
+  var [ easy, medium, hard ] = [ "easy", "medium", "hard" ].map( lvl => (
+    games.filter( x => x.difficulty == lvl )
+  ))
 
   return <div id={id} className="Society">
     <h2>{name}</h2>
+    <p className="byline">{byline}</p>
     <div className="blurb">
       <span dangerouslySetInnerHTML={desc}></span>
       <span className="attribution">--Joe</span>
     </div>
 
-    {easyGames.length && <h3>Rituals accessible to initiates</h3>}
-    {easyGames.map( x => <Game {...x} /> )}
-
-    {mediumGames.length && <h3>More difficult rituals</h3>}
-    {mediumGames.map( x => <Game {...x} /> )}
-
-    {hardGames.length && <h3>Advanced and challenging rituals</h3>}
-    {hardGames.map( x => <Game {...x} /> )}
+    {easy.length && <h3>Rituals accessible to initiates</h3>}
+    {easy.map( x => <Game {...x} /> )}
+    {medium.length && <h3>More difficult rituals</h3>}
+    {medium.map( x => <Game {...x} /> )}
+    {hard.length && <h3>Advanced and challenging</h3>}
+    {hard.map( x => <Game {...x} /> )}
   </div>
 };
 
@@ -65,7 +73,8 @@ var Game = ({title, author, instructions, niche, values, skills, media}) => (
     <h4>
       {title}
       {
-        author != "Joe Edelman" && <span className="attribution"> by {author}</span>
+        author != "Joe Edelman" &&
+        <span className="attribution"> by {author}</span>
       }
     </h4>
     <p>{instructions}</p>
@@ -86,8 +95,7 @@ var Game = ({title, author, instructions, niche, values, skills, media}) => (
   </div>
 );
 
-// <dt>Skills trained</dt>      <dd>{skills && skills.map( x => <span>{x}</span>)}</dd>
-
+// <dt>Skills trained</dt><dd>{skills && skills.map( x => <span>{x}</span>)}</dd>
 
 var s = ReactDOMServer.renderToStaticMarkup( <Page societies={societies} /> );
 process.stdout.write(s + '\n');

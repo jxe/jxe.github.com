@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
 body {
   margin:0;
   margin-left: 200px;
@@ -10,14 +12,18 @@ body {
   body {
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 150px;
   }
 }
 
 p {
   padding-top: 0px;
   margin-top: 0px;
-  margin-bottom: 7px;
   max-width: 600px;
+}
+
+.Game p {
+  margin-bottom: 7px;
 }
 
 ul {
@@ -46,7 +52,13 @@ h1 {
   font-weight: bold;
   margin: 0px;
   color: rgb(92, 89, 89);
-  margin-top: 5px;
+  margin-top: 45px;
+}
+
+h1 small {
+  display: block;
+  font-size: 15px;
+  font-weight: normal;
 }
 
 h2 {
@@ -57,14 +69,14 @@ h2 {
 
 h3 {
   margin-top: 30px;
-}
-
-h3 {
   margin-bottom: 0px;
   color: hsl(0, 0%, 43%);
-  padding-bottom: 6px;
-  font-weight: normal;
-  text-decoration: underline;
+  /*padding-bottom: 6px;*/
+  /*font-weight: normal;*/
+  /*text-decoration: underline;*/
+  font-family: "Indie Flower";
+  font-size: 18px;
+  transform: rotate(-1deg);
 }
 
 dl { margin: 0; }
@@ -76,17 +88,13 @@ dd {
 }
 
 dd span {
-  /*color: hsla(235, 87%, 37%, 0.74);*/
-  border-radius: 5px;
-  /*background: hsla(219, 100%, 50%, 0.21);*/
+  border-radius: 4px;
   text-transform: uppercase;
   margin-left: 6px;
-  padding: 0px 4px;
-  /*font-weight: bold;*/
-  text-shadow: hsl(219, 93%, 91%) 0px 0px 1px;
-
-  color: hsla(245, 33%, 94%, 0.9);
-  background: hsla(219, 100%, 50%, 0.5);
+  padding: 1px 4px;
+  text-shadow: hsla(0, 0%, 0%, 0.36) 0px 0px 1px;
+  color: hsla(327, 100%, 98%, 1);
+  background: hsla(218, 100%, 74%, 1);
 }
 
 dt {
@@ -110,15 +118,20 @@ dd + dt {
   padding: 5px 10px;
   min-height: 60px;
   border-left: solid 2px rgb(205, 205, 205);
-  background: #f3f3f3;
+  background: rgba(255, 239, 199, 0.44);
   max-width: 600px;
   color: #555;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 7px;
+  transform: rotate(-1deg);
 }
 
 h4 {
   margin: 0;
   font-size: 18px;
   margin-bottom: 8px;
+  font-family: "Indie Flower";
+  /*font-weight: normal;*/
+  color: #000;
 }
 
 h4 span.attribution {
@@ -126,15 +139,6 @@ h4 span.attribution {
   font-weight: normal;
 }
 
-
-.research img {
-width: 60px;
-height: 60px;
-flex: auto 0 0;
-box-shadow: hsl(0, 0%, 42%) 0px 1px 3px;
-margin-left: 13px;
-  margin-right: 2px;
-}
 
 .thumbnails {
   padding: 0;
@@ -147,28 +151,55 @@ margin-left: 13px;
   color: #666;
 }
 
-.Intro p, .Outro p {
-  line-height: 1.3em;
-}
-
 h1 {
   margin-bottom: 15px;
 }
 
-.Society .blurb {
-  background: rgba(5, 148, 255, 0.07);
-  padding: 10px;
-  border-radius: 10px;
+.blurb {
   margin-top: 10px;
-  margin: 10px 40px;
   line-height: 1.3;
   color: rgb(115, 115, 115);
   max-width: 520px;
-  font-style: italic;
+  font-family: "Indie Flower";
+  border-left: 4px #ddd solid;
+  padding-left: 20px;
 }
 
+.Outro.blurb {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
-.Society .blurb em {
+.blurb em {
   color: rgb(84, 84, 84);
   font-weight: bold;
+}
+
+div.me_photo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: url(../img/joe.jpg);
+  background-size: cover;
+  position: absolute;
+  border-radius: 100px;
+  left: 0px;
+  top: 0px;
+  opacity: 0.7;
+}
+
+div.me_photo:hover {
+  opacity: 1.0;
+}
+
+ul a {
+  font-weight: bold;
+  color: #06c;
+  font-size: 15px;
+}
+
+.byline {
+  margin-top: 3px;
+  color: #605d56;
+  line-height: 1.4;
 }
