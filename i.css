@@ -623,6 +623,7 @@ a.projectBanner{
   width: 330px;
   vertical-align: top;
   color: #666;
+  line-height: 1.2em
 }
 
 .projectBanner:first-child {
