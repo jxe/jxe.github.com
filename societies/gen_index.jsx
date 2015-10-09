@@ -10,6 +10,7 @@ var allRituals = require('./rituals.json').records.reduce((acc, rec) => (
 
 var Page = ({societies}) => (
   <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>A Library of Rituals and Games</title>
     <link rel="stylesheet" href="gameslib.css"></link>
     <a href=".."><div className="me_photo" /></a>
