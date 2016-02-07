@@ -49,9 +49,17 @@ var Page = ({societies}) => (
 var Society = ({id, name, byline, description, rituals}) => {
   var desc = {__html: marked(description || "")}
   var games = rituals.map( id => allRituals[id] )
-  var [ easy, medium, hard ] = [ "easy", "medium", "hard" ].map( lvl => (
-    games.filter( x => x.difficulty == lvl )
-  ))
+  
+  var byStage = {}
+  games.forEach( x => {
+    if (!byStage[x.stage]) byStage[x.stage] = []
+    byStage[x.stage].push(x)
+  })
+  
+  // var [ easy, medium, hard ] = [ "easy", "medium", "hard" ].map( lvl => (
+  //   games.filter( x => x.difficulty == lvl )
+  // ))
+  // 
 
   return <div id={id} className="Society">
     <h2>{name}</h2>
@@ -60,15 +68,24 @@ var Society = ({id, name, byline, description, rituals}) => {
       <span dangerouslySetInnerHTML={desc}></span>
       <span className="attribution">--Joe</span>
     </div>
+    
+    {
+      Object.keys(byStage).map( stage => (
+        <div>
+          <h3>{stage}</h3>
+          {byStage[stage].map( x => <Game {...x} /> )}
+        </div>
+      ))
+    }
 
-    {easy.length && <h3>Rituals accessible to initiates</h3>}
-    {easy.map( x => <Game {...x} /> )}
-    {medium.length && <h3>More difficult rituals</h3>}
-    {medium.map( x => <Game {...x} /> )}
-    {hard.length && <h3>Advanced and challenging</h3>}
-    {hard.map( x => <Game {...x} /> )}
   </div>
 };
+// {easy.length && <h3>Rituals accessible to initiates</h3>}
+// {easy.map( x => <Game {...x} /> )}
+// {medium.length && <h3>More difficult rituals</h3>}
+// {medium.map( x => <Game {...x} /> )}
+// {hard.length && <h3>Advanced and challenging</h3>}
+// {hard.map( x => <Game {...x} /> )}
 
 var Game = ({title, author, instructions, niche, values, skills, media}) => (
   <div className="Game">
