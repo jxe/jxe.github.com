@@ -19,27 +19,31 @@
 <style>
 body { font-family: sans-serif; font-size: 13px; color: #333; font-size: 16px; text-align: center; max-width: 1024px; margin: 10px auto; }
 aside img { width: 78px; border-radius: 5px; }
-aside h2 { font-size: 16px; margin-top: 0px; margin-bottom: 0px; }
-aside { position: absolute; top: 25px; left: 30px; width: 78px; text-align: center; }
+aside { text-align: center; }
 a { text-decoration: none; color: #06c; }
 hr { border-top: 1px solid #eee; margin: 30px }
 p { max-width: 450px; }
-h2 { margin-top: 100px;}
+h2 { margin-top: 20px;}
 .chapters {
   display: flex;
+  background: #000;
 }
 .chapters a {
+  font-size: 11px;
   flex: 1.0;
-  background: #000;
-  color: #aaa;
+  background: #222;
+  color: #555;
   padding: 8px 3px;
-  margin: 2px 2px;
+  margin: 1px 0px;
+  margin-right: 2px;
   text-align: center;
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
+  /*box-shadow: inset black 0px 0px 2px;*/
 }
 .chapters a b {
   display: block;
-  color: white;
+  color: #ccc;
+
 }
 .videoWrapper {
 	position: relative;
@@ -58,9 +62,13 @@ section {
   text-align: left;
   display: inline-block;
   width: 40%;
-  min-width: 400px;
+  min-width: 320px;
   vertical-align: top;
-  padding-right: 5%;
+  /*padding: 10px;*/
+  /*margin-right: 5%;*/
+}
+li {
+  margin-bottom: 10px;
 }
 </style>
 
@@ -75,7 +83,6 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
 </script>
 
 <article>
-  <h2> Is Anything Worth Maximizing? </h2>
 
   <p>
     <div class="chapters">
@@ -112,26 +119,21 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
   </p>
 
   <section>
-    <b>Get involved.</b>
+    <b>Thanks for watching!</b>
     <ul>
-      <li>The <a href="http://livable.media">Center for Livable Media</a> and <a href="http://tinyletter.com/livablemedia">newsletter</a>. Check out the "responsible networks" research group, which will include work on reason-based metrics.</li>
-      <li><a href="https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl">Hindsight</a>, the chrome extension demo’d</li>
-    </ul>
-
-    <b>Code.</b>
-
-    <ul>
-      <li><a href="https://www.npmjs.com/package/reasons">reasons</a> on npm, a toolkit for collecting user reasons</li>
+      <li>Install <a href="https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl">Hindsight</a>, the chrome extension demo'd in the talk to help us collect these new metrics from companies.</li>
+      <li>Join the <a href="http://tinyletter.com/livablemedia">newsletter</a> for the <a href="http://livable.media">Center for Livable Media</a> where we'll be doing trainings for organizations and supporting research in this field. (Check out the "responsible networks" research group, which will include work on reason-based metrics.)
+      <li>Developers can check out <a href="https://www.npmjs.com/package/reasons">reasons</a> on npm, a widget kit for collecting user reasons</li>
+      <li>Designers can watch my previous talk: <a href="/dfa/">Designing for Agency</a></li>
     </ul>
   </section>
 
   <section>
-    <b>Further reading.</b>
+    <b>Read on.</b>
 
     <ul>
-      <li><a href="bibliography.html">Bibliography</a>, highlighting prior work by <a href="http://ruthchang.net/">Ruth Chang</a>, <a href="http://philosophy.fas.nyu.edu/object/jdavidvelleman.html">David Velleman</a>, and <a href="http://scholar.harvard.edu/sen/home">Amartya Sen</a> (coming soon: transcript)</li>
-      <li>My previous talk: <a href="/dfa/">Designing for Agency</a></li>
-      <li>My <a href="https://medium.com/@edelwax/">medium posts</a> and <a href="http://www.tristanharris.com/essays/">Tristan Harris' writings</a> advocating Time Well Spent metrics</li>
+      <li>Academics can check out the <a href="bibliography.html">Bibliography</a>, highlighting prior work by <a href="http://ruthchang.net/">Ruth Chang</a>, <a href="http://philosophy.fas.nyu.edu/object/jdavidvelleman.html">David Velleman</a>, and <a href="http://scholar.harvard.edu/sen/home">Amartya Sen</a> (coming soon: transcript)</li>
+      <li>You might also like my <a href="https://medium.com/@edelwax/">medium posts</a> and <a href="http://www.tristanharris.com/essays/">Tristan Harris' writings</a> advocating Time Well Spent metrics</li>
     </ul>
   </section>
 
