@@ -85,7 +85,7 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
 <article>
 
   <p>
-    <div class="chapters">
+    <div id="chapters" class="chapters" style="display:none">
       <a onclick="goto(100)">
         <b>Intro</b>
         0m00s
@@ -149,4 +149,10 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
 <script>
   f = Froogaloop(document.getElementById('video'))
   f.addEvent('ready', function(){})
+
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (!iOS){
+    document.getElementById('chapters').style.display = ""
+  }
+
 </script>
