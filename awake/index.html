@@ -1,0 +1,138 @@
+<div id="taskContainer" style="display:none">
+  <p id="task"></p>
+  <button id="done">Done</button>
+</div>
+
+<script src="zap.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+<script>
+if (!localStorage.playerId) localStorage.playerId = "Player" + Date.now()
+var fb = new Firebase('https://songwalks.firebaseio.com/quick/zapDemo/players')
+window.scenes = {}
+fb.child(localStorage.playerId).onDisconnect().remove()
+
+
+let RubeGoldbergScript =
+` When you hear a bell, kiss Raphael
+  When you hear a bell, hug Raphael
+  When you hear a bell, hi five Raphael
+  //
+  (3x) Make a wish and write it down somewhere; then wait until you hear humming, and read your wish aloud
+  //
+  When someone hugs or kisses Raphael, clap three times
+  //
+  (6x) If you hear someone clap three times, start humming
+  //
+  (3x) When someone starts reading aloud, touch them and tell them you can help
+  //
+  When you hear someone finish reading something, lie on the table
+  (6x) When someone lies on the table, gently put a hand on them
+`
+
+
+let RubeGoldbergText =
+` Wait
+  When you hear a bell, kiss Raphael
+  When you hear a bell, hug Raphael
+  When you hear a bell, hi five Raphael
+  Make a wish and write it down somewhere; then wait until you hear humming, and read your wish aloud
+  Make a wish and write it down somewhere; then wait until you hear humming, and read your wish aloud
+  Make a wish and write it down somewhere; then wait until you hear humming, and read your wish aloud
+  When someone hugs or kisses Raphael, clap three times
+  If you hear someone clap three times, start humming
+  If you hear someone clap three times, start humming
+  If you hear someone clap three times, start humming
+  If you hear someone clap three times, start humming
+  If you hear someone clap three times, start humming
+  If you hear someone clap three times, start humming
+  When someone starts reading aloud, touch them and tell them you can help
+  When someone starts reading aloud, touch them and tell them you can help
+  When someone starts reading aloud, touch them and tell them you can help
+  When you hear someone finish reading something, lie on the table
+  When someone lies on the table, gently put a hand on them
+  When someone lies on the table, gently put a hand on them
+  When someone lies on the table, gently put a hand on them
+  When someone lies on the table, gently put a hand on them
+  When someone lies on the table, gently put a hand on them
+  When someone lies on the table, gently put a hand on them`
+
+let RubeGoldbergFlow = RubeGoldbergText.split(/\s*\n\s*/)
+
+
+
+
+function Scene(name, obj){
+  scenes[name] = Object.assign(obj, Scene.utils, {type:name})
+}
+Scene.utils = {
+  handle(event, context){
+    console.log(this.type, 'handling', event)
+    this.context = context
+    this.playerId = context.playerId
+    this.players = context.players
+    this.player = context.player
+    this.scene = context.player.scene
+    this.task = context.player.task
+    if (!this[event]) return false
+    else this[event].call(this)
+  }
+}
+
+
+Scene('DEFAULT', {
+  assignNext(){
+    let allPlayers = Object.values(this.players)
+    let max = Math.max.apply(null,allPlayers.map(x => x.taskIndex || 0))
+    let next = RubeGoldbergFlow[max+1]
+    console.log('running assignNext', allPlayers, max, next)
+    if (!next) return
+    Object.assign(this.player, {
+      DIRTY: true,
+      taskIndex: max+1,
+      task: { is: 'new', type: 'assign', text: next },
+      scene: {
+        type: 'DEFAULT'
+      }
+    })
+  },
+  playerTriesToStarIn(){
+    return this.assignNext()
+  },
+  playerTaskIsOver(){
+    return this.assignNext()
+  }
+})
+
+
+zap({
+  playerId: localStorage.playerId,
+  scenes: window.scenes,
+
+  storage: {
+    onPlayersChanged(cb){ fb.on('value', snap => cb(snap.val() || {})) },
+    updatePlayerTask(id, changed){ fb.child(id).child('task').update(changed) },
+    updateDirtyPlayers(players){
+      var records = {}
+      Object.values(players).forEach(p => {
+        if (p.DIRTY){ delete p.DIRTY; records[p.id] = p }
+      })
+      fb.update(records)
+    }
+  },
+
+  localTaskManagers: {
+    assign(t, whenDone){
+      document.getElementById('task').innerHTML = t.text
+      document.getElementById('taskContainer').style.display = 'block'
+      document.getElementById('done').onclick = function(){
+        document.getElementById('taskContainer').style.display = 'none'
+        whenDone({
+          is: 'done'
+        })
+      }
+    }
+  }
+})
+
+
+</script>
