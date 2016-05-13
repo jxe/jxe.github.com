@@ -12,24 +12,6 @@ window.scenes = {}
 fb.child(localStorage.playerId).onDisconnect().remove()
 
 
-let RubeGoldbergScript =
-` When you hear a bell, kiss Raphael
-  When you hear a bell, hug Raphael
-  When you hear a bell, hi five Raphael
-  //
-  (3x) Make a wish and write it down somewhere; then wait until you hear humming, and read your wish aloud
-  //
-  When someone hugs or kisses Raphael, clap three times
-  //
-  (6x) If you hear someone clap three times, start humming
-  //
-  (3x) When someone starts reading aloud, touch them and tell them you can help
-  //
-  When you hear someone finish reading something, lie on the table
-  (6x) When someone lies on the table, gently put a hand on them
-`
-
-
 let RubeGoldbergText =
 ` Wait
   When you hear a bell, kiss Raphael
@@ -79,27 +61,36 @@ Scene.utils = {
 }
 
 
+// rather than a max, show the first task that isn't done or currently assigned
+
+
 Scene('DEFAULT', {
-  assignNext(){
-    let allPlayers = Object.values(this.players)
-    let max = Math.max.apply(null,allPlayers.map(x => x.taskIndex || 0))
-    let next = RubeGoldbergFlow[max+1]
-    console.log('running assignNext', allPlayers, max, next)
-    if (!next) return
+  assignNext(finishedTask){
+    let all = Object.values(this.players)
+    let allTasks = Object.keys(RubeGoldbergFlow)
+    let currentAssignedTasks = all.map(p => p.currentTask)
+    let doneTasks = all.map(p => p.finishedTasks || []).reduce((a, b) => a.concat(b))
+    let takenTasks = currentAssignedTasks.concat(doneTasks)
+    let availableTasks = allTasks.filter(x => takenTasks.indexOf(x) < 0)
+    let myTask = availableTasks.sort((a,b) => a-b)[0]
+    console.log('availableTasks', availableTasks, myTask)
+    if (!myTask) return
+    if (finishedTask) {
+      if (!this.player.finishedTasks) this.player.finishedTasks = []
+      this.player.finishedTasks.push(finishedTask)
+    }
     Object.assign(this.player, {
       DIRTY: true,
-      taskIndex: max+1,
-      task: { is: 'new', type: 'assign', text: next },
-      scene: {
-        type: 'DEFAULT'
-      }
+      currentTask: myTask,
+      task: { is: 'new', type: 'assign', text: RubeGoldbergFlow[myTask] },
+      scene: { type: 'DEFAULT' }
     })
   },
   playerTriesToStarIn(){
     return this.assignNext()
   },
   playerTaskIsOver(){
-    return this.assignNext()
+    return this.assignNext(this.player.currentTask)
   }
 })
 
