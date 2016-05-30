@@ -2,9 +2,8 @@
 
 
 <header class="header">
-<h1>Human Values, Choicemaking, and Interface Designs</h1>
-<h2>i.e., Why are we all wasting time on the internet?</h2>
-<h3><b>Joe Edelman</b> July 2014. DRAFT</h3>
+<h1>Choicemaking and the Interface</h1>
+<h3><b>Joe Edelman</b> 2014</h3>
 </header>
 
 
@@ -12,7 +11,7 @@
 ## Abstract
 
 <p id="abstract">
-*What information do we need to live lives we'd choose, when confronted daily with app stores, browsers, recommenders, and notification screens?  We'll use theories of choice in economics and philosophy to derive the information requirements of good choices.  We'll find that current menus are biased toward regrettable and isolating choices.  To address this, we'll uncover principles for the redesign of these menu systems and explore the possibility of a public database about choices and outcomes.  Finally, we'll consider the impact of such a system on the media ecosystem and on incentives for business.*
+*Theories of choice from economics and philosophy suggest a set of information requirements for good choices. Current menus are biased toward regrettable and isolating choices. To address this, we propose principles for the redesign of menu systems, and consider the possibility of a public database about choices and outcomes. Consequences of such a system on the media ecosystem and on incentives for business are also explored.*
 </div>
 
 
@@ -20,9 +19,6 @@
 ## Contents
 
 *[Introduction](#situation)*
-
-* **[Untrustworthy Tech](#device-responsibility)**
-  *The responsibilities of a device to its user.*
 
 Human choicemaking
 
@@ -56,15 +52,13 @@ Human choicemaking
 
 <a name="situation"></a><a name="device-responsibility"></a>
 
-## Our Situation
+## Introduction
 
-### Untrustworthy Technology
+Much of our daily lives are structured by menus. Whether we are deciding which email to respond to, what to order at a restaurant, which stores to visit on a street or in a mall, what job listings to investigate--we navigate our lives by scanning lists of options.
 
-If doctors have responsibilities to their patients--to help them make informed choices, to present information in an unbiased way, and to act in their best interests rather than exploiting them--might we say that our computing devices (and the companies that produce them) have a similar set of responsibilities to us?  Like our doctors, our devices have a hugely influential position in our lives.  They intermediate almost every choice we make.
+We can ask, then, what are the responsibilities of menu-makers?
 
-Here we'll focus on one key responsibility: to present options on-screen in a manner that is free from bias and manipulation.  We'll show how devices are not giving users information that would let them make better use of their time and money, and we'll suggest designs and institutions to fix this.
-
-Currently, many kinds of device menus--app stores, notification screens, browsers--are guilty of two broad kinds of manipulation:
+This essay focus on one key responsibility: to present options on-screen in a manner that is free from bias and manipulation.  Currently, many kinds of menus (including, on devices--app stores, notification screens, browsers) are guilty of two broad kinds of manipulation:
 
 **Hidden costs**.  *Time costs* for instance are often unexpected on the internet.  Whereas in commerce we are wary of hidden costs, unexpected fees, and consider them *dishonest business*, unexpected costs via the internet are not yet seen as dishonest.
 
@@ -117,7 +111,7 @@ To be clear, avoiding the *feeling* of regret is not the standard here.  We ofte
 
 For this reason, we'll focus on designing interfaces that avoid *durably regrettable choices*--choices where, if we were to review our activity, we'd be able to name a better option that we wish we'd taken (and that we have since become familiar with)--and specifically the subset that we might call *"I wish I had known X" regrettable choices*--where we can also name some plausible information that would have helped us understand the options and choose differently. &#10033;<span class="sidenote">&#10033; A full explanation of why "Durable I-Wish-I-Had-Known Regret" (DIR) is a good foundation for defining good and bad choices is beyond our scope here.  But consider that, in choosing a metric around which to characterise choices, we would want one that: (a) accommodates many value systems across different users, (b) aligns with user intuitions about what's good, and (c) aligns with human needs.  An inferior metric like "maximal moment-to-moment happiness" fails all of these:  some people don't value happiness, many things widely regarded to be good like grad school and childbirth are not about happiness, and there are ways to be happy that don't align well with human needs.  Furthermore: (d) DIR is clearly and quickly evaluable via user reports, (e) that evaluation once made is durable over time, and (f) minimizing DIR correlates well with existing metrics, including maximizing brand trust and net promoter, maximizing positive user sentiment, and minimizing burnout.</span>
 
-Shitty menus are those which lead us directly to these regrettable choices.  We may feel Durable I-Wish-I-Had-Known Regret because of wrong assumptions about the costs/likelihoods of the option we choose, about the existence or proximity of better options, or about what is important to us about the choice.  In particular, shitty menus may be missing information about time costs, money costs, whether hoped-for outcomes are likely, whether unexpected outcomes are likely, whether there are less-costly or otherwise better options for similar outcomes, and even whether our hopes themselves are likely to change.  
+Shitty menus are those which lead us directly to these regrettable choices.  We may feel Durable I-Wish-I-Had-Known Regret because of wrong assumptions about the costs/likelihoods of the option we choose, about the existence or proximity of better options, or about what is important to us about the choice.  In particular, shitty menus may be missing information about time costs, money costs, whether hoped-for outcomes are likely, whether unexpected outcomes are likely, whether there are less-costly or otherwise better options for similar outcomes, and even whether our hopes themselves are likely to change.
 
 Without this information, it is more likely we'll make a choice we'll later regret.  Below I'll present designs for browsers, for app stores, and for other device menus that address this.
 
@@ -129,7 +123,7 @@ Without this information, it is more likely we'll make a choice we'll later regr
 *"There are goals other than well-being, and values other than goals."* - Amartya
 Sen, 1984
 
-One of the trickiest sources of regret is when we made a choice based on ill-informed values or goals.  For instance, we have all made choices based on price where later we wished we had considered another factor as more important.  Or sometimes we make purchases based on the mistaken idea that we will continue with a certain project. 
+One of the trickiest sources of regret is when we made a choice based on ill-informed values or goals.  For instance, we have all made choices based on price where later we wished we had considered another factor as more important.  Or sometimes we make purchases based on the mistaken idea that we will continue with a certain project.
 
 This happens all the time. Perhaps a goal was overly specific, was dependent on some other goal in a way we didn't understand, was founded on a misunderstanding, or was just less compelling than a goal or value we hadn't thought of yet.
 
