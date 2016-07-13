@@ -67,7 +67,7 @@ It would be great to figure out which of our connections are cross cultural. E.g
  * total # cross cultural connections is 1800
  * cross cultural connections per hour: 3
 
-But this is nontrivial given our current dataset.  Eventually we want to run [http://en.wikipedia.org/wiki/Clique_(graph_theory) clique detection] and [http://en.wikipedia.org/wiki/Data_clustering clustering] algorithms on our data.  Then we can identify cross-clique and cross-cluster friendships and hostings.
+But this is nontrivial given our current dataset.  Eventually we want to run [clique detection](http://en.wikipedia.org/wiki/Clique_(graph_theory)) and [clustering](http://en.wikipedia.org/wiki/Cluster_analysis) algorithms on our data.  Then we can identify cross-clique and cross-cluster friendships and hostings.
 
 For now, we use a hardcoded mapping from country of origin to cultural distance.
 
