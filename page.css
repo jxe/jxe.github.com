@@ -22,3 +22,16 @@ p#fields a:hover {
   background-color: hsl(210, 100%, 70%);
   text-decoration: none;
 }
+
+@media (max-width: 500px) {
+  aside, article {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    min-width: 100%;
+    box-sizing: border-box;  
+  }
+}
+
