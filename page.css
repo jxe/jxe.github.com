@@ -1,8 +1,13 @@
-body { font-family: sans-serif; font-size: 13px; color: #333 }
+body { font-family: sans-serif; font-size: 13px; color: #333; padding: 0px 10px; }
+
+aside { display: inline-block; width: 156px; text-align: center; margin-right: 25px; padding-top: 50px; }
+article { display:inline-block; max-width: 450px; font-size: 16px;  vertical-align: top; }
+
+
 aside img { width: 156px; border-radius: 5px; }
 aside h2 { font-size: 16px; margin-top: 0px; margin-bottom: 0px; }
-aside { position: absolute; top: 25px; left: 30px; width: 156px; text-align: center; }
-article { position: absolute; top: 10px; left: 216px; max-width: 450px; font-size: 16px;  }
+
+
 a { text-decoration: none; color: #06c; }
 a:hover { text-decoration: underline; }
 hr { border-top: 1px solid #eee; margin: 30px }
@@ -31,7 +36,52 @@ p#fields a:hover {
     left: 0px;
     padding: 10px;
     min-width: 100%;
-    box-sizing: border-box;  
+    box-sizing: border-box;
   }
 }
 
+.card {
+  position: relative;
+  width: 208px;
+  display: inline-block;
+  box-shadow: black 0px 0px 1px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  vertical-align: top;
+  height: 142px;
+  overflow: hidden;
+}
+
+.card img {
+  position: relative;;
+  top:0px;
+  height: 100%;
+  opacity: 1.0;
+}
+
+.card h3 {
+  padding: 4px 10px;
+  margin:0;
+  font-size: 18px;
+  text-shadow: white 0px 1px 2px;
+  color: rgb(70, 70, 70);;
+  z-index: 100;
+  position: absolute;
+  font-weight: normal;
+  bottom: 0px;
+  background: rgba(255,255,255,0.8);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0,0.2) 0px -1px 2px;
+}
+
+.card p {
+  color: gray;
+  position: relative;
+  margin: 0;
+  padding: 2px 10px;
+}
+
+.card:hover { text-decoration: none; }
+
+.card img:hover { opacity: 0.4 }
