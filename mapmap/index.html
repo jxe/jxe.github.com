@@ -1,0 +1,59 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <button id="go">GO</button>
+  <div id="elapsed"></div>
+  <audio id="welcome" src="welcome.mp3"/>
+  <audio id="n" src="n.mp3"/>
+  <audio id="e" src="e.mp3"/>
+  <audio id="s" src="s.mp3"/>
+  <audio id="w" src="w.mp3"/>
+</body>
+<script>
+
+var repeat;
+var startTime = localStorage.getItem('start')
+let go = document.getElementById('go')
+
+go.onclick = function(){
+  speak('welcome')
+  load('n')
+  load('e')
+  load('s')
+  load('w')
+  if (!startTime || startTime - Date.now() > 12*60*60*1000){
+    startTime = Date.now()
+    localStorage.setItem('start', startTime)
+  }
+  setInterval(function(){
+    document.getElementById('elapsed').innerHTML = "elapsed: " + ((Date.now() - startTime)/1000)
+  }, 100)
+  navigator.geolocation.watchPosition(function(p) {
+    newLoc(p.coords.latitude, p.coords.longitude);
+  }, console.log, {
+    timeout: 10000,
+    maximumAge: 10*60*1000
+  })
+  go.outerHTML = ''
+}
+
+function direction(lat,lng){
+  let latDiff = lat - 52.5190587
+  let lngDiff = lng - 13.3888065
+  if (Math.abs(latDiff) > Math.abs(lngDiff)){
+    return latDiff > 0 ? "s" : "n"
+  } else {
+    return lngDiff > 0 ? "w" : "e"
+  }
+}
+
+function speak(dir){ document.getElementById(dir).play() }
+function load(dir){ document.getElementById(dir).load() }
+
+function newLoc(lat,lng){
+  if (repeat) clearInterval(repeat)
+  let dir = direction(lat,lng)
+  speak(dir)
+  repeat = setInterval(function(){ speak(dir) }, 60000)
+}
+
+</script>

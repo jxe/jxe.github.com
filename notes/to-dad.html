@@ -1,0 +1,61 @@
+<style media="screen">
+  span { display: inline-block; }
+  img {
+    display: block;
+    width: 50px;
+    max-height: 30px;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    margin-left: auto;
+    opacity: 0.4
+  }
+  img:hover {
+    position: absolute;
+    left:0;
+    width: 100%;
+    max-height: none;
+    opacity: 1.0;
+  }
+  p > * { vertical-align: bottom; }
+</style>
+
+
+
+
+<textarea style="display:none">
+Hello dad! Miss you!
+
+Do you miss me?
+
+There were
+* [giants], ^giants.jpg
+* [bears], ^bears.jpg
+* and [a forest], ^forest.jpg
+all over the place!
+
+I bet you do!
+</textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="container"></div>
+<script>
+var text = document.getElementsByTagName('textarea')[0].innerHTML;
+text = text.replace(/\n\n/g, "\n<br><br>")
+text = text.replace(/^\* (.*)$/mg, function(match){
+  var m = match.match(/^\* (.*)\[(.*)\](.*) \^(.*)$/)
+  return "<span><img src='"+m[4]+"'>"+m[1]+"<b>"+m[2]+"</b>"+m[3]+"</span>"
+  return "foo" + m[2];
+})
+document.getElementById('container').innerHTML = text;
+</script>
