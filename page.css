@@ -1,5 +1,11 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 body {
-  font-family: "Helvetica Neue", sans-serif; font-size: 13px; color: #333; padding: 0px 0px; margin: 0; display: flex; flex-direction: column;    align-items: center;
+  font-size: 13px; color: #333; padding: 0px 0px; margin: 0; display: flex; flex-direction: column;    align-items: center;
 }
 
 .nav {
@@ -19,7 +25,7 @@ body {
 
 .me { display: block; width: 156px; text-align: center; margin-right: 25px; padding-top: 50px; }
 .me img.face { width: 156px; border-radius: 5px; margin-top: 10px; }
-.me h2 { font-size: 22px; margin-top: 0px; margin-bottom: 0px; }
+.me h2 { font-size: 22px; margin-top: 0px; margin-bottom: 0px; font-weight: 300 }
 .me .icon img { height: 16px; }
 
 article { display:block; max-width: 450px; font-size: 16px;  vertical-align: top; text-align: left;  }
