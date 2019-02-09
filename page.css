@@ -23,10 +23,25 @@ body {
 .nav a { color: rgba(90, 90, 90, 0.3); }
 .nav a:hover, .nav b { color: black; text-decoration: none; }
 
-.me { display: block; width: 156px; text-align: center; margin-right: 25px; padding-top: 50px; }
-.me img.face { width: 156px; border-radius: 5px; margin-top: 10px; }
+.me { display: block; text-align: center; margin-right: 25px; padding-top: 50px; }
+.me img.face { width: 156px; height: 156px; border-radius: 5px; margin-top: 10px; }
 .me h2 { font-size: 22px; margin-top: 0px; margin-bottom: 0px; font-weight: 300 }
-.me .icon img { height: 16px; }
+.me .icon img { height: 16px; filter: grayscale(0.8); opacity: 0.5; }
+.me .icon:hover img { filter: none; opacity: 1; }
+
+.facebox {
+  display: flex;
+  position: relative
+}
+
+.col {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: -25px;
+  display: flex; flex-direction: column;
+  justify-content: center;
+}
 
 article { display:block; max-width: 450px; font-size: 16px;  vertical-align: top; text-align: left;  }
 
