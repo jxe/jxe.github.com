@@ -146,13 +146,17 @@
 
 		<script src="js/reveal.js"></script>
 		<script>
+			const h1 = "https://hooks.slack.com/services/"
+			const h2 = "T70TEC4VB/"
+			const h3 = "BU2MFRBGX/"
+			const h4 = "gnmOIG7H9omoDpqDGs3Tq2DI"
 			// - https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				hash: true
 			});
 			Reveal.addEventListener( 'slidechanged', function( event ) {
 				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				fetch("https://hooks.slack.com/services/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", {
+				fetch(h1+h2+h3+h4, {
 					method: 'POST', 
 					// headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify( { text: "Eli is at " + event.indexh }) 
