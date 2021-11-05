@@ -1,91 +1,130 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
 
-<meta property="og:type"               content="video" />
-<meta property="og:description"        content="How metrics shape markets, how we’re doing them wrong, and how we could do them right." />
-<meta property="og:image"              content="http://nxhx.org/maximizing/snake-owl.png" />
+<meta property="og:type" content="video" />
+<meta property="og:description"
+  content="How metrics shape markets, how we’re doing them wrong, and how we could do them right." />
+<meta property="og:image" content="http://nxhx.org/maximizing/snake-owl.png" />
 
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@edelwax">
 <meta name="twitter:creator" content="@edelwax">
 <meta name="twitter:title" content="Is Anything Worth Maximizing? On Metrics, Society, and Selves">
-<meta name="twitter:description" content="How metrics shape markets, how we’re doing them wrong, and how we could do them right.">
+<meta name="twitter:description"
+  content="How metrics shape markets, how we’re doing them wrong, and how we could do them right.">
 <meta name="twitter:image" content="http://nxhx.org/maximizing/snake-owl.png">
 
 
-<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/accbpganjjaadepnncaknjdkogbmgfbl">
+<!-- <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/accbpganjjaadepnncaknjdkogbmgfbl"> -->
 <title>Is Anything Worth Maximizing?</title>
 <style>
-body { font-family: sans-serif; font-size: 13px; color: #333; font-size: 16px; text-align: center; max-width: 1024px; margin: 10px auto; }
-aside img { width: 78px; border-radius: 5px; }
-aside { text-align: center; }
-a { text-decoration: none; color: #06c; }
-hr { border-top: 1px solid #eee; margin: 30px }
-p { max-width: 450px; }
-h2 { margin-top: 20px;}
-.chapters {
-  display: flex;
-  background: #000;
-}
-.chapters a {
-  font-size: 11px;
-  flex: 1.0;
-  background: #222;
-  color: #555;
-  padding: 8px 3px;
-  margin: 1px 0px;
-  margin-right: 2px;
-  text-align: center;
-  /*font-variant: small-caps;*/
-  /*box-shadow: inset black 0px 0px 2px;*/
-}
-.chapters a b {
-  display: block;
-  color: #ccc;
+  body {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    max-width: 1024px;
+    margin: 10px auto;
+  }
 
-}
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-section {
-  text-align: left;
-  display: inline-block;
-  width: 40%;
-  min-width: 320px;
-  vertical-align: top;
-  /*padding: 10px;*/
-  /*margin-right: 5%;*/
-}
-li {
-  margin-bottom: 10px;
-}
+  aside img {
+    width: 78px;
+    border-radius: 5px;
+  }
+
+  aside {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #06c;
+  }
+
+  hr {
+    border-top: 1px solid #eee;
+    margin: 30px
+  }
+
+  p {
+    max-width: 450px;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  .chapters {
+    display: flex;
+    background: #000;
+  }
+
+  .chapters a {
+    font-size: 11px;
+    flex: 1.0;
+    background: #222;
+    color: #555;
+    padding: 8px 3px;
+    margin: 1px 0px;
+    margin-right: 2px;
+    text-align: center;
+    /*font-variant: small-caps;*/
+    /*box-shadow: inset black 0px 0px 2px;*/
+  }
+
+  .chapters a b {
+    display: block;
+    color: #ccc;
+
+  }
+
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  section {
+    text-align: left;
+    display: inline-block;
+    width: 40%;
+    min-width: 320px;
+    vertical-align: top;
+    /*padding: 10px;*/
+    /*margin-right: 5%;*/
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
 </style>
 
 <aside class="me">
-  <a href="/"><img src="/me.jpg"/></a>
+  <a href="/"><img src="/me.jpg" /></a>
 </aside>
 
-<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+<!-- <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script> -->
 <script>
-var f;
-function goto(num){ f.api('seekTo', num); f.api('play'); }
+  var f;
+  function goto(num) { f.api('seekTo', num); f.api('play'); }
 </script>
 
 <article>
 
   <p>
-    <div id="chapters" class="chapters" style="display:none">
+    <!-- <div id="chapters" class="chapters" style="display:none">
       <a onclick="goto(100)">
         <b>Intro</b>
         0m00s
@@ -110,10 +149,13 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
         <b>Credits</b>
         44m12s
       </a>
-    </div>
+    </div> -->
 
-    <div class="videoWrapper">
-    <iframe id="video" src="https://player.vimeo.com/video/155525207?portrait=0&api=1&player_id=video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <div class="videoWrapper">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GyVHrGLiTcc" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
 
   </p>
@@ -121,10 +163,11 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
   <section>
     <b>Thanks for watching!</b>
     <ul>
-      <li>Install <a href="https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl">Hindsight</a>, the chrome extension demo'd in the talk to help us collect these new metrics from companies.</li>
-      <li>Join the <a href="http://tinyletter.com/livablemedia">newsletter</a> for the <a href="http://livable.media">Center for Livable Media</a> where we'll be doing trainings for organizations and supporting research in this field. (Check out the "responsible networks" research group, which will include work on reason-based metrics.)
-      <li>Developers can check out <a href="https://www.npmjs.com/package/reasons">reasons</a> on npm, a widget kit for collecting user reasons</li>
-      <li>Designers can watch my previous talk: <a href="/dfa/">Designing for Agency</a></li>
+      <!-- <li>Install <a href="https://chrome.google.com/webstore/detail/hindsight/accbpganjjaadepnncaknjdkogbmgfbl">Hindsight</a>, the chrome extension demo'd in the talk to help us collect these new metrics from companies.</li> -->
+      <!-- <li>Join the <a href="http://tinyletter.com/livablemedia">newsletter</a> for the <a href="http://livable.media">Center for Livable Media</a> where we'll be doing trainings for organizations and supporting research in this field. (Check out the "responsible networks" research group, which will include work on reason-based metrics.) -->
+      <li>Developers can check out <a href="https://www.npmjs.com/package/reasons">reasons</a> on npm, a widget kit for
+        collecting user reasons</li>
+      <!-- <li>Designers can watch my previous talk: <a href="/dfa/">Designing for Agency</a></li> -->
     </ul>
   </section>
 
@@ -142,27 +185,31 @@ function goto(num){ f.api('seekTo', num); f.api('play'); }
         <a href="https://medium.com/@edelwax/is-anything-worth-maximizing-d11e648eb56f#dc21">
           bibliography
         </a>
-         highlighting foundational work by <a href="http://ruthchang.net/">Ruth Chang</a>, <a href="http://philosophy.fas.nyu.edu/object/jdavidvelleman.html">David Velleman</a>, and <a href="http://scholar.harvard.edu/sen/home">Amartya Sen</a>
-       </li>
-      <li>You might also like my <a href="https://medium.com/@edelwax/">medium posts</a> and <a href="http://www.tristanharris.com/essays/">Tristan Harris' writings</a> advocating Time Well Spent metrics</li>
+        highlighting foundational work by <a href="http://ruthchang.net/">Ruth Chang</a>, <a
+          href="http://philosophy.fas.nyu.edu/object/jdavidvelleman.html">David Velleman</a>, and <a
+          href="http://scholar.harvard.edu/sen/home">Amartya Sen</a>
+      </li>
+      <li>You might also like my <a href="https://medium.com/@edelwax/">medium posts</a> and <a
+          href="http://www.tristanharris.com/essays/">Tristan Harris' writings</a> advocating Time Well Spent metrics
+      </li>
     </ul>
   </section>
 
   </p>
 
-<hr>
+  <hr>
 
-<i>This work has been partly supported by <a href="http://stripe.com">Stripe</a>.
+  <i>This work has been partly supported by <a href="http://stripe.com">Stripe</a>.
 
 </article>
 
 
 <script>
   f = Froogaloop(document.getElementById('video'))
-  f.addEvent('ready', function(){})
+  f.addEvent('ready', function () { })
 
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  if (!iOS){
+  if (!iOS) {
     document.getElementById('chapters').style.display = ""
   }
 
