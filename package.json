@@ -1,0 +1,8 @@
+{
+  "dependencies": { "marked": "^14.0.0", "react": "^19.0.0-rc-68dbd84b-20240812", "react-dom": "^19.0.0-rc-68dbd84b-20240812" },
+  "devDependencies": {
+    "@types/bun": "^1.1.6",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
+  }
+}
