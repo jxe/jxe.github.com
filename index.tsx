@@ -1,51 +1,5 @@
-import type { ReactNode } from "react"
 import { renderToString } from 'react-dom/server'
-import { marked } from 'marked'
-
-const navSections = {
-  current: "Current",
-  philosophy: "Philosophy",
-  writing: "Writing",
-  prototypes: "Prototypes",
-  games: "Games",
-  background: "Background",
-}
-
-function Nav({ active }: { active: keyof typeof navSections }) {
-  return <div className="nav" id={active}>
-    {Object.entries(navSections).map(([key, title]) => (
-      (active === key ? <b>{title}</b> : <a href={`#${key}`}>{title}</a>)
-    ))}
-  </div>
-}
-
-function Text({ children }: { children: string }) {
-  return <article dangerouslySetInnerHTML={{
-    __html: marked(children, {
-      async: false
-    })
-  }} />
-}
-
-function Work({
-  title,
-  year,
-  link,
-  children,
-  otherAuthors,
-  footer,
-}: {
-  title: string,
-  year: number,
-  link: string,
-  children: ReactNode,
-  otherAuthors?: string,
-  footer?: ReactNode
-}) {
-  return <p><a className="essay" href={link}>
-    <b>{title} ({year})</b>{otherAuthors && `; with ${otherAuthors}`} <i>{children}</i> {footer && <>({footer})</>}
-  </a></p>
-}
+import { Me, Nav, Text, Work } from './src/react-components'
 
 function Page() {
   return <>
@@ -53,27 +7,14 @@ function Page() {
     <title>Joe Edelman</title>
     <link rel="stylesheet" href="/page.css" />
 
-    <center id="welcome">
-      <div className="me">
-        <h2>Joe Edelman</h2>
-        <div className="facebox">
-          <img className="face" src="/me.jpg" />
-          <div className="col">
-            <a target="_" className="icon" href="http://twitter.com/edelwax"> <img src="https://twitter.com/favicon.ico" /> </a>
-            <a target="_" className="icon" href="http://github.com/jxe"> <img src="https://github.com/favicon.ico" /> </a>
-            <a target="_" className="icon" href="https://scholar.google.com/citations?hl=en&user=ZCQjxd4AAAAJ"> <img
-              src="https://scholar.google.com/favicon.ico" /> </a>
-          </div>
-        </div>
-      </div>
-    </center>
+    <Me />
 
     <Nav active="current" />
 
     <Text>{`
-I co-lead the [Meaning Alignment Institute](https://meaningaligment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and post-market structures. I also curate [a database of what's good about life](https://universe.meaningalignment.org), and field-build towards a paradigm shift in social choice, AI alignment, and mechanism design.
+I co-lead the [Meaning Alignment Institute](https://meaningaligment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and field-build towards a paradigm shift in social choice, AI alignment, and mechanism design.
 
-I also helped start [the Turtle Mafia](http://turtlemafia.org), a support group for researchers.
+I am also helping to start [the Turtle Mafia](http://turtlemafia.org), a support group for researchers.
     `}</Text>
 
     <Nav active="philosophy" />
@@ -83,7 +24,7 @@ My philosophy work descends pretty clearly from that of [Charles Taylor](https:/
 
 It concerns the nature of values and norms, and how they play into the choices we make, and into our retrospective assessments. That is, I work mainly in the theories of choice, action, and practical reason.
 
-My biggest contribution is definitions for ["human values"](https://arxiv.org/abs/2404.10636) and [“meaningful choices"](https://github.com/jxe/vpm/blob/master/vpm.pdf) that are precise enough to create surveys, metrics, aligned ML models, new democratic mechanisms, etc. Perhaps it will also lead to explainable, moral learning in AI, and offer a path past mechanisms that optimize for engagement and revealed preference, rather than underlying values.
+My biggest contribution is definitions for ["human values"](https://arxiv.org/abs/2404.10636) and [“meaningful choices"](https://github.com/jxe/vpm/blob/master/vpm.pdf) that are precise enough to create surveys, metrics, aligned ML models, new democratic mechanisms, etc. Perhaps this will also lead to explainable, moral learning in AI, and offer a path past mechanisms that optimize for engagement and revealed preference, rather than underlying values.
 
 My deepest motivation is not just to contribute to philosophy, but to answer pressing questions like:
 - Why are some human needs sensed/addressed by markets and bureaucracies, but not others?
@@ -208,15 +149,15 @@ I believe these are ultimately questions about what in human life is worth honor
     <Text>{`
 My origins are in HCI and in game design.
 
-In tech, I was lucky to learn from people like [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay), [Terry Winograd](https://hci.stanford.edu/winograd/), and [Bill Verplank](https://en.wikipedia.org/wiki/Bill_Verplank) at [Interval Research](https://en.wikipedia.org/wiki/Interval_Research_Corporation), from [Casey Fenton](http://www.caseyfenton.com/) at CouchSurfing (where I developed the [metrics](/csmetrics/) which guided the company), from [Howie Shrobe](https://people.csail.mit.edu/hes/) and [Marvin Minksy](https://web.media.mit.edu/~minsky/) at MIT. And more recently through conversations with [Bret Victor](http://worrydream.com) and [Rob Ochshorn](http://rmozone.com/).
+In HCI, I was lucky to learn from people like [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay), [Terry Winograd](https://hci.stanford.edu/winograd/), and [Bill Verplank](https://en.wikipedia.org/wiki/Bill_Verplank) at [Interval Research](https://en.wikipedia.org/wiki/Interval_Research_Corporation), and from [Howie Shrobe](https://people.csail.mit.edu/hes/) and [Marvin Minksy](https://web.media.mit.edu/~minsky/) at MIT. And more recently through conversations with [Bret Victor](http://worrydream.com) and [Rob Ochshorn](http://rmozone.com/).
 
 My tactic of running social experiments through games and performance emerged from study with [Christian Wolff](https://en.wikipedia.org/wiki/Christian_Wolff_(composer)) (partipatory music) and [Peter Parnell](https://en.wikipedia.org/wiki/Peter_Parnell) (playwriting) at Dartmouth, and then various improvisational scores with [Nancy Stark Smith](http://nancystarksmith.com), [Mike Vargas](http://www.mikevargas.net), [Ruth Zaporah](http://www.actiontheater.com/ruth.htm), and others. I had the great fortune to work alongside [Albert Kong](http://www.lethalbeef.com/) and [Catherine Herdlick](http://paradeofkites.com/) on the real world games festival [Come Out and Play](http://www.comeoutandplay.org/).
 
-My concern with meaning and metrics started when I developed the meaning-based organizational metrics at Couchsurfing.com, then co-founded the Center for Humane Technology with Tristan Harris, and coined the term “Time Well Spent” for a family of metrics adopted by teams at Facebook, Google, and Apple.
+My concern with meaning and metrics has its origins working with [Casey Fenton](http://www.caseyfenton.com/) at CouchSurfing, where I developed the meaning-based organizational [metrics](/csmetrics/) which guided the company. I then co-founded the Center for Humane Technology with [Tristan Harris](http://www.tristanharris.com/), and coined the term “Time Well Spent” for a family of metrics adopted by teams at Facebook, Google, and Apple.
 
 I then started [an online school](https://sfsd.io) and wrote [a textbook on Values-Based Design](https://textbook.sfsd.io), and finally launched [a nonprofit](https://meaningalignment.org) to bring about a future where wise AIs and humans collaborate to help people live well.
 
-I've benefited from working alongside [Ellie Hain](https://twitter.com/ellie__hain), Oliver Klingefjord, [Ryan Lowe](https://scholar.google.ca/citations?user=iRgYMuEAAAAJ&hl=en/), and (earlier) [Tristan Harris](http://www.tristanharris.com/), Nathan Vanderpool, and Anne Selke.
+I continue to benefit from working alongside [Ellie Hain](https://twitter.com/ellie__hain), Oliver Klingefjord, and [Ryan Lowe](https://scholar.google.ca/citations?user=iRgYMuEAAAAJ&hl=en/), and from many conversations with Anne Selke.
     `}</Text>
     <div style={{ height: '160px' }} />
   </>
