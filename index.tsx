@@ -71,9 +71,9 @@ function Page() {
     <Nav active="current" />
 
     <Text>{`
-I co-lead the [Meaning Alignment Institute](https://meaningaligment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit democratic and post-market structures. I also curate a database of what's good about life, the "[Universe of Meaning](https://universe.meaningalignment.org)", and field-build around new paradigms in social choice, AI alignment, and mechanism design.
+I co-lead the [Meaning Alignment Institute](https://meaningaligment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and post-market structures. I also curate [a database of what's good about life](https://universe.meaningalignment.org), and field-build towards a paradigm shift in social choice, AI alignment, and mechanism design.
 
-I also started [the Turtle Mafia](http://turtlemafia.org), a support group for researchers.
+I also helped start [the Turtle Mafia](http://turtlemafia.org), a support group for researchers.
     `}</Text>
 
     <Nav active="philosophy" />
@@ -81,21 +81,18 @@ I also started [the Turtle Mafia](http://turtlemafia.org), a support group for r
     <Text>{`
 My philosophy work descends pretty clearly from that of [Charles Taylor](https://en.wikipedia.org/wiki/Charles_Taylor_(philosopher)), [Ruth Chang](http://ruthchang.net), [Amartya Sen](https://en.wikipedia.org/wiki/Amartya_Sen), and [David Velleman](http://nyu.academia.edu/DavidVelleman).
 
-It concerns the nature of values and norms, and how they play into the choices we make, and into our retrospective assessments. I.e., the theory of choice, action, practical reason, etc.
+It concerns the nature of values and norms, and how they play into the choices we make, and into our retrospective assessments. That is, I work mainly in the theories of choice, action, and practical reason.
 
-My biggest contribution is a definition of "human values", “meaningful choices", etc that's
-    precise enough to create surveys, metrics, aligned ML models, new democratic mechanisms, etc. We hope that it can also enable explainable, moral learning in AI, and address problems with mechanisms that optimize for engagement and revealed preference, rather than values.
+My biggest contribution is definitions for ["human values"](https://arxiv.org/abs/2404.10636) and [“meaningful choices"](https://github.com/jxe/vpm/blob/master/vpm.pdf) that are precise enough to create surveys, metrics, aligned ML models, new democratic mechanisms, etc. Perhaps it will also lead to explainable, moral learning in AI, and offer a path past mechanisms that optimize for engagement and revealed preference, rather than underlying values.
 
 My deepest motivation is not just to contribute to philosophy, but to answer pressing questions like:
 - Why are some human needs sensed/addressed by markets and bureaucracies, but not others?
-- Are there any metrics it is safe to maximize?
+- Is there a metric it's safe to maximize?
 - What drives the modern trend towards atomization and social isolation?
 
-I believe these questions are related to the question of what to honor in human life, and that the answers will be found in the details of how people make choices, and how they assess them. E.g.:
+I believe these are ultimately questions about what in human life is worth honoring, and that the answers are found in the details of how people make choices, and how they assess them. E.g.: What do people mean when they say an experience was *meaningful* (as opposed to pleasurable, important, etc) or a choice was *wise* (as opposed to effective, clever, etc)?
 
-- When people say an experience was *meaningful* (as opposed to pleasurable, important, etc) or a choice was *wise* (as opposed to effective, clever, etc), what do they mean?
-
-Read more at MAI's [Related Academic Work](https://meaninglabs.notion.site/Related-Academic-Work-c933408fd8fc44c3acd42d6ccb827461?pvs=4) page.
+*Read more at MAI's [Related Academic Work](https://meaninglabs.notion.site/Related-Academic-Work-c933408fd8fc44c3acd42d6ccb827461?pvs=4) page.*
     `}</Text>
 
     <Nav active="writing" />

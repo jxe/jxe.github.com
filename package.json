@@ -1,5 +1,13 @@
 {
-  "dependencies": { "marked": "^14.0.0", "react": "^19.0.0-rc-68dbd84b-20240812", "react-dom": "^19.0.0-rc-68dbd84b-20240812" },
+  "scripts": {
+    "build": "bun index.tsx",
+    "watch": "bun -w index.tsx"
+  },
+  "dependencies": {
+    "marked": "^14.0.0",
+    "react": "^19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "^19.0.0-rc-68dbd84b-20240812"
+  },
   "devDependencies": {
     "@types/bun": "^1.1.6",
     "@types/react": "^18.3.3",
