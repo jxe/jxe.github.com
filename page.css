@@ -5,7 +5,14 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 body {
-  font-size: 13px; color: #333; padding: 0px 0px; margin: 0; display: flex; flex-direction: column;    align-items: center;
+  font-size: 13px;
+  color: #333;
+  padding: 0px 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 }
 
 q {
@@ -32,7 +39,11 @@ q {
 .nav a { color: rgba(90, 90, 90, 0.3); }
 .nav a:hover, .nav b { color: black; text-decoration: none; }
 
-.me { display: block; text-align: center; margin-right: 25px; padding-top: 50px; }
+.me {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
 .me img.face { width: 156px; height: 156px; border-radius: 5px; margin-top: 10px; box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); }
 .me h2 { font-size: 24px; margin-top: 0px; margin-bottom: 0px; font-weight: 200 }
 .me .icon img { height: 16px; filter: grayscale(0.8); opacity: 0.5; }
