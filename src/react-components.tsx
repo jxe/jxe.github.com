@@ -13,7 +13,7 @@ const navSections = {
 export function Nav({ active }: { active: keyof typeof navSections }) {
   return <div className="nav" id={active}>
     {Object.entries(navSections).map(([key, title]) => (
-      (active === key ? <b>{title}</b> : <a href={`#${key}`}>{title}</a>)
+      (active === key ? <b key={key}>{title}</b> : <a key={key} href={`#${key}`}>{title}</a>)
     ))}
   </div>
 }
