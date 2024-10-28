@@ -12,7 +12,7 @@ function Page() {
     <Nav active="current" />
 
     <Text>{`
-I co-lead the [Meaning Alignment Institute](https://meaningaligment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and [field-build towards a paradigm shift](https://aisc-wg.notion.site/Rationale-for-a-Field-Building-Effort-4a41ae207cbf470685af59ec17c00d18?pvs=4) in social choice, AI alignment, and mechanism design.
+I co-lead the [Meaning Alignment Institute](https://meaningalignment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and [field-build towards a paradigm shift](https://aisc-wg.notion.site/Rationale-for-a-Field-Building-Effort-4a41ae207cbf470685af59ec17c00d18?pvs=4) in social choice, AI alignment, and mechanism design.
 
 I am also helping to start [the Turtle Mafia](http://turtlemafia.org), a support group for researchers.
     `}</Text>
