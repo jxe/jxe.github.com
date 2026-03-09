@@ -13,8 +13,6 @@ function Page() {
 
     <Text>{`
 I co-lead the [Meaning Alignment Institute](https://meaningalignment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and [field-build towards a paradigm shift](https://aisc-wg.notion.site/Rationale-for-a-Field-Building-Effort-4a41ae207cbf470685af59ec17c00d18?pvs=4) in social choice, AI alignment, and mechanism design.
-
-I am also helping to start [the Turtle Mafia](http://turtlemafia.org), a support group for researchers.
     `}</Text>
 
     <Nav active="philosophy" />
@@ -39,6 +37,16 @@ I believe these are ultimately questions about what in human life is worth honor
     <Nav active="writing" />
 
     <article>
+
+      <Work
+        title="Co-Aligning AI and Institutions with Thick Models of Value"
+        year={2025}
+        link="https://arxiv.org/abs/2512.03399"
+        otherAuthors="Tan Zhi-Xuan, Matija Franklin, Michiel Bakker, Jakob Foerster, Iason Gabriel, + many others"
+      >
+        Even an AI system that is perfectly aligned to the intentions of its operating organization can lead to bad outcomes if the goals of that organization are misaligned with those of other institutions and individuals. For this reason, we need full-stack alignment, the concurrent alignment of AI systems and the institutions that shape them with what people value. This can be done without imposing a particular vision of individual or collective flourishing. We argue that current approaches for representing values, such as utility functions, preference orderings, or unstructured text, struggle to address these and other issues effectively. They struggle to distinguish values from other signals, to support principled normative reasoning, and to model collective goods. We propose thick models of value will be needed.
+      </Work>
+
 
       <Work
         title="What are Human Values, and How Do We Align AI to them?"
