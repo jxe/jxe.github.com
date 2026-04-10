@@ -12,7 +12,7 @@ function Page() {
     <Nav active="current" />
 
     <Text>{`
-I co-lead the [Meaning Alignment Institute](https://meaningalignment.org), where I work to align markets, democracies, and AIs with what's important to people. There, my focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and [field-build towards a paradigm shift](https://aisc-wg.notion.site/Rationale-for-a-Field-Building-Effort-4a41ae207cbf470685af59ec17c00d18?pvs=4) in social choice, AI alignment, and mechanism design.
+I co-lead the [Meaning Alignment Institute](https://meaningalignment.org), where I work to align markets, democracies, and AIs with what's important to people. I'm principal investigator on the [Full-Stack Alignment](https://arxiv.org/abs/2512.03399) research program, a network of 50+ researchers at universities and industry labs. My focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and [field-build towards a paradigm shift](https://aisc-wg.notion.site/Rationale-for-a-Field-Building-Effort-4a41ae207cbf470685af59ec17c00d18?pvs=4) in social choice, AI alignment, and mechanism design.
     `}</Text>
 
     <Nav active="philosophy" />
@@ -43,6 +43,7 @@ I believe these are ultimately questions about what in human life is worth honor
         year={2025}
         link="https://arxiv.org/abs/2512.03399"
         otherAuthors="Tan Zhi-Xuan, Matija Franklin, Michiel Bakker, Jakob Foerster, Iason Gabriel, + many others"
+        footer={<>ICML 2025 Workshop on Models of Human Feedback for AI Alignment (MoFA), Vancouver</>}
       >
         Even an AI system that is perfectly aligned to the intentions of its operating organization can lead to bad outcomes if the goals of that organization are misaligned with those of other institutions and individuals. For this reason, we need full-stack alignment, the concurrent alignment of AI systems and the institutions that shape them with what people value. This can be done without imposing a particular vision of individual or collective flourishing. We argue that current approaches for representing values, such as utility functions, preference orderings, or unstructured text, struggle to address these and other issues effectively. They struggle to distinguish values from other signals, to support principled normative reasoning, and to model collective goods. We propose thick models of value will be needed.
       </Work>
@@ -172,3 +173,24 @@ I continue to benefit from working alongside [Ellie Hain](https://twitter.com/el
 }
 
 Bun.write('index.html', renderToString(<Page />))
+
+// Build cv.html from cv.md
+import { marked } from 'marked'
+const cvMd = await Bun.file('cv.md').text()
+const cvHtml = `<!DOCTYPE html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<title>Joe Edelman — CV</title>
+<style>
+  body { font-family: 'SF Mono', 'Menlo', 'Consolas', monospace; font-size: 14px; line-height: 1.6; color: #333; max-width: 72ch; margin: 40px auto; padding: 0 20px; word-wrap: break-word; }
+  h1 { font-size: 16px; font-weight: bold; margin: 0 0 0.5em; }
+  h2 { font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #666; margin: 2em 0 0.5em; border-bottom: 1px solid #ddd; padding-bottom: 0.25em; }
+  p { margin: 0.5em 0; }
+  a { color: #06c; }
+  ul { padding-left: 1.5em; margin: 0.5em 0; }
+  li { margin: 0.25em 0; }
+  strong { font-weight: bold; }
+  em { font-style: italic; color: #666; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 1.5em 0; }
+</style>
+${marked(cvMd, { async: false })}`
+Bun.write('cv.html', cvHtml)

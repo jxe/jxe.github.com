@@ -55,6 +55,7 @@ export function Me() {
           <a target="_" className="icon" href="http://github.com/jxe"> <img src="https://github.com/favicon.ico" /> </a>
           <a target="_" className="icon" href="https://scholar.google.com/citations?hl=en&user=ZCQjxd4AAAAJ"> <img
             src="https://scholar.google.com/favicon.ico" /> </a>
+          <a target="_" className="icon" href="/cv.html" style={{ fontSize: '11px', opacity: 0.5, color: '#555', textDecoration: 'none' }}>CV</a>
         </div>
       </div>
     </div>
