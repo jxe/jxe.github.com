@@ -12,7 +12,7 @@ function Page() {
     <Nav active="current" />
 
     <Text>{`
-I co-lead the [Meaning Alignment Institute](https://meaningalignment.org), where I work to align markets, democracies, and AIs with what's important to people. I'm principal investigator on the [Full-Stack Alignment](https://arxiv.org/abs/2512.03399) research program, a network of 50+ researchers at universities and industry labs. My focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaninglabs.notion.site/AI-Safety-via-Market-Intermediaries-6c4b2c072f0a44b9869bc37d23186fbc?pvs=4). I also curate [a database of what's good about life](https://universe.meaningalignment.org), and [field-build towards a paradigm shift](https://aisc-wg.notion.site/Rationale-for-a-Field-Building-Effort-4a41ae207cbf470685af59ec17c00d18?pvs=4) in social choice, AI alignment, and mechanism design.
+I co-lead the [Meaning Alignment Institute](https://meaningalignment.org), where I work to align markets, democracies, and AIs with what's important to people. I'm a PI on the [AGI Institutions](https://agi-institutions.org) and [Full-Stack Alignment](https://arxiv.org/abs/2512.03399) research programs, which include a network of 50+ researchers at universities and industry labs. My focus is on new, values-explicit [democratic](https://meaningalignment.substack.com/p/the-first-moral-graph) and [post-market structures](https://meaningalignment.substack.com/p/market-intermediaries-a-post-agi).
     `}</Text>
 
     <Nav active="philosophy" />
@@ -22,7 +22,7 @@ My philosophy work descends pretty clearly from that of [Charles Taylor](https:/
 
 It concerns the nature of values and norms, and how they play into the choices we make, and into our retrospective assessments. That is, I work mainly in the theories of choice, action, and practical reason.
 
-My biggest contribution is definitions for ["human values"](https://arxiv.org/abs/2404.10636) and [“meaningful choices"](https://github.com/jxe/vpm/blob/master/vpm.pdf) that are precise enough to create surveys, metrics, aligned ML models, new democratic mechanisms, etc. Perhaps this will also lead to explainable, moral learning in AI, and offer a path past mechanisms that optimize for engagement and revealed preference, rather than underlying values.
+One contribution is an operationalization for ["human values"](https://arxiv.org/abs/2404.10636) and meaningful choices precise enough that mechanisms, metrics, and ML models can be built on top. Perhaps this will also lead to explainable moral reasoning in AI, and offer a path past mechanisms that optimize against us.
 
 My deepest motivation is not just to contribute to philosophy, but to answer pressing questions like:
 - Why are some human needs sensed/addressed by markets and bureaucracies, but not others?
@@ -30,8 +30,6 @@ My deepest motivation is not just to contribute to philosophy, but to answer pre
 - What drives the modern trend towards atomization and social isolation?
 
 I believe these are ultimately questions about what in human life is worth honoring, and that the answers are found in the details of how people make choices, and how they assess them. E.g.: What do people mean when they say an experience was *meaningful* (as opposed to pleasurable, important, etc) or a choice was *wise* (as opposed to effective, clever, etc)?
-
-*Read more at MAI's [Related Academic Work](https://meaninglabs.notion.site/Related-Academic-Work-c933408fd8fc44c3acd42d6ccb827461?pvs=4) page.*
     `}</Text>
 
     <Nav active="writing" />
