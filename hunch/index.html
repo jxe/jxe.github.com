@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<title>Hunch — markdown notes for iOS & macOS</title>
+<link rel="stylesheet" href="/page.css" />
+<style>
+  main { max-width: 540px; margin: 60px auto 120px; padding: 0 20px; }
+  .icon { width: 96px; height: 96px; display: block; margin: 0 0 18px; }
+  h1 { font-size: 36px; font-weight: 300; margin: 0 0 6px; letter-spacing: -0.02em; }
+  h2 { font-size: 17px; font-weight: 500; margin: 36px 0 8px; color: #222; }
+  .tagline { color: #666; font-size: 17px; margin: 0 0 28px; line-height: 1.4; }
+  p, li { font-size: 15px; line-height: 1.55; color: rgba(0, 0, 0, 0.78); }
+  ul { padding-left: 20px; margin: 8px 0; }
+  ul li { margin-bottom: 4px; }
+  code { font-family: 'SF Mono', 'Menlo', monospace; font-size: 13px; background: rgba(0,0,0,0.05); padding: 1px 4px; border-radius: 3px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 8px; }
+  .actions a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #333;
+    font-size: 14px;
+  }
+  .actions a:hover { background: #f4f4f4; text-decoration: none; border-color: #999; }
+  hr { border: none; border-top: 1px solid #eee; margin: 48px 0; }
+  .footnote { color: #999; font-size: 13px; margin-top: 48px; }
+</style>
+
+<main>
+  <img class="icon" src="/hunch/icon.png" alt="Hunch app icon">
+  <h1>Hunch</h1>
+  <p class="tagline">Open-source markdown notes for iOS &amp; macOS. Each block is a row. Your notes live as plain <code>.md</code> files in a folder you own — open them in any editor, sync them with iCloud, hand them to an agent.</p>
+
+  <div class="actions">
+    <a href="https://github.com/jxe/hunch">Source on GitHub</a>
+    <a href="https://github.com/jxe/hunch/blob/main/PRIVACY.md">Privacy policy</a>
+    <!-- TestFlight invite link slots in here once external testing is open. -->
+  </div>
+
+  <h2>What it is</h2>
+  <p>A native block editor for iOS 26 and macOS 26 — paragraphs, headings, lists, toggles, quotes, code, images, subpages. Cmd+P opens a fuzzy page picker; <code>@</code>-mentions link pages; voice dictation has a Siri Shortcut. Edit mode for one block at a time, nav mode for multi-block selection / move / indent — no hover-floating UI.</p>
+  <p>The on-disk format ("Clamshell") is a folder of plain markdown plus a small amount of sidecar state — a per-device recovery log, trash, assets. Durable, portable, iCloud-friendly. Drop the folder into Obsidian, grep it, version-control it, hand it to an LLM.</p>
+
+  <h2>What it isn't</h2>
+  <ul>
+    <li>Real-time multiplayer collaboration</li>
+    <li>Full databases (relations, formulas, rollups, views)</li>
+    <li>Tables</li>
+    <li>AI features</li>
+  </ul>
+
+  <p class="footnote">Privacy policy: <a href="https://github.com/jxe/hunch/blob/main/PRIVACY.md">github.com/jxe/hunch/PRIVACY.md</a> — Hunch collects nothing, transmits nothing, has no server.</p>
+</main>
