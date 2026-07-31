@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2eee4" />
+    <meta
+      name="description"
+      content="A reader of old poems by Joe Edelman."
+    />
+    <title>Old Poems — Joe Edelman</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#poem">Skip to poem</a>
+
+    <div class="reader-shell">
+      <header class="site-header">
+        <button
+          class="contents-toggle"
+          type="button"
+          aria-label="Open contents"
+          aria-expanded="false"
+          aria-controls="contents"
+        >
+          <span aria-hidden="true">☰</span>
+        </button>
+
+        <a class="book-title" href="#" aria-label="Open the first poem">
+          <span>Old Poems</span>
+          <small>Joe Edelman</small>
+        </a>
+
+        <p class="position" aria-live="polite">
+          <span id="position-current">1</span>
+          <span aria-hidden="true">/</span>
+          <span id="position-total">14</span>
+        </p>
+      </header>
+
+      <aside class="contents" id="contents" aria-label="Poem contents">
+        <div class="contents-heading">
+          <button class="contents-close" type="button" aria-label="Close contents">×</button>
+        </div>
+        <nav id="poem-navigation"></nav>
+      </aside>
+
+      <button class="contents-scrim" type="button" tabindex="-1" aria-label="Close contents"></button>
+
+      <main class="page" id="poem" tabindex="-1">
+        <article class="poem" aria-labelledby="poem-title">
+          <header class="poem-header">
+            <p class="poem-year" id="poem-year"></p>
+            <h1 id="poem-title"></h1>
+          </header>
+          <div class="poem-body" id="poem-body"></div>
+        </article>
+      </main>
+
+      <footer class="page-controls" aria-label="Reader controls">
+        <button class="page-button previous" id="previous-poem" type="button">
+          <span aria-hidden="true">←</span>
+          <span>
+            <small>Previous</small>
+            <strong id="previous-title"></strong>
+          </span>
+        </button>
+
+        <div class="progress" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+
+        <button class="page-button next" id="next-poem" type="button">
+          <span>
+            <small>Next</small>
+            <strong id="next-title"></strong>
+          </span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </footer>
+    </div>
+
+    <script src="poems.js"></script>
+    <script src="reader.js"></script>
+  </body>
+</html>
