@@ -107,6 +107,48 @@ I believe these are ultimately questions about what in human life is worth honor
 
     </article>
 
+    <Nav active="interviews" />
+
+    <article>
+
+      <Work
+        title="Full-Stack AI Alignment"
+        year={2025}
+        link="https://www.jimruttshow.com/joe-edelman-2/"
+        footer={<>The Jim Rutt Show</>}
+      >
+        On aligning AI and the institutions around it: thick models of value, meaning-preserving markets, democratic regulation, negotiation systems, and the risks of concentrated power.
+      </Work>
+
+      <Work
+        title="Full Stack AI Alignment and Human Flourishing"
+        year={2025}
+        link="https://podcasts.apple.com/us/podcast/season-10-episode-1-full-stack-ai-alignment-and-human/id1609313639?i=1000729635167"
+        footer={<>GreenPill, with Kevin Owocki</>}
+      >
+        On thick models of value, lessons from the attention economy, value-driven markets, and four practical moonshots for AI and institutions that support human flourishing.
+      </Work>
+
+      <Work
+        title="Joe Edelman: Co-Founder of Meaning Alignment Institute"
+        year={2024}
+        link="https://podcasts.apple.com/us/podcast/joe-edelman-co-founder-of-meaning-alignment-institute/id1547525454?i=1000679513862"
+        footer={<>RadicalxChange(s), with Matt Prewitt</>}
+      >
+        On how AI already shapes our values, tools for values-based negotiation, and whether machines can understand what matters to us.
+      </Work>
+
+      <Work
+        title="Aligning Society with Our Deepest Values and Sources of Meaning"
+        year={2024}
+        link="https://podcast.clearerthinking.org/episode/209/joe-edelman-aligning-society-with-our-deepest-values-and-sources-of-meaning/"
+        footer={<>Clearer Thinking, with Spencer Greenberg</>}
+      >
+        On defining values and meaning, finding agreement across political divides, and building more values-aligned democracies, markets, and AI systems.
+      </Work>
+
+    </article>
+
     <Nav active="prototypes" />
 
     <article>

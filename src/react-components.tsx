@@ -5,6 +5,7 @@ const navSections = {
   current: "Current",
   philosophy: "Philosophy",
   writing: "Writing",
+  interviews: "Interviews",
   prototypes: "Prototypes",
   games: "Games",
   background: "Background",
